@@ -1,0 +1,23 @@
+#magazine-container{
+    height: 100vh;
+    width: 75vh;
+    background-image: url("./background-image.jpg");
+    background-size: cover;
+    margin: 0 auto;
+}
+
+#magazine-title{
+    color: white;
+    font-size: 25vh;
+    text-align: center;
+    margin: 0;
+    line-height: 0.8;
+}
+
+#magazine-title-description{
+    text-align: center;
+    font-size: 3vh;
+    margin: 0;
+    color: #ffffcc;
+    line-height: 0;
+}
