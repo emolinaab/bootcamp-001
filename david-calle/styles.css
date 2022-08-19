@@ -2,19 +2,37 @@
     --yellow: #ffff66;
 }
 
+@font-face {
+    font-family: butler;
+    src: url("./fonts/Butler_Medium.otf");
+}
+
+@font-face {
+    font-family: butler;
+    font-weight: bold;
+    src: url("./fonts/Butler_Bold.otf");
+}
+
+@font-face {
+    font-family: butler;
+    font-weight: lighter;
+    src: url("./fonts/Butler_Light.otf");
+}
+
 body{
     margin: 0;
     box-sizing: border-box;
+    font-family: butler;
 }
 
 #magazine-container{
     height: 100vh;
     width: 75vh;
     background: linear-gradient(
-        rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.2)
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
       ), 
-      url("./background-image.jpg");
+      url("./img/background-image.jpg");
     background-size:cover;
     margin: 0 auto;
 }
@@ -86,4 +104,28 @@ body{
 
 .text-right{
     text-align: right;
+}
+
+#bottom-announcement{
+    position: absolute;
+    bottom: 0;
+    width: 75vh;
+    padding: 5vh 2vh;
+}
+
+#bottom-announcement-img{
+    width: 8vh;
+    display: block;
+    transform: rotate(45deg);
+    margin-bottom: 1vh;
+    align-items: center;
+}
+
+#bottom-announcement-title{
+    color: white;
+    font-weight: bold;
+    line-height: 0.8;
+    margin: 0;
+    font-size: 4vh;
+    margin-top: 1vh;
 }
