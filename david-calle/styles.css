@@ -4,6 +4,7 @@
 
 body{
     margin: 0;
+    box-sizing: border-box;
 }
 
 #magazine-container{
@@ -35,20 +36,27 @@ body{
 }
 
 #announcements-container{
-    height: 60vh;
+    height: 36vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 12vh 0;
     width: 72vh;
     margin: 0 auto;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .announcement-container{
-    width: 16vh;
+    width: 17vh;
     text-align: left;
     margin: 1vh 0;
 }
 
+.announcement-image-container{
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 .announcement-title, .announcement-title-alone{
     font-weight: bold;
@@ -69,4 +77,13 @@ body{
     color: white;
     font-weight: lighter;
     font-size: 1.9vh;
+}
+
+.announcement-image{
+    display: block;
+    width: 100%;
+}
+
+.text-right{
+    text-align: right;
 }
