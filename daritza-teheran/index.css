@@ -1,0 +1,14 @@
+a {
+    color: #0969da;
+}
+
+.card {
+    position: relative;
+    padding: 2.7vh 1.5vw 2.7vh 1.5vw;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 15px 15px 15px 15px;
+    background-color: white;
+}
+  
