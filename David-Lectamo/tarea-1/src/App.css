@@ -25,7 +25,7 @@
   display: flex;
   margin-top: -30px;
   margin-right: 80px;
-  height: 300px;
+  height: 350px;
 }
 
 .general-title{
@@ -50,7 +50,7 @@
 }
 
 .driverquestion {
-  margin-top: 10px;
+  margin-top: -13px;
 }
 
 .background {
@@ -69,8 +69,8 @@
 .oriol {
   justify-content: flex-end;
   display: flex;
-  margin-left: 350px;
-  font-size: 27px;
+  margin-left: 394px;
+  font-size: 29px;
   line-height: 100%;
   margin-top: 120px;
 }
@@ -78,7 +78,7 @@
 .cart {
   justify-content: flex-end;
   display: flex;
-  margin-left: 280px;
+  margin-left: 340px;
   font-size: 23px;
   margin-top: -30px;
   line-height: 100%;
@@ -118,7 +118,7 @@
 }
 
 .empty {
-  height: 300px;
+  height: 270px;
 }
 
 html, body {
@@ -134,7 +134,7 @@ html, body {
 .schumacher {
   position: absolute;
   height: 800px;
-  right: 110px;
-  top: 100px;
+  right: 105px;
+  top: 105px;
   z-index: 1;
 }
