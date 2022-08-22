@@ -39,12 +39,6 @@
   grid-template-columns: 50% 50%;
 }
 
-.App {
-  background: #ecf0f1;
-  margin-left: 400px;
-  margin-right: 400px;
-}
-
 .comparation{
   justify-content: left;
   font-size: 30px;
