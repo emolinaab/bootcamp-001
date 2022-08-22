@@ -138,3 +138,18 @@ html, body {
   top: 105px;
   z-index: 1;
 }
+
+.sennacontainer {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.senna {
+  position: absolute;
+  height: 460px;
+  z-index: 2;
+  right: 80px;
+  top: 445px;
+}

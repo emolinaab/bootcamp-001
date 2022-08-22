@@ -4,6 +4,7 @@ import Driver from './components/Driver.js';
 import code from './images/code.png';
 import car from './images/car.jpg';
 import schumacher from './images/schumacher.png';
+import senna from './images/senna.png';
 
 function App() {
   return (
@@ -13,11 +14,19 @@ function App() {
           <p>LA REVISTA ESPA&Ntilde;OLA CIEN POR CIEN DE F&Oacute;RMULA 1</p>
         </div>
 
+
+        <div className='sennacontainer'>
+          <img className = 'senna'
+            src = {senna}
+            alt = 'senna' />
+        </div>
         <div className='schumachercontainer'>
           <img className = 'schumacher'
             src = {schumacher}
             alt = 'schumacher' />
         </div>
+
+        
 
         <div className = 'grid'>
           <div className = 'left'>
@@ -59,9 +68,6 @@ function App() {
           <div className = 'empty'>
           </div>
         </div>
-
-        
-
         <div className = 'codecontainer'>
           <img className = 'code'
             src = {code}
