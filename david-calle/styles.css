@@ -26,8 +26,8 @@ body{
 }
 
 #magazine-container{
-    height: 100vh;
-    width: 75vh;
+    height: 100vmin;
+    width: 75vmin;
     background: linear-gradient(
         rgba(0, 0, 0, 0.3), 
         rgba(0, 0, 0, 0.3)
@@ -35,11 +35,12 @@ body{
       url("./img/background-image.jpg");
     background-size:cover;
     margin: 0 auto;
+    position: relative;
 }
 
 #magazine-title{
     color: white;
-    font-size: 25vh;
+    font-size: 25vmin;
     text-align: center;
     margin: 0;
     line-height: 0.8;
@@ -47,28 +48,33 @@ body{
 
 #magazine-title-description{
     text-align: center;
-    font-size: 3vh;
+    font-size: 3vmin;
     margin: 0;
     color: var(--yellow);
     line-height: 0;
 }
 
 #announcements-container{
-    height: 36vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 12vh 0;
-    width: 72vh;
-    margin: 0 auto;
+    justify-content: space-between;
     flex-wrap: wrap;
-    align-content: space-between;
+    align-items: flex-start;
+    padding: 12vmin 0;
+    width: 72vmin;
+    margin: 0 auto;
 }
 
 .announcement-container{
-    width: 17vh;
+    width: 17vmin;
+    margin: 1vmin 0;
+}
+
+#announcements-left{
     text-align: left;
-    margin: 1vh 0;
+}
+
+#announcements-right{
+    text-align: right;
 }
 
 .announcement-image-container{
@@ -80,7 +86,7 @@ body{
     font-weight: bold;
     line-height: 0.8;
     margin: 0;
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
 }
 .announcement-title{
     color: white;   
@@ -94,7 +100,7 @@ body{
     line-height: 0.8;
     color: white;
     font-weight: lighter;
-    font-size: 1.9vh;
+    font-size: 1.9vmin;
 }
 
 .announcement-image{
@@ -102,22 +108,18 @@ body{
     width: 100%;
 }
 
-.text-right{
-    text-align: right;
-}
-
 #bottom-announcement{
     position: absolute;
     bottom: 0;
-    width: 75vh;
-    padding: 5vh 2vh;
+    width: 75vmin;
+    padding: 5vmin 2vmin;
 }
 
 #bottom-announcement-img{
-    width: 8vh;
+    width: 8vmin;
     display: block;
     transform: rotate(45deg);
-    margin-bottom: 1vh;
+    margin-bottom: 1vmin;
     align-items: center;
 }
 
@@ -126,6 +128,6 @@ body{
     font-weight: bold;
     line-height: 0.8;
     margin: 0;
-    font-size: 4vh;
-    margin-top: 1vh;
+    font-size: 4vmin;
+    margin-top: 1vmin;
 }
