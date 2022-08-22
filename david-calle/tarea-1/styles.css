@@ -80,6 +80,7 @@ body{
 .announcement-image-container{
     border-radius: 50%;
     overflow: hidden;
+    margin-bottom: 1vmin;
 }
 
 .announcement-title, .announcement-title-alone{
