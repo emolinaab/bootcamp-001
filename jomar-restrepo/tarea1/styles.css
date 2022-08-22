@@ -1,0 +1,102 @@
+
+.fondo{
+    background-image: url("/jomar-restrepo/tarea1/img/fondop1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 800px;
+    height: 1000px;
+    margin: 0 600px;
+    
+}
+
+.titulo{
+    display: flex;
+    background-color: #ffb200;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'League Gothic', sans-serif;   
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    
+}
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 30px;
+    color: #395B64
+}
+.fecha{
+    margin-right: 20px;
+    font-size: 20px;
+    color: #395B64
+}
+.tituloplay{
+    font-size: 100px;
+    margin-left: 90px !important;
+    margin-right: 0px !important;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: #ffb200;    
+    width: 270px;
+    opacity: 0.60;  
+    font-family: 'League Gothic', sans-serif; 
+}
+#play{
+    margin-right: 0px;
+    margin-bottom: 100px; 
+    color: #ffb200;  
+    
+}
+#titulo2{
+    margin-left: 15px;
+    font-family: 'League Gothic', sans-serif;
+   
+}
+
+.subtitulo2{
+    font-size: 20px;  
+    position:absolute;
+    width:250px;    
+    height: 30px;
+    top:40%;
+    margin-left: 500px;
+    background-color: #ffb200;
+    color: #100F0F;
+    border-bottom-right-radius: 30px;
+    font-family: 'League Gothic', sans-serif;
+    color: #395B64;   
+}
+.subtitulo2 h4{
+    margin: 0;
+    right: 5px;
+    font-size: 25px;
+}
+
+.parrafo{
+    text-align: right;
+    font-size: 30px;
+    color: #F7F7F7;
+}
+
+.parrafo2{
+    font-size: 50px;
+    color: #24A19C;
+}
+
+.parrafo2 p {
+    margin-bottom: 25px;
+}
+
+#direccion{
+    font-size: 30px;
+    color:azure;
+    margin: 0 0 200px;
+}
