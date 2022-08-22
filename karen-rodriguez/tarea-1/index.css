@@ -1,0 +1,119 @@
+/*Formatos de letra*/
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.tittle{
+    font-family: 'Aboreto', cursive;
+    font-family: 'Lora', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 200px;
+    letter-spacing: 0.25em;
+    margin: 0;
+
+    }
+
+.textColor{
+    color: rgb(255, 166, 0);
+}
+
+.textStrong{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.textBig{
+    font-size: 30px
+}
+
+.textBelow, .n{
+    font-size: 60px
+}
+
+/*Estructura de la contenido*/
+.revista{
+    width: 40vw;
+    height: 100vh; 
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(231,214,182,1) 100%);
+    border:1px solid black;
+    padding: 20px;
+}
+
+.contenido{
+    width: 40vw;
+    height: 100vh; 
+    position: relative;
+
+}
+
+#fotoBritney{
+    position: absolute;
+    bottom: 0px;
+    width: 65%;
+    left: 15%;
+}
+
+
+.texto{
+    position: absolute;
+    bottom: 0%;
+}
+
+
+/*Maquetacion*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenido{
+
+    display: grid;
+    grid-template-columns: 30% auto 20%;    
+    grid-template-areas: "tittle tittle tittle"
+                         "paragraph none numero"
+                         "textBelow  textBelow textbelow"
+                         "textFinish textFinish textFinish";
+   
+}
+
+.tittle{
+    grid-area: tittle;
+}
+
+.numero{
+    grid-area: numero;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.numero img{
+    justify-content: end;
+}
+
+.paragraph{
+    display: flex;
+    flex-direction: column;
+    grid-area: paragraph;
+
+}
+
+.textBelow{
+    grid-area: textBelow;
+}
+
+.textFinish{
+    grid-area: textFinish;
+}
+
+
+
+
+
+
