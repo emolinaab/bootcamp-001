@@ -80,7 +80,10 @@ function App() {
         </div>
 
         <div className = 'bottompanel'>
-          <h2>Text</h2>
+          <div>
+            <p className = 'footerTitle'>LA PRETEMPORADA 2002. A TODO GAS</p>
+            <p className = 'footer'>AS&Iacute;  AFRONTA EL CIRCUIT DE CATALUNYA LOS TEST DE F1</p>
+          </div>
         </div>
       </div>
     </div>
