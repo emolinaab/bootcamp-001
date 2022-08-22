@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Assets/img/fender-logo-vector.svg" type="image/x-icon">
+    <title>CSS</title>
+    <link rel="stylesheet" href="Assets/css/Portada.css">
+</head>
+<body>
+
+
+    <!-- Principal -->
+    <div class="main">
+
+
+        <div class="main__bg">
+            <video id="bg" src="/bootcamp-001/Sebastian-Rosero/Tarea1/Css/Assets/video/Blue & Pink Abstract Music Tiktok Background.mp4" autoplay
+                 loop 
+                 controls 
+                 muted="muted"></video>
+        </div>
+
+        <div class="title">
+            <div class="title__content">
+                <span class="">MUSIC FESTIVAL</span>
+            </div>
+        </div>
+
+        <div class="neon">
+
+            <div class="shadow">
+                <div class="triangle-wrapper">
+                  <div class="triangle">
+                    <p>Todrick</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="box">
+                <div class="box__person">
+                    <img src="./Assets/img/Persona-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="subtitle__content">
+                <h3 class="subtitle">SEPTIEMBRE 05</h3>
+            </div>
+            <div>
+                <p>Cali - Parque de las banderas</p>
+                <span>7:00 PM</span>
+            </div>
+        </div>
+        
+        <div class="dark__bar">
+            <div class="bar__content">
+                <div class="boletas">
+                    <li><span>Boletas Disponibles</span></li>
+                </div>
+                <div class="patrocinadores">
+                    <span>
+                        <img src="/bootcamp-001/Sebastian-Rosero/Tarea1/Css/Assets/img/Globant-LightBG-Color@3x.png" alt="Globant" width="100">
+                    </span>
+                    <span>
+                        <img src="Assets/img/fender-logo-vector.svg" alt="Globant" width="50">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+       
+
+    </div>
+
+    <script>
+        var video = document.getElementById("bg");
+
+        function autoplay() {
+            video.play();
+        }
+
+        window.addEventListener("load", function(){
+            autoplay();
+        });
+
+        
+    </script>
+
+</body>
+</html>
