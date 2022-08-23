@@ -1,14 +1,86 @@
-a {
-    color: #0969da;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,100;1,300&display=swap');body{
+    margin:0;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
 }
 
-.card {
+#format{
+    background-image: url(img/spaniel.jpg);
+    height: 110vh;
+    width: 80vh;
+    margin: 0 auto;
     position: relative;
-    padding: 2.7vh 1.5vw 2.7vh 1.5vw;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-    border-radius: 15px 15px 15px 15px;
-    background-color: white;
+    background-size:cover;
 }
-  
+
+.title{
+    color: white;
+    font-size: 10vh;
+    text-align: center;
+    margin: 0;
+    line-height: 0.65;
+    padding: 15px;
+}
+
+.subtitle{
+    color: #cc8334;
+    font-size: 2.5vh;
+    text-align: start;
+    margin: 0;
+    text-indent: 6vh;
+    font-weight: 300;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.7vh;
+    padding: 6vh ;
+    height: 16vh;
+    width: 25vh;
+    justify-content: flex-end;
+}
+
+.thin-white{
+    color: #fafaf9;
+    font-weight: 500;
+}
+.thin-yellow{
+    color:  #cc8334;
+    font-weight: 500;
+}
+.start{
+    justify-content: start;
+}
+
+.left{
+    width: 68vh;
+    align-items: flex-end;
+    font-weight: 500;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    width: 15vh;
+    padding: 5vh ;
+    background-color: #e9e916;
+    font-weight: 500;
+    font-size: 2vh;
+    align-items: flex-end;
+}
+
+#bar{
+    display: block;
+    height: 6vh;
+    width: 12vh;
+}
+
+.image{
+    display: block;
+    height: 20h;
+    width: 20vh;
+    border-radius: 50%;
+}
