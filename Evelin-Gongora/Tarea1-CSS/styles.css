@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+body{
+  background-color: #6D645D;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.container{
+  margin: 15px 15px 15px 15px;
+  width: 800px;
+  height: 900px;
+  background-color: #BEAFAC;
+  background-image: url("resources/modelo.jpg");
+  margin-left: auto;
+	margin-right: auto;
+  position: relative;
+}
+
+.container-child{
+  width: 100%;
+  height: 100%;
+  /*background-color: red;*/
+  position: relative;
+}
+
+.container-header{
+  width: 100%;
+  height: 15%;
+  /*background-color: red;*/
+}
+
+.title{
+  padding: 0px;
+  font-size: 120px;
+  color: #FBFDFA;
+  font-family: 'Bodoni Moda', serif;
+  text-align: center;
+  line-height: 75%;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.phrase{
+  padding: 20px 0px 0px 0px;
+  font-size: 14px;
+  color: #FBFDFA;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-weight: lighter;
+}
+
+.container-italia{
+  /*background-color: aquamarine;*/
+  width: 30px;
+  height: auto;
+  position: absolute;
+  left: 695px;
+  top: 40px;
+}
+
+.italia{
+  font-size: 13px;
+  color: #FBFDFA;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.container-code{
+  width: auto;
+  height: auto;
+  background-color: aqua;
+  position: absolute;
+  left: 0px;
+  top: 770px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.img-code{
+  width: 80px;
+  height: 130px;
+}
+
+.container-date{
+  /*background-color: aquamarine;*/
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 90px;
+  top: 125px;
+}
+
+.date{
+  font-size: 8px;
+  color: #FBFDFA;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  letter-spacing: 1px;
+}
+
+.container-editor{
+  /*background-color: aquamarine;*/
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 500px;
+  top: 125px;
+}
+
+.editor{
+  font-size: 8px;
+  color: #FBFDFA;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  letter-spacing: 1px;
+}
+
+.container-theme{
+  /*background-color: aquamarine;*/
+  width: auto;
+  height: 100px;
+  position: absolute;
+  left: 630px;
+  top: 195px;
+}
+
+.theme-title{
+  font-size: 45px;
+  -webkit-text-stroke: 0.5px #FBFDFA;
+  color: transparent; 
+  text-align: center;
+  line-height: 82%;
+}
+
+.name{
+  font-size: 18px;
+  color: #FBFDFA;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.container-theme-2{
+  /*background-color: aquamarine;*/
+  width: auto;
+  height: 100px;
+  position: absolute;
+  left: 30px;
+  top: 230px;
+}
+
+.theme-2-title{
+  font-size: 30px;
+  color: #FBFDFA;
+  font-family: 'Oswald', sans-serif;
+}
+
+.theme-2{
+  font-size: 150px;
+  -webkit-text-stroke: 1.5px #FBFDFA;
+  color: transparent; 
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  line-height: 80%;
+}
+
+.name-2{
+  font-size: 25px;
+  color: #FBFDFA;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 50%;
+}
+
+.name-3{
+  font-size: 25px;
+  color: #FBFDFA;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.author{
+  margin: 5px;
+  font-size: 10px;
+  color: #FBFDFA;
+  text-align: center;
+}
+  
