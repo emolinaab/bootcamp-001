@@ -29,7 +29,8 @@
     text-align: start;
     margin: 0;
     text-indent: 6vh;
-    font-weight: 300;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .flex-container {
