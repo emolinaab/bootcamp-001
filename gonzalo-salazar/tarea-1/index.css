@@ -1,11 +1,11 @@
 body {
-    background-image: url("img/fondo.jpg");
+    background-image: url("img/background.jpg");
     background-size: cover;
     margin: 0;
     padding: 0;
 }
 
-.container {
+.main_container {
     background-image: url("img/nba.webp");
     background-size: cover;
     background-position: center;
@@ -18,7 +18,7 @@ body {
     border-radius: 15px;
 }
 
-.titulo_1 {
+.title_1 {
     display: flex;
     justify-content: flex-end;
     padding-top: 45px;
@@ -32,7 +32,7 @@ body {
     background-color: rgba(255, 255, 255, 0.655);
 }
 
-.titulo_2 {
+.title_2 {
     display: flex;
     margin-left: 80px;
     margin-top: 10px;
@@ -58,32 +58,31 @@ body {
     font-variant: normal;
 }
 
-.flex_container {
+.container {
     display: flex;
     margin: 30px;
     justify-content: space-between;
 }
 
-.contenido_izq {
+.left_content {
     width: 50%;
 }
 
-.contenido_izq p {
+.left_content p {
     font-family: Georgia, serif;
     text-decoration: none solid rgb(68, 68, 68);
     font-style: italic;
     text-transform: none;
-    color: white;
     color: white;
     margin-top: 270px;
 }
 
-.contenido_der {
+.right_content {
     text-align: right;
     width: 40%;
 }
 
-.contenido_der p {
+.right_content p {
     font-family: Georgia, serif;
     text-decoration: none solid rgb(68, 68, 68);
     font-style: italic;
@@ -91,7 +90,7 @@ body {
     color: white;
 }
 
-.contenido_der h3 {
+.right_content h3 {
     font-family: "Arial Black", Gadget, sans-serif;
     color: #ffffff;
     font-weight: 700;
