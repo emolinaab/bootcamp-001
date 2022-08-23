@@ -1,0 +1,93 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    display: table ;
+    background-color: black;
+    background: #b92b27;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 900px;
+    height: 1400px;
+    position: absolute;
+    top:10%;
+    left: 35%;           
+    margin-top: -100px;
+    margin-left: -10px;
+}
+
+@font-face {
+    font-family: myFontforH1;
+    src: url(fuentes/BLUECHERIES.ttf);
+}
+
+@font-face {
+    font-family: myFontforP;
+    src: url(fuentes/Cherry\ Days.ttf);
+}
+
+.title
+{
+    color:white;
+    text-align: center;
+    padding-top: 10px;
+    font-family: myFontforH1;
+    font-size: 300px;
+}
+
+img
+{
+    width: 750px;
+    position:static;
+
+}
+
+.container-p
+{
+    width: 250px;
+    color: rgb(6, 6, 66);
+    display: flex;
+    float:right;
+    position: absolute;
+    top: 700px;
+    right: 50px;
+}
+
+.container-p2
+{
+    width: 175px;
+    float:left;
+    color: #f2c600b1;
+    position: absolute;
+    top: 700px;
+    margin-left: 20px;
+
+}
+
+p
+{
+    font-family: myFontforP;
+    font-size: large;
+    
+}
+
+.container-h2
+{
+    position: absolute;
+    top: 1200px;
+    margin-left: 45px;
+}
+
+h2
+{
+    font-family: myFontforH1;
+    font-size: 150px;
+    background: linear-gradient(yellow,red);
+    -webkit-background-clip: text;
+    color: transparent;  
+}
