@@ -1,4 +1,4 @@
-.fondo {
+.background {
     background-image: url("/jomar-restrepo/tarea2/img/fondop1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -8,7 +8,7 @@
     margin: 0 600px;
   }
   
-  .titulo {
+  .title {
     display: flex;
     background-color: #ffb200;
     flex-direction: row;
@@ -23,7 +23,7 @@
     height: 50px;
     margin: 10px;
   }
-  .subtitulo {
+  .subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,12 +31,12 @@
     font-size: 30px;
     
   }
-  .fecha {
+  .date {
     margin-right: 20px;
     font-size: 20px;
     
   }
-  .tituloplay {
+  .titleplay {
     font-size: 200px;
     margin-left: 220px !important;
     margin-right: 0px !important;
@@ -54,12 +54,13 @@
     margin-bottom: 200px;
     color: #ffb200;
   }
-  #titulo2 {
+  #title2 {
     margin-left: 15px;
     font-family: "League Gothic", sans-serif;
+    margin-top: 3px;
   }
   
-  .subtitulo2 {
+  .subtitle2 {
     font-size: 20px;
     position: absolute;
     width: 250px;
@@ -78,13 +79,13 @@
     font-size: 25px;
   }
   
-  .parrafo {
+  .paragraph {
     text-align: right;
     font-size: 30px;
     color: #f7f7f7;
   }
   
-  .parrafo2 {
+  .paragraph2 {
     font-size: 50px;
     color: #ECB365;
   }
@@ -93,7 +94,7 @@
     margin-bottom: 25px;
   }
   
-  #direccion {
+  #direction {
     font-size: 30px;
     color: azure;
     margin: 0 0 200px;
