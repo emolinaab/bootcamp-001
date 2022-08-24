@@ -23,12 +23,12 @@ background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, F
 
 @font-face {
     font-family: myFontforH1;
-    src: url(fuentes/BLUECHERIES.ttf);
+    src: url(fonts/BLUECHERIES.ttf);
 }
 
 @font-face {
     font-family: myFontforP;
-    src: url(fuentes/Cherry\ Days.ttf);
+    src: url(fonts/Cherry\ Days.ttf);
 }
 
 .title
