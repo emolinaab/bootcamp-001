@@ -4,7 +4,7 @@ body {
 
 .bodyTitles {
   background-color: black;
-  background-image: url("/bootcamp-001/ValentinaAtehortua/tarea-2/img/Space-PNG-Image.png");
+  background-image: url("../img/Space-PNG-Image.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 140%;
