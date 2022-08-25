@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#format{
+main{
     background-image: url(img/spaniel.jpg);
     height: 110vh;
     width: 80vh;
@@ -33,10 +33,9 @@
     font-style: italic;
 }
 
-.flex-container {
+.cover-lines > div{
     display: flex;
     flex-direction: column;
-    font-size: 2.7vh;
     padding: 6vh ;
     height: 16vh;
     width: 25vh;
@@ -45,27 +44,33 @@
 
 .thin-white{
     color: #fafaf9;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 2.7vh;
+    margin: 0%;
 }
+
 .thin-yellow{
     color:  #cc8334;
     font-weight: 500;
-}
-.start{
-    justify-content: start;
+    font-size: 2.5vh;
+    margin: 0%;
 }
 
-.left{
+.cover-lines > div:not(:first-child){
+    height: 5vh;
+}
+
+#left{
+    height: 12vh;
     width: 68vh;
     align-items: flex-end;
-    font-weight: 500;
 }
 
 .footer{
     position: absolute;
     bottom: 0;
-    height: 10vh;
-    width: 15vh;
+    height: 6.4vh;
+    width: 17vh;
     padding: 5vh ;
     background-color: #e9e916;
     font-weight: 500;
