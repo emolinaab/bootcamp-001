@@ -1,6 +1,7 @@
-/*Formatos de letra*/
+/*letter fonts*/
 *{
     font-family: 'Quicksand', sans-serif;
+    font-size: 2vh;
 }
 
 .tittle{
@@ -9,13 +10,13 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Playfair Display', serif;
     text-align: center;
-    font-size: 200px;
+    font-size: 12vw;
     letter-spacing: 0.25em;
     margin: 0;
-
+   
     }
 
-.textColor{
+.textColour{
     color: rgb(255, 166, 0);
 }
 
@@ -25,37 +26,36 @@
 }
 
 .textBig{
-    font-size: 30px
+    font-size: 2vw
 }
 
 .textBelow, .n{
-    font-size: 60px
+    font-size: 3vw;
 }
 
-/*Estructura de la contenido*/
-.revista{
+/*content structure*/
+.magazineCover{
     width: 40vw;
-    height: 100vh; 
+    height: 100vh;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(231,214,182,1) 100%);
     border:1px solid black;
     padding: 20px;
+    position: relative;
 }
 
-.contenido{
+.content{
     width: 40vw;
-    height: 100vh; 
     position: relative;
 
 }
 
 #fotoBritney{
     position: absolute;
-    bottom: 0px;
-    width: 65%;
+    width: 75%;
     left: 15%;
+    bottom: 0%;
 }
-
 
 .texto{
     position: absolute;
@@ -63,21 +63,20 @@
 }
 
 
-/*Maquetacion*/
+/*magazine cover layout*/
 body{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.contenido{
+.content{
 
     display: grid;
     grid-template-columns: 30% auto 20%;    
     grid-template-areas: "tittle tittle tittle"
-                         "paragraph none numero"
-                         "textBelow  textBelow textbelow"
+                         "left . right"
+                         "textBelow  textBelow textBelow"
                          "textFinish textFinish textFinish";
    
 }
@@ -86,21 +85,21 @@ body{
     grid-area: tittle;
 }
 
-.numero{
-    grid-area: numero;
+.right{
+    grid-area: right;
     display: flex;
     flex-direction: column;
     text-align: end;
 }
 
-.numero img{
+.right img{
     justify-content: end;
 }
 
-.paragraph{
+.left{
     display: flex;
     flex-direction: column;
-    grid-area: paragraph;
+    grid-area: left;
 
 }
 
@@ -110,10 +109,58 @@ body{
 
 .textFinish{
     grid-area: textFinish;
+
 }
 
+.magazineCover{
+    position: relative;
+}
 
+.content{
+    position: absolute;
+    bottom: 0;
+}
 
+/*mobile responsive*/
+@media only screen and (max-width : 900px) {
+    .magazineCover{
+        width: 100%;
+    }    
+    
+    .tittle{
+        font-size: 20vw;
+        
+    }
 
-
-
+    .content{
+        width: 90%;
+    }
+    
+    #fotoBritney{
+        position: absolute;
+        width: 75%;
+        height: auto;
+        right:  0%;
+        bottom: 0%;
+    }
+    
+    .right{
+        grid-area: right;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+    }
+    
+    .right img{
+        justify-content: center;
+    }
+    
+    .left{
+        display: flex;
+        flex-direction: column;
+        grid-area: left;
+    
+    }
+    
+}
