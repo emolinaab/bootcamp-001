@@ -1,5 +1,5 @@
 .background {
-  background-image: url("/jomar-restrepo/tarea1/img/fondop1.jpg");
+  background-image: url("../img/fondop1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,8 +14,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: "League Gothic", sans-serif;
-  
+  font-family: "League Gothic", sans-serif;  
 }
 
 .logo {
@@ -47,8 +46,7 @@
   color: #ffb200;
   width: 270px;
   opacity: 0.6;
-  font-family: "League Gothic", sans-serif;
-  
+  font-family: "League Gothic", sans-serif;  
   
 }
 #play {
