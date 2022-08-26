@@ -1,0 +1,211 @@
+:root {
+    --bc: #f7f5f2;
+    --primary: #f7ea08;
+    --secondary: #ff3fb4;
+    --tertiary: #c53a1b;
+    --white: #ffffff;
+    --black: #000000;
+    /* Gray Colors */
+    --gray: #6c757d;
+    --gray-light: #fcf1ec;
+    --gray-extra-dark: #343a40;
+    /* Sizes */
+    --heading: 3.4rem;
+    --heading-large: 7.5rem;
+    --heading-medium: 2rem;
+    --paragraph: 1.1rem;
+    /* Fonts */
+    --font-main: "Poppins";
+}
+.column {
+  width: 100%;
+  height: 855px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.magazine {
+  margin: 0 1.5em;
+  height: 80%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 8px 15px 0 rgba(0, 0, 0, .225);
+}
+.magazine img {
+  height: 100%;
+}
+.magazine-content {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.text-overlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+.magazine-content h1 {
+  top: 0;
+  margin: 0;
+  width: 98%;
+  line-height: 1.05em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 110px;
+  color: var(--tertiary);
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  transform: scale(1, 1.5);
+}
+.magazine-bottom {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  z-index: 3;
+}
+.magazine-left h2 {
+  margin: 1.4em 0 0 0;
+  line-height: .6em;
+  color: var(--tertiary);
+  text-transform: uppercase;
+  font-size: calc(var(--heading) - .6rem);
+  transform: scale(1, 1.4);
+}
+.left-inner {
+  margin: 0 0 0 1.9em;
+}
+.left-inner p {
+  margin: 1em 0 0 0;
+  color: var(--gray-light);
+  font-size: calc(var(--paragraph) - .35em);
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.left-inner h3 {
+  margin: 0;
+  line-height: 1.2em;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: calc(var(--paragraph) + .25em);
+  font-weight: 600;
+  transform: scale(1, 1.4);
+}
+.left-inner h4 {
+  margin: 0;
+  line-height: 1.2em;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: calc(var(--paragraph) - .1em);
+  font-weight: 600;
+  transform: scale(1, 1.4);
+}
+.left-inner h5 {
+  margin: 0;
+  line-height: 1.2em;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: calc(var(--paragraph) - .3em);
+  font-weight: 500;
+  transform: scale(1, 1.4);
+}
+.left-inner h6 {
+  margin: 0;
+  line-height: 1.2em;
+  color: var(--gray-light);
+  text-transform: uppercase;
+  font-size: calc(var(--paragraph) - .7em);
+  font-weight: 500;
+  transform: scale(1, 1.4);
+  opacity: .6;
+}
+.right-inner {
+  margin: 0 .8em 0 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.right-inner h2 {
+  margin: 0;
+  line-height: 1.1em;
+  color: var(--tertiary);
+  text-transform: uppercase;
+  font-size: calc(var(--paragraph) - .05em);
+  transform: scale(1, 1.3);
+}
+.right-inner p {
+  margin: 0;
+  color: var(--gray-light);
+  font-size: calc(var(--paragraph) - .25em);
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.right-inner h3 {
+  margin: 0;
+  line-height: 1.2em;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: calc(var(--paragraph) + .15em);
+  font-weight: 600;
+  transform: scale(1, 1.3);
+}
+.right-inner h4 {
+  margin: 0;
+  line-height: 1.2em;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: calc(var(--paragraph) - .15em);
+  font-weight: 600;
+  transform: scale(1, 1.3);
+}
+.right-inner .plus {
+  margin: 2.25em 0 0 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-inner .plus .vert {
+  width: .3em;
+  height: 100%;
+  background-color: var(--tertiary);
+  position: absolute;
+}
+.right-inner .plus .horiz {
+  width: 100%;
+  height: .3em;
+  background-color: var(--tertiary);
+  position: absolute;
+}
+.right-inner .large {
+  font-size: calc(var(--heading) - 1.5rem);
+}
+/* Scrollbar */
+::-webkit-scrollbar-track {
+    background-color: var(--bc);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--bc);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary);
+}
