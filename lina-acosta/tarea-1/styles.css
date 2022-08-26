@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: black;
+}
+#main-title {
+  margin: 0cm;
+  color: rgb(248, 2, 2);
+  font-size: 8rem;
+  padding-bottom: 4px;
+  position: static;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  letter-spacing: 10mm;
+}

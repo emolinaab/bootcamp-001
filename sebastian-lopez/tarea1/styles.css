@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-color: bisque;
+}
+.container{
+    width: 70%;
+    height: 130vh;
+    background-image: url('https://wallpaperaccess.com/full/1163690.jpg');
+    background-size: 100% 100%;
+    margin:auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+
+.container > img{
+    width: 110%;
+    position: absolute;
+    bottom:0;
+    left:10%;
+    z-index: 0;
+    filter: drop-shadow(0px 10px 10px rgb(130, 56, 3));
+}
+h5{
+    background-color: rgb(0, 9, 76);
+    padding: 0.5em;
+    flex-grow: 0;
+    color:white;
+    text-align: center;
+}
+h1{
+    color:gold;
+    font-size: 7.5em;
+    text-align: center;
+    text-shadow: 2px 1px 1px black;
+    flex-grow: 0.5;
+}
+
+span{
+    color: rgb(174, 0, 209);
+}
+.labels{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.labels h6{
+    background-color: blueviolet;
+    padding: 1em;
+    color:aliceblue;
+    width: 20%;
+    text-align: center;
+}
+
+.content{
+    flex-grow: 2;
+    color:white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30%;
+    padding:0px 30px;
+
+}
+
+#offer{
+    width: 80%;
+    transform: rotate(-15deg);
+}
+.rise{
+    background-color: rgba(0, 255, 255, 0.253);
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+h2{
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.reasons{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    color:gold;
+}
+
+.reasons span{
+    font-size: 2em;
+    text-shadow: 1px 1px 1px gold;
+    float: left;
+    margin-right: 10px;
+}
+
+.list{
+    border-bottom: 1em purple;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left:20px;
+}
+
+.list h4{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.578);
+    padding: .4em;
+    transform: skew(-20deg);
+    margin-bottom: 0;
+}
+
