@@ -1,0 +1,71 @@
+body {
+  background-color: black;
+}
+
+.general-title{
+  justify-content: center;
+  display: flex;
+  font-size: 31.9px;
+} 
+
+.background {
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.App {
+  background: white;
+  width: 1000px;
+  position: relative;
+}
+
+.oriol {
+  justify-content: flex-end;
+  display: flex;
+  margin-left: 394px;
+  font-size: 29px;
+  line-height: 100%;
+  margin-top: 120px;
+}
+
+.cart {
+  justify-content: flex-end;
+  display: flex;
+  margin-left: 340px;
+  font-size: 23px;
+  margin-top: -30px;
+  line-height: 100%;
+}
+
+.bottompanel {
+  background-color: red;
+  justify-content: center;
+  display: flex;
+  z-index: 2;
+  height: 100px;
+}
+
+.footer {
+  justify-content: center;
+  display: flex;
+  margin-top: -24px;
+  margin-right: 50px;
+  margin-left: 300px;
+  font-size: 36px;
+  line-height: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.footerTitle {
+  justify-content: center;
+  display: flex;
+  margin-top: 13px;
+  margin-left: 110px;
+  font-size: 26px;
+  line-height: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  color:  yellow;
+}
