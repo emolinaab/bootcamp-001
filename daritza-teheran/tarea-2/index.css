@@ -37,7 +37,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 6vh ;
-    height: 16vh;
+    height: 15vh;
     width: 25vh;
     justify-content: flex-end;
 }
@@ -67,15 +67,18 @@ main{
 }
 
 .footer{
+    display: flex;
     position: absolute;
     bottom: 0;
-    height: 6.4vh;
+    height: 5vh;
     width: 17vh;
-    padding: 5vh ;
+    padding: 5vh;
     background-color: #e9e916;
     font-weight: 500;
     font-size: 2vh;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #bar{
