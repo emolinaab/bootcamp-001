@@ -5,7 +5,7 @@
     background-image: url(./img/Image1.jpg);
     background-repeat: no-repeat;
     position: relative;
-    grid-template-columns: 170px auto 220px;
+    grid-template-columns: 170px auto 140px;
     grid-template-rows: 50px 90px 70px 30px auto 20px;
   }
 
@@ -16,6 +16,7 @@
     font-weight: bold;
     font-family:monospace;
     font-size: 14px;
+    list-style:none;
 }
 
 .item3 {
@@ -28,7 +29,7 @@
     font-weight: bold;
     background-color: rgba(70, 36, 193, 0.297);
     justify-self: right;
-
+    list-style:none
 }
 
 .item4 {
@@ -39,6 +40,7 @@
     margin-left: auto;
     margin-right: auto;
     font-family:fantasy;
+    list-style:none
 }
 .item5 {
     grid-column: 1/4;
@@ -49,17 +51,18 @@
     margin-left: auto;
     margin-right: auto;
     font-family: cursive;
+    list-style:none
 }
 
 .item6 {
-    text-align: right;
     grid-column: 3/4;
     grid-row: 5/7;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    color: rgb(147, 12, 32);
+    color: rgb(0, 0, 0);
     padding-right: 10%;
     font-family:Helvetica;
+    list-style:none
 }
 
 .item7 {
@@ -70,6 +73,7 @@
     color: rgb(203, 124, 28);
     padding-left: 5%;
     font-family:Helvetica;
+    list-style:none
 }
 
 .item8 {
@@ -79,6 +83,7 @@
     padding-left: 9%;
     font-weight: bold;
     font-family:Helvetica;
+    list-style:none
 }
 
 .item9 {
@@ -90,6 +95,7 @@
     font-size: 12px;
     justify-self: center;
     align-self: center;
+    list-style:none
 }
 
 .footermagazine {
@@ -105,4 +111,5 @@
     font-size: 10px;
     text-align: right;
     font-weight: bold;
+    list-style:none
 }
