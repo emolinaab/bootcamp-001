@@ -1,0 +1,110 @@
+body {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    background-image: url("img/nba.webp");
+    background-size: cover;
+    background-position: center;
+    height: 130vh;
+    margin: 0px auto;
+    width: 55%;
+    margin-top: 50px;
+    box-shadow: 0px 0px 9px 0px #000000;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.title_1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 45px;
+}
+
+.item_1 {
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 0px 9px 0px #000000;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.655);
+}
+
+.title_2 {
+    display: flex;
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+.item_2 {
+    text-align: center;
+    padding: 5px;
+}
+
+.item_2 h2 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+        0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+        0 20px 20px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+}
+
+.container {
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+}
+
+.left_content {
+    width: 50%;
+}
+
+.left_content p {
+    font-family: Georgia, serif;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    text-transform: none;
+    color: white;
+    margin-top: 270px;
+}
+
+.right_content {
+    text-align: right;
+    width: 40%;
+}
+
+.right_content p {
+    font-family: Georgia, serif;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    text-transform: none;
+    color: white;
+}
+
+.right_content h3 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: uppercase;
+}
+
+.footer_container {
+    color: #fff;
+    display: flex;
+    border-radius: 15px;
+    justify-content: space-around;
+    background-color: rgba(32, 30, 28, 0.642);
+    margin: 15px;
+}
