@@ -1,5 +1,5 @@
 .background {
-    background-image: url("/jomar-restrepo/tarea2/img/fondop1.jpg");
+    background-image: url("../img/fondop1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -72,6 +72,7 @@
     border-bottom-right-radius: 30px;
     font-family: "League Gothic", sans-serif;
     color: #395b64;
+    
   }
   .subtitulo2 h4 {
     margin: 0;
@@ -96,7 +97,8 @@
   
   #direction {
     font-size: 30px;
-    color: azure;
+    color: #f7f7f7;
     margin: 0 0 200px;
+    top:10px;
   }
   
