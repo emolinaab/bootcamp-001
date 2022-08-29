@@ -63,7 +63,10 @@
 
 .subtitle2 {
   font-size: 20px;
-  position: absolute;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 250px;
   height: 30px;
   top: 40%;
@@ -73,6 +76,7 @@
   border-bottom-right-radius: 30px;
   font-family: "League Gothic", sans-serif;
   color: #395b64;
+  
 }
 .subtitle2 h4 {
   margin: 0;
@@ -89,6 +93,7 @@
 .paragraph2 {
   font-size: 50px;
   color: #ECB365;
+  margin-top: 100px;
 }
 
 .paragraph2 p {
