@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,100;1,300&display=swap');body{
+    margin:0;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+main{
+    background-image: url(img/spaniel.jpg);
+    height: 110vh;
+    width: 80vh;
+    margin: 0 auto;
+    position: relative;
+    background-size:cover;
+}
+
+.title{
+    color: white;
+    font-size: 10vh;
+    text-align: center;
+    margin: 0;
+    line-height: 0.65;
+    padding: 15px;
+}
+
+.subtitle{
+    color: #cc8334;
+    font-size: 2.5vh;
+    text-align: start;
+    margin: 0;
+    text-indent: 6vh;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.cover-lines{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 65vh;
+    width: 40vh;
+}
+
+.cover-lines > ul {
+    list-style: none;
+}
+
+.cover-lines ul:first-child{
+    margin-block-start: 8vh;
+    margin-bottom: 10vh;
+}
+
+.thin-white{
+    color: #fafaf9;
+    font-weight: 400;
+    font-size: 2.7vh;
+}
+
+.thin-yellow{
+    color:  #cc8334;
+    font-weight: 500;
+    font-size: 2.5vh;
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    width: 68vh;
+    align-items: flex-end;
+}
+
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 5vh;
+    width: 17vh;
+    padding: 5vh;
+    background-color: #e9e916;
+    font-weight: 500;
+    font-size: 2vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#bar{
+    display: block;
+    height: 6vh;
+    width: 12vh;
+}
+
+.image{
+    display: block;
+    height: 20h;
+    width: 20vh;
+    border-radius: 50%;
+}
