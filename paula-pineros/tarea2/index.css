@@ -3,6 +3,10 @@ img {
     height: 80px;
     margin: 1px;
     border-radius: 50%;
+    margin-right: 20px;
+}
+figure{
+    margin:0;
 }
 dl{
     display: flex;
@@ -19,7 +23,6 @@ dd{
     color: white;
     padding: 0.25px;
 }
-/* Middle*/
 h1 {
   width: 45px;
   word-wrap: break-word;
@@ -46,7 +49,7 @@ section{
 main{
     display: flex;
 }
-menu{
+ul{
     list-style: none;
     padding: 0;
     padding-right: 20px;
@@ -54,7 +57,6 @@ menu{
 #imgs{
     float:right;
     width: 80px;
-
 }
 p {
     display: inline-block;
