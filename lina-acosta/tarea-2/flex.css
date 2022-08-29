@@ -1,0 +1,84 @@
+.flex-container {
+  display:flex;
+  height: 50px;
+  margin-bottom: 1rem;
+  color: white;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+.flex-big-letter{
+  font-size:x-large;
+}
+.flex-normal-letter{
+  font-size: smaller;
+}
+.flex-container > .item {
+  color: red;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.flex-super-small{
+  height: 20px;
+}
+.flex-small{
+  height: 40px;
+  font-size: small;
+}
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.flex-1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.flex-basis {
+  flex-basis: 90px;
+}
+.red{
+  color:rgb(218, 10, 10);
+}
+.blue{
+  color:rgba(12, 202, 202, 0.897)
+}
+.white{
+  color:white;
+}
