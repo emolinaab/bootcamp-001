@@ -10,7 +10,7 @@
   position: absolute;
   top: -798px;
   width: 850px;
-  left: 65px;
+  left: 25px;
 }
 
 .codecontainer {
@@ -22,7 +22,7 @@
 .code {
   height: 200px;
   position: absolute;
-  right: 0;
+  right: 40px;
   top: -100px;
 }
 
@@ -35,5 +35,5 @@
 .car {
   height: 100px;
   position: absolute;
-  left: 0;
+  left: -40px;
 }
