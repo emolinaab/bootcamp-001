@@ -1,0 +1,101 @@
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.f1-logo {
+  justify-content: flex-end;
+  display: flex;
+  margin-top: -30px;
+  margin-right: 80px;
+  height: 350px;
+}
+
+.driverquestion {
+  margin-top: -13px;
+}
+
+.text-50years {
+  justify-content: flex-start;
+  display: flex;
+  margin-top: -20px;
+  margin-right: 200px;
+  margin-left: 130px;
+  font-size: 25px;
+  line-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  justify-content: flex-start;
+  display: flex;
+  margin-top: -100px;
+  margin-right: 200px;
+  margin-left: 130px;
+  font-size: 45px;
+  color: red;
+  line-height: 85px;
+}
+
+.comparation {
+  justify-content: flex-right;
+  font-size: 30px;
+  margin-top: -60px;
+  margin-left: 130px;
+  line-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.empty {
+  height: 300px;
+}
+
+.ralf {
+  margin-left: 65px;
+  font-size: 23px;
+}
+
+.ralfquestion {
+  margin-top: -27px;
+  margin-left: 65px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+.carlos {
+  margin-left: 65px;
+  font-size: 23px;
+  margin-top: -10px;
+}
+
+.carlosquestion {
+  margin-top: -27px;
+  margin-left: 65px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+.mika {
+  margin-left: 65px;
+  font-size: 23px;
+  margin-top: -10px;
+}
+
+.mikaquestion {
+  margin-top: -27px;
+  margin-left: 65px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+.verticaltext {
+  transform: rotate(270deg);
+  color: red;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: -420px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -500px;
+  font-size: 40px;
+}
