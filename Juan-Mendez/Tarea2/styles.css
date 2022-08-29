@@ -1,0 +1,178 @@
+body {
+    background-image: url(juego.webp);
+    background-size:100vh;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.title {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items:flex-start;
+margin-top: -9%;
+}
+h1 {
+color:white;
+font-size: 200px;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-transform: uppercase;
+text-shadow: 3px 3px #000;
+}
+h2{
+color:red;
+font-size: 160px;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-transform: uppercase;
+text-shadow: 3px 3px #000;
+}
+.subtitle{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: -8%;
+}
+h3 {
+    color:white;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    width: 20%;
+    text-shadow: 2px 2px #000;
+    text-align-last:center;
+    margin-top: 0%;
+    }
+.image2{
+    position: fixed;
+    left: 25%;
+    bottom:-0.5%    
+}
+.image3{
+    position: fixed;
+    left: 25%;
+    bottom:-0.5%    
+}
+.image4{
+    position: fixed;
+    left: 34.9%;
+    bottom:-4%    
+}
+.image5{
+    position: fixed;
+    left: 30%;
+    bottom:-5%    
+}
+.image6{
+    position: fixed;
+    left: 24%;
+    bottom:-5%    
+}
+.image7{
+    position: fixed;
+    left: 71%;
+    bottom:0%    
+}
+.image8{
+    position: fixed;
+    right: 71%;
+    top:0%    
+}
+.image9{
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    bottom:26%    
+}
+.image10{
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    bottom:10%    
+}
+.image11{
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    bottom: 43%;   
+}
+.image12{
+    background-color: black;
+    position: fixed;
+    right: 67%;
+    bottom: 0%;   
+}
+.new1{
+    margin-top:0%;
+    margin-left: 61%;
+    text-align-last:justify;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color:white;
+    width: 15%;
+    text-shadow: 2px 2px #000;
+}
+.title1{
+    text-align-last:center;
+    color:white;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
+    margin-left:60.6%;
+    margin-top:0%;
+    background-color:rgb(211, 18, 18);
+    width: 15%;
+}
+.new2{
+    margin-top:2%;
+    margin-left: 60.6%;
+    text-align-last:start;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:white;
+    font-size: 20px;
+    width: 15%;
+    text-shadow: 2px 2px #000;
+}
+.title2{
+    text-align-last:center;
+    color:white;
+    font-size: 18px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
+    margin-left:60.6%;
+    background-color:rgb(211, 18, 18);
+    width: 15%;
+}
+.new3{
+    margin-top:-2%;
+    margin-left: 61%;
+    text-align-last:start;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:white;
+    font-size: 19px;
+    width: 15%;
+    text-shadow: 2px 2px #000;
+}
+.title3{
+    text-align-last:center;
+    color:white;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
+    margin-left:60.6%;
+    background-color:rgb(211, 18, 18);
+    width: 15%;
+}
+.new{
+    background-color: rgb(211, 18, 18);
+    color:white;
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
+    margin-left:70.4%;
+    margin-top: -38%;
+    width: 5%;
+}
