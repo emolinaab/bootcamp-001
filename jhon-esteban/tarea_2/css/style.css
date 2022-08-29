@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('http://fonts.cdnfonts.com/css/vogue');
+
+
+body {
+    color: white;
+    text-shadow: 1px 1px 0px rgb(17, 16, 16), 1px 2px 0px rgb(24, 23, 23),
+    1px 3px 0px rgb(27, 25, 25), 1px 4px 0px rgb(24, 23, 23);
+    font-family: 'Noto Serif', serif;
+}
+.container{
+    background-image: url('../img/katyabaner2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 750px;
+    height: 1000px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+}
+
+.name h1{
+    font-size: xx-large;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.name h3{
+    margin: 0;
+    margin-left: 10px;
+}
+
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.season h1{
+    margin: 0;
+    margin-right: 10px;
+    font-size: x-large
+}
+
+.center{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    
+}
+
+.center h1{
+    font-family: 'Vogue', sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 0 0 0 10px;
+}
+.center h3{
+    color: white;
+    text-shadow: 1px 1px 0px rgb(17, 16, 16);
+    margin: 0 0 0 10px;
+    padding-top: 5px;
+    font-size: medium;
+
+}
+
+.voltiao{
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0 0 5px 10px;
+    
+}
+
+.bottom h1{
+    font-size: medium;
+}
+
+.bottom h5{
+    margin: 0;
+}
+
+.makeup{
+    margin: 0;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.makeup img{
+    width: 250px;
+    height: 250px;
+    border-radius: 301px;
+}
+
