@@ -9,6 +9,11 @@
     grid-template-rows: 50px 90px 70px 30px auto 20px;
   }
 
+ul {
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+
 .item1 {
     padding-left: 5%;
     padding-top: 5%;
