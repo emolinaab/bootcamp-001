@@ -53,6 +53,7 @@ const turnToDecimal = (number) => {
 };
 
 const handleNumber = (number) => {
+  let isZero = false;
   if (isAns || isPercentage) return;
   if (isResult) {
     clearAll();
@@ -63,15 +64,17 @@ const handleNumber = (number) => {
     decimalValue = decimalValue * 10 + number;
   } else if (!operation) {
     if (firstOperand === 0 && number === 0) return;
+    isZero = firstOperand === 0;
     firstOperand = firstOperand * 10 + number;
   } else {
     if (secondOperand === 0 && number === 0) return;
+    isZero = secondOperand === 0;
     secondOperand = secondOperand * 10 + number;
   }
-
   if (input.innerHTML === operation) updateInput("");
-  updateInput(number, false);
-  updateSummary(number, false);
+  if (isZero) updateSummary(summary.innerHTML.slice(0, -1) + number);
+  else updateSummary(number, false);
+  updateInput(number, isZero);
 };
 
 const handleDecimals = () => {
