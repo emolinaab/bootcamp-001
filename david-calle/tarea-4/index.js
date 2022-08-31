@@ -81,13 +81,13 @@ const handleDecimals = () => {
   } else {
     firstOperand += turnToDecimal(decimalValue);
   }
-
   isDecimal = false;
   decimalValue = 0;
   additionalZeros = 0;
 };
 
 const solveOperation = () => {
+  handleDecimals();
   if (secondOperand === null) return;
   switch (operation) {
     case "+":
@@ -112,7 +112,6 @@ const handleOperation = (symbol) => {
   isAns = false;
   isResult = false;
   isPercentage = false;
-  handleDecimals();
   solveOperation();
   updateInput(symbol);
   updateSummary(symbol, false);
@@ -134,7 +133,6 @@ const handleDecimal = () => {
 
 const showResult = () => {
   if (operation && secondOperand === null) return;
-  handleDecimals();
   solveOperation();
   isAns = false;
   isPercentage = false;
