@@ -1,7 +1,7 @@
 "use strict";
 
 // Small enough?
-/*
+
 function smallEnough(a, limit) {
   if (!(a instanceof Array))
     return console.error("An array is expected to be entered");
@@ -9,11 +9,10 @@ function smallEnough(a, limit) {
   return !(typeof validate === "number") ? true : false;
 }
 
-console.log(smallEnough(a, 200));
-*/
+console.log(smallEnough([1, 2, 3], 200));
 
 // Odd or Even?
-/*
+
 function oddOrEven(array) {
   let sum = 0;
   for (let i = 0; i < array.length; i++) {
@@ -24,10 +23,9 @@ function oddOrEven(array) {
 }
 
 console.log(oddOrEven([[0, 1, 5]]));
-*/
 
 // Simple string characters
-/*
+
 function returnList(string) {
   const upperCase = /[A-Z]/,
     lowerCase = /[a-z]/,
@@ -52,4 +50,3 @@ function returnList(string) {
 }
 
 console.log(returnList("1234567890"));
-*/
