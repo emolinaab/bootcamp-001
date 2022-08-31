@@ -28,6 +28,7 @@ p{
 #calculator-screen{
     background-color: black;
     padding: 5px 20px;
+    min-height: 100px;
 }
 
 #summary p{
@@ -75,4 +76,5 @@ p{
 
 .calculator-double-button:hover, .calculator-button:hover{
     cursor: pointer;
+    filter: brightness(85%);
 }
