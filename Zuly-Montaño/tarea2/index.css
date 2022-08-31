@@ -28,23 +28,17 @@
 }
 
 .text p {
-  font: oblique bold 90% cursive;
-  color: #fff;
-  text-align: left;
-  margin-right: 60%;
+  font: oblique bold 100% cursive;
+  color: #fff; 
 }
 
-.containerImagen {
-  width: 70px;
-  height: 70px;
-}
-
-.containerImagen img {
-  width: 85%;
-  height: 80%;
-  float: right;
+ img {
+  float: left;
   box-shadow: 0px 8px 12px 0px #000000;
-  padding: 3px;
+  padding: 4px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px; 
 }
 
 .text {
@@ -60,10 +54,9 @@
 }
 
 .text1 p {
-  width: 150px;
-  height: 65px;
+  width: 200px;
+  height: 75px;
   text-align: left;
-  box-shadow: 0px 4px 12px 0px #ae4242;
   padding: 3px;
   flex-direction: row-reverse;
   align-content: space-between;
@@ -81,7 +74,8 @@
 
 .text2 {
   color: rgb(243, 109, 131);
-  font: oblique bold 70% cursive;
+  font: oblique bold 100% cursive;
   box-shadow: 0px 8px 12px 0px #000000;
   padding: 3px;
 }
+
