@@ -1,0 +1,84 @@
+/*calculator structure************************************/
+#calculatorStructure{
+    display: grid;
+    grid-template-areas: 'screenContainer screenContainer'
+    'numberContainer operationsContainer';
+}
+
+#screenContainer{
+grid-area: screenContainer;
+border: solid 1px red
+}
+
+#numberContainerBtn{
+    grid-area: numberContainer;
+    border: solid 1px red;
+    width: 100%;
+}
+
+#operationsContainerBtn{
+    grid-area: operationsContainer;
+    border: solid 1px red
+}
+
+/*sizes and internal distribution****************************/
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: aquamarine;
+    width: 300px;
+    height: 500px;
+}
+
+#calculatorStructure{
+    padding: 30px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#screenContainer #textfield{
+    width: 100%;
+    height: 40px;
+    border: solid 1px rgb(38, 0, 255);
+}
+
+#numberContainerBtn{
+  
+    text-align: center;
+}
+
+#operationsContainerBtn{
+
+    text-align: center;
+}
+
+
+.button{
+   height: 40px; 
+   border: solid 1px rgb(38, 0, 255);
+   margin: 3px 4px;
+}
+
+
+
+/*letter fonts*/
+*{ 
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+}
+
+#screenContainer #textfield{
+    text-align:right;
+    font-size: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Silkscreen', cursive;
+}
