@@ -19,6 +19,7 @@
   font: bold;
   flex: 4 25%;
 }
+
 #multiplication {
   background-color: rgb(255, 153, 0);
 }
@@ -34,15 +35,19 @@
 #subtraction {
   background-color: rgb(255, 153, 0);
 }
+
 #equal {
   background-color: rgb(255, 153, 0);
 }
+
 #reset {
   width: 130px;
 }
+
 #zero {
   width: 130px;
 }
+
 #result {
   display: block;
   text-align: right;

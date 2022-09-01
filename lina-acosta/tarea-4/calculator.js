@@ -1,137 +1,153 @@
-var operatora;
-var operatorb;
-var operation;
-var firstpoint = false;
-var op = false;
-function init() {
-  var result = document.getElementById('result');
-  var reset = document.getElementById('reset');
-  var addition = document.getElementById('addition');
-  var subtraction = document.getElementById('subtraction');
-  var multiplication = document.getElementById('multiplication');
-  var division = document.getElementById('division');
-  var equal = document.getElementById('equal');
-  var one = document.getElementById('one');
-  var two = document.getElementById('two');
-  var three = document.getElementById('three');
-  var four = document.getElementById('four');
-  var five = document.getElementById('five');
-  var six = document.getElementById('six');
-  var seven = document.getElementById('seven');
-  var eight = document.getElementById('eight');
-  var nine = document.getElementById('nine');
-  var zero = document.getElementById('zero');
-  var percentage = document.getElementById('percentage');
-  var point = document.getElementById('point');
-  //Events
-  one.onclick = function (e) {
-    result.textContent = result.textContent + '1';
-  };
+const result = document.getElementById('result');
+const reset = document.getElementById('reset');
+const addition = document.getElementById('addition');
+const subtraction = document.getElementById('subtraction');
+const multiplication = document.getElementById('multiplication');
+const division = document.getElementById('division');
+const equal = document.getElementById('equal');
+const one = document.getElementById('one');
+const two = document.getElementById('two');
+const three = document.getElementById('three');
+const four = document.getElementById('four');
+const five = document.getElementById('five');
+const six = document.getElementById('six');
+const seven = document.getElementById('seven');
+const eight = document.getElementById('eight');
+const nine = document.getElementById('nine');
+const zero = document.getElementById('zero');
+const percentage = document.getElementById('percentage');
+const point = document.getElementById('point');
+let firstpoint = false;
+let op = false;
+let operation = '';
+let operatora = 0;
+let operatorb = 0;
 
-  two.onclick = function (e) {
-    result.textContent = result.textContent + '2';
-  };
-  three.onclick = function (e) {
-    result.textContent = result.textContent + '3';
-  };
-  four.onclick = function (e) {
-    result.textContent = result.textContent + '4';
-  };
-  five.onclick = function (e) {
-    result.textContent = result.textContent + '5';
-  };
-  six.onclick = function (e) {
-    result.textContent = result.textContent + '6';
-  };
-  seven.onclick = function (e) {
-    result.textContent = result.textContent + '7';
-  };
-  eight.onclick = function (e) {
-    result.textContent = result.textContent + '8';
-  };
-  nine.onclick = function (e) {
-    result.textContent = result.textContent + '9';
-  };
-  zero.onclick = function (e) {
-    result.textContent = result.textContent + '0';
-  };
-  point.onclick = function (e) {
-    if (result.textContent != '' && firstpoint == false) {
-      result.textContent = result.textContent + '.';
-      firstpoint = true;
-    }
-  };
-  reset.onclick = function (e) {
-    resett();
-  };
-  addition.onclick = function (e) {
-    if (op == false) {
-      operatora = result.textContent;
-      operation = '+';
-      firstpoint = false;
-      op = true;
-    }
+one.addEventListener('click', () => {
+  result.textContent = result.textContent + '1';
+});
+
+two.addEventListener('click', () => {
+  result.textContent = result.textContent + '2';
+});
+
+three.addEventListener('click', () => {
+  result.textContent = result.textContent + '3';
+});
+
+four.addEventListener('click', () => {
+  result.textContent = result.textContent + '4';
+});
+
+five.addEventListener('click', () => {
+  result.textContent = result.textContent + '5';
+});
+
+six.addEventListener('click', () => {
+  result.textContent = result.textContent + '6';
+});
+
+seven.addEventListener('click', () => {
+  result.textContent = result.textContent + '7';
+});
+
+eight.addEventListener('click', () => {
+  result.textContent = result.textContent + '8';
+});
+
+nine.addEventListener('click', () => {
+  result.textContent = result.textContent + '9';
+});
+
+zero.addEventListener('click', () => {
+  result.textContent = result.textContent + '0';
+});
+
+reset.addEventListener('click', () => {
+  resett();
+});
+
+point.addEventListener('click', () => {
+  if (result.textContent != '' && firstpoint == false) {
+    result.textContent = result.textContent + '.';
+    firstpoint = true;
+  }
+});
+
+addition.addEventListener('click', () => {
+  if (op == false) {
+    operatora = result.textContent;
     operation = '+';
     firstpoint = false;
-    clean();
-  };
-  subtraction.onclick = function (e) {
-    if (result.textContent == '') {
-      result.textContent = result.textContent + '-';
-    } else {
-      if (op == false) {
-        operatora = result.textContent;
-        operation = '-';
-        firstpoint = false;
-        op = true;
-      }
+    op = true;
+  }
+  operation = '+';
+  firstpoint = false;
+  clean();
+});
+
+subtraction.addEventListener('click', () => {
+  if (result.textContent == '') {
+    result.textContent = result.textContent + '-';
+  } else {
+    if (op == false) {
+      operatora = result.textContent;
       operation = '-';
       firstpoint = false;
-      clean();
-    }
-  };
-  multiplication.onclick = function (e) {
-    if (op == false) {
-      operatora = result.textContent;
-      operation = '*';
-      firstpoint = false;
       op = true;
     }
+    operation = '-';
+    firstpoint = false;
+    clean();
+  }
+});
+
+multiplication.addEventListener('click', () => {
+  if (op == false) {
+    operatora = result.textContent;
     operation = '*';
     firstpoint = false;
-    clean();
-  };
-  division.onclick = function (e) {
-    if (op == false) {
-      operatora = result.textContent;
-      operation = '/';
-      firstpoint = false;
-      op = true;
-    }
+    op = true;
+  }
+  operation = '*';
+  firstpoint = false;
+  clean();
+});
+
+division.addEventListener('click', () => {
+  if (op == false) {
+    operatora = result.textContent;
     operation = '/';
     firstpoint = false;
-    clean();
-  };
-  percentage.onclick = function (e) {
-    if (op == false) {
-      operatorb = result.textContent;
-      operation = '%';
-      firstpoint = false;
-      op = true;
-    }
+    op = true;
+  }
+  operation = '/';
+  firstpoint = false;
+  clean();
+});
+
+percentage.addEventListener('click', () => {
+  if (op == false) {
+    operatorb = result.textContent;
     operation = '%';
     firstpoint = false;
-    solve();
-  };
-  equal.onclick = function (e) {
-    operatorb = result.textContent;
-    op = false;
-    solve();
-  };
-}
+    op = true;
+  }
+  operation = '%';
+  firstpoint = false;
+  solve();
+});
+
+equal.addEventListener('click', () => {
+  operatorb = result.textContent;
+  op = false;
+  solve();
+});
+
 function clean() {
   result.textContent = '';
 }
+
 function resett() {
   result.textContent = '';
   operatora = 0;
@@ -140,6 +156,7 @@ function resett() {
   op = false;
   firstpoint = false;
 }
+
 function solve() {
   var res = 0;
   switch (operation) {
