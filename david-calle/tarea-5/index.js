@@ -26,6 +26,8 @@ const containerPosition = document
 
 const squareRadius = containerPosition.width / 6;
 
+const pieces = document.querySelectorAll(".puzzle-piece");
+
 const getDirection = (
   objectLeft,
   objectRight,
@@ -93,6 +95,17 @@ const move = (piece, direction) => {
   }
 };
 
+const checkVictory = () => {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (i + j == 4) break;
+      if (!matrix[i][j]) return;
+      if (matrix[i][j].getAttribute("number") != i * 3 + j + 1) return;
+    }
+  }
+  alert("champion");
+};
+
 const handleMousemove = (event) => {
   if (!isDown) return;
 
@@ -124,9 +137,8 @@ const handleMouseup = (event) => {
       mousePosition.y
     )
   );
+  checkVictory();
 };
-
-const pieces = document.querySelectorAll(".puzzle-piece");
 
 pieces.forEach((piece) => {
   const index = Math.floor(Math.random() * positions.length);
@@ -136,6 +148,7 @@ pieces.forEach((piece) => {
   piece.setAttribute("col", position[1]);
   piece.style.top = (33.33 * position[0]).toString() + "%";
   piece.style.left = (33.33 * position[1]).toString() + "%";
+  piece.innerHTML = `<p>${piece.getAttribute("number")}</p>`;
   matrix[position[0]][position[1]] = piece;
   piece.addEventListener("mousemove", handleMousemove);
   piece.addEventListener("mousedown", handleMousedown);
