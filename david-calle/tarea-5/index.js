@@ -179,4 +179,4 @@ const startGame = (dimension) => {
   createPieces(dimension);
 };
 
-startGame(3);
+startGame(4);
