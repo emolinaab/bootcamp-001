@@ -4,6 +4,7 @@ export let createButtons=(buttons, contenedorbuttons)=>{
         btn.textContent= button
         btn.classList.add(buttons.class[0])
         btn.classList.add(buttons.class[1])
+        btn.id=button
         btn.value=button
         btn.setAttribute("type","button")
 

@@ -1,6 +1,7 @@
 import {createButtons} from './buttons/physic structure/buttonCreation.js'
 import {numberButtons, operationButtons } from './buttons/physic structure/buttonInformation.js'
 import { btnACOnclick,calculateOperationOnclick,btnDELOnclick} from './buttons/operation/buttonOperation.js'
+import {changeStyles} from './buttons/physic structure/changeStyles.js'
 
 //show calculator structure
 let numberContainerBtn = document.getElementById("numberContainerBtn");
@@ -8,7 +9,6 @@ let operationsContainerBtn = document.getElementById("operationsContainerBtn")
 
 createButtons(numberButtons,numberContainerBtn)
 createButtons(operationButtons,operationsContainerBtn)
-
 
 
 //write on the calculator
@@ -28,3 +28,6 @@ showCharacterOnscreen()
 btnACOnclick()
 calculateOperationOnclick()
 btnDELOnclick()
+
+//styles
+changeStyles()
