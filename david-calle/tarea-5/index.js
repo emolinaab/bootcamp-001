@@ -36,44 +36,51 @@ const getDirection = (
   );
 };
 
-const containerPosition = document
-  .querySelector("#puzzle-container")
-  .getBoundingClientRect();
+const getMousePosition = () => {
+  let e = window.event;
+  return {
+    x: e.clientX,
+    y: e.clientY,
+  };
+};
 
-const squareRadius = containerPosition.width / 6;
 let piecePosition = null;
 let isDown = false;
 
 const handleMousemove = (event) => {
   if (!isDown) return;
-  event.preventDefault();
+  const containerPosition = document
+    .querySelector("#puzzle-container")
+    .getBoundingClientRect();
+  const squareRadius = containerPosition.width / 6;
+
   event.target.style.position;
-  let e = window.event;
-  let posX = e.clientX;
-  let posY = e.clientY;
-  event.target.style.top = posY - containerPosition.top - squareRadius + "px";
-  event.target.style.left = posX - containerPosition.left - squareRadius + "px";
-  console.log(
-    getDirection(
-      piecePosition.left,
-      piecePosition.right,
-      piecePosition.top,
-      piecePosition.bottom,
-      posX,
-      posY
-    )
-  );
+  const mousePosition = getMousePosition();
+  event.target.style.top =
+    mousePosition.y - containerPosition.top - squareRadius + "px";
+  event.target.style.left =
+    mousePosition.x - containerPosition.left - squareRadius + "px";
 };
 
 const handleMousedown = (event) => {
   event.target.style["z-index"] = 100;
   isDown = true;
   piecePosition = event.target.getBoundingClientRect();
-  console.log(piecePosition);
 };
 
 const handleMouseup = (event) => {
   event.target.style["z-index"] = 0;
+  const mousePosition = getMousePosition();
+  console.log(
+    getDirection(
+      piecePosition.left,
+      piecePosition.right,
+      piecePosition.top,
+      piecePosition.bottom,
+      mousePosition.x,
+      mousePosition.y
+    )
+  );
   event.target.style.top =
     (33.33 * event.target.getAttribute("row")).toString() + "%";
   event.target.style.left =
