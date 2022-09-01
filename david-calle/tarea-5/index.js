@@ -25,10 +25,10 @@ const getDirection = (
   mouseY
 ) => {
   const distances = {
-    rightDistance: mouseX - objectRight,
-    leftDistance: objectLeft - mouseX,
-    topdistance: objectTop - mouseY,
-    bottomDistance: mouseY - objectBottom,
+    right: mouseX - objectRight,
+    left: objectLeft - mouseX,
+    top: objectTop - mouseY,
+    bottom: mouseY - objectBottom,
   };
 
   return Object.keys(distances).reduce((a, b) =>
@@ -74,6 +74,10 @@ const handleMousedown = (event) => {
 
 const handleMouseup = (event) => {
   event.target.style["z-index"] = 0;
+  event.target.style.top =
+    (33.33 * event.target.getAttribute("row")).toString() + "%";
+  event.target.style.left =
+    (33.33 * event.target.getAttribute("col")).toString() + "%";
   isDown = false;
 };
 
@@ -83,6 +87,8 @@ pieces.forEach((piece) => {
   const index = Math.floor(Math.random() * positions.length);
   let position = positions[index];
   positions.splice(index, 1);
+  piece.setAttribute("row", position[0]);
+  piece.setAttribute("col", position[1]);
   piece.style.top = (33.33 * position[0]).toString() + "%";
   piece.style.left = (33.33 * position[1]).toString() + "%";
   matrix[position[0]][position[1]] = piece;
