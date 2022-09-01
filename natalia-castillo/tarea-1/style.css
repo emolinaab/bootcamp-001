@@ -1,0 +1,136 @@
+body{
+    background-color: rgb(15, 18, 20);   
+}
+
+div{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#magazine-cover{
+    background-image: url(images/ramen2.jpg);
+    background-size:cover;  
+    height: 150vh;
+    width: 90vh;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    font-size: 2vh;
+    width: 30vh;
+    justify-content: flex-end;
+}
+
+#footer{
+    background-color: rgba(165, 72, 5, 0.587);
+    margin-top: 45vh;
+    height: 12vh;
+    align-items: flex-start;
+    padding-left: 5vh; 
+}
+
+.title{
+    color: rgba(184,178,164,255);
+    font-size: 12vh;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    padding-bottom: 0;
+    
+}
+
+.subtitle{
+    color: rgb(107,71,46);
+    font-size: 3vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.author{
+    width: 20vh;
+    color: rgb(107,71,46);
+    background-color:  rgba(184,178,164,255);
+    font-size: 2vh;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    padding-right: 5px;
+    margin-right: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+span{
+    color: rgb(107,71,46);
+    font-style: italic;
+}
+
+p{
+    font-size: 2vh;
+    color:rgb(146,65,21);
+    width: 15vh;
+
+}
+
+.left{
+    position:relative; 
+    left:412px; 
+}
+
+.right{
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 1vh;
+    
+}
+
+.center{
+    position:relative; 
+    left:50px; 
+    margin-top: 0;
+}
+
+.large{
+    font-size: 4vh;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.larger{
+    font-size: 7vh;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.cream-color{
+    color: rgba(184,178,164,255);
+    width: auto;
+}
+
+.bottom{
+    position:relative; 
+    left:90px; 
+    margin: 0;
+    padding-top: 2vh;
+}
+
+#barcode{
+    position: relative;
+    left: 88px;
+    height: 12vh;
+    width: 10vh;
+}
+
+#images{
+    height: 12vh;
+    width: 12vh;
+    border-radius: 60%;
+    position: relative;
+    right: 220px;
+}

@@ -1,0 +1,28 @@
+.box-sizing-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 1.4rem;
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+#content-box {
+  box-sizing: content-box;
+}
+
+#diferent-size {
+  font-size: 2rem;
+}
+.white {
+  color: white;
+}
+.app {
+  background-image: url(https://hips.hearstapps.com/vidthumb/images/captura-de-pantalla-2022-01-19-a-las-15-39-51-1642608919.jpg);
+  background-size: 158mm;
+  margin-left: 420px;
+  margin-right: 350px;
+}
