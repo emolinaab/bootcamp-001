@@ -164,16 +164,18 @@ const createPieces = (dimension) => {
     piece.setAttribute("number", i + 1);
     piece.setAttribute("class", "puzzle-piece");
 
+    piece.addEventListener("mousemove", handleMousemove);
+    piece.addEventListener("mousedown", handleMousedown);
+    piece.addEventListener("mouseup", handleMouseup);
+
     piece.style.top = wide * position[0] + "%";
     piece.style.left = wide * position[1] + "%";
     piece.style.height = wide + "%";
     piece.style.width = wide + "%";
-    piece.innerHTML = `<p>${i + 1}</p>`;
+    const pieceNumber = document.createTextNode(i + 1);
+    piece.appendChild(pieceNumber);
 
     matrix[position[0]][position[1]] = piece;
-    piece.addEventListener("mousemove", handleMousemove);
-    piece.addEventListener("mousedown", handleMousedown);
-    piece.addEventListener("mouseup", handleMouseup);
     puzzleContainer.appendChild(piece);
   }
 };
@@ -184,4 +186,4 @@ const startGame = (dimension) => {
   createPieces(dimension);
 };
 
-startGame(5);
+startGame(4);
