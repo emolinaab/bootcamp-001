@@ -150,23 +150,18 @@ const createPieces = (dimension) => {
     const index = Math.floor(Math.random() * positions.length);
     const position = positions[index];
     positions.splice(index, 1);
-
     piece.setAttribute("row", position[0]);
     piece.setAttribute("col", position[1]);
     piece.setAttribute("number", i + 1);
     piece.setAttribute("class", "puzzle-piece");
-
     piece.addEventListener("mousemove", handleMousemove);
     piece.addEventListener("mousedown", handleMousedown);
     piece.addEventListener("mouseup", handleMouseup);
-
-    piece.style.top = wide * position[0] + "%";
-    piece.style.left = wide * position[1] + "%";
+    setPiecePosition(piece, wide * position[0] + "%", wide * position[1] + "%");
     piece.style.height = wide + "%";
     piece.style.width = wide + "%";
     const pieceNumber = document.createTextNode(i + 1);
     piece.appendChild(pieceNumber);
-
     matrix[position[0]][position[1]] = piece;
     puzzleContainer.appendChild(piece);
   }
