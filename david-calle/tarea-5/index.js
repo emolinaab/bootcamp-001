@@ -1,18 +1,12 @@
 let matrix = null;
-
 let positions = null;
-
 let piecePosition = null;
-
 let isDown = false;
-
 let puzzleDimension = null;
 
 const containerPosition = document
   .querySelector("#puzzle-container")
   .getBoundingClientRect();
-
-const pieces = document.querySelectorAll(".puzzle-piece");
 
 const getDirection = (
   objectLeft,
@@ -42,49 +36,47 @@ const getMousePosition = () => {
   };
 };
 
+const setPiecePosition = (piece, top, left) => {
+  piece.style.top = top;
+  piece.style.left = left;
+};
+
+const isInsideTheMatrix = (row, col) => {
+  return (
+    row >= 0 &&
+    row <= puzzleDimension - 1 &&
+    col >= 0 &&
+    col <= puzzleDimension - 1
+  );
+};
+
 const move = (piece, direction) => {
   const row = parseInt(piece.getAttribute("row"));
   const col = parseInt(piece.getAttribute("col"));
-  let movex = 0;
-  let movey = 0;
   const wide = 100 / puzzleDimension;
-
-  switch (direction) {
-    case "right":
-      movex += 1;
-      break;
-    case "left":
-      movex += -1;
-      break;
-    case "up":
-      movey += -1;
-      break;
-    case "down":
-      movey += 1;
-      break;
-  }
-
+  const movex = direction == "right" ? 1 : direction == "left" ? -1 : 0;
+  const movey = direction == "down" ? 1 : direction == "up" ? -1 : 0;
   const destinyRow = row + movey;
   const destinyCol = col + movex;
-
   if (
-    destinyRow < 0 ||
-    destinyRow > puzzleDimension - 1 ||
-    destinyCol < 0 ||
-    destinyCol > puzzleDimension - 1
+    isInsideTheMatrix(destinyRow, destinyCol) &&
+    matrix[destinyRow][destinyCol] === null
   ) {
-    piece.style.top = (wide * row).toString() + "%";
-    piece.style.left = (wide * col).toString() + "%";
-  } else if (matrix[destinyRow][destinyCol] === null) {
     matrix[row][col] = null;
     matrix[destinyRow][destinyCol] = piece;
-    piece.style.top = (wide * destinyRow).toString() + "%";
-    piece.style.left = (wide * destinyCol).toString() + "%";
+    setPiecePosition(
+      piece,
+      (wide * destinyRow).toString() + "%",
+      (wide * destinyCol).toString() + "%"
+    );
     piece.setAttribute("row", destinyRow);
     piece.setAttribute("col", destinyCol);
   } else {
-    piece.style.top = (wide * row).toString() + "%";
-    piece.style.left = (wide * col).toString() + "%";
+    setPiecePosition(
+      piece,
+      (wide * row).toString() + "%",
+      (wide * col).toString() + "%"
+    );
   }
 };
 
@@ -181,9 +173,10 @@ const createPieces = (dimension) => {
 };
 
 const startGame = (dimension) => {
+  document.querySelector("#puzzle-container").innerHTML = "";
   setDimensions(dimension);
   createPuzzleBase(dimension);
   createPieces(dimension);
 };
 
-startGame(4);
+startGame(3);
