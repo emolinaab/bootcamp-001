@@ -1,30 +1,16 @@
-const matrix = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
+let matrix = null;
 
-const positions = [
-  [0, 0],
-  [0, 1],
-  [0, 2],
-  [1, 0],
-  [1, 1],
-  [1, 2],
-  [2, 0],
-  [2, 1],
-  [2, 2],
-];
+let positions = null;
 
 let piecePosition = null;
 
 let isDown = false;
 
+let puzzleDimension = null;
+
 const containerPosition = document
   .querySelector("#puzzle-container")
   .getBoundingClientRect();
-
-const squareRadius = containerPosition.width / 6;
 
 const pieces = document.querySelectorAll(".puzzle-piece");
 
@@ -61,6 +47,8 @@ const move = (piece, direction) => {
   const col = parseInt(piece.getAttribute("col"));
   let movex = 0;
   let movey = 0;
+  const wide = 100 / puzzleDimension;
+
   switch (direction) {
     case "right":
       movex += 1;
@@ -79,28 +67,34 @@ const move = (piece, direction) => {
   const destinyRow = row + movey;
   const destinyCol = col + movex;
 
-  if (destinyRow < 0 || destinyRow > 2 || destinyCol < 0 || destinyCol > 2) {
-    piece.style.top = (33.33 * row).toString() + "%";
-    piece.style.left = (33.33 * col).toString() + "%";
+  if (
+    destinyRow < 0 ||
+    destinyRow > puzzleDimension - 1 ||
+    destinyCol < 0 ||
+    destinyCol > puzzleDimension - 1
+  ) {
+    piece.style.top = (wide * row).toString() + "%";
+    piece.style.left = (wide * col).toString() + "%";
   } else if (matrix[destinyRow][destinyCol] === null) {
     matrix[row][col] = null;
     matrix[destinyRow][destinyCol] = piece;
-    piece.style.top = (33.33 * destinyRow).toString() + "%";
-    piece.style.left = (33.33 * destinyCol).toString() + "%";
+    piece.style.top = (wide * destinyRow).toString() + "%";
+    piece.style.left = (wide * destinyCol).toString() + "%";
     piece.setAttribute("row", destinyRow);
     piece.setAttribute("col", destinyCol);
   } else {
-    piece.style.top = (33.33 * row).toString() + "%";
-    piece.style.left = (33.33 * col).toString() + "%";
+    piece.style.top = (wide * row).toString() + "%";
+    piece.style.left = (wide * col).toString() + "%";
   }
 };
 
 const checkVictory = () => {
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      if (i + j == 4) break;
+  for (let i = 0; i < puzzleDimension; i++) {
+    for (let j = 0; j < puzzleDimension; j++) {
+      if (i + j === puzzleDimension * 2 - 2) break;
       if (!matrix[i][j]) return;
-      if (matrix[i][j].getAttribute("number") != i * 3 + j + 1) return;
+      if (matrix[i][j].getAttribute("number") != i * puzzleDimension + j + 1)
+        return;
     }
   }
   alert("champion");
@@ -108,7 +102,7 @@ const checkVictory = () => {
 
 const handleMousemove = (event) => {
   if (!isDown) return;
-
+  const squareRadius = containerPosition.width / (puzzleDimension * 2);
   const mousePosition = getMousePosition();
   event.target.style.top =
     mousePosition.y - containerPosition.top - squareRadius + "px";
@@ -140,17 +134,54 @@ const handleMouseup = (event) => {
   checkVictory();
 };
 
-pieces.forEach((piece) => {
-  const index = Math.floor(Math.random() * positions.length);
-  let position = positions[index];
-  positions.splice(index, 1);
-  piece.setAttribute("row", position[0]);
-  piece.setAttribute("col", position[1]);
-  piece.style.top = (33.33 * position[0]).toString() + "%";
-  piece.style.left = (33.33 * position[1]).toString() + "%";
-  piece.innerHTML = `<p>${piece.getAttribute("number")}</p>`;
-  matrix[position[0]][position[1]] = piece;
-  piece.addEventListener("mousemove", handleMousemove);
-  piece.addEventListener("mousedown", handleMousedown);
-  piece.addEventListener("mouseup", handleMouseup);
-});
+const setDimensions = (dimension) => {
+  puzzleDimension = dimension;
+};
+
+const createPuzzleBase = (dimension) => {
+  matrix = [];
+  positions = [];
+  for (let i = 0; i < dimension; i++) {
+    matrix.push(new Array(dimension).fill(null));
+    for (let j = 0; j < dimension; j++) {
+      positions.push([i, j]);
+    }
+  }
+};
+
+const createPieces = (dimension) => {
+  const piecesNumber = dimension ** 2 - 1;
+  const puzzleContainer = document.querySelector("#puzzle-container");
+  const wide = 100 / dimension;
+  for (let i = 0; i < piecesNumber; i++) {
+    const piece = document.createElement("div");
+    const index = Math.floor(Math.random() * positions.length);
+    const position = positions[index];
+    positions.splice(index, 1);
+
+    piece.setAttribute("row", position[0]);
+    piece.setAttribute("col", position[1]);
+    piece.setAttribute("number", i + 1);
+    piece.setAttribute("class", "puzzle-piece");
+
+    piece.style.top = wide * position[0] + "%";
+    piece.style.left = wide * position[1] + "%";
+    piece.style.height = wide + "%";
+    piece.style.width = wide + "%";
+    piece.innerHTML = `<p>${i + 1}</p>`;
+
+    matrix[position[0]][position[1]] = piece;
+    piece.addEventListener("mousemove", handleMousemove);
+    piece.addEventListener("mousedown", handleMousedown);
+    piece.addEventListener("mouseup", handleMouseup);
+    puzzleContainer.appendChild(piece);
+  }
+};
+
+const startGame = (dimension) => {
+  setDimensions(dimension);
+  createPuzzleBase(dimension);
+  createPieces(dimension);
+};
+
+startGame(5);
