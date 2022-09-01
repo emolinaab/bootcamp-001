@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" />
+    <script src="index.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <div id="Previous-Value"></div>
+                <div id="Current-Value"></div>
+            </div>
+            <button class="col-1" onclick="display.deleteAll()">C</button>
+            <button class="operator" value="porcentage">%</button>
+            <button onclick="display.delete()">&larr;</button>
+            <button class="operator" value="divide">/</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator" value="multiply">*</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="number" value="subtraction">-</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator" value="addition">+</button>
+            <button class="col-2 number">0</button>
+            <button class="number">.</button>
+            <button class="operator" value="equal">=</button>
+        </div>
+    </div>
+</body>
+</html>
