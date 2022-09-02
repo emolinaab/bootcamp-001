@@ -15,11 +15,11 @@ const buttons = [
     {text: "7", cls: "num"},
     {text: "8", cls: "num"},
     {text: "9", cls: "num"},
-    {text: "AC", cls: "num"},
+    {text: "AC", cls: "allClear"},
     {text: "4", cls: "num"},
     {text: "5", cls: "num"},
     {text: "6", cls: "num"},
-    {text: "C", cls: "num"},
+    {text: "C", cls: "clear"},
     {text: "1", cls: "num"},
     {text: "2", cls: "num"},
     {text: "3", cls: "num"},
@@ -42,8 +42,4 @@ buttons.map((b) => {
     makeButton(b);
 });
 
-const numberButtons = document.querySelectorAll('.num')
-console.log(numberButtons)
 
-const icon = document.querySelectorAll('img')
-console.log(icon[0].className)
