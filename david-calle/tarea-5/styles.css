@@ -23,6 +23,7 @@ body{
     height: 50vmin;
     border: 1px solid white;
     position: relative;
+    display: none;
 }
 
 .puzzle-piece{
@@ -39,4 +40,35 @@ body{
 .puzzle-piece:hover{
     cursor: pointer;
     
+}
+
+#introductory-text{
+    color: white;
+}
+
+#dimension-input{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+button{
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+
+button:hover{
+    cursor: pointer;
 }

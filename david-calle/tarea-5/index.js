@@ -3,10 +3,7 @@ let positions = null;
 let piecePosition = null;
 let isDown = false;
 let puzzleDimension = null;
-
-const containerPosition = document
-  .querySelector("#puzzle-container")
-  .getBoundingClientRect();
+let containerPosition = null;
 
 const getDirection = (
   objectLeft,
@@ -174,4 +171,19 @@ const startGame = (dimension) => {
   createPieces(dimension);
 };
 
-startGame(4);
+const startButton = document.querySelector("button[type='submit']");
+
+startButton.addEventListener("mouseup", () => {
+  let dimensionInput = document.querySelector("#dimension-input").value;
+  dimensionInput = parseInt(dimensionInput);
+  if (isNaN(dimensionInput) || dimensionInput < 1) {
+    alert("type a valid number");
+    return;
+  }
+  document.querySelector("#puzzle-container").style.display = "block";
+  document.querySelector("#game-selector").style.display = "none";
+  containerPosition = document
+    .querySelector("#puzzle-container")
+    .getBoundingClientRect();
+  startGame(dimensionInput);
+});
