@@ -1,0 +1,24 @@
+input{
+    width: 90%;
+    height: 30px;
+    border-width: 5px;
+}
+table{
+    margin: auto;
+}
+tbody{
+    background-color: blanchedalmond;
+}
+button{
+    width: 60px;
+    height: 40px;
+    background-color: rgb(222, 237, 237);
+    border-radius: 55%;
+}
+.operation{
+    background-color: rgb(68, 113, 176);
+    color: antiquewhite;
+}
+.total{
+    width: 122px;
+}
