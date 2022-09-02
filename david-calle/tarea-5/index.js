@@ -5,7 +5,7 @@ let isDown = false;
 let puzzleDimension = null;
 let containerPosition = null;
 
-const getDirection = (
+const getMoveDirection = (
   objectLeft,
   objectRight,
   objectTop,
@@ -83,10 +83,11 @@ const checkVictory = () => {
       if (i + j === puzzleDimension * 2 - 2) break;
       if (!matrix[i][j]) return;
       if (matrix[i][j].getAttribute("number") != i * puzzleDimension + j + 1)
-        return;
+        return false;
     }
   }
   alert("champion");
+  return true;
 };
 
 const handleMousemove = (event) => {
@@ -111,7 +112,7 @@ const handleMouseup = (event) => {
   const mousePosition = getMousePosition();
   move(
     event.target,
-    getDirection(
+    getMoveDirection(
       piecePosition.left,
       piecePosition.right,
       piecePosition.top,
@@ -121,10 +122,6 @@ const handleMouseup = (event) => {
     )
   );
   checkVictory();
-};
-
-const setDimensions = (dimension) => {
-  puzzleDimension = dimension;
 };
 
 const createPuzzleBase = (dimension) => {
@@ -138,37 +135,42 @@ const createPuzzleBase = (dimension) => {
   }
 };
 
-const createPieces = (dimension) => {
+const createIndividualPiece = (number, dimension) => {
+  const wide = 100 / dimension;
+  const piece = document.createElement("div");
+  const index = Math.floor(Math.random() * positions.length);
+  const position = positions[index];
+  positions.splice(index, 1);
+  piece.setAttribute("row", position[0]);
+  piece.setAttribute("col", position[1]);
+  piece.setAttribute("number", number + 1);
+  piece.setAttribute("class", "puzzle-piece");
+  piece.addEventListener("mousemove", handleMousemove);
+  piece.addEventListener("mousedown", handleMousedown);
+  piece.addEventListener("mouseup", handleMouseup);
+  setPiecePosition(piece, wide * position[0] + "%", wide * position[1] + "%");
+  piece.style.height = wide + "%";
+  piece.style.width = wide + "%";
+  const pieceNumber = document.createTextNode(number + 1);
+  piece.appendChild(pieceNumber);
+  matrix[position[0]][position[1]] = piece;
+  return piece;
+};
+
+const generatePieces = (dimension) => {
   const piecesNumber = dimension ** 2 - 1;
   const puzzleContainer = document.querySelector("#puzzle-container");
-  const wide = 100 / dimension;
   for (let i = 0; i < piecesNumber; i++) {
-    const piece = document.createElement("div");
-    const index = Math.floor(Math.random() * positions.length);
-    const position = positions[index];
-    positions.splice(index, 1);
-    piece.setAttribute("row", position[0]);
-    piece.setAttribute("col", position[1]);
-    piece.setAttribute("number", i + 1);
-    piece.setAttribute("class", "puzzle-piece");
-    piece.addEventListener("mousemove", handleMousemove);
-    piece.addEventListener("mousedown", handleMousedown);
-    piece.addEventListener("mouseup", handleMouseup);
-    setPiecePosition(piece, wide * position[0] + "%", wide * position[1] + "%");
-    piece.style.height = wide + "%";
-    piece.style.width = wide + "%";
-    const pieceNumber = document.createTextNode(i + 1);
-    piece.appendChild(pieceNumber);
-    matrix[position[0]][position[1]] = piece;
+    const piece = createIndividualPiece(i, dimension);
     puzzleContainer.appendChild(piece);
   }
 };
 
 const startGame = (dimension) => {
   document.querySelector("#puzzle-container").innerHTML = "";
-  setDimensions(dimension);
+  puzzleDimension = dimension;
   createPuzzleBase(dimension);
-  createPieces(dimension);
+  generatePieces(dimension);
 };
 
 const startButton = document.querySelector("button[type='submit']");
@@ -186,4 +188,7 @@ startButton.addEventListener("mouseup", () => {
     .querySelector("#puzzle-container")
     .getBoundingClientRect();
   startGame(dimensionInput);
+  if (checkVictory()) {
+    alert("you're a lucky one");
+  }
 });
