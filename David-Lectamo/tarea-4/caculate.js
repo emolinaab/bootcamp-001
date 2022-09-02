@@ -31,85 +31,86 @@ function init(){
   let point = document.getElementById('point');
   let equal = document.getElementById('equal');
 
-  one.onclick = function(e){
-  if (result.textContent === '0') {
+  one.addEventListener('click', () => {
+    if (result.textContent === '0') {
       result.textContent = '1';
     } else {
       result.textContent = result.textContent + '1';
     }
-  }
+  });
+  
 
-  two.onclick = function(e){
+  two.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '2';
     } else {
       result.textContent = result.textContent + '2';
     }
-  }
+  });
 
-  three.onclick = function(e){
+  three.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '3';
     } else {
       result.textContent = result.textContent + '3';
     }
-  }
+  });
 
-  four.onclick = function(e){
+  four.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '4';
     } else {
       result.textContent = result.textContent + '4';
     }
-  }
+  });
 
-  five.onclick = function(e){
+  five.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '5';
     } else {
       result.textContent = result.textContent + '5';
     }
-  }
+  });
 
-  six.onclick = function(e){
+  six.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '6';
     } else {
       result.textContent = result.textContent + '6';
     }
-  }
+  });
 
-  seven.onclick = function(e){
+  seven.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '7';
     } else {
       result.textContent = result.textContent + '7';
     }
-  }
+  });
 
-  eight.onclick = function(e){
+  eight.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '8';
     } else {
       result.textContent = result.textContent + '8';
     }
-  }
+  });
 
-  nine.onclick = function(e){
+  nine.addEventListener('click', () => {
     if (result.textContent === '0') {
       result.textContent = '9';
     } else {
       result.textContent = result.textContent + '9';
     }
-  }
+  });
 
-  zero.onclick = function(e){
+  zero.addEventListener('click', () => {
     if (result.textContent !== '0') {
       result.textContent = result.textContent + '0';
     } 
-  }
+  });
 
-  point.onclick = function(e){
+  point.addEventListener('click', () => {
     if(!decimal1){
       result.textContent = result.textContent + '.';
       decimal1 = true;
@@ -119,69 +120,71 @@ function init(){
         decimal2 = true;
       }
     }
-  }
+  });
 
-  clear.onclick = function(e){
+  clear.addEventListener('click', () => {
     reset();
-  }
+  });
 
-  division.onclick = function(e) {
+  division.addEventListener('click', () => {
     if (!operatorSelected) {
-      operating1 = result.textContent;
+      operating1 = parseFloat(result.textContent);
       operation = '/';   
       cleanUp();
       operatorSelected = true;
     }
-  }
+  });
 
-  multiplication.onclick = function(e) {
+  multiplication.addEventListener('click', () => {
     if (!operatorSelected) {
-      operating1 = result.textContent;
+      operating1 = parseFloat(result.textContent);
       operation = '*';
       cleanUp();
       operatorSelected = true;
     }
-  }
+  });
 
-  subtraction.onclick = function(e) {
+  subtraction.addEventListener('click', () => {
     if(result.textContent === '0') {
       result.textContent =  '-';
     } else {
       if (!operatorSelected && result.textContent !== '') {
-        operating1 = result.textContent;
+        operating1 = parseFloat(result.textContent);
         operation = '-';
         cleanUp();
         operatorSelected = true;
       }
     }
-  }
+  });
 
-  addition.onclick = function(e) {
+  addition.addEventListener('click', () => {
     if (!operatorSelected) {
-      operating1 = result.textContent;
+      operating1 = parseFloat(result.textContent);
       operation = '+';
       cleanUp();
       operatorSelected = true;
     }
-  }
+  });
 
-  percentage.onclick = function(e) {
+  percentage.addEventListener('click', () => {
     if (!operatorSelected) {
-      operating1 = result.textContent;
+      operating1 = parseFloat(result.textContent);
       operation = '%';
       cleanUp();
       operatorSelected = true;
     }
-  }
+  });
 
-  equal.onclick = function(e) {
+  equal.addEventListener('click', () => {
     if (operatorSelected) {
-      operating2 = result.textContent;
+      operating2 = parseFloat(result.textContent);
       if(operating1 !== '' && operating2 !== ''){
+        solve();
+      } else if (operating1 !== '' && operating2 === '' && operation === '%') {
         solve();
       }
     }
-  }
+  });
 }
 
 function cleanUp() {
@@ -199,30 +202,28 @@ function reset() {
 }
 
 function solve() {
-  let res = 0;
+  var res = 0;
   switch(operation) {
     case '+':
-      res = parseFloat(operating1) + parseFloat(operating2);
+      res = operating1 + operating2;
       break;
     case '-':
-      res = parseFloat(operating1) - parseFloat(operating2);
+      res = operating1 - operating2;
       break;
     case '*':
-      res = parseFloat(operating1) * parseFloat(operating2);
+      res = operating1 * operating2;
       break;
     case '/':
-      res = parseFloat(operating1) / parseFloat(operating2);
+      res = operating1 / operating2;
       break;
     case '%':
-      if (operating2=== '') {
-        res = parseFloat(operating1)/100;
+      if (operating2 === '') {
+        res = operating1/100;
         break;
-      } else if (operating2!==0){
-        res = parseFloat(operating1)/100 * (parseFloat(operating2));
+      } else if (operating2 !== 0){
+        res = operating1/100 * (operating2);
         break;
       }
-      result.textContent = 'Sintax error';
-      break;
   }
   reset();
   result.textContent = res + '';
