@@ -1,0 +1,81 @@
+.container {
+  background-image: url(img/fondo.jpg);
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px 0px #000000;
+  margin: 0px auto;
+  width: 600px;
+  background-color: rgba(0, 255, 255, 0.437);
+  padding: 12px;
+  height: 600px;
+}
+.titulo-flex {
+  background-color: rgba(201, 195, 223, 0.176);
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 60%;
+}
+
+.description p {
+  font: oblique bold 95% cursive;
+  color:#fff;
+  text-align: left;
+  height: 40;
+  width: 90;
+  margin-right: 65%;
+  margin-top: 10%;
+  margin-bottom: 10px;
+}
+
+.text p {
+  font: oblique bold 100% cursive;
+  color: #fff; 
+}
+
+ img {
+  float: left;
+  box-shadow: 0px 8px 12px 0px #000000;
+  padding: 4px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px; 
+}
+
+.text {
+  margin-top: 38%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.customs p {
+  text-align: left;
+  background-color: rgba(78, 72, 238, 0.674);
+}
+
+.text1 p {
+  width: 200px;
+  height: 75px;
+  text-align: left;
+  padding: 3px;
+  flex-direction: row-reverse;
+  align-content: space-between;
+  background-color: rgba(78, 72, 238, 0.674);
+  margin-right: 48%;
+}
+
+.titulo-flex h1 {
+  color: #442ec3;
+  text-align: left;
+  font: oblique bold 140% cursive;
+  text-decoration-line: underline;
+  text-decoration-color: rgb(222, 213, 214);
+}
+
+.text2 {
+  color: rgb(243, 109, 131);
+  font: oblique bold 100% cursive;
+  box-shadow: 0px 8px 12px 0px #000000;
+  padding: 3px;
+}
+
