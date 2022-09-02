@@ -19,8 +19,8 @@ body{
 }
 
 #puzzle-container{
-    width: 50vmin;
-    height: 50vmin;
+    width: 80vmin;
+    height: 80vmin;
     border: 1px solid white;
     position: relative;
     display: none;
