@@ -178,7 +178,7 @@ const startButton = document.querySelector("button[type='submit']");
 startButton.addEventListener("mouseup", () => {
   let dimensionInput = document.querySelector("#dimension-input").value;
   dimensionInput = parseInt(dimensionInput);
-  if (isNaN(dimensionInput) || dimensionInput < 1) {
+  if (isNaN(dimensionInput) || dimensionInput <= 1) {
     alert("type a valid number");
     return;
   }
