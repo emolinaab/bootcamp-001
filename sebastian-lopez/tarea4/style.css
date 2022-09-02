@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(54, 54, 32);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+section{
+    background-color: rgb(39, 39, 39);
+    max-width: 90%;
+
+}
+
+input{
+    outline: 0;
+    border: 0;
+    width: 100%;
+    background-color: rgb(62, 63, 72);
+    text-align: right;
+    font-size: 3em;
+    color: whitesmoke;
+    padding: 1em 0.5em;
+    letter-spacing: 0.1em;
+}
+
+#buttons{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:0.6em;
+    gap:10px;
+}
+
+button{
+    padding: 0.8em;
+    cursor: pointer; 
+    color:white;
+    background-color: rgb(48, 48, 48);
+    border: 0;
+    font-size: 1.5em;
+}
+
+button:hover{
+    background-color: rgb(69, 69, 69);
+}
+
+#answer{
+    grid-column: span 3;
+}
