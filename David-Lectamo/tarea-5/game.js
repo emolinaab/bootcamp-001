@@ -31,276 +31,176 @@ function init(){
   const cell33 = document.getElementById('cell33');
 
   cell33.addEventListener('click', () => {
-    const c33 = numbers[3][3];               //Save the current value of the cell
     if (numbers[3][2] == undefined) {        //Asks if the cell to its left is empty
-      numbers[3][3] = numbers[3][2];         //Assign empty to its value
-      numbers[3][2] = c33;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(3,3,  3,2);
     } else if (numbers[2][3] == undefined) { //Ask if the cell above is empty
-      numbers[3][3] = numbers[2][3];         //Assign empty to its value
-      numbers[2][3] = c33;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(3,3,  2,3);
     }
   });
 
   cell32.addEventListener('click', () => {
-    const c32 = numbers[3][2];               //Save the current value of the cell
     if (numbers[3][3] == undefined) {        //Asks if the cell to its right is empty
-      numbers[3][2] = numbers[3][3];         //Assign empty to its value
-      numbers[3][3] = c32;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(3,2,  3,3);                 
     } else if (numbers[3][1] == undefined) { //Asks if the cell to its left is empty
-      numbers[3][2] = numbers[3][1];         //Assign empty to its value
-      numbers[3][1] = c32;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(3,2,  3,1);      
     } else if (numbers[2][2] == undefined) { //Ask if the cell above is empty
-      numbers[3][2] = numbers[2][2];         //Assign empty to its value
-      numbers[2][2] = c32;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(3,2,  2,2);    
     }
   });
 
   cell31.addEventListener('click', () => {
-    const c31 = numbers[3][1];               //Save the current value of the cell
     if (numbers[3][2] == undefined) {        //Asks if the cell to its right is empty
-      numbers[3][1] = numbers[3][2];         //Assign empty to its value
-      numbers[3][2] = c31;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(3,1,  3,2);
     } else if (numbers[3][0] == undefined) { //Asks if the cell to its left is empty
-      numbers[3][1] = numbers[3][0];         //Assign empty to its value
-      numbers[3][0] = c31;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(3,1,  3,0);
     } else if (numbers[2][1] == undefined) { //Ask if the cell above is empty
-      numbers[3][1] = numbers[2][1];         //Assign empty to its value
-      numbers[2][1] = c31;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(3,1,  2,1);
     }
   });
   
   cell30.addEventListener('click', () => {
-    const c30 = numbers[3][0];               //Save the current value of the cell
     if (numbers[3][1] == undefined) {        //Asks if the cell to its right is empty
-      numbers[3][0] = numbers[3][1];         //Assign empty to its value
-      numbers[3][1] = c30;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(3,0,  3,1);
     } else if (numbers[2][0] == undefined) { //Ask if the cell above is empty
-      numbers[3][0] = numbers[2][0];         //Assign empty to its value
-      numbers[2][0] = c30;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(3,0,  2,0);
     }
   });
 
   cell23.addEventListener('click', () => {
-    const c23 = numbers[2][3];               //Save the current value of the cell
     if (numbers[2][2] == undefined) {        //Asks if the cell to its left is empty
-      numbers[2][3] = numbers[2][2];         //Assign empty to its value
-      numbers[2][2] = c23;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(2,3,  2,2);
     } else if (numbers[1][3] == undefined) { //Ask if the cell above is empty
-      numbers[2][3] = numbers[1][3];         //Assign empty to its value
-      numbers[1][3] = c23;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(2,3,  1,3);
     } else if (numbers[3][3] == undefined) { //Ask if the cell below is empty
-      numbers[2][3] = numbers[3][3];         //Assign empty to its value
-      numbers[3][3] = c23;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(2,3,  3,3);
     }
   });
 
   cell22.addEventListener('click', () => {
-    const c22 = numbers[2][2];               //Save the current value of the cell
-    if (numbers[2][3] == undefined) {        //Asks if the cell to its right is empty
-      numbers[2][2] = numbers[2][3];         //Assign empty to its value
-      numbers[2][3] = c22;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+    if (numbers[2][3] == undefined) {        //Asks if the cell to its right is empty 
+      changeValues(2,2,  2,3);
     } else if (numbers[2][1] == undefined) { //Asks if the cell to its left is empty
-      numbers[2][2] = numbers[2][1];         //Assign empty to its value
-      numbers[2][1] = c22;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(2,2,  2,1);
     } else if (numbers[1][2] == undefined) { //Ask if the cell above is empty
-      numbers[2][2] = numbers[1][2];         //Assign empty to its value
-      numbers[1][2] = c22;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(2,2,  1,2);
     } else if (numbers[3][2] == undefined) { //Ask if the cell below is empty
-      numbers[2][2] = numbers[3][2];         //Assign empty to its value
-      numbers[3][2] = c22;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(2,2,  3,2);
     }
   });
 
   cell21.addEventListener('click', () => {
-    const c21 = numbers[2][1];               //Save the current value of the cell
     if (numbers[2][2] == undefined) {        //Asks if the cell to its right is empty
-      numbers[2][1] = numbers[2][2];         //Assign empty to its value
-      numbers[2][2] = c21;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(2,1,  2,2);
     } else if (numbers[2][0] == undefined) { //Asks if the cell to its left is empty
-      numbers[2][1] = numbers[2][0];         //Assign empty to its value
-      numbers[2][0] = c21;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(2,1,  2,0);
     } else if (numbers[1][1] == undefined) { //Ask if the cell above is empty
-      numbers[2][1] = numbers[1][1];         //Assign empty to its value
-      numbers[1][1] = c21;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(2,1,  1,1);
     } else if (numbers[3][1] == undefined) { //Ask if the cell below is empty
-      numbers[2][1] = numbers[3][1];         //Assign empty to its value
-      numbers[3][1] = c21;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(2,1,  3,1);
     }
   });
 
   cell20.addEventListener('click', () => {
-    const c20 = numbers[2][0];               //Save the current value of the cell
     if (numbers[2][1] == undefined) {        //Asks if the cell to its right is empty
-      numbers[2][0] = numbers[2][1];         //Assign empty to its value
-      numbers[2][1] = c20;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(2,0,  2,1);
     } else if (numbers[1][0] == undefined) { //Ask if the cell above is empty
-      numbers[2][0] = numbers[1][0];         //Assign empty to its value
-      numbers[1][0] = c20;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(2,0,  1,0);
     } else if (numbers[3][0] == undefined) { //Ask if the cell below is empty
-      numbers[2][0] = numbers[3][0];         //Assign empty to its value
-      numbers[3][0] = c20;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(2,0,  3,0);
     }
   });
 
   cell13.addEventListener('click', () => {
-    const c13 = numbers[1][3];               //Save the current value of the cell
     if (numbers[1][2] == undefined) {        //Asks if the cell to its left is empty
-      numbers[1][3] = numbers[1][2];         //Assign empty to its value
-      numbers[1][2] = c13;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(1,3,  1,2);
     } else if (numbers[0][3] == undefined) { //Ask if the cell above is empty
-      numbers[1][3] = numbers[0][3];         //Assign empty to its value
-      numbers[0][3] = c13;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(1,3,  0,3);
     } else if (numbers[2][3] == undefined) { //Ask if the cell below is empty
-      numbers[1][3] = numbers[2][3];         //Assign empty to its value
-      numbers[2][3] = c13;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(1,3,  2,3);
     }
   });
 
   cell12.addEventListener('click', () => {
-    const c12 = numbers[1][2];               //Save the current value of the cell
     if (numbers[1][3] == undefined) {        //Asks if the cell to its right is empty
-      numbers[1][2] = numbers[1][3];         //Assign empty to its value
-      numbers[1][3] = c12;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(1,2,  1,3);
     } else if (numbers[1][1] == undefined) { //Asks if the cell to its left is empty
-      numbers[1][2] = numbers[1][1];         //Assign empty to its value
-      numbers[1][1] = c12;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(1,2,  1,1);
     } else if (numbers[0][2] == undefined) { //Ask if the cell above is empty
-      numbers[1][2] = numbers[0][2];         //Assign empty to its value
-      numbers[0][2] = c12;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(1,2,  0,2);
     } else if (numbers[2][2] == undefined) { //Ask if the cell below is empty
-      numbers[1][2] = numbers[2][2];         //Assign empty to its value
-      numbers[2][2] = c12;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(1,2,  2,2);
     }
   });
 
   cell11.addEventListener('click', () => {
-    const c11 = numbers[1][1];               //Save the current value of the cell
     if (numbers[1][2] == undefined) {        //Asks if the cell to its right is empty
-      numbers[1][1] = numbers[1][2];         //Assign empty to its value
-      numbers[1][2] = c11;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(1,1,  1,2);
     } else if (numbers[1][0] == undefined) { //Asks if the cell to its left is empty
-      numbers[1][1] = numbers[1][0];         //Assign empty to its value
-      numbers[1][0] = c11;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(1,1,  1,0);
     } else if (numbers[0][1] == undefined) { //Ask if the cell above is empty
-      numbers[1][1] = numbers[0][1];         //Assign empty to its value
-      numbers[0][1] = c11;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(1,1,  0,1);
     } else if (numbers[2][1] == undefined) { //Ask if the cell below is empty
-      numbers[1][1] = numbers[2][1];         //Assign empty to its value
-      numbers[2][1] = c11;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(1,1,  2,1);
     }
   });
 
   cell10.addEventListener('click', () => {
-    const c10 = numbers[1][0];               //Save the current value of the cell
     if (numbers[1][1] == undefined) {        //Asks if the cell to its right is empty
-      numbers[1][0] = numbers[1][1];         //Assign empty to its value
-      numbers[1][1] = c10;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(1,0,  1,1);
     } else if (numbers[0][0] == undefined) { //Ask if the cell above is empty
-      numbers[1][0] = numbers[0][0];         //Assign empty to its value
-      numbers[0][0] = c10;                   //Assigns the previously saved value to the cell above
-      refesh();
+      changeValues(1,0,  0,0);
     } else if (numbers[2][0] == undefined) { //Ask if the cell below is empty
-      numbers[1][0] = numbers[2][0];         //Assign empty to its value
-      numbers[2][0] = c10;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(1,0,  2,0);
     }
   });
 
   cell03.addEventListener('click', () => {
-    const c03 = numbers[0][3];               //Save the current value of the cell
     if (numbers[0][2] == undefined) {        //Asks if the cell to its left is empty
-      numbers[0][3] = numbers[0][2];         //Assign empty to its value
-      numbers[0][2] = c03;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(0,3,  0,2);
     } else if (numbers[1][3] == undefined) { //Ask if the cell below is empty
-      numbers[0][3] = numbers[1][3];         //Assign empty to its value
-      numbers[1][3] = c03;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(0,3,  1,3);
     }
   });
 
   cell02.addEventListener('click', () => {
-    const c02 = numbers[0][2];               //Save the current value of the cell
     if (numbers[0][3] == undefined) {        //Asks if the cell to its right is empty
-      numbers[0][2] = numbers[0][3];         //Assign empty to its value
-      numbers[0][3] = c02;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(0,2,  0,3);
     } else if (numbers[0][1] == undefined) { //Asks if the cell to its left is empty
-      numbers[0][2] = numbers[0][1];         //Assign empty to its value
-      numbers[0][1] = c02;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(0,2,  0,1);
     } else if (numbers[1][2] == undefined) { //Ask if the cell below is empty
-      numbers[0][2] = numbers[1][2];         //Assign empty to its value
-      numbers[1][2] = c02;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(0,2,  1,2);
     }
   });
   
   cell01.addEventListener('click', () => {
-    const c01 = numbers[0][1];               //Save the current value of the cell
     if (numbers[0][2] == undefined) {        //Asks if the cell to its right is empty
-      numbers[0][1] = numbers[0][2];         //Assign empty to its value
-      numbers[0][2] = c01;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(0,1,  0,2);
     } else if (numbers[0][0] == undefined) { //Asks if the cell to its left is empty
-      numbers[0][1] = numbers[0][0];         //Assign empty to its value
-      numbers[0][0] = c01;                   //Assigns the previously saved value to the cell to the left
-      refesh();
+      changeValues(0,1,  0,0);
     } else if (numbers[1][1] == undefined) { //Ask if the cell below is empty
-      numbers[0][1] = numbers[1][1];         //Assign empty to its value
-      numbers[1][1] = c01;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(0,1,  1,1);
     }
   });
 
   cell00.addEventListener('click', () => {
-    const c00 = numbers[0][0];               //Save the current value of the cell
     if (numbers[0][1] == undefined) {        //Asks if the cell to its right is empty
-      numbers[0][0] = numbers[0][1];         //Assign empty to its value
-      numbers[0][1] = c00;                   //Assigns the previously saved value to the cell to the right
-      refesh();
+      changeValues(0,0,  0,1);
     } else if (numbers[1][0] == undefined) { //Ask if the cell below is empty
-      numbers[0][0] = numbers[1][0];         //Assign empty to its value
-      numbers[1][0] = c00;                   //Assigns the previously saved value to the cell below
-      refesh();
+      changeValues(0,0,  1,0);
     }
   });
+}
+
+/*
+  * @Param i, j Origin
+  * @Param i, j Destinty
+  * This method changes two values in an array
+*/
+function changeValues (iOrigin, jOrigin, iDestiny, jDestiny) {
+  const val = numbers[iOrigin][jOrigin];
+  numbers[iOrigin][jOrigin] = numbers[iDestiny][jDestiny];         
+  numbers[iDestiny][jDestiny] = val;  
+  refesh();
 }
 
 /*
