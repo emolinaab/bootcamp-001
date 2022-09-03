@@ -1,127 +1,125 @@
-let operating_a;
-let operating_b;
-let operation;
-
 function init() {
-  let result = document.getElementById("result");
-  let reset = document.getElementById("reset");
-  let addition = document.getElementById("addition");
-  let subtraction = document.getElementById("subtraction");
-  let multiplication = document.getElementById("multiplication");
-  let division = document.getElementById("division");
-  let equal = document.getElementById("equal");
-  let one = document.getElementById("one");
-  let two = document.getElementById("two");
-  let three = document.getElementById("three");
-  let four = document.getElementById("four");
-  let five = document.getElementById("five");
-  let six = document.getElementById("six");
-  let seven = document.getElementById("seven");
-  let eight = document.getElementById("eight");
-  let nine = document.getElementById("nine");
-  let zero = document.getElementById("zero");
+  const result = document.getElementById("result");
+  const reset = document.getElementById("reset");
+  const addition = document.getElementById("addition");
+  const subtraction = document.getElementById("subtraction");
+  const multiplication = document.getElementById("multiplication");
+  const division = document.getElementById("division");
+  const equal = document.getElementById("equal");
+  const one = document.getElementById("one");
+  const two = document.getElementById("two");
+  const three = document.getElementById("three");
+  const four = document.getElementById("four");
+  const five = document.getElementById("five");
+  const six = document.getElementById("six");
+  const seven = document.getElementById("seven");
+  const eight = document.getElementById("eight");
+  const nine = document.getElementById("nine");
+  const zero = document.getElementById("zero");
 
-  one.onclick = function (e) {
+  let operating_a;
+  let operating_b;
+  let operation;
+
+  one.addEventListener("click", (e) => {
     result.textContent = result.textContent + "1";
-  };
+  });
 
-  two.onclick = function (e) {
+  two.addEventListener("click", (e) => {
     result.textContent = result.textContent + "2";
-  };
+  });
 
-  three.onclick = function (e) {
+  three.addEventListener("click", (e) => {
     result.textContent = result.textContent + "3";
-  };
+  });
 
-  four.onclick = function (e) {
+  four.addEventListener("click", (e) => {
     result.textContent = result.textContent + "4";
-  };
+  });
 
-  five.onclick = function (e) {
+  five.addEventListener("click", (e) => {
     result.textContent = result.textContent + "5";
-  };
+  });
 
-  six.onclick = function (e) {
+  six.addEventListener("click", (e) => {
     result.textContent = result.textContent + "6";
-  };
+  });
 
-  seven.onclick = function (e) {
+  seven.addEventListener("click", (e) => {
     result.textContent = result.textContent + "7";
-  };
+  });
 
-  eight.onclick = function (e) {
+  eight.addEventListener("click", (e) => {
     result.textContent = result.textContent + "8";
-  };
+  });
 
-  nine.onclick = function (e) {
+  nine.addEventListener("click", (e) => {
     result.textContent = result.textContent + "9";
-  };
+  });
 
-  zero.onclick = function (e) {
+  zero.addEventListener("click", (e) => {
     result.textContent = result.textContent + "0";
-  };
+  });
 
-  reset.onclick = function (e) {
+  reset.addEventListener("click", (e) => {
     restart();
-  };
+  });
 
-  addition.onclick = function (e) {
-    operating_a = result.textContent;
+  addition.addEventListener("click", (e) => {
+    operating_a = parseFloat(result.textContent);
     operation = "+";
     clean_up();
-  };
+  });
 
-  subtraction.onclick = function (e) {
-    operating_a = result.textContent;
+  subtraction.addEventListener("click", (e) => {
+    operating_a = parseFloat(result.textContent);
     operation = "-";
     clean_up();
-  };
+  });
 
-  multiplication.onclick = function (e) {
-    operating_a = result.textContent;
+  multiplication.addEventListener("click", (e) => {
+    operating_a = parseFloat(result.textContent);
     operation = "*";
     clean_up();
-  };
+  });
 
-  division.onclick = function (e) {
-    operating_a = result.textContent;
+  division.addEventListener("click", (e) => {
+    operating_a = parseFloat(result.textContent);
     operation = "/";
     clean_up();
-  };
+  });
 
-  equal.onclick = function (e) {
-    operating_b = result.textContent;
+  equal.addEventListener("click", (e) => {
+    operating_b = parseFloat(result.textContent);
     resolve();
-  };
+  });
 
-  function clean_up() {
-    result.textContent = "";
-  }
+  const clean_up = () => (result.textContent = "");
 
-  function restart() {
+  const restart = () => {
     result.textContent = "";
     operating_a = 0;
     operating_b = 0;
     operation = "";
-  }
+  };
 
-  function resolve() {
+  const resolve = () => {
     let res = 0;
     switch (operation) {
       case "+":
-        res = parseFloat(operating_a) + parseFloat(operating_b);
+        res = operating_a + operating_b;
         break;
       case "-":
-        res = parseFloat(operating_a) - parseFloat(operating_b);
+        res = operating_a - operating_b;
         break;
       case "*":
-        res = parseFloat(operating_a) * parseFloat(operating_b);
+        res = operating_a * operating_b;
         break;
       case "/":
-        res = parseFloat(operating_a) / parseFloat(operating_b);
+        res = operating_a / operating_b;
         break;
     }
     restart();
     result.textContent = res;
-  }
+  };
 }
