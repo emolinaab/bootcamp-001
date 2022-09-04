@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz@1,9..144&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="toggleBtn"></div>
+      <div class="container">
+        <section class="calculator">
+          <section id="result" class="display"></section>
+
+          <button class="color col-2 button-deleteAll" onclick="delAll('AC')">
+            AC
+          </button>
+
+          <button
+            class="button-operator color"
+            value="percentage"
+            onclick="add('%')"
+          >
+            %
+          </button>
+          <button
+            class="button-operator operatorColor"
+            value="division"
+            onclick="add('/')"
+          >
+            ÷
+          </button>
+          <button class="button-number" onclick="add('7')">7</button>
+          <button class="button-number" onclick="add('8')">8</button>
+          <button class="button-number" onclick="add('9')">9</button>
+          <button
+            class="button-operator operatorColor"
+            value="multiplication"
+            onclick="add('*')"
+          >
+            x
+          </button>
+          <button class="button-number" onclick="add('4')">4</button>
+          <button class="button-number" onclick="add('5')">5</button>
+          <button class="button-number" onclick="add('6')">6</button>
+          <button
+            class="button-operator operatorColor"
+            value="subtraction"
+            onclick="add('-')"
+          >
+            -
+          </button>
+          <button class="button-number" onclick="add('1')">1</button>
+          <button class="button-number" onclick="add('2')">2</button>
+          <button class="button-number" onclick="add('3')">3</button>
+          <button
+            class="button-operator operatorColor"
+            value="addition"
+            onclick="add('+')"
+          >
+            +
+          </button>
+          <button class="col-2 button-number" onclick="add('0')">0</button>
+          <button class="button-number" onclick="add('.')">.</button>
+          <button
+            class="button-equal operatorColor"
+            value="equal"
+            onclick="calc('=')"
+          >
+            =
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <script src="./js/Calculator.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
