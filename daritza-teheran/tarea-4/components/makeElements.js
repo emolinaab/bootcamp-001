@@ -1,13 +1,15 @@
-import { Calculator } from "./calculator.js";
-
 const root = document.getElementById("root");
-const current = document.querySelector('results')
-const calculator = new Calculator(current)
 
 export function makeSection(props) {
     const section = document.createElement("section");
     section.setAttribute("id", props);
     root.appendChild(section);
+}
+export function makeDiv(props) {
+    const div = document.createElement("div");
+    div.setAttribute("id", props);
+    const parent = document.getElementById("resultSection");
+    parent.appendChild(div);
 }
 
 export function makeButton(props) {
@@ -16,17 +18,11 @@ export function makeButton(props) {
     button.classList.add(props.cls);
     const parent = document.getElementById("buttonSection");
     parent.appendChild(button);
-    if (props.cls !="operation"){
-        button.addEventListener('click', () => {
-            calculator.display(button.innerText)
-            //calculator.updateDisplay()
-        })
-    } 
 }
 
 export function makeIcon(props) {
     const img = document.createElement("img");
-    img.classList.add(props.cls);
+    img.setAttribute("id", props.cls);
     img.setAttribute("src", props.source);
     const parent = document.getElementById("topSection");
     parent.appendChild(img);
