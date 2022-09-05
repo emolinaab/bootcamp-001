@@ -177,8 +177,9 @@ function init(){
 
   equal.addEventListener('click', () => {
     if (operatorSelected) {
-      operating2 = parseFloat(result.textContent);
-      if(operating1 !== '' && operating2 !== ''){
+      operating2 = result.textContent;
+      if(operating1 !== '' && operating2 !== '') {
+        operating2 = parseFloat(result.textContent);
         solve();
       } else if (operating1 !== '' && operating2 === '' && operation === '%') {
         solve();
