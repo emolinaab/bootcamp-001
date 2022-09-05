@@ -1,0 +1,84 @@
+@import url('http://fonts.cdnfonts.com/css/vogue');
+
+body{
+    
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../img/fondo.jpg');
+}
+
+.container{
+    width: 450;
+    height: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    
+
+}
+
+.display #screen{
+
+    width: 97%;
+    height: 70px;
+    font-size: 35px;
+    outline: none;
+    border: none;
+    text-align: right;
+    padding-right: .5em;
+    background: #ecf0f3;
+    border-radius: 8px;
+    box-shadow: inset 8px 8px 8px #cbced1,inset -8px -8px 8px #d8d6d6;
+}
+
+.buttons{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.7em;
+    
+}
+
+.buttons .row button{
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 6px;
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1);
+    transition: .1s;
+    
+}
+
+.buttons .row button:hover{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),inset 5px 5px 8px #fff;
+    background: #fff;
+}
+
+#colorbotton1{
+    background: #33ccff;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #66d9ff, inset -5px -5px 8px #00ace6;
+}
+
+#colorbotton1:hover{
+    box-shadow: inset 5px 5px 8px #00ace6, inset -5px -5px 8px #00ace6;;
+}
+
+#colorbotton2{
+    background: #33cc33;
+    
+}
+
+#colorbotton2:hover{
+    box-shadow: inset 5px 5px 8px #2eb82e, inset -5px -5px 8px #33cc33;
+}
