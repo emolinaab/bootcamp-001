@@ -60,66 +60,40 @@ function splitFinal() {
   return expressionFull;
 }
 
+function operate(symbol, pieces){
+  let size = pieces.length;
+  let temporal;
+  for(let i = 0; i < size; i++){
+    if (pieces[i] == symbol) {
+      if (pieces[i] == "^") {
+        temporal = exp(pieces[i - 1], pieces[i + 1]);
+      }else if (pieces[i] == "X") {
+        temporal = mult(pieces[i - 1], pieces[i + 1]);
+      }else if (pieces[i] == "/") {
+        temporal = div(pieces[i - 1], pieces[i + 1]);
+      }else if (pieces[i] == "%") {
+        temporal = mod(pieces[i - 1], pieces[i + 1]);
+      }else if (pieces[i] == "+") {
+        temporal = add(pieces[i - 1], pieces[i + 1]);
+      }else if (pieces[i] == "-") {
+        temporal = sub(pieces[i - 1], pieces[i + 1]);
+      }
+      pieces[i - 1] = temporal;
+      pieces.splice(i, 2);
+      i--;
+    }
+  }
+}
 //Calculate the total
 function total() {
   let pieces = splitFinal();
   pieces.pop();
-  let temporal;
-  let size = pieces.length;
-  let i;
-  for (i = 0; i < size; i++) {
-    if (pieces[i] == "^") {
-      temporal = exp(pieces[i - 1], pieces[i + 1]);
-      pieces[i - 1] = temporal;
-      pieces.splice(i, 2);
-      i--;
-    }
-  }
-  size = pieces.length;
-  for (i = 0; i < size; i++) {
-    if (pieces[i] == "X") {
-      temporal = mult(pieces[i - 1], pieces[i + 1]);
-      pieces[i - 1] = temporal;
-      pieces.splice(i, 2);
-      i--;
-    }
-  }
-  size = pieces.length;
-  for (i = 0; i < size; i++) {
-    if (pieces[i] == "/") {
-      temporal = div(pieces[i - 1], pieces[i + 1]);
-      pieces[i - 1] = temporal;
-      pieces.splice(i, 2);
-      i--;
-    }
-  }
-  size = pieces.length;
-  for (i = 0; i < size; i++) {
-    if (pieces[i] == "%") {
-      temporal = mod(pieces[i - 1], pieces[i + 1]);
-      pieces[i - 1] = temporal;
-      pieces.splice(i, 2);
-      i--;
-    }
-  }
-  size = pieces.length;
-  for (i = 0; i < size; i++) {
-    if (pieces[i] == "+") {
-      temporal = add(pieces[i - 1], pieces[i + 1]);
-      pieces[i - 1] = temporal;
-      pieces.splice(i, 2);
-      i--;
-    }
-  }
-  size = pieces.length;
-  for (i = 0; i < size; i++) {
-    if (pieces[i] == "-") {
-      temporal = sub(pieces[i - 1], pieces[i + 1]);
-      pieces[i - 1] = temporal;
-      pieces.splice(i, 2);
-      i--;
-    }
-  }
+  operate("^", pieces);
+  operate("X", pieces);
+  operate("/", pieces);
+  operate("%", pieces);
+  operate("+", pieces);
+  operate("-", pieces);
   document.getElementById("Numero").value = "";
   document.getElementById("Numero").value = pieces[0];
 }
