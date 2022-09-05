@@ -7,15 +7,35 @@ export function type(char,isOperator){
 
     if(isOperator){
         if(input.value.length > 0){
-            input.value[input.value.length -1].match( "[-+x/.]" )? input.value == input.value : input.value += char
-        }else{
-            input.value = input.value
-        }
-    }else{ 
-        input.value += char
-        let values = input.value.split(/[-+x/]/)
 
-        let operators = input.value.split(/[0123456789.]/).join("")
+            if(char == "-"){
+                input.value[input.value.length -1].match( "[-+]" )? input.value = input.value.slice(0,-1) + char: input.value += char
+            }else if (char != "."){
+                input.value[input.value.length -1].match( "[-+x/]" ) ? input.value = input.value.slice(0,-1) + char: input.value += char
+            }else{
+                let currentValue  = []
+        
+                let values = []
+                let operators = []
+        
+                getValuesAndOperators(currentValue,values,operators)
+                
+                values[values.length -1].includes(".") && values.length != operators.length ? input.values = input.value : input.value += char
+            }
+            
+        }else{
+            char.match(/[-+.]/) ? input.value += char : input.value = input.value
+        }
+    }else{
+        
+        input.value += char
+
+        let currentValue  = []
+        
+        let values = []
+        let operators = []
+
+       getValuesAndOperators(currentValue,values,operators)
 
         if(values.length > 1){
            result.value = initializeOperation(operators,values)
@@ -29,16 +49,15 @@ export function clear(chars){
         result.value = ""
     }else{
         input.value = input.value.slice(0,-1)
-        let values = input.value.split(/[-+x/]/)
-        let operators = input.value.split(/[0123456789.]/).join("")
 
+        let currentValue  = []
+        let values = []
+        let operators = []
 
-        if(values.length > 1){
-            if(!Array.from(input.value)[input.value.length -1].match(/[+-/x]/)) {
-                result.value = initializeOperation(operators,values)
-            }else{
-                values.length > 2?result.value = initializeOperation(operators.slice(0,-1),values.slice(0,-1)): result.value = ""
-            }    
+       getValuesAndOperators(currentValue,values,operators)
+
+        if(values.length > 1){ 
+                result.value = initializeOperation(operators,values)        
         }else{
              result.value = ""
         }
@@ -54,6 +73,7 @@ export function submit(){
         result.value = ""
     }
 }
+
 function initializeOperation(operators,values){
     let response = 0
 
@@ -77,3 +97,21 @@ function initializeOperation(operators,values){
     return response
 }
 
+
+function getValuesAndOperators(currentValue,values,operators){
+
+    Array.from(input.value).forEach((c,i) =>{
+        
+       if((c == "-" || c == "x" || c == "/" || c == "+") && (i != 0)  && (input.value[i-1] != "-" && input.value[i-1] != "/" && input.value[i-1] != "+" && input.value[i-1] != "x" )){
+            operators.push(c)
+            values.push(currentValue.join(""))
+            currentValue = []
+        }else{   
+            currentValue.push(c)
+            if(i  == input.value.length -1){
+                values.push(currentValue.join(""))
+                currentValue = []
+            } 
+        }
+    })
+}
