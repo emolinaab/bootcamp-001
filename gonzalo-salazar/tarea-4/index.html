@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <title>Calculator</title>
+</head>
+
+<body onload="init()">
+    <table class="calculator">
+        <tr>
+            <td colspan="4"><span id="result"></span></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light" id="seven">7</button></td>
+            <td><button class="btn btn-light" id="eight">8</button></td>
+            <td><button class="btn btn-light" id="nine">9</button></td>
+            <td><button class="btn btn-warning" id="division">/</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light" id="four">4</button></td>
+            <td><button class="btn btn-light" id="five">5</button></td>
+            <td><button class="btn btn-light" id="six">6</button></td>
+            <td><button class="btn btn-warning" id="multiplication">*</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light" id="one">1</button></td>
+            <td><button class="btn btn-light" id="two">2</button></td>
+            <td><button class="btn btn-light" id="three">3</button></td>
+            <td><button class="btn btn-warning" id="subtraction">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-success" id="equal">=</button></td>
+            <td><button class="btn btn-light" id="zero">0</button></td>
+            <td><button class="btn btn-danger" id="reset">C</button></td>
+            <td><button class="btn btn-warning" id="addition">+</button></td>
+        </tr>
+    </table>
+    <script src="main.js"></script>
+</body>
+
+</html>
