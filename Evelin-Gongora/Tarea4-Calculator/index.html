@@ -16,29 +16,30 @@
           <h1 class="title">Evelin's Calculator</h1>
           <p class="age">2022</p>
         </hgroup>
-        <form name="calculator" class="container-calculator">
+        <section class="container-calculator">
           <section class="output">
-            <input type="textfield" class="current-operand" name="result" value="">
+            <input type="text" class="current-operand" placeholder="0" id="result">
           </section>
-          <input type="button" value="1" onClick="document.calculator.result.value+='1'">
-          <input type="button" value="2" onClick="document.calculator.result.value+='2'">
-          <input type="button" value="3" onClick="document.calculator.result.value+='3'">
-          <input type="button" value="+" onClick="document.calculator.result.value+='+'">
-          <input type="button" value="4" onClick="document.calculator.result.value+='4'">
-          <input type="button" value="5" onClick="document.calculator.result.value+='5'">
-          <input type="button" value="6" onClick="document.calculator.result.value+='6'">
-          <input type="button" value="-" onClick="document.calculator.result.value+='-'">
-          <input type="button" value="7" onClick="document.calculator.result.value+='7'">
-          <input type="button" value="8" onClick="document.calculator.result.value+='8'">
-          <input type="button" value="9" onClick="document.calculator.result.value+='9'">
-          <input type="button" value="*" onClick="document.calculator.result.value+='*'">
-          <input type="button" value="0" onClick="document.calculator.result.value+='0'">
-          <input type="reset" value="c">
-          <input type="button" value="/" onClick="document.calculator.result.value+='/'">
-          <input type="button" value="=" onClick="document.calculator.result.value=eval(document.calculator.result.value)">
-        </form>
+          <button name="data-number">1</button>
+          <button name="data-number">2</button>
+          <button name="data-number">3</button>
+          <button name="data-operation">+</button>
+          <button name="data-number">4</button>
+          <button name="data-number">5</button>
+          <button name="data-number">6</button>
+          <button name="data-operation">-</button>
+          <button name="data-number">7</button>
+          <button name="data-number">8</button>
+          <button name="data-number">9</button>
+          <button name="data-operation">*</button>
+          <button name="data-number">0</button>
+          <button name="data-delete">C</button>
+          <button name="data-operation">/</button>
+          <button name="data-equal">=</button>
+        </section>
       </section>
     </article>
   </main>
+  <script src="js/calculator.js"></script>
 </body>
 </html>
