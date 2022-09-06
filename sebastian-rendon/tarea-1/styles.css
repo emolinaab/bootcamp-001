@@ -17,6 +17,7 @@ body {
   background: linear-gradient(180deg, #ff8000 10%, #fdb777 90%);
   height: 720px;
   width: 720px;
+  overflow: hidden;
 }
 
 .edition__details {
@@ -102,6 +103,8 @@ body {
 }
 
 .aside__supporting-articles {
+  position: relative;
+  z-index: 20;
   padding-right: 1rem;
   display: flex;
   flex-direction: column;
@@ -142,12 +145,13 @@ body {
 
 .footer__third-article {
   position: relative;
-  padding: 0 1rem;
-  right: 0;
+  padding: 0 2rem;
+  right: -1rem;
   grid-area: footer;
-  color: #fff;
-  background-color: #000;
-  border-radius: 1rem 0 0 0;
+  color: #000;
+  background-color: #dcff36;
+  transform: skewX(15deg);
+  /* border-radius: 1rem 0 0 0; */
 }
 
 .footer__third-article > h1 {
