@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Calculator</title>
+    <meta charset = 'UTF-8' />
+    <meta name = 'viewport' content = 'width=device-width' />
+    <link rel = 'stylesheet' href = 'styles.css' />
+  </head>
+  <body onload = 'init();'>
+    <main>
+      <article>
+        <header class = 'title'> 
+          <h1>Calculator</h1>
+        </header>
+        <section class = 'wrapper'>
+            <span   class = 'display'                 id='result'>0</span>
+            <button class = 'clearButton' value = 'C' id='clearButton'>C</button>
+            <button class = 'percentage'  value = '%' id='percentage'>%</button>
+            <button class = 'operations'  value = '÷' id='division'>÷</button>
+          
+            <button class = 'button numbers'    value = '7' id='seven'>7</button>
+            <button class = 'button numbers'    value = '8' id='eight'>8</button>
+            <button class = 'button numbers'    value = '9' id='nine'>9</button>
+            <button class = 'button operations' value = 'x' id='multiplication'>x</button>
+
+            <button class = 'button numbers'    value = '4' id='four'>4</button>
+            <button class = 'button numbers'    value = '5' id='five'>5</button>
+            <button class = 'button numbers'    value = '6' id='six'>6</button>
+            <button class = 'button operations' value = '-' id='subtraction'>-</button>
+
+            <button class = 'button numbers'    value = '1' id='one'>1</button>
+            <button class = 'button numbers'    value = '2' id='two'>2</button>
+            <button class = 'button numbers'    value = '3' id='three'>3</button>
+            <button class = 'button operations' value = '+' id='addition'>+</button>
+
+            <button class = 'zero'           value = '0' id='zero'>0</button>
+            <button class = 'button numbers' value = '.' id='point'>.</button>
+            <button class = 'operations'     value = '=' id='equal'>=</button>
+        </section>
+    </article>
+    </main>
+    <script src = 'caculate.js'></script>
+  </body>
+</html>
