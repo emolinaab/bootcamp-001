@@ -30,165 +30,47 @@ function init(){
   const cell32 = document.getElementById('cell32');
   const cell33 = document.getElementById('cell33');
 
-  cell33.addEventListener('click', () => {
-    if (numbers[3][2] == undefined) {        //Asks if the cell to its left is empty
-      changeValues(3,3,  3,2);
-    } else if (numbers[2][3] == undefined) { //Ask if the cell above is empty
-      changeValues(3,3,  2,3);
-    }
-  });
+  numbers[
+    [cell00.addEventListener('click', () => {
+      click(0,0,'topLeftCorner');
+    }), cell01.addEventListener('click', () => {
+      click(0,1,'topEdge');
+    }), cell02.addEventListener('click', () => {
+      click(0,2,'topEdge');
+    }), cell03.addEventListener('click', () => {
+      click(0,3,'topRightCorner');
+    })],
 
-  cell32.addEventListener('click', () => {
-    if (numbers[3][3] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(3,2,  3,3);                 
-    } else if (numbers[3][1] == undefined) { //Asks if the cell to its left is empty
-      changeValues(3,2,  3,1);      
-    } else if (numbers[2][2] == undefined) { //Ask if the cell above is empty
-      changeValues(3,2,  2,2);    
-    }
-  });
+    [cell10.addEventListener('click', () => {
+      click(1,0,'leftEdge');
+    }), cell11.addEventListener('click', () => {
+      click(1,1,'center');
+    }), cell12.addEventListener('click', () => {
+      click(1,2,'center');
+    }), cell13.addEventListener('click', () => {
+      click(1,3,'rightEdge');
+    })],
 
-  cell31.addEventListener('click', () => {
-    if (numbers[3][2] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(3,1,  3,2);
-    } else if (numbers[3][0] == undefined) { //Asks if the cell to its left is empty
-      changeValues(3,1,  3,0);
-    } else if (numbers[2][1] == undefined) { //Ask if the cell above is empty
-      changeValues(3,1,  2,1);
-    }
-  });
-  
-  cell30.addEventListener('click', () => {
-    if (numbers[3][1] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(3,0,  3,1);
-    } else if (numbers[2][0] == undefined) { //Ask if the cell above is empty
-      changeValues(3,0,  2,0);
-    }
-  });
+    [cell20.addEventListener('click', () => {
+      click(2,0,'leftEdge');
+    }), cell21.addEventListener('click', () => {
+      click(2,1,'center');
+    }), cell22.addEventListener('click', () => {
+      click(2,2,'center');
+    }), cell23.addEventListener('click', () => {
+      click(2,3,'rightEdge');
+    })],
 
-  cell23.addEventListener('click', () => {
-    if (numbers[2][2] == undefined) {        //Asks if the cell to its left is empty
-      changeValues(2,3,  2,2);
-    } else if (numbers[1][3] == undefined) { //Ask if the cell above is empty
-      changeValues(2,3,  1,3);
-    } else if (numbers[3][3] == undefined) { //Ask if the cell below is empty
-      changeValues(2,3,  3,3);
-    }
-  });
-
-  cell22.addEventListener('click', () => {
-    if (numbers[2][3] == undefined) {        //Asks if the cell to its right is empty 
-      changeValues(2,2,  2,3);
-    } else if (numbers[2][1] == undefined) { //Asks if the cell to its left is empty
-      changeValues(2,2,  2,1);
-    } else if (numbers[1][2] == undefined) { //Ask if the cell above is empty
-      changeValues(2,2,  1,2);
-    } else if (numbers[3][2] == undefined) { //Ask if the cell below is empty
-      changeValues(2,2,  3,2);
-    }
-  });
-
-  cell21.addEventListener('click', () => {
-    if (numbers[2][2] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(2,1,  2,2);
-    } else if (numbers[2][0] == undefined) { //Asks if the cell to its left is empty
-      changeValues(2,1,  2,0);
-    } else if (numbers[1][1] == undefined) { //Ask if the cell above is empty
-      changeValues(2,1,  1,1);
-    } else if (numbers[3][1] == undefined) { //Ask if the cell below is empty
-      changeValues(2,1,  3,1);
-    }
-  });
-
-  cell20.addEventListener('click', () => {
-    if (numbers[2][1] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(2,0,  2,1);
-    } else if (numbers[1][0] == undefined) { //Ask if the cell above is empty
-      changeValues(2,0,  1,0);
-    } else if (numbers[3][0] == undefined) { //Ask if the cell below is empty
-      changeValues(2,0,  3,0);
-    }
-  });
-
-  cell13.addEventListener('click', () => {
-    if (numbers[1][2] == undefined) {        //Asks if the cell to its left is empty
-      changeValues(1,3,  1,2);
-    } else if (numbers[0][3] == undefined) { //Ask if the cell above is empty
-      changeValues(1,3,  0,3);
-    } else if (numbers[2][3] == undefined) { //Ask if the cell below is empty
-      changeValues(1,3,  2,3);
-    }
-  });
-
-  cell12.addEventListener('click', () => {
-    if (numbers[1][3] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(1,2,  1,3);
-    } else if (numbers[1][1] == undefined) { //Asks if the cell to its left is empty
-      changeValues(1,2,  1,1);
-    } else if (numbers[0][2] == undefined) { //Ask if the cell above is empty
-      changeValues(1,2,  0,2);
-    } else if (numbers[2][2] == undefined) { //Ask if the cell below is empty
-      changeValues(1,2,  2,2);
-    }
-  });
-
-  cell11.addEventListener('click', () => {
-    if (numbers[1][2] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(1,1,  1,2);
-    } else if (numbers[1][0] == undefined) { //Asks if the cell to its left is empty
-      changeValues(1,1,  1,0);
-    } else if (numbers[0][1] == undefined) { //Ask if the cell above is empty
-      changeValues(1,1,  0,1);
-    } else if (numbers[2][1] == undefined) { //Ask if the cell below is empty
-      changeValues(1,1,  2,1);
-    }
-  });
-
-  cell10.addEventListener('click', () => {
-    if (numbers[1][1] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(1,0,  1,1);
-    } else if (numbers[0][0] == undefined) { //Ask if the cell above is empty
-      changeValues(1,0,  0,0);
-    } else if (numbers[2][0] == undefined) { //Ask if the cell below is empty
-      changeValues(1,0,  2,0);
-    }
-  });
-
-  cell03.addEventListener('click', () => {
-    if (numbers[0][2] == undefined) {        //Asks if the cell to its left is empty
-      changeValues(0,3,  0,2);
-    } else if (numbers[1][3] == undefined) { //Ask if the cell below is empty
-      changeValues(0,3,  1,3);
-    }
-  });
-
-  cell02.addEventListener('click', () => {
-    if (numbers[0][3] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(0,2,  0,3);
-    } else if (numbers[0][1] == undefined) { //Asks if the cell to its left is empty
-      changeValues(0,2,  0,1);
-    } else if (numbers[1][2] == undefined) { //Ask if the cell below is empty
-      changeValues(0,2,  1,2);
-    }
-  });
-  
-  cell01.addEventListener('click', () => {
-    if (numbers[0][2] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(0,1,  0,2);
-    } else if (numbers[0][0] == undefined) { //Asks if the cell to its left is empty
-      changeValues(0,1,  0,0);
-    } else if (numbers[1][1] == undefined) { //Ask if the cell below is empty
-      changeValues(0,1,  1,1);
-    }
-  });
-
-  cell00.addEventListener('click', () => {
-    if (numbers[0][1] == undefined) {        //Asks if the cell to its right is empty
-      changeValues(0,0,  0,1);
-    } else if (numbers[1][0] == undefined) { //Ask if the cell below is empty
-      changeValues(0,0,  1,0);
-    }
-  });
+    [cell30.addEventListener('click', () => {
+      click(3,0,'lowerLeftCorner');
+    }), cell31.addEventListener('click', () => {
+      click(3,1,'bottomEdge');
+    }), cell32.addEventListener('click', () => {
+      click(3,2,'bottomEdge');
+    }), cell33.addEventListener('click', () => {
+      click(3,3,'lowerRightCorner');
+    })]
+  ];
 }
 
 /*
@@ -199,7 +81,7 @@ function init(){
 function changeValues (iOrigin, jOrigin, iDestiny, jDestiny) {
   const val = numbers[iOrigin][jOrigin];
   numbers[iOrigin][jOrigin] = numbers[iDestiny][jDestiny];         
-  numbers[iDestiny][jDestiny] = val;  
+  numbers[iDestiny][jDestiny] = val;    
   refesh();
 }
 
@@ -232,4 +114,65 @@ function refesh() {
       }
     }
   } 
+}
+
+function click (originI, originJ, kind) {
+  if (kind === 'bottomEdge') {
+    right(originI, originJ);
+    left(originI, originJ);
+    above(originI, originJ);
+  } else if (kind === 'center') {
+    right(originI, originJ);
+    left(originI, originJ);
+    above(originI, originJ);
+    below(originI, originJ);
+  } else if (kind === 'leftEdge') {
+    right(originI, originJ);
+    above(originI, originJ);
+    below(originI, originJ);
+  } else if (kind === 'rightEdge') {
+    left(originI, originJ);
+    above(originI, originJ);
+    below(originI, originJ);
+  } else if (kind === 'topEdge') {
+    right(originI, originJ);
+    left(originI, originJ);
+    below(originI, originJ);
+  } else if (kind === 'lowerRightCorner') {
+    left(originI, originJ);
+    above(originI, originJ);
+  } else if (kind === 'lowerLeftCorner') {
+    right(originI, originJ);
+    above(originI, originJ);
+  } else if (kind === 'topRightCorner') {
+    left(originI, originJ);
+    below(originI, originJ);
+  } else if (kind === 'topLeftCorner') {
+    right(originI, originJ);
+    below(originI, originJ);
+  }
+}
+
+function right (originI, originJ) {
+  if (numbers[originI][originJ + 1] === undefined) {          //Asks if the cell to its right is empty
+    changeValues(originI,originJ,  originI,originJ + 1); 
+  }
+}
+
+function left (originI, originJ) {
+  if (numbers[originI][originJ - 1] === undefined) {         //Asks if the cell to its left is empty
+    changeValues(originI,originJ,  originI,originJ - 1); 
+  }
+}
+
+function above (originI, originJ) {
+  if (numbers[originI - 1][originJ] === undefined) { //Ask if the cell above is empty
+    changeValues(originI,originJ,  originI - 1,originJ);
+  }
+}
+
+function below (originI, originJ) {
+  if (numbers[originI + 1][originJ] == undefined) {  //Ask if the cell below is empty
+    changeValues(originI,originJ,  originI + 1,originJ);
+  }
 }
