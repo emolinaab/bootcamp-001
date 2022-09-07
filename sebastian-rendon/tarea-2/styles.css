@@ -70,8 +70,8 @@ body {
   grid-template-columns: 1fr 300px 1fr;
   grid-template-rows: 3fr 1fr;
   grid-template-areas: 
-    "aside-1 . aside-2"
-    "aside-1 barcode footer";
+    "article . aside-2"
+    "footer-1 barcode footer-2";
   height: 100%;
   width: 100%;
 }
@@ -83,17 +83,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-area: aside-1;
+  grid-area: article;
 }
 
-.article__main-article > h1 {
+.article__main-article h1 {
   text-transform: uppercase;
   color: #47c7fc;
   font-size: 4rem;
   margin: 0;
 }
 
-.article__main-article > h2 {
+.article__main-article h2 {
   margin-top: 0.2rem;
   margin-bottom: 0.1rem;
 }
@@ -145,15 +145,34 @@ body {
 
 .footer__third-article {
   position: relative;
+  z-index: 20;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  grid-area: footer-1;
+}
+
+.title__third-article {
+  line-height: 2.75rem;
+}
+
+.title__third-article > span {
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.footer__fourth-article {
+  position: relative;
   padding: 0 2rem;
   right: -1rem;
-  grid-area: footer;
+  grid-area: footer-2;
   color: #000;
   background-color: #dcff36;
   transform: skewX(15deg);
   /* border-radius: 1rem 0 0 0; */
 }
 
-.footer__third-article > h1 {
+.footer__fourth-article > h1 {
   text-transform: uppercase;
 }
