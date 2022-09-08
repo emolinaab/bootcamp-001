@@ -1,18 +1,19 @@
-let numvar = "";
-let varnum1;
-let varnum2;
-let num_restart = 0; 
-let C = document.getElementById("C");
-let num1 = document.getElementById("num1");
-let num2 = document.getElementById("num2");
-let AC = document.getElementById("AC");
-let negativo = document.getElementById("negative");
-let EXE = document.getElementById("EXE");
-let num_but = document.getElementsByClassName("number");
-let ope_but = document.getElementsByClassName("operands");
-let operand;
+var numvar = "";
+var varnum1;
+var varnum2;
+var operand;
+var num_restart = 0; 
+const C = document.getElementById("C");
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const AC = document.getElementById("AC");
+const negativo = document.getElementById("negative");
+const EXE = document.getElementById("EXE");
+const num_but = document.getElementsByClassName("number");
+const ope_but = document.getElementsByClassName("operands");
 
-AC.addEventListener("click", function (event) {
+
+AC.addEventListener("click", () =>  {
   num1.innerHTML = "0";
   num2.innerHTML = "0";
   numvar = "";
@@ -20,7 +21,7 @@ AC.addEventListener("click", function (event) {
   varnum2 = 0 ; 
 });
 
-negativo.addEventListener("click", function (event) {
+negativo.addEventListener("click", () => {
   if (Number(numvar) >= 0 || numvar == "") {
     numvar = "-" + numvar;
   }
@@ -28,7 +29,7 @@ negativo.addEventListener("click", function (event) {
 });
 
 for (let x = 0; x < num_but.length; x++) {
-  num_but[x].addEventListener("click", function (event) {
+  num_but[x].addEventListener("click", () =>  {
     if (num_restart == 1 ) {
       num_restart = 0; 
       num1.innerHTML = 0;
@@ -41,7 +42,7 @@ for (let x = 0; x < num_but.length; x++) {
 }
 
 for (let x = 0; x < ope_but.length; x++) {
-  ope_but[x].addEventListener("click", function (event) {
+  ope_but[x].addEventListener("click",() =>  {
     if (numvar == "") {
       numvar = "0";
     }
@@ -54,12 +55,12 @@ for (let x = 0; x < ope_but.length; x++) {
   });
 }
 
-C.addEventListener("click", function (event) {
+C.addEventListener("click",() =>  {
   num2.innerHTML = "0";
   numvar = "";
 });
 
-EXE.addEventListener("click", function (event) {
+EXE.addEventListener("click", () =>  {
   num_restart = 1;
   num1.innerHTML = num1.innerHTML + num2.innerHTML + "=";
   console.log (varnum1) ; 
