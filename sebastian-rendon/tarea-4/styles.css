@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+:root {
+  --btn-primary-color: #fff;
+  --btn-secondary-color: #000;
+  --btn-accent-color: #fff;
+  --btn-primary-bg-color: #333;
+  --btn-secondary-bg-color: #a5a5a5;
+  --btn-accent-bg-color: #fea00a;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.calculator__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2rem;
+  height: 100%;
+}
+
+.calculator__basic-controls {
+  display: grid;
+  gap: 0.5rem;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  min-width: 420px;
+}
+
+.calculator__result {
+  flex: 1 1 auto;
+  color: #fff;
+}
+
+.calculator__result > .calculator__result--main {
+  margin: 0;
+  padding: 0 1rem;
+  text-align: left;
+  font-size: 4rem;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  appearance: none;
+  padding: 0 2.5rem;
+  border-radius: 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn.btn--primary {
+  color: var(--btn-primary-color);
+  background-color: var(--btn-primary-bg-color);
+}
+
+.btn.btn--secondary {
+  color: var(--btn-secondary-color);
+  background-color: var(--btn-secondary-bg-color);
+}
+
+.btn.btn--accent {
+  color: var(--btn-accent-color);
+  background-color: var(--btn-accent-bg-color);
+}
+
+.btn.btn--wide {
+  text-align: left;
+  grid-column-end: span 2;
+}
+
+/* TODO: Use ::before absolute inset-0 hack, transition opacity  */
+.btn::before {
+  position: absolute;
+  content: "";
+  background-color: currentColor;
+  color: inherit;
+  border-radius: inherit;
+  pointer-events: none;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .2s cubic-bezier(.4,0,.6,1);
+}
+
+:btn:hover::before {
+  opacity: 0.1;
+}
