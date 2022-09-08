@@ -1,0 +1,176 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+
+@font-face {
+   font-family: typehalo;
+   src: url(halo.ttf);
+}
+
+
+main {
+   display: block;
+   margin: 0px auto;
+   width: 1000px;
+   height: 1350px;
+}
+
+.background {
+
+   width: 1000px;
+   height: 1350px;
+
+}
+
+.Title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: -1300px;
+}
+
+.icon {
+   border-radius: 50%;
+   position: relative;
+   left: -40px;
+   width: 250px;
+   height: 250px;
+}
+
+.xbox {
+   position: relative;
+   top: -50px;
+   color: green;
+   font-size: 12em;
+}
+
+.message {
+   display: inline-block;
+   text-align: center;
+   position: relative;
+   top: -1400px;
+   left: 350px;
+   color: black;
+   font-size: 2.5em;
+}
+
+.halo {
+
+   text-align: center;
+   font-family: typehalo;
+   color: rgb(6, 197, 204);
+   font-size: 10em;
+   position: relative;
+   top: -800px;
+
+
+}
+
+.infinite {
+   text-align: center;
+   color: rgb(255, 255, 255);
+   font-size: 10em;
+   letter-spacing: 0.1em;
+   font-weight: 10;
+   font-family: Arial;
+   position: relative;
+   top: -850px;
+}
+
+.bonus {
+   margin: 0 auto;
+   position: relative;
+   top: -1550px;
+   left: 300px;
+   width: 300px;
+   height: 300px;
+   background-color: green;
+   border-radius: 50%;
+}
+
+.console {
+   position: relative;
+   width: 250px;
+   height: 200px;
+   top: 20px;
+   left: 15px;
+
+}
+
+.capsule_text {
+   width: 200px;
+   height: 100px;
+}
+
+.text {
+   text-align: center;
+   font-size: 1em;
+   position: relative;
+   top: 10px;
+   left: 50px;
+   font-weight: 900;
+   font-family: Helvetica;
+   color: white;
+}
+
+.information {
+   margin: 0 auto;
+   position: relative;
+   top: -1850px;
+   left: -250px;
+   width: 400px;
+   height: 300px;
+}
+
+.text2 {
+   font-size: 1.8em;
+   position: relative;
+   top: 10px;
+   left: 50px;
+   font-weight: 900;
+   font-family: arial;
+   color: greenyellow;
+}
+
+.text3 {
+   font-size: 1.8em;
+   position: relative;
+   top: 30px;
+   left: 50px;
+   font-weight: 900;
+   font-family: arial;
+   color: white;
+}
+
+.text4 {
+   font-size: 1.8em;
+   position: relative;
+   top: 60px;
+   left: 50px;
+   font-weight: 900;
+   font-family: arial;
+   color: greenyellow;
+}
+
+.web {
+   margin: 0 auto;
+   position: relative;
+   top: -1350px;
+   left: -300px;
+   width: 400px;
+   height: 70px;
+   background-color: green;
+}
+
+.text5 {
+   font-size: 1.8em;
+   position: relative;
+   top: 10px;
+   left: 60px;
+   font-weight: 900;
+   font-family: arial;
+   color: white;
+}
