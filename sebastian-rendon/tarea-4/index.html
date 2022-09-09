@@ -4,41 +4,159 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="assets/js/main.js"></script>
     <title>Calculator</title>
   </head>
   <body>
     <main class="calculator__container">
       <section class="calculator__result">
-        <h1 class="calculator__result--main">0</h1>
+        <h1 id="main-result" class="calculator__result--main">0</h1>
+        <h3 id="history" class="calculator__history"></h3>
       </section>
       <section class="calculator__basic-controls">
-        <button class="btn btn--secondary" type="button">AC</button>
-        <button class="btn btn--secondary" type="button">±</button>
-        <button class="btn btn--secondary" type="button" title="percentage">
-          %
+        <button
+          class="btn btn--secondary"
+          type="button"
+          data-type="clear"
+          value="AC"
+        >
+          AC
         </button>
-        <button class="btn btn--accent" type="button" title="divide">÷</button>
-        <button class="btn btn--primary" type="button">7</button>
-        <button class="btn btn--primary" type="button">8</button>
-        <button class="btn btn--primary" type="button">9</button>
-        <button class="btn btn--accent" type="button" title="multiply">
+        <button
+          class="btn btn--secondary btn--wide btn--right"
+          type="button"
+          data-type="delete"
+          value="DEL"
+        >
+          DEL
+        </button>
+        <button
+          class="btn btn--accent"
+          type="button"
+          title="divide"
+          data-type="operator"
+          value="÷"
+        >
+          ÷
+        </button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="7"
+        >
+          7
+        </button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="8"
+        >
+          8
+        </button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="9"
+        >
+          9
+        </button>
+        <button
+          class="btn btn--accent"
+          type="button"
+          title="multiply"
+          data-type="operator"
+          value="×"
+        >
           ×
         </button>
-        <button class="btn btn--primary" type="button">4</button>
-        <button class="btn btn--primary" type="button">5</button>
-        <button class="btn btn--primary" type="button">6</button>
-        <button class="btn btn--accent" type="button" title="substract">
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="4"
+        >
+          4
+        </button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="5"
+        >
+          5
+        </button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="6"
+        >
+          6
+        </button>
+        <button
+          class="btn btn--accent"
+          type="button"
+          title="substract"
+          data-type="operator"
+          value="-"
+        >
           −
         </button>
-        <button class="btn btn--primary" type="button">1</button>
-        <button class="btn btn--primary" type="button">2</button>
-        <button class="btn btn--primary" type="button">3</button>
-        <button class="btn btn--accent" type="button" title="add">+</button>
-        <button class="btn btn--wide btn--primary" type="button">0</button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="1"
+        >
+          1
+        </button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="2"
+        >
+          2
+        </button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="3"
+        >
+          3
+        </button>
+        <button
+          class="btn btn--accent"
+          type="button"
+          title="add"
+          data-type="operator"
+          value="+"
+        >
+          +
+        </button>
+        <button
+          class="btn btn--wide btn--primary"
+          type="button"
+          data-type="number"
+          value="0"
+        >
+          0
+        </button>
         <button class="btn btn--primary" type="button">.</button>
-        <button class="btn btn--accent" type="button" title="result">=</button>
+        <button
+          class="btn btn--accent"
+          type="button"
+          title="result"
+          data-type="equal"
+          value="="
+        >
+          =
+        </button>
       </section>
     </main>
   </body>

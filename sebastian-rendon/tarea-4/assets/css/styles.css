@@ -6,6 +6,8 @@
 }
 
 :root {
+  --text-primary-color: #fff;
+  --text-secondary-color: #bbb;
   --btn-primary-color: #fff;
   --btn-secondary-color: #000;
   --btn-accent-color: #fff;
@@ -28,33 +30,44 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 2rem;
   height: 100%;
 }
 
 .calculator__basic-controls {
   display: grid;
   gap: 0.5rem;
+  padding: 2rem;
   grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  flex: 1 2 420px;
   min-width: 420px;
 }
 
 .calculator__result {
-  flex: 1 1 auto;
-  color: #fff;
+  padding: 2rem;
+  background-color: #111;
+  flex: 2 1 auto;
+  overflow: auto;
 }
-
 .calculator__result > .calculator__result--main {
+  color: var(--text-primary-color);
   margin: 0;
   padding: 0 1rem;
-  text-align: left;
-  font-size: 4rem;
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+  white-space: pre-line;
+}
+
+.calculator__result > .calculator__history {
+  color: var(--text-secondary-color);
+  padding: 0 1rem;
+  font-size: 1.5rem;
 }
 
 .btn {
   position: relative;
   cursor: pointer;
   appearance: none;
+  border: unset;
   padding: 0 2.5rem;
   border-radius: 4rem;
   font-size: 2rem;
@@ -77,11 +90,13 @@ body {
 }
 
 .btn.btn--wide {
-  text-align: left;
   grid-column-end: span 2;
 }
 
-/* TODO: Use ::before absolute inset-0 hack, transition opacity  */
+.btn.btn--right {
+  text-align: right;
+}
+
 .btn::before {
   position: absolute;
   content: "";
@@ -94,6 +109,6 @@ body {
   transition: opacity .2s cubic-bezier(.4,0,.6,1);
 }
 
-:btn:hover::before {
+.btn:hover::before {
   opacity: 0.1;
 }
