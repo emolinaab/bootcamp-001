@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="index.css" />
+        <script src="calculator.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th colspan="4"><input type="text" id="Numero"></th>
+            </tr>
+            <tr>
+                <th><button class="operation" onclick="deleteC()">C</button></th>
+                <th><button class="operation" onclick="writeInput('^')">^</button></th>
+                <th><button class="operation" onclick="writeInput('%')">%</button></th>
+                <th><button class="operation" onclick="writeInput('/')">/</button></th>
+            </tr>
+            <tr>
+                <th><button onclick="writeInput('7')">7</button></th>
+                <th><button onclick="writeInput('8')">8</button></th>
+                <th><button onclick="writeInput('9')">9</button></th>
+                <th><button class="operation" onclick="writeInput('X')">X</button></th>
+            </tr>
+            <tr>
+                <th><button onclick="writeInput('4')">4</button></th>
+                <th><button onclick="writeInput('5')">5</button></th>
+                <th><button onclick="writeInput('6')">6</button></th>
+                <th><button class="operation" onclick="writeInput('-')">-</button></th>
+            </tr>
+            <tr>
+                <th><button onclick="writeInput('1')">1</button></th>
+                <th><button onclick="writeInput('2')">2</button></th>
+                <th><button onclick="writeInput('3')">3</button></th>
+                <th><button class="operation" onclick="writeInput('+')">+</button></th>
+            </tr>
+            <tr>
+                <th><button onclick="writeInput('0')">0</button></th>
+                <th><button onclick="writeInput('.')">.</button></th>
+                <th colspan="2"><button class="operation total" onclick="total()">=</button></th>
+            </tr>
+        </table>
+    </body>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./js/index.js" rel="stylesheet" />
+    <script src="./js/Display.js" type="text/javascript"></script>
+    <script src="./js/Calculator.js" type="text/javascript"></script>
+    <script src="./js/index.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="display">
+          <div id="previous-value"></div>
+          <div id="current-value"></div>
+        </div>
+        <button class="col-2" onclick="display.deleteAll()">C</button>
+        <button onclick="display.delete()">&larr;</button>
+        <button class="operator" value="todivide">%</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator" value="tomultiply">*</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator" value="tosubtract">-</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator" value="toadd">+</button>
+        <button class="col-2 number">0</button>
+        <button class="number">.</button>
+        <button class="operator" value="equal">=</button>
+      </div>
+    </div>
+  </body>
+</html>

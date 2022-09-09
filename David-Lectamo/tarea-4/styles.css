@@ -1,0 +1,106 @@
+body {
+  background-color: #161616;
+  padding: 2em; 
+}
+
+.title{
+  justify-content: center;
+  display: flex;
+  font-size: 31.9px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  display: flex;  
+  flex-wrap: wrap;
+  font-weight: bold;
+  text-align: center; 
+  margin-right: 400px;
+  margin-left: 400px;
+  font-size: 31.9px;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper > * {
+  padding: 10px;
+}
+
+.display {
+  color: white;
+  text-align: end;
+  background: #282828;
+  border: 1px solid #414141;
+  flex: 1 100%;
+  min-height: 40px;
+}
+
+.clearButton {
+  background: #2B2B2B;
+  border: 1px solid #414141;
+  color: #fdfdfd;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8em;
+  flex-basis: 50%;
+}
+
+.clearButton:hover {
+  background: #333333;
+}
+
+.percentage {
+  background: #111;
+  border: 1px solid #414141;
+  color: #fdfdfd;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8em;
+  flex-basis: 25%;
+}
+
+.operations {
+  background: rgb(220, 140, 0);
+  border: 1px solid #414141;
+  color: #fdfdfd;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  flex-basis: 25%;
+}
+
+.operations:hover {
+  background: rgb(161, 105, 7);
+}
+
+.numbers {
+  background: #2B2B2B;
+  border: 1px solid #414141;
+  color: #fdfdfd;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.numbers:hover {
+  background: #333333;
+}
+
+.button {
+  flex: 4 25%;
+}
+
+.zero {
+  background: #2B2B2B;
+  border: 1px solid #414141;
+  color: #fdfdfd;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8em;
+  flex-basis: 50%;
+}
+
+.zero:hover {
+  background: #333333;
+}

@@ -1,0 +1,41 @@
+body{
+    height: 100vh;
+    background-color: beige;
+}
+table{
+    width: 60%;
+    height: 60%;
+    margin:auto;
+    margin-top: 5%;
+    margin-bottom: 30%;
+    background-color: beige;
+    
+}
+th{
+    background-color: rgb(177, 249, 225);
+    width: 20%;
+    height: 20%;
+    border-color: black;
+    border: 1px solid;
+}
+h1{
+    color: rgb(89, 47, 128);
+    text-align: center;
+    text-shadow: 3px 4px rgba(231, 191, 111, 0.728);
+}
+h2{
+    text-align: center;
+    color: brown;
+}
+button{
+    width: 95%;
+    height: 95%;
+    background-color: rgb(177, 249, 225);
+}
+#create{
+    width: 10%;
+    height: 10%;
+    background-color: rgb(241, 191, 134);
+    position:fixed;
+    font-weight: bold;
+}
