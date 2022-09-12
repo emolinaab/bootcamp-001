@@ -47,7 +47,6 @@ export default class CalculatorDisplay {
     };
 
     const onKeyDown = (e) => {
-      console.log(e.key);
       if (Calculator.operands.includes(e.key))
         display._calculator.addOperandToEquation(e.key);
       else if (Calculator.operators.includes(e.key))
