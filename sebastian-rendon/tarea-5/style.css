@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&wght=400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.puzzle__container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle__body {
+    display: grid;
+    border: 20px solid #000;
+    border-radius: 0.1rem;
+    background-color: #be9f80;
+}
+
+.puzzle__piece {
+    padding: 4rem;
+    line-height: 2rem;
+    font-size: 2rem;
+    border: 1px solid #000;
+    background-color: #fefbea;
+    font-weight: bold;
+}
+
+.puzzle__piece.puzzle__piece--empty {
+    background-color: #be9f80;
+}
