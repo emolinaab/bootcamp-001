@@ -1,0 +1,118 @@
+* {
+  font-family: "fraunces", "serif";
+  color: white;
+}
+
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+}
+
+.dark {
+  background-color: #fdfeff;
+}
+
+.dark .calculator {
+  background-color: #161616;
+  box-shadow: 15px 10px 0px 5px #a29e9e33;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: 100px repeat(5, 75px);
+  background-color: #f4f7f6;
+  padding: 15px;
+  border-radius: 32px;
+  box-shadow: 15px 10px 0px 5px #afa8a833;
+}
+
+button {
+  cursor: pointer;
+  margin: 5px;
+  padding: 0;
+  border-radius: 32px;
+  font-size: 1.5em;
+  border: none;
+  background-color: #006f54;
+  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #4f504f1f;
+}
+
+button:active {
+  background-color: #b3b3b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.display {
+  grid-column: 1 / -1;
+  padding: 16px;
+  display: flex;
+  margin: 10px 10px 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #363636;
+  border-radius: 32px;
+  text-align: right;
+  font-size: 30px;
+  word-break: break-all;
+  box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+.dark .display {
+  grid-column: 1 / -1;
+  padding: 16px;
+  display: flex;
+  margin: 10px 10px 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  border-radius: 32px;
+  text-align: right;
+  justify-content: space-between;
+  word-break: break-all;
+  background-color: #363636;
+  box-shadow: 0px 0px 0px 10px rgb(136, 135, 135);
+}
+
+.operatorColor {
+  background-color: rgb(69, 66, 66);
+}
+
+.color {
+  background-color: grey;
+}
+
+.toggleBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: #555;
+  cursor: pointer;
+  border: 2px solid #eaedef;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0, 1),
+    -5px -5px 10px rgb(129, 126, 126);
+}
+
+.dark .toggleBtn {
+  border: 2px solid #0e69a5;
+}
+
+#resul {
+  font-size: 90px;
+}
