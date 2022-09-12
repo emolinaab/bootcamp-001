@@ -1,15 +1,29 @@
+import { React } from "react";
+import "./announcementsContainer.css";
+
+const AnnouncementImage = ({ imageUrl }) => {
+  return (
+    <div className=" announcement-image-container">
+      <img className="announcement-image" src={imageUrl} alt="" />
+    </div>
+  );
+};
+
+const AnnouncementTitle = ({ title }) => (
+  <h3 className="announcement-title">{title}</h3>
+);
+
+const AnnouncementDescription = ({ description }) => (
+  <p className="announcement-description">{description}</p>
+);
+
 const Announcement = ({ title, description, imageUrl }) => {
   return (
     <div className="announcement-container">
-      {imageUrl ? (
-        <div className=" announcement-image-container">
-          <img className="announcement-image" src={imageUrl} alt="" />
-        </div>
-      ) : null}
-
-      <h3 className="announcement-title">{title}</h3>
+      {imageUrl ? <AnnouncementImage imageUrl={imageUrl} /> : null}
+      <AnnouncementTitle title={title} />
       {description ? (
-        <p className="announcement-description">{description}</p>
+        <AnnouncementDescription description={description} />
       ) : null}
     </div>
   );

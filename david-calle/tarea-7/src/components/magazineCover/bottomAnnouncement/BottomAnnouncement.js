@@ -1,4 +1,13 @@
+import { React } from "react";
 import "./bottomAnnouncement.css";
+
+const AnnouncementTitle = ({ title }) => (
+  <h2 id="bottom-announcement-title">{title}</h2>
+);
+
+const AnnouncementDescription = ({ description }) => (
+  <p class="announcement-description">{description}</p>
+);
 
 const BottomAnnouncement = ({ title, description }) => {
   return (
@@ -8,8 +17,8 @@ const BottomAnnouncement = ({ title, description }) => {
         src={process.env.PUBLIC_URL + "/img/paw.png"}
         alt=""
       />
-      <h2 id="bottom-announcement-title">{title}</h2>
-      <p class="announcement-description">{description}</p>
+      <AnnouncementTitle title={title} />
+      <AnnouncementDescription description={description} />
     </div>
   );
 };

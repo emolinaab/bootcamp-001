@@ -1,3 +1,4 @@
+import { React } from "react";
 import "./announcementsContainer.css";
 import Announcement from "./Announcement";
 

@@ -1,3 +1,4 @@
+import { React } from "react";
 import AnnouncementsContainer from "./announcementsContainer/AnnouncementsContainer";
 import BottomAnnouncement from "./bottomAnnouncement/BottomAnnouncement";
 import "./magazineCoverStyles.css";
