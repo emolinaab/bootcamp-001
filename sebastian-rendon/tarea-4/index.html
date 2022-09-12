@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
     <script type="module" src="assets/js/main.js"></script>
     <title>Calculator</title>
   </head>
   <body>
     <main class="calculator__container">
       <section class="calculator__result">
+        <h3 id="history" class="calculator__history">0</h3>
         <h1 id="main-result" class="calculator__result--main">0</h1>
-        <h3 id="history" class="calculator__history"></h3>
       </section>
       <section class="calculator__basic-controls">
         <button
@@ -147,7 +152,14 @@
         >
           0
         </button>
-        <button class="btn btn--primary" type="button">.</button>
+        <button
+          class="btn btn--primary"
+          type="button"
+          data-type="number"
+          value="."
+        >
+          .
+        </button>
         <button
           class="btn btn--accent"
           type="button"

@@ -1,3 +1,5 @@
+import Calculator from './calculator.js';
+
 export default class CalculatorDisplay {
   _calculator;
   _resultElement;
@@ -21,7 +23,7 @@ export default class CalculatorDisplay {
 
     const onClearBtnClick = () => {
       display._calculator.clear();
-      display.updateResult();
+      display.update();
     };
 
     const onDelBtnClick = () => {
@@ -30,7 +32,7 @@ export default class CalculatorDisplay {
     };
 
     const onNumberBtnClick = (event) => {
-      display._calculator.addNumberToEquation(event.target.value);
+      display._calculator.addOperandToEquation(event.target.value);
       display.updateResult();
     };
 
@@ -40,13 +42,24 @@ export default class CalculatorDisplay {
     };
 
     const onEqualBtnClick = () => {
-      try {
-        display._calculator.setEquationResult();
-        display.update();
-      } catch (error) {}
+      display._calculator.evalEquationResult();
+      display.update();
     };
 
-    const eventHandler = {
+    const onKeyDown = (e) => {
+      console.log(e.key);
+      if (Calculator.operands.includes(e.key))
+        display._calculator.addOperandToEquation(e.key);
+      else if (Calculator.operators.includes(e.key))
+        display._calculator.addOperatorToEquation(e.key);
+      else if (e.key === '/') display._calculator.addOperatorToEquation('÷');
+      else if (e.key === '*') display._calculator.addOperatorToEquation('×');
+      else if (e.key === 'Enter') display._calculator.evalEquationResult();
+      else if (e.key === 'Backspace') display._calculator.delete();
+      display.update();
+    };
+
+    const btnClickHandlers = {
       number: onNumberBtnClick,
       operator: onOperatorBtnClick,
       clear: onClearBtnClick,
@@ -54,8 +67,9 @@ export default class CalculatorDisplay {
       delete: onDelBtnClick,
     };
 
+    window.addEventListener('keydown', onKeyDown);
     display._btns.forEach((btn) =>
-      btn.addEventListener('click', eventHandler[btn.dataset.type])
+      btn.addEventListener('click', btnClickHandlers[btn.dataset.type])
     );
   }
 
@@ -65,10 +79,11 @@ export default class CalculatorDisplay {
   }
 
   updateResult() {
-    this._resultElement.innerHTML = this._calculator.equation || '0';
+    if (this._calculator.error) this._resultElement.innerHTML = 'ERROR';
+    else this._resultElement.innerHTML = this._calculator.equation || '0';
   }
 
   updateHistory() {
-    this._historyElement.innerHTML = this._calculator.history;
+    this._historyElement.innerHTML = this._calculator.history || '0';
   }
 }

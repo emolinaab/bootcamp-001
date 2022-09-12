@@ -1,30 +1,55 @@
 export default class Calculator {
-  static _operators = ['×', '÷', '+', '-'];
+  static operators = ['×', '÷', '+', '-'];
+  static operands = [
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '0',
+    '.',
+  ];
 
   equation;
   history;
   freshlyEvaled;
+  error;
 
   constructor() {
-    this.equation = '0';
+    this.equation = '';
     this.history = '';
     this.freshlyEvaled = true;
+    this.error = false;
   }
 
+  /**
+   *
+   * @returns {boolean}
+   */
   get equationEndsWithOperator() {
-    return Calculator._operators.some((operator) =>
+    return Calculator.operators.some((operator) =>
       this.equation.endsWith(`<wbr>${operator}<wbr>`)
     );
   }
 
+  /**
+   *
+   * @returns {string[]}
+   */
   get infixNotation() {
     return this.equation.split('<wbr>');
   }
 
   clear() {
-    this.setEquation('0');
+    this.setEquation('');
     this.setHistory('');
     this.setFreshlyEvaled(true);
+    this.setError(false);
   }
 
   delete() {
@@ -33,17 +58,28 @@ export default class Calculator {
     else this.setEquation(this.equation.slice(0, -1));
   }
 
-  addNumberToEquation(value) {
-    if (this.freshlyEvaled) {
+  /**
+   *
+   * @param {string} value
+   */
+  addOperandToEquation(value) {
+    if (this.freshlyEvaled || this.error) {
       this.setEquation(value);
       this.setFreshlyEvaled(false);
+      this.setError(false);
     } else {
       this.setEquation(this.equation + value);
     }
   }
 
+  /**
+   *
+   * @param {string} value
+   */
   addOperatorToEquation(value) {
     if (this.freshlyEvaled) this.setFreshlyEvaled(false);
+    if (this.error) this.setError(false);
+
     if (this.equationEndsWithOperator) {
       this.setEquation(`${this.equation.slice(0, -11)}<wbr>${value}<wbr>`);
     } else {
@@ -51,27 +87,56 @@ export default class Calculator {
     }
   }
 
+  /**
+   *
+   * @param {string} value
+   */
   setEquation(value) {
     this.equation = value;
   }
 
+  /**
+   *
+   * @param {string} value
+   */
   setHistory(value) {
     this.history = value;
   }
 
+  /**
+   *
+   * @param {boolean} value
+   */
   setFreshlyEvaled(value) {
     this.freshlyEvaled = value;
   }
 
-  setEquationResult() {
-    if (!this.equationEndsWithOperator) {
-      const result = this.evalPostfixNotation();
-      this.setFreshlyEvaled(true);
-      this.setHistory(this.equation);
-      this.setEquation(`${result}`);
+  /**
+   *
+   * @param {boolean} value
+   */
+  setError(value) {
+    this.error = value;
+  }
+
+  evalEquationResult() {
+    if (!this.equationEndsWithOperator && !this.error) {
+      try {
+        const result = this.evalPostfixNotation();
+
+        this.setFreshlyEvaled(true);
+        this.setHistory(this.equation);
+        this.setEquation(`${result}`);
+      } catch (error) {
+        this.setError(true);
+      }
     }
   }
 
+  /**
+   *
+   * @returns {number}
+   */
   evalPostfixNotation() {
     const postfixNotation = this.getPostfixNotation();
     const stack = [];
@@ -88,17 +153,21 @@ export default class Calculator {
     return stack.pop();
   }
 
+  /**
+   *
+   * @returns {string[]}
+   */
   getPostfixNotation() {
     const stack = [];
     const result = [];
 
     for (const token of this.infixNotation) {
-      if (!Calculator._operators.includes(token)) result.push(token);
+      if (!Calculator.operators.includes(token)) result.push(token);
       else {
         while (
           !!stack.length &&
-          this.getPrecedence(token) <=
-            this.getPrecedence(stack[stack.length - 1])
+          this.getOperationPriority(token) <=
+            this.getOperationPriority(stack[stack.length - 1])
         ) {
           result.push(stack.pop());
         }
@@ -111,16 +180,35 @@ export default class Calculator {
     return result;
   }
 
-  getPrecedence(token) {
+  /**
+   *
+   * @param {string} token
+   * @returns {number}
+   */
+  getOperationPriority(token) {
     if (token === '÷' || token === '×') return 2;
     if (token === '+' || token == '-') return 1;
     return 0;
   }
 
+  /**
+   *
+   * @param {number} firstOperand
+   * @param {number} secondOperand
+   * @param {string} operator
+   * @returns
+   */
   getOperationResult(firstOperand, secondOperand, operator) {
-    if (operator === '÷') return secondOperand / firstOperand;
-    if (operator === '×') return secondOperand * firstOperand;
-    if (operator === '+') return secondOperand + firstOperand;
-    if (operator === '-') return secondOperand - firstOperand;
+    let newOperand;
+
+    if (operator === '÷') {
+      if (firstOperand === 0) throw new Error('Cannot divide by 0');
+      newOperand = secondOperand / firstOperand;
+    } else if (operator === '×') newOperand = secondOperand * firstOperand;
+    else if (operator === '+') newOperand = secondOperand + firstOperand;
+    else if (operator === '-') newOperand = secondOperand - firstOperand;
+
+    if (Number.isNaN(newOperand)) throw new Error('The result is not a number');
+    return newOperand;
   }
 }
