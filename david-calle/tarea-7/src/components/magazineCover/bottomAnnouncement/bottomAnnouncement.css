@@ -1,0 +1,23 @@
+#bottom-announcement{
+    position: absolute;
+    bottom: 0;
+    width: 75vmin;
+    padding: 5vmin 2vmin;
+}
+
+#bottom-announcement-img{
+    width: 8vmin;
+    display: block;
+    transform: rotate(45deg);
+    margin-bottom: 1vmin;
+    align-items: center;
+}
+
+#bottom-announcement-title{
+    color: white;
+    font-weight: bold;
+    line-height: 0.8;
+    margin: 0;
+    font-size: 4vmin;
+    margin-top: 1vmin;
+}
