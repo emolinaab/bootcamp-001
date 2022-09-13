@@ -50,6 +50,7 @@ let tiles = [],
 
 setupBoard()
 
+/* MAIN FUNCTIONS*/
 
 function drawTiles() {
   ctx.clearRect(0, 0, canvas.width, canvas.width);

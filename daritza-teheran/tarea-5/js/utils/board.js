@@ -1,5 +1,5 @@
 export function move(i, j, arr, rowCols) {
-    let blank = findBlank(arr)
+    let blank = arr.indexOf(-1);
     let blankCol = blank % rowCols;
     let blankRow = Math.floor(blank / rowCols);
     
@@ -15,12 +15,10 @@ export function shuffle(arr, rowCols) {
 }
 
 function swap(i, j, arr) {
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
 }
-
-
 
 function randomMove(arr,rowCols) {
   let r1 = Math.floor(Math.random()*rowCols);
@@ -38,17 +36,10 @@ function isNeighbor(i, j, x, y) {
   return false;
 }
 
-function findBlank(board) {
-  for (let i = 0; i < board.length; i++) {
-    if (board[i] == -1) return i;
-  }
-}
 
 export function isSolved(board, tiles) {
-    for (let i = 0; i < board.length - 1; i++) {
-      if (board[i] !== tiles[i].index) {
-        return false;
-      }
-    }
-    return true;
+  for (let i = 0; i < board.length - 1; i++) {
+    if (board[i] !== tiles[i].index) return false;
+  }
+  return true;
 }
