@@ -1,0 +1,14 @@
+main{
+    display: flex;
+    padding: 0px;
+    margin: 0 auto;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+#buttons{
+    height: 50px;
+    margin-top: 3%;
+
+}
