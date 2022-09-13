@@ -9,7 +9,7 @@ export function move(i, j, arr, rowCols) {
   }
 
 export function shuffle(arr, rowCols) {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 200; i++) {
     randomMove(arr, rowCols);
   }
 }
