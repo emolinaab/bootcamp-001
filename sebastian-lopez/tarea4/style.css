@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(54, 54, 32);
+  
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+section{
+    background-color: rgb(39, 39, 39);
+    max-width: 80%;
+}
+
+input[type="text"]{
+    outline: 0;
+    border: 0;
+    width:100%;
+    background-color: rgb(62, 63, 72);
+    text-align: right;
+    font-size: 3em;
+    color: whitesmoke;
+    padding: 0.6em 0.5em 0.2em 0.5em;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type="number"]{
+    outline: 0;
+    border: 0;
+    width: 100%;
+    background-color: rgb(62, 63, 72);
+    text-align: right;
+    font-size: 1em;
+    padding: 0em 0.5em 1em 0.5em;
+    font-size: 2.5em;
+    -moz-appearance: textfield;
+    color: rgb(220, 217, 217);
+}
+
+#buttons{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:0.6em;
+    gap:10px;
+}
+
+button{
+    padding: 0.8em;
+    cursor: pointer; 
+    color:white;
+    border: 0;
+    font-size: 1.5em;
+}
+
+#answer{
+    grid-column: span 3;
+}
+
+.number{
+    background-color: rgb(48, 48, 48);
+}
+
+.number:hover{
+    background-color: rgb(69, 69, 69);
+}
+
+.operator,.submit{
+    background-color: rgb(13, 75, 146);
+}
+.operator:hover,.submit:hover{
+    background-color: rgb(17, 92, 179);
+}
+
+.green{
+    background-color: rgb(92, 119, 12);
+}
+
+.green:hover{
+    background-color: rgb(113, 146, 15);
+}

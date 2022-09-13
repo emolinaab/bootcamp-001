@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Sliding Puzzle</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <h1>Lana Del Rey</h1>
+      <div id="row1">
+        <div id="position11" onClick="clickPosition(1,1);" class="img1"></div>
+        <div id="position12" onClick="clickPosition(1,2);" class="img2"></div>
+        <div id="position13" onClick="clickPosition(1,3);" class="img3"></div>
+      </div>
+      <div id="row2">
+        <div id="position21" onClick="clickPosition(2,1);" class="img4"></div>
+        <div id="position22" onClick="clickPosition(2,2);" class="img5"></div>
+        <div id="position23" onClick="clickPosition(2,3);" class="img6"></div>
+      </div>
+      <div id="row3">
+        <div id="position31" onClick="clickPosition(3,1);" class="img7"></div>
+        <div id="position32" onClick="clickPosition(3,2);" class="img8"></div>
+        <div id="position33" onClick="clickPosition(3,3);" class="img9"></div>
+      </div>
+      <button onClick="shuffle();">Nuevo Juego</button>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

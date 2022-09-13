@@ -1,0 +1,34 @@
+body {
+    font-family:myFont;
+    font-weight: 100;
+    text-align: center;
+    padding: 3px;
+}
+
+#title {
+    height: 150px;
+    width: 400px;
+    font-family: myFont;
+}
+
+#board {
+    width: 480px;
+    height: 480px;
+    border: 10px solid black;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board img {
+    width: 118px;
+    height: 118px;
+    border: 1px solid #0c67ae;
+}
+
+@font-face
+{
+    font-family: myFont;
+    src:url(fonts/Quick\ Blast.ttf);
+}

@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: cornsilk;
+}
+
+.title {
+  font-size: 44px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  padding-top: 30px;
+  color: rgba(0, 0, 0, .75);
+}
+
+.age {
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, .75);
+}
+
+.container-calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px)
+}
+
+.container-calculator > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.container-calculator > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 1.5rem;
+  border-color:transparent;
+  background-color:transparent;
+}
