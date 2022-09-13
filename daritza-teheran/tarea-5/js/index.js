@@ -50,7 +50,6 @@ let tiles = [],
 
 setupBoard()
 
-/* MAIN FUNCTIONS*/
 
 function drawTiles() {
   ctx.clearRect(0, 0, canvas.width, canvas.width);
@@ -81,9 +80,7 @@ function setupBoard() {
     }
   }
   board.pop();
-  // -1 means empty spot
   board.push(-1);
-  // Shuffle the board
   console.log(board)
   shuffle(board, rowCols);
   if (isSolved(board,tiles)) {shuffle(board, rowCols)};
