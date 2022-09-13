@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./statesOfWater.css";
 
 const Water = () => {
   const [currentTemp, setCurrentTemp] = useState(18);
