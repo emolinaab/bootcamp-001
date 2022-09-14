@@ -43,6 +43,7 @@ const EmojiGame = () => {
 
   const resetGame = () => {
     setGameState(initialGameState);
+    setRandomMovie();
   };
 
   const setAnswer = (e) => {
@@ -56,6 +57,7 @@ const EmojiGame = () => {
     } else {
       setRandomMovie();
       increasePoints();
+      clearInput();
     }
   };
 
@@ -65,6 +67,10 @@ const EmojiGame = () => {
       return;
     }
     setGameState({ ...gameState, lives: gameState.lives - 1 });
+  };
+
+  const clearInput = () => {
+    setGameState((gm) => ({ ...gm, answer: "" }));
   };
 
   const increasePoints = () => {
