@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/controller.js" type="module" defer></script>
+</head>
+<body>
+    <main> 
+        
+        <section id="puzzle">
+            
+        </section>
+       
+        <section id="reference">
+            <img src="./assets/painting.png" alt="Final Image">  
+        </section>
+       
+    </main>
+
+    <footer>
+        <input type="submit" value="Start">
+        <h1>Steps: <span id="count">0</span></h1>
+    </footer>
+    
+    <template data-box>
+        <div>
+            <button>&UpArrow;</button>
+            <button>&RightArrow;</button>
+            <button>&DownArrow;</button>
+            <button>&LeftArrow;</button>
+        </div>
+    </template>
+</body>
+</html>
