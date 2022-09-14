@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Slide Puzzle</title>
+</head>
+<body>
+
+    <header>
+        <img src="../img/pokemonLogo.webp">
+    </header>
+    
+    <main>
+        <section class="container">
+            <h1>Dragonite</h1>
+                <section>
+                    <div id="rowPosition1">
+                        <div id="position11" class="img1" onClick="changePosition(1,1);" ></div>
+                        <div id="position12" class="img2" onClick="changePosition(1,2);" ></div>
+                        <div id="position13" class="img3" onClick="changePosition(1,3);" ></div>
+                    </div>
+
+                    <div id="rowPosition2">
+                        <div id="position21" class="img4" onClick="changePosition(2,1);" ></div>
+                        <div id="position22" class="img5" onClick="changePosition(2,2);" ></div>
+                        <div id="position23" class="img6" onClick="changePosition(2,3);" ></div>
+                    </div>
+
+                    <div id="rowPosition3">
+                        <div id="position31" class="img7" onClick="changePosition(3,1);" ></div>
+                        <div id="position32" class="img8" onClick="changePosition(3,2);" ></div>
+                        <div id="position33" class="img9" onClick="changePosition(3,3);" ></div>
+                    </div>
+                    <button id="buttonColor" onClick="shuffleImages();" >Play Again</button>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
