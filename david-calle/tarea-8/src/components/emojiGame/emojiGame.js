@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./emojiGame.css";
+import AnswerInput from "./answerInput";
 import MOVIES_WITH_EMOJIS from "./moviesWithEmojis";
+import "./emojiGame.css";
 
 const GameTitle = ({ title }) => {
   return <h1 className="game-title">{title}</h1>;
@@ -14,113 +15,89 @@ const Counter = ({ title, number, className = "" }) => {
   );
 };
 
-const AnswerInput = ({ answer, setAnswer, tryAnswer }) => {
-  return (
-    <div className="answer-input-container">
-      <input
-        className="answer-input-field"
-        type="text"
-        value={answer}
-        onChange={setAnswer}
-      />
-      <button className="answer-input-button" onClick={tryAnswer}>
-        Send
-      </button>
-    </div>
-  );
-};
-
 const EmojiGame = () => {
-  const initialGameState = {
-    answer: "",
-    lives: 3,
-    points: 0,
-    currentMovie: { name: "", emojis: "" },
-    usedMovies: [],
-  };
-
-  const [gameState, setGameState] = useState(initialGameState);
-
-  const resetGame = () => {
-    setGameState(initialGameState);
-    setRandomMovie();
-  };
-
-  const setAnswer = (e) => {
-    const answer = e.target.value;
-    setGameState({ ...gameState, answer: answer });
-  };
-
-  const tryAnswer = () => {
-    if (gameState.answer !== gameState.currentMovie.name) {
-      decreaseLives();
-    } else {
-      setRandomMovie();
-      increasePoints();
-      clearInput();
-    }
-  };
-
-  const decreaseLives = () => {
-    if (gameState.lives === 0) {
-      resetGame();
-      return;
-    }
-    setGameState({ ...gameState, lives: gameState.lives - 1 });
-  };
-
-  const clearInput = () => {
-    setGameState((gm) => ({ ...gm, answer: "" }));
-  };
-
-  const increasePoints = () => {
-    setGameState((gm) => ({ ...gm, points: gm.points + 1 }));
-  };
-
-  const setRandomMovie = () => {
-    let movieIndex = 0;
-    do {
-      const amountOfMovies = MOVIES_WITH_EMOJIS?.length;
-      movieIndex = Math.floor(Math.random() * amountOfMovies);
-    } while (gameState.usedMovies.includes(movieIndex));
-    setMovieByIndex(movieIndex);
-  };
-
-  const setMovieByIndex = (index) => {
-    const movie = MOVIES_WITH_EMOJIS[index];
-    setGameState({
-      ...gameState,
-      currentMovie: {
-        name: movie.name,
-        emojis: movie.emojis,
-      },
-      usedMovies: gameState.usedMovies.concat(index),
-    });
-  };
+  const [answer, setAnswer] = useState("");
+  const [lives, setLives] = useState(3);
+  const [points, setPoints] = useState(0);
+  const [currentMovie, setCurrentMovie] = useState({ name: "", emojis: "" });
+  const [usedMovies, setUsedMovies] = useState([]);
 
   useEffect(() => {
     setRandomMovie();
   }, []);
 
+  const resetGame = () => {
+    setAnswer("");
+    setLives(3);
+    setPoints(0);
+    setRandomMovie();
+  };
+
+  const setUserAnswer = (e) => {
+    const answer = e.target.value;
+    setAnswer(answer);
+  };
+
+  const submitAnswer = () => {
+    if (answer !== currentMovie.name) {
+      decreaseLives();
+      return;
+    }
+    increasePoints();
+    clearInput();
+    setNewRandomMovie();
+  };
+
+  const decreaseLives = () => {
+    if (lives === 0) {
+      alert("you lost :( try again!");
+      resetGame();
+      return;
+    }
+    setLives(lives - 1);
+  };
+
+  const clearInput = () => {
+    setAnswer("");
+  };
+
+  const increasePoints = () => {
+    setPoints(points + 1);
+  };
+
+  const setRandomMovie = () => {
+    const moviesQuantity = MOVIES_WITH_EMOJIS?.length;
+    const movieIndex = Math.floor(Math.random() * moviesQuantity);
+    setCurrentMovie(MOVIES_WITH_EMOJIS[movieIndex]);
+    setUsedMovies([movieIndex]);
+  };
+
+  const setNewRandomMovie = () => {
+    if (usedMovies.length === MOVIES_WITH_EMOJIS.length) {
+      alert("you're a movie maniac");
+      resetGame();
+      return;
+    }
+    let movieIndex = 0;
+    do {
+      const moviesQuantity = MOVIES_WITH_EMOJIS?.length;
+      movieIndex = Math.floor(Math.random() * moviesQuantity);
+    } while (usedMovies.includes(movieIndex));
+    setCurrentMovie(MOVIES_WITH_EMOJIS[movieIndex]);
+    setUsedMovies(usedMovies.concat(movieIndex));
+  };
+
   return (
     <div className="game-wrapper">
-      <Counter
-        className="upper-left-counter"
-        title="Lives"
-        number={gameState.lives}
-      />
-      <Counter
-        className="upper-right-counter"
-        title="Points"
-        number={gameState.points}
-      />
+      <Counter className="upper-left-counter" title="Lives" number={lives} />
+      <Counter className="upper-right-counter" title="Points" number={points} />
       <div className="gameContainer">
         <GameTitle title="Guess the movie" />
-        <p className="emojis-container">{gameState.currentMovie.emojis}</p>
+        <p className="emojis-container">{currentMovie.emojis}</p>
         <AnswerInput
-          answer={gameState.answer}
-          setAnswer={setAnswer}
-          tryAnswer={tryAnswer}
+          answer={answer}
+          setAnswer={setUserAnswer}
+          submitAnswer={submitAnswer}
         />
       </div>
     </div>
