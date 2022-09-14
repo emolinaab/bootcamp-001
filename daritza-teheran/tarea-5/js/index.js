@@ -1,8 +1,7 @@
-import {makeButton, makeSection} from "./utils/makeElements.js";
+import {makeButton, makeCanvas, makeSection} from "./utils/makeElements.js";
 import {Tile} from "./utils/tile.js";
 import {shuffle, move, isSolved} from "./utils/board.js";
 
-/* CREATE ELEMENTS */
 const sections = ["buttons", "content"];
 const buttons = [{name: "Easy", value: 2}, 
                  {name: "Normal", value: 3}, 
@@ -16,40 +15,31 @@ buttons.map((e) => {
   makeButton(e); 
   const button = document.getElementById(e.name);
   button.addEventListener('click',()=>{
-    rowCols = e.value;
-    tiles = [],
-    board = [],
-    tileSize = img.width / rowCols;
-    setupBoard();
-    drawTiles();
+    init(e.value)
   })
 });
 
+makeCanvas()
 
-/* CREATE CANVAS */
-const content = document.getElementById("content");
-const c = document.createElement("canvas");
-c.setAttribute("id", "canvas");
-content.appendChild(c);
+let tiles, board, rowCols, tileSize, canvas, ctx, img;
 
-/* SETUP IMAGE */
-const canvas = document.getElementById("canvas"),
-      ctx = canvas.getContext("2d"),
-      img = new Image();
+function init(rC) {
+  tiles=[], board=[], rowCols = rC,  img = new Image(), tileSize = 600 / rowCols;
+  img.addEventListener('load', setupCanvas, false);
+  img.src = 'https://images.pexels.com/photos/5274345/pexels-photo-5274345.jpeg?auto=compress&cs=tinysrgb&w=600';
+  setupCanvas();
+  setupBoard();
+}
+window.onload = init(2);
 
-img.addEventListener('load', drawTiles, false);
-img.src = 'https://images.pexels.com/photos/5274345/pexels-photo-5274345.jpeg?auto=compress&cs=tinysrgb&w=600';
-canvas.setAttribute("width", img.naturalWidth);
-canvas.setAttribute("height", img.naturalHeight)
 
-/*  TILES CONFIG*/
-let tiles = [],
-  board = [],
-  rowCols = 2,
-  tileSize = img.width / rowCols;
-
-setupBoard()
-
+function setupCanvas() {
+  canvas = document.getElementById("canvas");
+  ctx = canvas.getContext("2d");
+  canvas.setAttribute("width", img.naturalWidth);
+  canvas.setAttribute("height", img.naturalHeight)
+  drawTiles();
+}
 
 function drawTiles() {
   ctx.clearRect(0, 0, canvas.width, canvas.width);
@@ -81,7 +71,6 @@ function setupBoard() {
   }
   board.pop();
   board.push(-1);
-  console.log(board)
   shuffle(board, rowCols);
   if (isSolved(board,tiles)) {shuffle(board, rowCols)};
 }

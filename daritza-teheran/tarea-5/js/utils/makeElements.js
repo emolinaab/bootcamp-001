@@ -5,7 +5,6 @@ export function makeSection(props) {
     section.setAttribute("id", props);
     root.appendChild(section);
 }
-
 export function makeButton(element) {
     const parent = document.getElementById("buttons");
     const btn = document.createElement("button");
@@ -13,6 +12,12 @@ export function makeButton(element) {
     btn.innerHTML = element.name;
     btn.setAttribute('value', element.value)
     parent.appendChild(btn);
+}
+export function makeCanvas() {
+    const content = document.getElementById("content");
+    const c = document.createElement("canvas");
+    c.setAttribute("id", "canvas");
+    content.appendChild(c);
 }
   
   
