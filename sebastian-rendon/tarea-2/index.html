@@ -13,11 +13,8 @@
   </head>
   <body>
     <main class="main__magazine">
-      <span
-        title="Edition: September 4, 2022 - 42th Edition"
-        class="edition__details"
-      >
-        Sept. 4, 2022 - Ed. 42
+      <span title="42th Edition: September 4th, 2022" class="edition__details">
+        <time datetime="2022-09-04">Sept. 4th, 2022</time> - Ed. 42
       </span>
       <header class="header">
         <h1 title="Checkered flag" class="header__magazine-title">
@@ -25,18 +22,19 @@
           <span>flag</span>
         </h1>
       </header>
-      <img
-        src="./assets/img/oscar_piastri.webp"
-        title="Oscar Piastri"
-        class="img__magazine-cover"
-        alt="Formula driver Oscar Piastri holding a helmet in a celebration pose"
-        aria-describedby="main-article"
-      />
+      <figure class="fig__magazine-cover">
+        <img
+          src="./assets/img/oscar_piastri.webp"
+          title="Oscar Piastri"
+          alt="Formula driver Oscar Piastri holding a helmet in a celebration pose"
+          aria-describedby="main-article"
+        />
+      </figure>
       <section class="section__grid">
         <article id="main-article" class="article__main-article">
           <header>
-            <h1>Oscar Piastri</h1>
-            <h2>Who is the new McLaren driver?</h2>
+            <h2>Oscar Piastri</h2>
+            <h3>Who is the new McLaren driver?</h3>
           </header>
           <p>
             The Australian promise talks about his expectations with the
@@ -44,17 +42,17 @@
           </p>
         </article>
         <aside class="aside__supporting-articles">
-          <h1 class="title__supporting-article--first">
+          <h3 class="title__supporting-article--first">
             Redbull ahead of Ferrari
-          </h1>
-          <h1 class="title__supporting-article--last">
+          </h3>
+          <h3 class="title__supporting-article--last">
             What to expect for Monza
-          </h1>
+          </h3>
         </aside>
         <footer class="footer__third-article">
-          <h1 class="title__third-article">
+          <h3 class="title__third-article">
             <span>There is a new team in the paddock: Audi</span>
-          </h1>
+          </h3>
         </footer>
         <footer class="footer__barcode">
           <img
@@ -65,7 +63,7 @@
           />
         </footer>
         <footer class="footer__fourth-article">
-          <h1>The Rumor...</h1>
+          <h3>The Rumor...</h3>
           <p>Gasly to be racing for Alpine next year!</p>
         </footer>
       </section>

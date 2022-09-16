@@ -10,9 +10,9 @@ body {
 }
 
 .main__magazine {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   margin: 4rem auto;
   background: linear-gradient(180deg, #ff8000 10%, #fdb777 90%);
   height: 720px;
@@ -56,13 +56,18 @@ body {
   line-height: 5.5rem;
 }
 
-.img__magazine-cover {
+.fig__magazine-cover {
+  display: inline-flex;
   position: absolute;
+  margin: 0;
   z-index: 10;
-  bottom: 0;
-  height: 100%;
   align-self: center;
-  width: auto;
+  justify-content: center;
+  height: 100%;
+}
+
+.img__magazine-cover {
+  object-fit: contain;
 }
 
 .section__grid {
@@ -86,14 +91,14 @@ body {
   grid-area: article;
 }
 
-.article__main-article h1 {
+.article__main-article h2 {
   text-transform: uppercase;
   color: #47c7fc;
   font-size: 4rem;
   margin: 0;
 }
 
-.article__main-article h2 {
+.article__main-article h3 {
   margin-top: 0.2rem;
   margin-bottom: 0.1rem;
 }
@@ -112,7 +117,7 @@ body {
   grid-area: aside-2;
 }
 
-.aside__supporting-articles > h1 {
+.aside__supporting-articles > h3 {
   text-transform: uppercase;
   color: #000;
   font-size: 2rem;
@@ -153,6 +158,7 @@ body {
 }
 
 .title__third-article {
+  font-size: 1.5rem;
   line-height: 2.75rem;
 }
 
@@ -164,6 +170,7 @@ body {
 
 .footer__fourth-article {
   position: relative;
+  z-index: 20;
   padding: 0 2rem;
   right: -1rem;
   grid-area: footer-2;
@@ -173,6 +180,7 @@ body {
   /* border-radius: 1rem 0 0 0; */
 }
 
-.footer__fourth-article > h1 {
+.footer__fourth-article > h3 {
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
