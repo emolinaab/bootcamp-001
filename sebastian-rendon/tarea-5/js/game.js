@@ -73,7 +73,7 @@ export default class Game {
   }
 
   shake(piece, element) {
-    const gridSize = puzzle.gridSize;
+    const gridSize = this.puzzle.gridSize;
 
     element.style = `transform: translate(${
       (piece.position % gridSize) * 5.5 - 0.25

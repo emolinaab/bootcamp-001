@@ -21,6 +21,7 @@ export default class Puzzle {
         position: i - 1,
       });
     }
+    console.log(this.pieces);
   }
 
   shuffle() {
@@ -73,5 +74,13 @@ export default class Puzzle {
       adjacentPositions.push(originPiece.position + gridSize);
     }
     return adjacentPositions;
+  }
+}
+
+class PuzzlePiece {
+  constructor(number, position, imgSrc = '') {
+    this.number = number;
+    this.position = position;
+    this.imgSrc = imgSrc;
   }
 }
