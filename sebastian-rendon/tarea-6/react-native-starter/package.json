@@ -1,0 +1,32 @@
+{
+  "name": "react-native-starter",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~46.0.9",
+    "expo-status-bar": "~1.4.0",
+    "prop-types": "^15.8.1",
+    "react": "18.0.0",
+    "react-native": "0.69.5",
+    "react-native-gesture-handler": "~2.5.0",
+    "react-navigation": "^4.4.4",
+    "react-navigation-stack": "^2.10.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0"
+  },
+  "private": true
+}
