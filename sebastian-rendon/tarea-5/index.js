@@ -18,7 +18,7 @@ function onSizeFormSubmit(evt) {
 
   game = new Game(new Puzzle(size), document.getElementById('puzzle'));
   game.puzzle.createPuzzleMap();
-  // game.puzzle.shuffle();
+  game.puzzle.shuffle();
   game.mountPuzzleElement();
 }
 
