@@ -21,7 +21,6 @@ export default class Puzzle {
         position: i - 1,
       });
     }
-    console.log(this.pieces);
   }
 
   shuffle() {
