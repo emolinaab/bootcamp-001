@@ -1,0 +1,78 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+#moaning{
+  display: flex;
+  justify-content: center;
+}
+#board {
+  width: 405px;
+  height: 405px;
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board img {
+  width: 79px;
+  height: 79px;
+  border: 0.5px solid lightblue;
+}
+
+#pieces {
+  width: 1053px;
+  height: 160px;
+  border: 2px solid black;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#pieces img {
+  width: 79px;
+  height: 79px;
+  border: 0.5px solid grey;
+}
+
+.container-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50px;
+  background: #141414;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  margin-left: 135%;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background: #ccc;
+}
+
+.wzp img {
+  width: 605px;
+  height: 409px;
+  margin: 0;
+}
+
+.wzp{
+  padding: 0;
+  margin: 0 1em;
+
+}
