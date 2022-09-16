@@ -1,8 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import {
-  $black, $purple, $red, $white,
-} from '../theme/colors';
+import { View, StyleSheet } from 'react-native';
+import { $black, $purple, $red, $white } from '../theme/colors';
 
 function BoxScreen() {
   return (
