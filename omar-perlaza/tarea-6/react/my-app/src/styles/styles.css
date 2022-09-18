@@ -1,0 +1,117 @@
+.container-post
+{
+   max-width: 1170px;
+   min-width: 100px;
+    height: 368px;
+    margin-left: 100px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: inherit;
+    align-items: stretch;
+    margin-top: 40px;
+    background-color: #fff;
+    box-shadow: rgb(66 103 178) 5px 5px, rgb(52, 76, 124) 10px 10px, rgba(137 143 156) 15px 15px, rgba(223,227,238) 20px 20px, rgba(247,247,247) 25px 25px;
+}
+
+.user-info h2
+{
+    display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+    color: #636469f7;
+}
+
+.post-image
+{
+    height: 7rem;
+    max-width: 7rem;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+.post-text
+{
+    max-width: 100%;
+    text-align: center;
+    padding: 40px;
+    font-family: Lato,sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #636469f7;
+}
+
+nav
+{
+    margin-top: 1px;
+    background-color: 	#3b5998;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: flex-start;
+    border: solid;
+    width: 100%;
+    padding: 0px;
+    align-items: center;
+    justify-content:space-around ;
+}
+
+ nav a
+{
+    display: flex;
+    margin: 15px;
+    font-family: Lato,sans-serif;
+    font-weight: 400;
+    text-align:justify;
+  /*   justify-content: space-between; */
+
+}
+
+.home-user-list
+{
+
+    min-height: 600px ;
+    min-width: 200px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-right: #8b9dc3 solid;
+}
+
+.user-info:hover
+{
+
+   background-color: #fff;
+   box-shadow: rgb(139,157,195) 5px 5px, rgb(52, 76, 124) 10px 10px, rgba(137 143 156) 15px 15px, rgba(223,227,238) 20px 20px, rgba(247,247,247) 25px 25px;
+   transform: translate(5px);
+}
+
+.user-list
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.user-image
+{
+    height: 3em;
+    width: 3rem;
+    border-radius: 50%;
+    margin:1ch 1ch ; 
+    display: inline;
+}
+h6
+{
+    display:flex;
+    align-items: center;
+    font-family: Lato,sans-serif;
+    color: #636469f7;
+}
