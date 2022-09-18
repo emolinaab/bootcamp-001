@@ -1,0 +1,98 @@
+.main__magazine {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 4rem auto;
+  background: linear-gradient(180deg, #ff8000 10%, #fdb777 90%);
+  height: 720px;
+  width: 720px;
+  overflow: hidden;
+}
+
+.edition__details {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__magazine-title {
+  position: relative;
+  top: -1.5rem;
+  color: #fff;
+  font-size: 4.75rem;
+  line-height: 4.75rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header__magazine-title > span {
+  display: inline-block;
+}
+
+.header__magazine-title > span:first-child {
+  color: #000;
+}
+
+.header__magazine-title > span::first-letter {
+  font-size: 5.5rem;
+  line-height: 5.5rem;
+}
+
+.img__magazine-cover {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  height: 100%;
+  align-self: center;
+  width: auto;
+}
+
+.section__grid {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: 
+    "aside-1 . aside-2"
+    "aside-1 barcode footer";
+  height: 100%;
+  width: 100%;
+}
+
+.footer__barcode {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  grid-area: barcode;
+}
+
+.img__barcode-img {
+  border-radius: 0.5rem;
+  border: #000 2px solid;
+  padding: 0.25rem;
+  object-fit: contain;
+  width: 120px;
+}
+
+.footer__third-article {
+  position: relative;
+  padding: 0 2rem;
+  right: -1rem;
+  grid-area: footer;
+  color: #000;
+  background-color: #dcff36;
+  transform: skewX(15deg);
+  /* border-radius: 1rem 0 0 0; */
+}
+
+.footer__third-article > h1 {
+  text-transform: uppercase;
+}
