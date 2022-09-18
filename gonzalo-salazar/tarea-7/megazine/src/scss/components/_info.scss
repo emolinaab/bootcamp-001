@@ -1,0 +1,29 @@
+@use "../abstracts/mixin";
+
+.info-section {
+  @include mixin.flex(space-around);
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+
+  &__img {
+    float: left;
+    margin: 10px;
+  }
+
+  &__article {
+    @include mixin.flex(center);
+    margin: 20px 0px;
+  }
+
+  @media (max-width: 1200px) {
+    & {
+      grid-template-columns: 200px 200px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    & {
+      grid-template-columns: 200px;
+    }
+  }
+}
