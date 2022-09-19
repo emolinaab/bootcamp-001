@@ -1,0 +1,39 @@
+.principalimage {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.photo {
+  z-index: 1;
+  position: absolute;
+  top: -798px;
+  width: 850px;
+  left: 25px;
+}
+
+.codecontainer {
+  width: 100%;
+  z-index: 3;
+  position: relative;
+}
+
+.code {
+  height: 200px;
+  position: absolute;
+  right: 40px;
+  top: -100px;
+}
+
+.carcontainer {
+  width: 100%;
+  z-index: 3;
+  position: relative;
+}
+
+.car {
+  height: 100px;
+  position: absolute;
+  left: -40px;
+}
