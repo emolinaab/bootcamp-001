@@ -17,14 +17,24 @@ const supportingArticles = [
   'What to expect for Monza',
 ];
 
+const today = new Date();
+const formattedDate = today.toLocaleString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+});
+const randomEd = Math.floor(Math.random() * 100);
+
 function App() {
   return (
     <main className="main__magazine">
       <span
         className="edition__details"
-        title="Edition: Sept. 4, 2022 - Ed. 47"
+        title={formattedDate + ' - Ed. ' + randomEd}
       >
-        Sept. 4, 2022 - Ed. 42
+        <time dateTime={today.toISOString()}>{formattedDate}</time>
+        {' - Ed. '}
+        {randomEd}
       </span>
       <header className="header">
         <h1 title="Checkered flag" className="header__magazine-title">
@@ -32,15 +42,23 @@ function App() {
           <span>flag</span>
         </h1>
       </header>
-      <img
-        src={coverImage}
-        title="Oscar Piastri"
-        className="img__magazine-cover"
-        alt="Oscar Piastri"
-      />
+      <figure className="fig__magazine-cover">
+        <img
+          className="img__magazine-cover"
+          src={coverImage}
+          title="Oscar Piastri"
+          alt="Formula driver Oscar Piastri holding a helmet in a celebration pose"
+          aria-describedby="main-article"
+        />
+      </figure>
       <section className="section__grid">
         <MainArticle {...mainArticle} />
         <SupportingArticles articles={supportingArticles} />
+        <footer className="footer__third-article">
+          <h3 className="title__third-article">
+            <span>There is a new team in the paddock: Audi</span>
+          </h3>
+        </footer>
         <footer className="footer__barcode">
           <img
             className="img__barcode-img"
@@ -48,8 +66,8 @@ function App() {
             alt="Magazine barcode"
           />
         </footer>
-        <footer className="footer__third-article">
-          <h1>The Rumor...</h1>
+        <footer className="footer__fourth-article">
+          <h3>The Rumor...</h3>
           <p>Gasly in talks with Alpine for next year.</p>
         </footer>
       </section>

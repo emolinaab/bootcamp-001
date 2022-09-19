@@ -45,13 +45,18 @@
   line-height: 5.5rem;
 }
 
-.img__magazine-cover {
+.fig__magazine-cover {
+  display: inline-flex;
   position: absolute;
+  margin: 0;
   z-index: 10;
-  bottom: 0;
-  height: 100%;
   align-self: center;
-  width: auto;
+  justify-content: center;
+  height: 100%;
+}
+
+.img__magazine-cover {
+  object-fit: contain;
 }
 
 .section__grid {
@@ -59,10 +64,30 @@
   grid-template-columns: 1fr 300px 1fr;
   grid-template-rows: 3fr 1fr;
   grid-template-areas: 
-    "aside-1 . aside-2"
-    "aside-1 barcode footer";
+    "article . aside-2"
+    "footer-1 barcode footer-2";
   height: 100%;
   width: 100%;
+}
+
+.footer__third-article {
+  position: relative;
+  z-index: 20;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  grid-area: footer-1;
+}
+
+.title__third-article {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+}
+
+.title__third-article > span {
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
 }
 
 .footer__barcode {
@@ -82,17 +107,19 @@
   width: 120px;
 }
 
-.footer__third-article {
+.footer__fourth-article {
   position: relative;
+  z-index: 20;
   padding: 0 2rem;
   right: -1rem;
-  grid-area: footer;
+  grid-area: footer-2;
   color: #000;
   background-color: #dcff36;
   transform: skewX(15deg);
   /* border-radius: 1rem 0 0 0; */
 }
 
-.footer__third-article > h1 {
+.footer__fourth-article > h3 {
+  font-size: 1.5rem;
   text-transform: uppercase;
 }

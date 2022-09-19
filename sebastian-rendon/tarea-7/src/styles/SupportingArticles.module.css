@@ -9,8 +9,9 @@
 }
 
 .title__supporting-article {
-  border-top: #47c7fc 3px solid;
   text-transform: uppercase;
   color: #000;
   font-size: 2rem;
+  border-top: #47c7fc 3px solid;
 }
+

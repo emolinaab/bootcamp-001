@@ -10,8 +10,8 @@ type Props = {
 function MainArticle({ heading, subheading, content }: Props) {
   return (
     <article className={styles['article__main-article']}>
-      <h1>{heading}</h1>
-      <h2>{subheading}</h2>
+      <h2>{heading}</h2>
+      <h3>{subheading}</h3>
       <p>{content}</p>
     </article>
   );

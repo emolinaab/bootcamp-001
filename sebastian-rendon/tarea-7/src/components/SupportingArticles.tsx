@@ -9,9 +9,9 @@ function SupportingArticles({ articles }: Props) {
   return (
     <aside className={styles['aside__supporting-articles']}>
       {articles.map((article) => (
-        <h1 key={article} className={styles['title__supporting-article']}>
+        <h3 key={article} className={styles['title__supporting-article']}>
           {article}
-        </h1>
+        </h3>
       ))}
     </aside>
   );
