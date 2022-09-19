@@ -5,8 +5,8 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <main class="titles">
-      <div class="bodyTitles">
+    <main className="titles">
+      <div className="bodyTitles">
         <Header />
         <Boxes />
         <Footer />
