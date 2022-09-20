@@ -37,7 +37,7 @@ export default function Form() {
   return (
     <div className="form-container">
       <p className="form-text">Sign In</p>
-      <p className="error">{error}</p>
+      {error ? <p className="error">{error}</p> : null}
       <div>
         <form onSubmit={handleSubmit}>
           <div className="fields-container">
