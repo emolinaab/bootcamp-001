@@ -1,0 +1,50 @@
+
+body {    
+    background-image: url('../tarea1/img/Kobe.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: auto 100%; 
+    background-color: black;
+    background-position: center;
+    width: 80%;
+    margin: auto;
+}
+
+.magazine-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.title {
+    color:white;
+    font-size: 100px;
+    text-align: center;
+    transition: font 1s ease-in-out;
+}
+
+.grid-container {
+    justify-content: justify;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 15px;
+    align-items: center;
+    margin-top: 35vh;
+}
+
+.container-left {
+    text-align: left;
+    color: white;
+    font-size: 40px;
+}
+
+.container-right {
+    text-align: right;
+    color: white;
+    font-size: 40px;
+}
+
+@media (max-height:400px) {
+    .title {
+        font-size:60px;
+    }
+}
