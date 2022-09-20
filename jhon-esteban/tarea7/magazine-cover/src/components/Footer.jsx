@@ -1,20 +1,20 @@
 import React from 'react'
 import runway from '../assets/img/runways.webp'
+import PrincipalTitle from './PrincipalTitle'
+import WebsiteKatya from './WebsiteKatya'
 
 const Footer = () => {
   return (
     <footer>
         <section class="bottom">
             <div>
-                <h1>Youtube Channel Trixie & Katya</h1>
-                <h5>August 2022</h5>
-                <h5>welovekatya.com</h5>
+                <PrincipalTitle text = {"Youtube Channel Trixie & Katya"}/>
+                <WebsiteKatya website = {"August 2022"}/>
+                <WebsiteKatya website = {"welovekatya.com"}/>
             </div>
-            <div>
-                <div class="makeup">
-                    <img src={runway} alt=""/>
-                    <h1>Not today Satan</h1>
-                </div>
+            <div class="makeup">
+                <img src={runway} alt=""/>
+                <PrincipalTitle text = {"Not today Satan"}/>
             </div>
         </section>
     </footer>
