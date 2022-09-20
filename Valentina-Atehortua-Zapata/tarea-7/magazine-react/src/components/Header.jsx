@@ -1,11 +1,13 @@
 import React from "react";
 import saturno from "../assets/img/saturno.png";
+import PrincipalTitle from "./PrincipalTitle";
+import Subtitle from "./Subtitle";
 
 const Header = () => {
   return (
     <header>
-      <h1>COSMOS</h1>
-      <h5 id="h5">T H E - S C I E N C E - O F - E V E R Y T H I N G</h5>
+      <PrincipalTitle text={"COSMOS"} />
+      <Subtitle text={"T H E - S C I E N C E - O F - E V E R Y T H I N G"}/>
       <img className="saturn" src={saturno} alt="" />
     </header>
   );

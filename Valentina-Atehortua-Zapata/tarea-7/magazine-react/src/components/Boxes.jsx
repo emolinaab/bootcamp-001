@@ -1,4 +1,5 @@
 import React from "react";
+import TitleBoxes from "./TitleBoxes";
 
 const Boxes = () => {
   return (
@@ -11,16 +12,16 @@ const Boxes = () => {
 
       <div className="container-boxes">
         <div className="box">
-          <h4>QUANTUM SUPREMACY</h4>
+          <TitleBoxes titleBox={"QUANTUM SUPREMACY"} />
         </div>
         <div className="box">
-          <h4>INFLAMMATION OVERLOAD</h4>
+          <TitleBoxes titleBox={"INFLAMMATION OVERLOAD"} />
         </div>
         <div className="box">
-          <h4>HOW DINOSAURS BECAME BIRDS</h4>
+          <TitleBoxes titleBox={"HOW DINOSAURS BECAME BIRDS"} />
         </div>
         <div className="box">
-          <h4>SATURN GREAT PLANET</h4>
+          <TitleBoxes titleBox={"SATURN GREAT PLANET"} />
         </div>
       </div>
     </section>
