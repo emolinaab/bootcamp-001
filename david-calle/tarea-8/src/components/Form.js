@@ -4,9 +4,18 @@ import { checkValidAccount, signIn } from "../utils";
 
 export default function Form() {
   const [formData, setFormData] = useState({ username: "", password: "" });
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    signIn(formData.username, formData.password)
+      .then((result) => {
+        setIsLoggedIn(result);
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
   };
 
   function handleChange(e) {
@@ -17,14 +26,23 @@ export default function Form() {
     });
   }
 
+  if (isLoggedIn) {
+    return (
+      <div className="form-container">
+        <p>You've successfully logged in</p>
+      </div>
+    );
+  }
+
   return (
     <div className="form-container">
       <p className="form-text">Sign In</p>
+      <p className="error">{error}</p>
       <div>
         <form onSubmit={handleSubmit}>
           <div className="fields-container">
             <div className="input-container">
-              <label for="username" className="input-label">
+              <label htmlFor="username" className="input-label">
                 Username:
               </label>
               <input
@@ -36,7 +54,7 @@ export default function Form() {
               />
             </div>
             <div className="input-container">
-              <label for="password" className="input-label">
+              <label htmlFor="password" className="input-label">
                 Password:
               </label>
               <input
