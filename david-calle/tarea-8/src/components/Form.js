@@ -1,15 +1,13 @@
 import React, { useState } from "react";
+import "./form.css";
+import { checkValidAccount, signIn } from "../utils";
 
 export default function Form() {
   const [formData, setFormData] = useState({ username: "", password: "" });
 
-  const checkValidity = (username, password) => {
-    return false;
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
-
-  const signIn = () => {};
-
-  const handleSubmit = () => {};
 
   function handleChange(e) {
     const value = e.target.value;
@@ -20,21 +18,41 @@ export default function Form() {
   }
 
   return (
-    <div>
+    <div className="form-container">
+      <p className="form-text">Sign In</p>
       <div>
-        <form>
-          <div>
-            <label for="fname">Username:</label>
-            <input type="text" id="username" name="username" />
-          </div>
-          <div>
-            <label for="lname">Password:</label>
-            <input type="password" id="password" name="password" />
+        <form onSubmit={handleSubmit}>
+          <div className="fields-container">
+            <div className="input-container">
+              <label for="username" className="input-label">
+                Username:
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input-container">
+              <label for="password" className="input-label">
+                Password:
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <input
             type="submit"
-            value="Sign In"
-            disabled={checkValidity(formData.username, formData.password)}
+            value="SIGN IN"
+            className="form-button"
+            disabled={!checkValidAccount(formData.username, formData.password)}
           />
         </form>
       </div>
