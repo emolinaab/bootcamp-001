@@ -9,6 +9,7 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError("");
     signIn(formData.username, formData.password)
       .then((result) => {
         setIsLoggedIn(result);
@@ -35,7 +36,7 @@ export default function Form() {
   }
 
   return (
-    <div className="form-container">
+    <section className="form-container">
       <p className="form-text">Sign In</p>
       {error ? <p className="error">{error}</p> : null}
       <div>
@@ -74,6 +75,6 @@ export default function Form() {
           />
         </form>
       </div>
-    </div>
+    </section>
   );
 }
