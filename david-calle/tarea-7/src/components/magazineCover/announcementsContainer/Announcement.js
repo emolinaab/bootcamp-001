@@ -3,9 +3,11 @@ import "./announcementsContainer.css";
 
 const AnnouncementImage = ({ imageUrl }) => {
   return (
-    <div className=" announcement-image-container">
-      <img className="announcement-image" src={imageUrl} alt="" />
-    </div>
+    <section className=" announcement-image-container">
+      <figure>
+        <img className="announcement-image" src={imageUrl} alt="" />
+      </figure>
+    </section>
   );
 };
 
@@ -19,13 +21,15 @@ const AnnouncementDescription = ({ description }) => (
 
 const Announcement = ({ title, description, imageUrl }) => {
   return (
-    <div className="announcement-container">
-      {imageUrl ? <AnnouncementImage imageUrl={imageUrl} /> : null}
-      <AnnouncementTitle title={title} />
-      {description ? (
-        <AnnouncementDescription description={description} />
-      ) : null}
-    </div>
+    <li>
+      <section className="announcement-container">
+        {imageUrl ? <AnnouncementImage imageUrl={imageUrl} /> : null}
+        <AnnouncementTitle title={title} />
+        {description ? (
+          <AnnouncementDescription description={description} />
+        ) : null}
+      </section>
+    </li>
   );
 };
 

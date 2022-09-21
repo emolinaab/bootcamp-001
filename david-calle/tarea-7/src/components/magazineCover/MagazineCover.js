@@ -15,12 +15,12 @@ const MagazineCover = ({ magazineData }) => {
   const { title, description, announcements, bottomTitle, bottomDescription } =
     magazineData;
   return (
-    <div id="magazine-container">
+    <section id="magazine-container">
       <MagazineTitle title={title} />
       <MagazineTitleDescription description={description} />
       <AnnouncementsContainer announcementsData={announcements} />
       <BottomAnnouncement title={bottomTitle} description={bottomDescription} />
-    </div>
+    </section>
   );
 };
 

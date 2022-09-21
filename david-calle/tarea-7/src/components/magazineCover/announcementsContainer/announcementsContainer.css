@@ -28,6 +28,14 @@
     margin-bottom: 1vmin;
 }
 
+figure{
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
 .announcement-title, .announcement-title-alone{
     font-weight: bold;
     line-height: 0.8;

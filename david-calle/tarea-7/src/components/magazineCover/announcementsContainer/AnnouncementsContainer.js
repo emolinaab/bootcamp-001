@@ -11,10 +11,10 @@ const AnnouncementsContainer = ({ announcementsData }) => {
     />
   ));
   return (
-    <div id="announcements-container">
-      <div id="announcements-left">{formatedAnnouncements.slice(0, 3)}</div>
-      <div id="announcements-right">{formatedAnnouncements.slice(3, 4)}</div>
-    </div>
+    <section id="announcements-container">
+      <ul id="announcements-left">{formatedAnnouncements.slice(0, 3)}</ul>
+      <ul id="announcements-right">{formatedAnnouncements.slice(3, 4)}</ul>
+    </section>
   );
 };
 

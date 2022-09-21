@@ -11,15 +11,17 @@ const AnnouncementDescription = ({ description }) => (
 
 const BottomAnnouncement = ({ title, description }) => {
   return (
-    <div id="bottom-announcement">
-      <img
-        id="bottom-announcement-img"
-        src={process.env.PUBLIC_URL + "/img/paw.png"}
-        alt=""
-      />
+    <section id="bottom-announcement">
+      <figure>
+        <img
+          id="bottom-announcement-img"
+          src={process.env.PUBLIC_URL + "/img/paw.png"}
+          alt=""
+        />
+      </figure>
       <AnnouncementTitle title={title} />
       <AnnouncementDescription description={description} />
-    </div>
+    </section>
   );
 };
 
