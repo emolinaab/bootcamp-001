@@ -1,10 +1,9 @@
 import React from 'react'
+import Title from './Tex/Title'
 
 const Below = () => {
   return (
-    <article className="textBelow textColour textStrong">
-        GET FLIRTY
-    </article>
+    <Title text={'GET FLIRTY'}></Title>
   )
 }
 
