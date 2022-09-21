@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+body{
+  background-image: url("../src/assets/img/dragonitebackground.png");   
+  font-family: 'Noto Serif', serif;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  width: 220px;
+  height: 400px;
+  margin: 5% auto;
+  padding: 5%;
+  background-color: rgba(235, 255, 248, 0.523);
+  border-radius: 30px;
+  font-family: 'Noto Serif', serif;
+}
+
+.form-login{
+  padding-top: -50px;
+}
+.container h3{
+  font-size: 2em;
+  margin-top: -4px;
+}
+
+.box{
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 55px;
+  margin-bottom: 15px;
+  font-family: 'Noto Serif', serif;
+}
+
+a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 35px 0 35px 0;
+  padding-bottom: 30px;
+}
+
+button{
+  background: #33ccff;
+  border-radius: 7px;
+  color: #fff;
+  border: 1px solid rgb(128, 128, 128);
+  box-shadow: inset 5px 5px 8px #66d9ff, inset -5px -5px 8px #00ace6;
+}
+
+button:hover{
+  box-shadow: inset 5px 5px 8px #00ace6, inset -5px -5px 8px #00ace6;;
+
+}
+
+.loginbutton{
+  font-size: 1.2rem;
+}
+
+.singupbutton{
+  font-size: 1.1rem;
+}
+
+img{
+  align-items:  flex-start;
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+
