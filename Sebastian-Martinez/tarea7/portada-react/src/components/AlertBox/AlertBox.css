@@ -1,0 +1,10 @@
+.alert-box {
+    border: none;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #FFF950 ;
+    font-weight: bolder;
+    height: 35px;
+    font-size: 20px;
+}

@@ -1,0 +1,10 @@
+.content-center {
+    width: 80%;
+    height: 100vh;
+    margin-top: 20px;
+    background-image: url('../../assets/adele.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid black;
+}
