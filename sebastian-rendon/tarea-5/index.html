@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js"></script>
+    <title>Sliding Puzzle</title>
+  </head>
+  <body>
+    <main class="puzzle__container">
+      <section>
+        <form id="size-form" class="size-form">
+          <label for="size-input">Enter the grid size</label>
+          <input type="number" name="size" id="size-input" placeholder="3" />
+          <button type="submit">Enter</button>
+        </form>
+      </section>
+      <section class="instructions">
+        <p>
+          Order the grid in ascending order from left to right and top to bottom
+          in order to win.
+        </p>
+      </section>
+      <section id="puzzle" class="puzzle__body"></section>
+      <section id="victory-message" class="victory">
+        <p>
+          <span class="victory__confetti victory__confetti--reverse">🎉</span
+          >Congratulations, you've won!<span class="victory__confetti">🎉</span>
+        </p>
+        <button id="play-again-btn" type="button">Play again</button>
+      </section>
+    </main>
+  </body>
+</html>
