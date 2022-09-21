@@ -2,35 +2,3 @@ body {
   background-color: #161616;
   padding: 2em; 
 }
-
-.title{
-  justify-content: center;
-  display: flex;
-  font-size: 31.9px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: -60px;
-}
-
-.container {
-  position: relative;
-  width: 30vw;
-  height: 10vw;
-  min-width: 600px;
-  min-height: 300px;
-  margin: 10px auto;
-  border: 2px solid #414141;
-  background: #333333;
-  box-sizing: border-box;
-  border-radius: 5px;
-  font-size: 40px;
-  color: #cccccc;
-  font-family: Arial, Helvetica, sans-serif;
-  top: -20px;
-}
-
-.submit {
-  margin-left: 40px;
-  font-size: 0.8em;
-  margin-top: 80px;
-}

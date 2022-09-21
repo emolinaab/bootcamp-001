@@ -5,7 +5,7 @@ function TextIn(props) {
   return (
     <div className='containterTextIn'>
       <p className = 'generalText'>{props.name}</p>
-      <input type={props.type} class='textIn' required id={props.type}></input>
+      <input type={props.type} className='textIn' required id={props.type} onChange={props.onChange} value={props.value}></input>
     </div>
   );
 }

@@ -1,29 +1,21 @@
 import './App.css';
-import TextIn from './components/TextIn';
-import signIn from './components/Signin';
+import LoginForm from './components/Login';
 
 function App() {
+  const Login = details => {
+    console.log(details);
+    if(details.user !== undefined && details.password !== undefined &&
+      details.user !== null && details.password !== null && 
+      details.user === 'admin' && details.password === '1234') {
+        console.log('Logged in');
+    } else {
+      console.log('Error to Sign in, user or password are incorrect');
+    }
+  }
+
   return (
-    <main>
-      <article>
-        <header className = 'title'> 
-          <h1>Login</h1>
-        </header>
-        <form>  
-          <div className='container'>
-            <TextIn 
-              name = 'Username'
-              type = 'text' />
-            <TextIn 
-            name = 'Password'
-            type = 'password' />
-            <button className='submit' type='submit' onClick={signIn(document.getElementById('text'), '1234')}>Sign in</button>  
-          </div>
-        </form>
-      </article>
-    </main>
+    <LoginForm Login={Login}/>
   );
 }
 
 export default App;
-
