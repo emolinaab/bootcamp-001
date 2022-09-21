@@ -30,13 +30,16 @@ export function shuffle (sort){
 export function check(){
     let right=true
     for(let i=0; i<8;i++){
-        if(document.getElementById("box"+i).id!= document.getElementById("box"+i).className){
+        if(document.getElementById("box"+i).id!= document.getElementById("box"+i).className){       
             right=false
-            alert("oops! You still have a little to finish")
         }
     }
+
+    
     if (right==true){
         alert("Congratulations! you have finished")
+    }else{
+        alert("oops! You still have a little to finish")
     }
 }
 
