@@ -23,13 +23,21 @@ const Water = () => {
   }
 
   return (
-    <div>
-      <input type="text" onChange={setTemperature} value={currentTemp} />
+    <section>
+      <input
+        type="text"
+        name="water_temperature"
+        title="water temperature"
+        onChange={setTemperature}
+        value={currentTemp}
+      />
       <div className={stateCss}>
-        At {currentTemp}°C, water is considered to be a "{stateOfMatter}" state
-        of matter.
+        <p>
+          At {currentTemp}°C, water is considered to be a "{stateOfMatter}"
+          state of matter.
+        </p>
       </div>
-    </div>
+    </section>
   );
 };
 

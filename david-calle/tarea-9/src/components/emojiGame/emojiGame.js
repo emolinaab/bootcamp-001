@@ -3,10 +3,6 @@ import AnswerInput from "./answerInput";
 import MOVIES_WITH_EMOJIS from "./moviesWithEmojis";
 import "./emojiGame.css";
 
-const GameTitle = ({ title }) => {
-  return <h1 className="game-title">{title}</h1>;
-};
-
 const Counter = ({ title, number, className = "" }) => {
   return (
     <p className={"counter " + className}>
@@ -38,7 +34,8 @@ const EmojiGame = () => {
     setAnswer(answer);
   };
 
-  const submitAnswer = () => {
+  const submitAnswer = (e) => {
+    e.preventDefault();
     if (answer !== currentMovie.name) {
       decreaseLives();
       return;
@@ -88,11 +85,11 @@ const EmojiGame = () => {
   };
 
   return (
-    <div className="game-wrapper">
+    <section className="game-wrapper">
       <Counter className="upper-left-counter" title="Lives" number={lives} />
       <Counter className="upper-right-counter" title="Points" number={points} />
       <div className="gameContainer">
-        <GameTitle title="Guess the movie" />
+        <h1 className="game-title">Guess the movie</h1>
         <p className="emojis-container">{currentMovie.emojis}</p>
         <AnswerInput
           answer={answer}
@@ -100,7 +97,7 @@ const EmojiGame = () => {
           submitAnswer={submitAnswer}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

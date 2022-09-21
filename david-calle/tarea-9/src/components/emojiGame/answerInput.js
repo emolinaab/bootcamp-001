@@ -3,17 +3,23 @@ import "./emojiGame.css";
 
 const AnswerInput = ({ answer, setAnswer, submitAnswer }) => {
   return (
-    <div className="answer-input-container">
-      <input
-        className="answer-input-field"
-        type="text"
-        value={answer}
-        onChange={setAnswer}
-      />
-      <button className="answer-input-button" onClick={submitAnswer}>
-        Send
-      </button>
-    </div>
+    <section className="answer-input-container">
+      <form onSubmit={submitAnswer}>
+        <label htmlFor="movieName">
+          <span className="screenreader">Name of the movie </span>
+        </label>
+        <input
+          className="answer-input-field"
+          type="text"
+          name="movieName"
+          id="movieName"
+          placeholder="type the name of the movie..."
+          value={answer}
+          onChange={setAnswer}
+        />
+        <input className="answer-input-button" type="submit" value="send" />
+      </form>
+    </section>
   );
 };
 

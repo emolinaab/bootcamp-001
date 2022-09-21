@@ -50,3 +50,7 @@ input:focus{
 .counter{
     font-weight: bolder;
 }
+
+.screenreader{
+    display: none;
+}
