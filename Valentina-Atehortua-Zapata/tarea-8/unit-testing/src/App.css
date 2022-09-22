@@ -1,0 +1,81 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  background-image: url("../src/assets/img/luna.jpg");
+  background-repeat: no-repeat;
+}
+
+.form {
+  background-position: center;
+  background-size: 130%;
+  height: 600px;
+  margin: 10% auto;
+  display: block;
+  width: 400px;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.678);
+  border-radius: 30px;
+}
+
+h4 {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+input {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 20px;
+  width: 200px;
+  border-radius: 4px;
+}
+
+.box {
+  align-items: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 20px;
+  text-decoration: none;
+  color: black;
+}
+button {
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  width: 100px;
+  height: 30px;
+  background-color: rgb(10, 10, 10);
+}
+
+h5 {
+  font-size: 20px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-group {
+  height: 55px;
+  margin-bottom: 15px;
+}
+
+.button:hover {
+  box-shadow: inset 5px 5px 8px rgb(170, 170, 180), inset -5px -5px 8px b;
+}
