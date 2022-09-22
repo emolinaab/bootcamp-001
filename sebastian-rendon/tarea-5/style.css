@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&wght=400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.size-form {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+}
+
+.size-form.size-form--hidden {
+    display: none;
+}
+
+.size-form > input {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.instructions {
+    padding: 1rem;
+}
+
+.puzzle__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle__body {
+    position: absolute;
+    background-color: #be9f80;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    opacity: 0;
+    box-sizing: content-box;
+    transition: opacity 1s ease-out;
+}
+
+.puzzle__body.puzzle__body--visible {
+    position: relative;
+    opacity: 1;
+}
+
+.puzzle__tile {
+    width: 5.5rem;
+    height: 5.5rem;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 0.25rem #be9f80 solid;
+    border-radius: 1rem;
+    background-color: #fefbea;
+    transform: translate(0,0);
+    transition: transform 0.2s linear;
+}
+
+.puzzle__tile.puzzle__tile--empty {
+    z-index: 0;
+    cursor: auto;
+    border: none;
+    background-color: #be9f80;
+}
+
+.victory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.victory.victory--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.victory__confetti {
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.victory__confetti.victory__confetti--reverse {
+    transform: scaleX(-1);
+}
