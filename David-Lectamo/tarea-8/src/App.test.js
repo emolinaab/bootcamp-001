@@ -19,6 +19,7 @@ describe ('Attempted to login with empty values', () => {
   })
 
   it('You dont log in because the password is empty', () => {
+    details.user = 'admin';
     details.password = '';
     expect(verify(details)).toEqual(false);
   })
