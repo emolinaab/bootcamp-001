@@ -16,11 +16,6 @@ function App() {
     password: "1234",
   };
 
-  let data1 = {
-    userName: "",
-    password: "",
-  };
-
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
@@ -35,7 +30,7 @@ function App() {
 
   const handleSubmit = () => {
     alert("The data has been sent");
-    console.log("data sent successfully");
+    console.log("Data sent successfully");
     console.log("user", values);
   };
 
@@ -51,7 +46,7 @@ function App() {
       console.log("Please, enter data");
     } else {
       alert("Sorry, wrong data");
-      console.log("data sent are incorrect");
+      console.log("Data sent are incorrect");
     }
   }
 
