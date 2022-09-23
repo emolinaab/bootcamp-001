@@ -3,56 +3,56 @@ import { Login } from './components/Login';
 import { SignIn } from './components/Login';
 
 
-let usu, usup;
+let user, password;
 test('All fields are empty', () => {
   render(<Login />);
-  usu='';
-  usup='';
-  const result = SignIn(usu, usup);
+  user='';
+  password='';
+  const result = SignIn(user, password);
   expect(result).toBe("Complete the rest of the fields");
 });
 test('Only password is empty', () => {
   render(<Login />);
-  usu="admin";
-  usup='';
-  const result = SignIn(usu, usup);
+  user="admin";
+  password='';
+  const result = SignIn(user, password);
   expect(result).toBe("Complete the rest of the fields");
 });
 test('Only user is empty', () => {
   render(<Login />);
-  usu='';
-  usup="123456";
-  const result = SignIn(usu, usup);
+  user='';
+  password="123456";
+  const result = SignIn(user, password);
   expect(result).toBe("Complete the rest of the fields");
 });
 test('All fields are correct test 1', () => {
   render(<Login />);
-  usu="admin";
-  usup="1234";
-  const result = SignIn(usu, usup);
+  user="admin";
+  password="1234";
+  const result = SignIn(user, password);
   expect(result).toBe("You are inside");
 });
 
 test('All fields are correct test 2', () => {
   render(<Login />);
-  usu="admin113";
-  usup="123456";
-  const result = SignIn(usu, usup);
+  user="admin113";
+  password="123456";
+  const result = SignIn(user, password);
   expect(result).toBe("You are inside");
 });
 
 test('All fields are correct test 3', () => {
   render(<Login />);
-  usu="usuario";
-  usup="contrasenia";
-  const result = SignIn(usu, usup);
+  user="usuario";
+  password="contrasenia";
+  const result = SignIn(user, password);
   expect(result).toBe("You are inside");
 });
 
 test('Nothing is correct', () => {
   render(<Login />);
-  usu="rgregeg";
-  usup="ge23a";
-  const result = SignIn(usu, usup);
+  user="rgregeg";
+  password="ge23a";
+  const result = SignIn(user, password);
   expect(result).toBe("The data are wrong");
 });
