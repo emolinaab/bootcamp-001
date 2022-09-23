@@ -1,8 +1,6 @@
 import { ADD_TODO } from "../types";
 
-const initialState = {
-  todos: [],
-};
+const initialState = [];
 
 const todoReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -11,7 +9,8 @@ const todoReducer = (state = initialState, action) => {
         ...state,
         {
           id: action.payload.id,
-          text: action.payload.text,
+          title: action.payload.title,
+          description: action.payload.description,
           completed: false,
         },
       ];
