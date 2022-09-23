@@ -6,42 +6,37 @@ import Label from "./components/Label";
 import PrincipalTitle from "./components/PrincipalTitle";
 
 function App() {
-  const [values, setValues] = useState({
-    userName: "",
-    password: "",
-  });
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   let data = {
     userName: "valen@gmail.com",
     password: "1234",
   };
 
-  const handleChange = (e) => {
+  const handleChangeUsername = (e) => {
     e.preventDefault();
-    const { name, value } = e.target;
-    setValues((lastValue) => {
-      return {
-        ...lastValue,
-        [name]: value,
-      };
-    });
-    console.log(value);
+    const { value } = e.target;
+    setUsername(value);
+  };
+
+  const handleChangePassword = (e) => {
+    e.preventDefault();
+    const { value } = e.target;
+    setPassword(value);
   };
 
   const handleSubmit = () => {
     alert("The data has been sent");
     console.log("Data sent successfully");
-    console.log("user", values);
+    console.log("user", username, password);
   };
 
   function formValidate(e) {
     e.preventDefault();
-    if (
-      values.userName === data.userName &&
-      values.password === data.password
-    ) {
+    if (username === data.userName && password === data.password) {
       handleSubmit();
-    } else if (values.userName.length <= 0 || values.password.length <= 0) {
+    } else if (username.length <= 0 || password.length <= 0) {
       alert("The field is empty");
       console.log("Please, enter data");
     } else {
@@ -64,19 +59,21 @@ function App() {
           <div className="form-group">
             <Label label={"User Name"} />
             <Input
-              onChange={handleChange}
+              onChange={handleChangeUsername}
               input={"email"}
               placeholder={"example@correo.com"}
               name={"userName"}
+              value={username}
             />
           </div>
           <div className="form-group">
             <Label label={"Password"} />
             <Input
               input={"password"}
-              onChange={handleChange}
+              onChange={handleChangePassword}
               placeholder={"Enter your password"}
               name={"password"}
+              value={password}
             />
           </div>
           <Button button={"button"} text={"Sing In"} />

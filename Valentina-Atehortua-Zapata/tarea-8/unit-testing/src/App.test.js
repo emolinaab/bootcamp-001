@@ -25,8 +25,8 @@ test("Validation of correct data entry", () => {
   fireEvent.input(inputPassword, { target: { value: password } });
 
   fireEvent.submit(form);
-  const successfulEntry = screen.getByText(/Sing In/i);
-  expect(successfulEntry).toBeInTheDocument();
+  const buttonLogin = screen.getByText(/Sing In/i);
+  expect(buttonLogin).toBeInTheDocument();
 });
 
 test("Validation of incorrect data entry", () => {
