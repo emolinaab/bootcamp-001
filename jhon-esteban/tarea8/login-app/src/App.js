@@ -16,39 +16,41 @@ function App() {
   let data ={
     userName: "jhon.esteban@gmail.com",
     password: "12345",
-  };
+  }
 
-  const handleChange = (e) => {
-    e.preventDefault();
-    const { name,value } = e.target;
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    const { name,value } = event.target
     setValues((finalValue) => {
       return{
         ...finalValue,
         [name]:value,
-      };
-    });
+        
+      }
+    })
   }
 
-  const handleSubmit = () => {
-    alert("Se han enviado los datos correctamente.");
-    console.log("user", values)
-  }
+  const handleSubmit = () => {alert("The data has been sent")}
 
   function formValidations(e){
-    e.preventDefault();
+    e.preventDefault()
     if(
       values.userName === data.userName && values.password === data.password
     ){
-      handleSubmit();
-    }else{
-      alert("Datos incorrectos")
+      handleSubmit()
+    }else if (values.userName.length <= 0 || values.password.length <= 0){
+      alert("The field is empty")
+    }
+    else{
+      alert("Sorry, the data is wrong")
     }
   }
 
   return (
     
     <section class="container">
-      <form class="form-login" onSubmit={formValidations}>
+      <form class="form-login" onSubmit={formValidations} aria-label="form">
         <PrincipalTitle tittle={"Please Sign In"}/>
           <div class="box">
             <div class="form-group">
@@ -63,7 +65,7 @@ function App() {
               <Label label={"Password"}/>
               <Input
               onChange={handleChange}
-              placeholder={"*****"}
+              placeholder={"Enter your password"}
               name={"password"} 
               input={"password"}/>
             </div>
