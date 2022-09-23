@@ -1,0 +1,10 @@
+@use "../abstracts/mixin";
+
+.container-img {
+  @include mixin.flex(center);
+
+  img {
+    max-width: 100%;
+    background-size: cover;
+  }
+}

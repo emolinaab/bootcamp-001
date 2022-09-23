@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#puzzle {
+    
+    background-color: black;
+    width: 100vmin;
+    height: 100vmin;
+    margin: 0 auto;
+}
+
+
+table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.white {
+    background-color: white;
+}
+.red {
+    background-color: red;
+}
+
+button {
+    color:		#D4AF37; 
+    font-size: 4vmin;
+    height: 20vmin;
+    width: 20vmin;
+}
+
+
+
+
