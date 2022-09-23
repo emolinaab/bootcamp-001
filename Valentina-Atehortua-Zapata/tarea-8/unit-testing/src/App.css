@@ -8,13 +8,15 @@ body {
 .form {
   background-position: center;
   background-size: 130%;
-  height: 600px;
+  height: 500px;
   margin: 10% auto;
   display: block;
   width: 400px;
   border: 2px solid black;
   background-color: rgba(255, 255, 255, 0.678);
   border-radius: 30px;
+  box-shadow: inset 4px 5px 7px rgb(236, 236, 239),
+    inset -5px -5px 8px rgb(114, 111, 111);
 }
 
 h4 {
@@ -23,17 +25,17 @@ h4 {
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 input {
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 20px;
+  height: 30px;
   width: 200px;
-  border-radius: 4px;
+  border-radius: 12px;
 }
 
 .box {
@@ -42,18 +44,12 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 30px;
 }
-a {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  padding-top: 20px;
-  text-decoration: none;
-  color: black;
-}
+
 button {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   border-radius: 4px;
   width: 100px;
   height: 30px;
@@ -62,6 +58,12 @@ button {
 
 h5 {
   font-size: 20px;
+}
+h1 {
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .footer {
   display: flex;
@@ -77,5 +79,12 @@ h5 {
 }
 
 .button:hover {
-  box-shadow: inset 5px 5px 8px rgb(170, 170, 180), inset -5px -5px 8px b;
+  box-shadow: inset 2px 2px 8px rgb(233, 233, 236);
+}
+
+label {
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
 }

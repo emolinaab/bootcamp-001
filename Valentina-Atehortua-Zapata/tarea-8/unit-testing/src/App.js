@@ -34,7 +34,7 @@ function App() {
   };
 
   const handleSubmit = () => {
-    alert("Los datos han sido enviados");
+    alert("The data has been sent");
     console.log("data sent successfully");
     console.log("user", values);
   };
@@ -46,27 +46,32 @@ function App() {
       values.password === data.password
     ) {
       handleSubmit();
-    } else if (
-      values.userName === data1.userName &&
-      values.password === data1.password
-    ) {
-      alert("El campo está vacío");
+    } else if (values.userName.length <= 0 || values.password.length <= 0) {
+      alert("The field is empty");
+      console.log("Please, enter data");
     } else {
-      alert("lo siento, datos incorrectos");
+      alert("Sorry, wrong data");
+      console.log("data sent are incorrect");
     }
   }
 
   return (
     <div className="container">
-      <form action="#" className="form" onSubmit={formValidate}>
-        <PrincipalTitle title="Sing in" />
+      <form
+        action="#"
+        className="form"
+        onSubmit={formValidate}
+        aria-label="form"
+      >
+        <PrincipalTitle title="Login" />
+        <h1>Welcome, make your registration</h1>
         <div className="box">
           <div className="form-group">
             <Label label={"User Name"} />
             <Input
               onChange={handleChange}
               input={"email"}
-              placeholder={"Ingresa tu email"}
+              placeholder={"example@correo.com"}
               name={"userName"}
             />
           </div>
@@ -75,12 +80,11 @@ function App() {
             <Input
               input={"password"}
               onChange={handleChange}
-              placeholder={"Ingresa tu password"}
+              placeholder={"Enter your password"}
               name={"password"}
             />
           </div>
           <Button button={"button"} text={"Sing In"} />
-          <a href="">Forgot Password?</a>
         </div>
       </form>
     </div>
