@@ -1,0 +1,16 @@
+@use "../abstracts/mixin";
+
+.footer {
+  @include mixin.flex(center);
+  padding: 5px;
+  background-color: #fff;
+
+  &__img {
+    float: left;
+    margin: 10px;
+
+    img {
+      width: 50px;
+    }
+  }
+}
