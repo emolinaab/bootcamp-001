@@ -1,0 +1,81 @@
+body {
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.container {
+  margin: 15px 15px 15px 15px;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-child {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.title {
+  padding: 30px;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  color: #120b40;
+  letter-spacing: 1px;
+}
+
+.title1 {
+  position: absolute;
+  left: 20px;
+}
+
+.title2 {
+  position: absolute;
+  left: 190px;
+}
+
+.emojis {
+  position: absolute;
+  top: 120px;
+  left: 35%;
+  font-size: 35px;
+}
+
+input,
+button {
+  font-family: "Lato", sans-serif;
+  display: block;
+  width: 90%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 50px;
+}
+
+button {
+  position: absolute;
+  top: 270px;
+  left: 20px;
+  background: #120b40;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #ffffff;
+}
