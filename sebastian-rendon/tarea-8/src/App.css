@@ -1,0 +1,8 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.form-fields {
+    padding: 0 0.5rem;
+}
