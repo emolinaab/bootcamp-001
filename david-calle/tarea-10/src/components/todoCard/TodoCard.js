@@ -8,6 +8,7 @@ const TodoCard = ({ id, title, description, completed }) => {
   const handleComplete = () => {
     dispatch(toggleTodo(id));
   };
+
   return (
     <li className="card">
       <div className="card-data-container">

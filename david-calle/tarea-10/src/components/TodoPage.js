@@ -4,9 +4,9 @@ import TodoList from "./todoList/TodoList";
 
 export default function TodoPage() {
   return (
-    <div>
+    <section>
       <TodoForm />
       <TodoList />
-    </div>
+    </section>
   );
 }
