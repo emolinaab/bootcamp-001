@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "../redux/actions/todo.actions";
+import { addTodo } from "../../redux/actions/todo.actions";
+import "./todoForm.scss";
 
 const TodoForm = () => {
   const initialFormState = {
@@ -10,11 +11,11 @@ const TodoForm = () => {
 
   const [formData, setFormData] = useState(initialFormState);
   const dispatch = useDispatch();
-  const nextId = useSelector((state) => state.todos.length);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo(nextId, formData.title, formData.description));
+    if (formData.title === "") return;
+    dispatch(addTodo(formData.title, formData.description));
     cleanFormData();
   };
 

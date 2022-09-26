@@ -1,6 +1,6 @@
 import React from "react";
-import TodoForm from "./TodoForm";
-import TodoList from "./TodoList";
+import TodoForm from "./todoForm/TodoForm";
+import TodoList from "./todoList/TodoList";
 
 export default function TodoPage() {
   return (
