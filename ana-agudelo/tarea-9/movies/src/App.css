@@ -1,0 +1,46 @@
+.movieview {
+  height: 300px;
+  width: 300px;
+  background-color: black;
+  text-align: center;
+}
+
+.lives {
+  color: white;
+  font-weight: bold;
+  font-family:monospace;
+  font-size: 16px;
+  list-style:none;
+}
+
+.score {
+  color: white;;
+  font-family:monospace;
+  font-size: 16px;
+  font-weight: bold;
+  list-style:none
+}
+
+h1 {
+  font-size: 25px;
+  color: orange;
+  font-family:cursive;
+  text-align: center;
+  font-weight: bold;
+}
+
+.emoji {
+  font-size: 25px;
+  font-family:cursive;
+  text-align: center;
+  background-color: rgba(200, 200, 200, 0.55);
+}
+
+.input {
+  font-size: 15px;
+  color: black;
+  font-family:cursive;
+  margin:center;
+  background-color: white;
+  text-align: center;
+}
