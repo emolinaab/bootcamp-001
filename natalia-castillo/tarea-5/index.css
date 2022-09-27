@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Fredoka+One&display=swap");
+
+body {
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  color: brown;
+  background-color: #f6c854;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: "Concert One", cursive;
+}
+
+#board {
+  width: 420px;
+  height: 420px;
+  background-color: #1b1a4e;
+  border: 10px solid #3d3c85;
+  border-radius: 20px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board img {
+  width: 138px;
+  height: 138px;
+  border: 1px solid #1b1a4e;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: brown;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: brown;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.popup #reset {
+  margin-top: 5%;
+  height: 40px;
+  background-color: brown;
+  color: #fef9d8;
+  font-size: 20px;
+  font-family: "Concert One";
+  border-radius: 8px;
+}
+
+.popup #reset:hover {
+  background-color: rgb(219, 101, 101);
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+
+  .popup {
+    width: 70%;
+  }
+}
