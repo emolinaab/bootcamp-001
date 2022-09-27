@@ -1,0 +1,17 @@
+.aside__supporting-articles {
+  position: relative;
+  z-index: 20;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: aside-2;
+}
+
+.title__supporting-article {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2rem;
+  border-top: #47c7fc 3px solid;
+}
+
