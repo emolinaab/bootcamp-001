@@ -1,0 +1,23 @@
+@use "../abstracts/mixin";
+
+.container-image {
+  @include mixin.flex(center);
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+
+  &__image {
+    object-fit: contain;
+    width: 700px;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    & {
+      display: none;
+    }
+  }
+}
