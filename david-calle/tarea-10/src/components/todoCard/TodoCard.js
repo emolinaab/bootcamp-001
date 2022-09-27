@@ -23,8 +23,12 @@ const TodoCard = ({ id, title, description, completed }) => {
       <button className="card-button" onClick={handleComplete}>
         {completed ? "⏪" : "👌"}
       </button>
-      <Link className="card-button" to={`todos/${id}`}>
-        "ℹ️"
+      <Link
+        className="card-button"
+        to={`todos/${id}`}
+        style={{ textDecoration: "none", backgroundColor: "white" }}
+      >
+        ℹ️
       </Link>
     </li>
   );

@@ -38,7 +38,8 @@
         text-align: center;
         display: flex;
         align-items: center;
-        padding: 5px;
+        padding: 10px;
+        color: black;
         &:hover{
             cursor: pointer;
         }
@@ -46,7 +47,10 @@
         &:visited{
             text-decoration: none;
             color: black;
-            background-color: white !important;
+        }
+
+        &:active{
+            color: lightblue;
         }
     }
 }
