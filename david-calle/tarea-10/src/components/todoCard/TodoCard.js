@@ -2,6 +2,7 @@ import React from "react";
 import "./todoCard.scss";
 import { toggleTodo } from "../../redux/actions/todo.actions";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const TodoCard = ({ id, title, description, completed }) => {
   const dispatch = useDispatch();
@@ -19,9 +20,12 @@ const TodoCard = ({ id, title, description, completed }) => {
           </p>
         )}
       </div>
-      <button className="card-completed-button" onClick={handleComplete}>
+      <button className="card-button" onClick={handleComplete}>
         {completed ? "⏪" : "👌"}
       </button>
+      <Link className="card-button" to={`todos/${id}`}>
+        "ℹ️"
+      </Link>
     </li>
   );
 };

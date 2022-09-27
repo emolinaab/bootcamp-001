@@ -1,0 +1,16 @@
+.todo-list{
+    &-wrapper{
+        display: flex;
+        justify-content: baseline;
+        min-height: 100vh;
+    }
+
+    &-base{
+        background-color: lightgray;
+    }
+
+    &-details{
+        flex: 1;
+        padding: 20px;
+    }
+}

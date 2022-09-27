@@ -1,6 +1,13 @@
 import { ADD_TODO, TOGGLE_TODO } from "../types";
 
-const initialState = [];
+const initialState = [
+  {
+    id: "0",
+    title: "example todo",
+    description: "this is an example todo",
+    completed: false,
+  },
+];
 
 const todoReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -8,7 +15,7 @@ const todoReducer = (state = initialState, action) => {
       return [
         ...state,
         {
-          id: state.length + 1,
+          id: String(state.length + 1),
           title: action.payload.title,
           description: action.payload.description,
           completed: false,

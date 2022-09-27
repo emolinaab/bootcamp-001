@@ -33,9 +33,20 @@
         }
     }
 
-    &-completed-button{
+    &-button{
+        border: solid 1px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 5px;
         &:hover{
             cursor: pointer;
+        }
+
+        &:visited{
+            text-decoration: none;
+            color: black;
+            background-color: white !important;
         }
     }
 }
