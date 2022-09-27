@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mock Magazine Cover about Oscar Piastri"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Magazine</title>
+  </head>
+  <body>
+    <main class="main__magazine">
+      <span title="42th Edition: September 4th, 2022" class="edition__details">
+        <time datetime="2022-09-04">Sept. 4th, 2022</time> - Ed. 42
+      </span>
+      <header class="header">
+        <h1 title="Checkered flag" class="header__magazine-title">
+          <span>checkered</span>
+          <span>flag</span>
+        </h1>
+      </header>
+      <figure class="fig__magazine-cover">
+        <img
+          src="./assets/img/oscar_piastri.webp"
+          title="Oscar Piastri"
+          alt="Formula driver Oscar Piastri holding a helmet in a celebration pose"
+          aria-describedby="main-article"
+        />
+      </figure>
+      <section class="section__grid">
+        <article id="main-article" class="article__main-article">
+          <header>
+            <h2>Oscar Piastri</h2>
+            <h3>Who is the new McLaren driver?</h3>
+          </header>
+          <p>
+            The Australian promise talks about his expectations with the
+            Woking-based team.
+          </p>
+        </article>
+        <aside class="aside__supporting-articles">
+          <h3 class="title__supporting-article--first">
+            Redbull ahead of Ferrari
+          </h3>
+          <h3 class="title__supporting-article--last">
+            What to expect for Monza
+          </h3>
+        </aside>
+        <footer class="footer__third-article">
+          <h3 class="title__third-article">
+            <span>There is a new team in the paddock: Audi</span>
+          </h3>
+        </footer>
+        <footer class="footer__barcode">
+          <img
+            class="img__barcode-img"
+            src="./assets/img/sample_barcode.jpg"
+            aria-label="Magazine barcode"
+            alt="Magazine barcode"
+          />
+        </footer>
+        <footer class="footer__fourth-article">
+          <h3>The Rumor...</h3>
+          <p>Gasly to be racing for Alpine next year!</p>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
