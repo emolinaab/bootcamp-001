@@ -1,0 +1,78 @@
+.login-form {
+  height: auto;
+  width: auto;
+  padding: 20% 8%;
+}
+
+.login-form__title {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 35px;
+  margin: 10px 0;
+}
+
+.login-form__input {
+  width: auto;
+  height: 15%;
+  margin: 0px 0px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form__input label {
+  margin: 0 0 5px;
+  color: var(--second-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.login-form__input input {
+  height: 40%;
+  padding: 10px 10px 3px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: var(--second-color);
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+  outline: none;
+}
+
+.login-form__input input:focus {
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+.colors {
+  background-color: brown;
+}
+
+.login-form__recovery {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.login-form__recovery a {
+  color: var(--main-color);
+}
+
+.login-form .button {
+  background-color: var(--main-color);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  width: 35%;
+  height: 40px;
+  border: none;
+  border-radius: 14px;
+}
+
+.login-form .button__login {
+  margin: 10px 33%;
+}
+.login-form__register {
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+.login-form__register a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 20px;
+}
