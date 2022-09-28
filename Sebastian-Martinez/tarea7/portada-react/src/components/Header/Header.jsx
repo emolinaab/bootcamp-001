@@ -6,10 +6,10 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <div className='header'>
+    <header className='header'>
       <TopTitle text={"september 2022 | number 13"} />
       <PrincipalTitle title={"famous"} />
-    </div>
+    </header>
   )
 }
 
