@@ -1,0 +1,48 @@
+@use "../abstracts/mixin";
+
+.header {
+  @include mixin.flex(center);
+  padding: 5%;
+
+  width: 800px;
+  height: 95px;
+
+  &__section {
+    padding: 2px;
+  }
+
+  &__article {
+    flex-direction: column;
+    padding: 5px;
+   
+
+    h2 {
+      font: oblique  130% cursive;
+      color: #000000;
+      font-weight: normal;
+      text-align: left;
+      margin-top: -10%;
+      align-self: auto;
+      letter-spacing: 2px;
+    }
+
+  }
+}
+
+.aside {
+  
+ margin: 1px;
+  
+
+  h1 {
+    
+    text-align: center;
+    font: oblique bold 520% cursive;
+    margin-bottom: 30px;
+    text-shadow: rgb(238, 70, 70) 0.1em 0.1em 0.2em;
+    letter-spacing: 10px;
+  
+   
+  }
+
+}

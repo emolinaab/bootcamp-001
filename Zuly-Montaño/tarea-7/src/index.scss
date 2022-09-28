@@ -1,0 +1,20 @@
+@use "scss/abstracts/mixin";
+
+// base
+
+@use "scss/base/base.scss";
+
+// main magazine container
+@use "scss/components/main.scss";
+
+// header
+@use "scss/components/header.scss";
+
+// image
+@use "scss/components/image.scss";
+
+// information
+@use "scss/components/information.scss";
+
+// footer
+@use "scss/components/footer";
