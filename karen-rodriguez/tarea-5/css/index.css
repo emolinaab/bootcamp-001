@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Formatos de letra*/
+
+body{text-align: center;}
+
+/*Maquetacion*/
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#fondo{
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction: column;
+
+}
+
+#puzzleContainer { 
+  display: flex;
+  justify-content:column;
+  flex-wrap: wrap;
+}
+
+
+/*Estilos*/
+h1{
+  font-size: 4rem;
+  color: 457402;
+}
+
+#puzzleContainer{
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+
+}
+
+.box0,.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
+  background: url("../img/conejito.png");
+  width: 33%;
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+  background-color: #000;
+}
+
+.box0 {background-position: left top;}
+.box1 {background-position: center top;}
+.box2 {background-position: right top;}
+.box3 {background-position: left center;}
+.box4 {background-position: center center;}
+.box5 {background-position: right center;}
+.box6 {background-position: left bottom;}
+.box7 {background-position: center bottom;}
+.box8 {background: white;}
+
+button{
+
+  border-radius: 10px;
+  height: 30px;
+  width: 80px;
+  background-color: #a5d505;
+
+}
+
+#check{
+  background-color: #457402;
+}
