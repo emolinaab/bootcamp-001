@@ -7,7 +7,7 @@ function App() {
   const [movies, setMovies] = useState("")
   const [index, setIndex] = useState("0")
 
-  const handleChange =(e) => {
+  const handleChange = (e) => {
     e.preventDefault()
     const {value} = e.target
     setMovies(value)
@@ -31,8 +31,7 @@ function App() {
   }
 
   function clear(){
-    let input= document.getElementById("movisName")
-    input.value=""
+    setMovies("")
   }
   
   return (
@@ -41,7 +40,7 @@ function App() {
         <section className="subContainer">
           <div className="emojis">{Movies[index].emojis}</div>
           <div className="sendEmojis"></div>
-          <input placeHolder="Enter the movie name" onChange={handleChange} required id="movisName"></input>
+          <input placeHolder="Enter the movie name" onChange={handleChange} required id="movisName" value={movies}></input>
           <button onClick={validateData} type="submit">Send</button>
         </section>
    </section>
