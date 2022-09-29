@@ -4,24 +4,36 @@ import styles from '../styles/FormField.module.css';
 type FormFieldProps = {
   label: string;
   inputId: string;
-  inputType: string;
-  value: string;
-  onChange: Function;
+  placeholder?: string;
+  inputType?: string;
+  register?: Function;
+  errorMessage?: string;
 };
 
 function FormField(props: FormFieldProps) {
-  const { label, inputId, value, onChange, inputType = 'text' } = props;
+  const {
+    label,
+    inputId,
+    placeholder = '',
+    inputType = 'text',
+    register = () => {},
+    errorMessage = undefined,
+  } = props;
   return (
     <section className={styles['form-control']}>
-      <label htmlFor={inputId} className={styles.label}>
+      <label id={`${inputId}-label`} htmlFor={inputId} className={styles.label}>
         {label}
       </label>
       <input
+        id={inputId}
         type={inputType}
-        value={value}
+        aria-labelledby={`${inputId}-label`}
+        placeholder={placeholder}
         className={styles.input}
-        onChange={(e) => onChange(e)}
+        data-testid={inputId}
+        {...register()}
       />
+      <small className={styles['error-message']}>{errorMessage || ''}</small>
     </section>
   );
 }

@@ -1,18 +1,21 @@
 import React from 'react';
 
 type FormContainerProps = {
-  children: JSX.Element | JSX.Element[];
-  onSubmit: Function;
+  className?: string;
+  children?: JSX.Element | JSX.Element[];
+  onSubmit?: Function;
 };
 
 function FormContainer(props: FormContainerProps) {
-  const { children, onSubmit } = props;
+  const { className, children, onSubmit } = props;
 
   return (
     <form
+      className={className}
+      data-testid="form-container"
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit();
+        if (onSubmit) onSubmit();
       }}
     >
       {children}

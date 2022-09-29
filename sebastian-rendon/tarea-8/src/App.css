@@ -3,6 +3,7 @@ main {
     justify-content: center;
 }
 
-.form-fields {
-    padding: 0 0.5rem;
+.form-container {
+    width: 360px;
+    padding: 2rem;
 }

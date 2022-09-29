@@ -1,14 +1,15 @@
 .btn {
-    appearance: none;
-    border: none;
+    margin: 1rem 0.5rem;
     padding: 0.75rem 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
     border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono';
+    font-weight: 700;
     cursor: pointer;
 }
 

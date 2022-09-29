@@ -1,6 +1,5 @@
 .form-control {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0.5rem;
 }
 
 .label {
@@ -8,5 +7,13 @@
 }
 
 .input {
-    padding: 0.25rem;
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+}
+
+.error-message {
+    display: inline-block;
+    height: 1em;
+    color: #ff3333;
 }
