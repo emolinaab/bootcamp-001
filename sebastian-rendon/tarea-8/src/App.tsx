@@ -10,16 +10,16 @@ import FormField from './components/FormField';
 const schema = yup.object().shape({
   username: yup
     .string()
+    .required('Username is required')
     .matches(/^[A-Z0-9_]*$/i, 'Username must not contain special characters')
     .min(4, 'Username must be at least 4 characters')
-    .max(32, 'Username must be at most 32 characters')
-    .required('Username is required'),
+    .max(16, 'Username must be at most 16 characters'),
   password: yup
     .string()
+    .required('Password is required')
     .matches(/^\S*$/i, 'Password must not contain white spaces')
     .min(4, 'Password must be at least 4 characters')
-    .max(16, 'Password must be at most 16 characters')
-    .required('Password is required'),
+    .max(16, 'Password must be at most 16 characters'),
 });
 
 function App() {
@@ -28,9 +28,7 @@ function App() {
     handleSubmit,
     getValues,
     formState: { errors },
-    reset,
   } = useForm({
-    mode: 'onBlur',
     resolver: yupResolver(schema),
     defaultValues: { username: '', password: '' },
   });
@@ -44,8 +42,8 @@ function App() {
   }
 
   function onInvalid() {
-    if (errors.username) console.log(errors.username.message);
-    if (errors.password) console.log(errors.password.message);
+    if (errors.username) console.log('Username is invalid');
+    if (errors.password) console.log('Password is invalid');
 
     return errors;
   }

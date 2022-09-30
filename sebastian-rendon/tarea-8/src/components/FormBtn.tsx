@@ -13,6 +13,7 @@ function FormBtn(props: FormBtnProps) {
     <button
       className={`${styles.btn} ${styles.primary}`}
       type="submit"
+      data-testid="signin-btn"
       {...(formId ? { form: formId } : {})}
     >
       {label}

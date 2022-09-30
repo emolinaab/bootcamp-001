@@ -33,7 +33,12 @@ function FormField(props: FormFieldProps) {
         data-testid={inputId}
         {...register()}
       />
-      <small className={styles['error-message']}>{errorMessage || ''}</small>
+      <small
+        className={styles['error-message']}
+        data-testid={`${inputId}-errormessage`}
+      >
+        {errorMessage || ''}
+      </small>
     </section>
   );
 }
