@@ -1,0 +1,9 @@
+main {
+  background-image: url(../assets/spaniel.jpg);
+  height: 110vh;
+  width: 80vh;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover;
+  color: azure;
+}
