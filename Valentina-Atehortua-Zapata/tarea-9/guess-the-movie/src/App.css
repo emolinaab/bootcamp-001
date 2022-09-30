@@ -1,10 +1,10 @@
 * {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h3 {
-  color: aliceblue;
+  color: black;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -12,6 +12,13 @@ h3 {
   font-size: 40px;
   text-shadow: 1px 1px 0px rgb(139, 134, 134), 1px 2px 0px rgb(139, 134, 134),
     1px 3px 0px rgb(139, 134, 134), 1px 4px 0px;
+}
+
+h2 {
+  color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .emoji {
@@ -25,7 +32,7 @@ h3 {
 input {
   width: 600px;
   height: 20px;
-  color: white;
+  color: black;
   margin-top: 40px;
   justify-content: center;
   align-items: center;
@@ -34,7 +41,7 @@ input {
 }
 
 button {
-  background-color: aliceblue;
+  background-color: rgb(207, 216, 223);
   width: 50px;
   height: 30px;
   border-radius: 8px;
@@ -49,4 +56,19 @@ button {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.startAgain {
+  background-color: rgb(208, 215, 221);
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-left: 600px;
+}
+swal {
+  background-color: b;
 }
