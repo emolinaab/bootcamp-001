@@ -16,7 +16,7 @@ body{
   display: table;
   background-color: rgb(251, 251, 251);
   width: 280px;
-  height: 220px;
+  height: 250px;
   justify-content: center;
   text-align: center;
   padding: 10px;
@@ -32,6 +32,7 @@ body{
 
 .emojis{
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 button{
