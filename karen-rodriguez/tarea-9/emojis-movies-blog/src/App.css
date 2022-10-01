@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
-  flex-direction: column;
+}
+
+#msg{
+  height: 10%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#app{
+  height: 100vh;
   align-items: center;
+  flex-direction: column;
+  justify-content:center;
+}
+
+#game{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 90%;
+
 }
 
-.App-link {
-  color: #61dafb;
+#principalTittle{
+  font-family: 'Bungee Spice', cursive;
+  font-size: 8ex;
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#board{
+  height: 30vh;
+  font-size:18ex;
+  padding-bottom: 200px;
+
+}
+
+#searcher{
+  width: 100%;
+  height: 50px;
+}
+
+#input{
+  height: 100%;
+  width: 70%;
+}
+
+#btnCheck{
+  height: 100%;
+  width: 20%;
 }

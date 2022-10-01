@@ -5,3 +5,6 @@ export let moviesData=[
     {emojis:'🐼🥋🐍🦗🐒🐯', name:'kung fu panda'},
     {emojis:'💯 ➕1️⃣🐄', name:'101 dalmatas'},
 ]
+
+
+export let lives='❤❤❤'

@@ -1,47 +1,79 @@
-import {moviesData} from './data.js'
+import {moviesData,lives} from './data.js'
 import { useState } from "react";
 import './App.css';
 
 function App() {
-  const [item, setItem] = useState("")
-  const [index, setIndex] = useState(0);
+  
+  const [valueInput, setvalueInput] = useState("")
+  const [indexMovie, setIndexMovie] = useState(0);
+  const [points, setPoints] = useState(0);
+  const [live, setLive] = useState(3);
 
   const handleChange = (e) => {
     e.preventDefault();
     const { value } = e.target;
-    setItem(value);
+    setvalueInput(value);
   };
 
   function numberGenerate(){
     const number= Math.floor(Math.random() * moviesData.length)
-    setIndex(number)
+    setIndexMovie(number)
   }
 
   function checkData (){
-      if(moviesData[index].name.toLowerCase()===item.toLowerCase()){
-        alert("dioooo")
+      if(moviesData[indexMovie].name.toLowerCase()===valueInput.toLowerCase()){
+        setPoints(points+1)
         numberGenerate()
-        clearField()
       }else{
-        alert("No dio")
-
+        if(live===1){
+          gameOver()
+        }else{
+          alert("Wrong movie! please try again")
+          setLive(live-1)
+          
+        } 
+        showLives()      
+        setPoints(0)
       }
-    
+      clearField()
   }
 
   function clearField(){
-    let input= document.getElementById("input")
-    input.value=""
+    setvalueInput("")
   }
 
+  function gameOver(){
+    setLive(0)
+    alert("Game over")
+    let btnCheck = document.getElementById("btnCheck")
+    let input= document.getElementById("input")
+    btnCheck.disabled= "false"
+    input.disabled="false"
+  }
+
+  function showLives(){
+    return lives.substring(0,live)
+  }
   return (
-    <div className="App">
-      <div id="board">{moviesData[index].emojis}</div>
-      <div id="searcher">
-        <input id="input" type="text" onChange={handleChange}></input>
-        <button onClick={checkData} type="submit">Check</button>
+    <div id="app" className='container'>
+      <div id="msg" className='container'>
+        <h1 className='container' id="points" >points: {points}</h1>
+        <h1 className='container' id="points">{showLives()}</h1>
+       </div>
+      
+      <div id="game" className="container">
+        <h1 id="principalTittle">Guess the movie!</h1>
+        <h4>What movie is it?</h4>
+        <div id="board">
+          {moviesData[indexMovie].emojis}
+        </div>
+        <div id="searcher">
+          <input id="input" type="text" onChange={handleChange} autoComplete="off" value={valueInput}></input>
+          <button id="btnCheck" onClick={checkData} type="submit" >Check</button>
+        </div>
       </div>
     </div>
+    
   );
 }
 
