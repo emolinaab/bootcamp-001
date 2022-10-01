@@ -1,0 +1,6 @@
+@use "./scss/abstracts/mixin";
+
+.App {
+  @include mixin.flex(center);
+  margin-top: 50px;
+}

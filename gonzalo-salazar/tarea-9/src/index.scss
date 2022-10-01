@@ -1,0 +1,13 @@
+// abstracts
+@use "scss/abstracts/variables";
+@use "scss/abstracts/mixin";
+
+// base
+@use "scss/base/reset";
+@use "scss/base/base";
+
+// content
+@use "./scss/components/GuessMovie.scss";
+
+// image
+@use "./scss/components/image.scss";
