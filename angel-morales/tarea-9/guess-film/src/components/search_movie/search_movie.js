@@ -30,7 +30,10 @@ const movies = [
 ];
 
 export const searchMovie = (text) => {
-  if (typeof movies.find((el) => el.name === text.toLowerCase()) === "object")
+  if (
+    typeof movies.find((el) => el.name === text.toLowerCase().trim()) ===
+    "object"
+  )
     return true;
   else return false;
 };

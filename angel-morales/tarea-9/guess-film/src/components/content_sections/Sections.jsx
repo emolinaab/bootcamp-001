@@ -19,9 +19,11 @@ export const Content = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (searchMovie(name) === true) {
       setDisplay(showEmoji());
       setValidate(false);
+      setName("");
       setScore(score + 1);
     } else {
       setValidate(true);
@@ -54,6 +56,7 @@ export const Content = () => {
               What movie is it?
             </label>
             <input
+              value={name}
               type="text"
               className="form__text"
               name="movie"
