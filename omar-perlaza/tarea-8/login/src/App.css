@@ -1,0 +1,116 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,500;0,700;1,500&family=Roboto+Condensed:wght@700&display=swap');
+
+
+.App {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ /*  margin: 15%; */
+  width: 100%;
+  min-height: 700px;
+  max-height:900px;
+  background-image:url('./images/login.gif' );
+ /*  background-repeat:; */
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+.container-principal
+{
+  border: solid white;
+  border-radius: 25px;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(240, 248, 255, 0.178);
+  
+  /* justify-content: center; */
+}
+
+.title
+{
+  display:inline;
+  font-size: 20px;
+  background-color: rgba(240, 248, 255, 0.268);
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 10%;
+}
+
+.content input
+{
+  height: 50px;
+  margin-bottom: 65px;
+  width: 90%;
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+}
+
+.content button
+{
+  height: 50px;
+  width: 80% ;
+  background-color: #5CB8E4;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+label
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #5CB8E4;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
