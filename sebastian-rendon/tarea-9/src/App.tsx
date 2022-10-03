@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import baseMovies from './assets/movies';
 import './App.css';
 import GameStatusModal from './components/GameStatusModal';
+import GameForm from './components/GameForm';
+import GameScore from './components/GameScore';
 
 type GameStatus = 'IN_PROGRESS' | 'LOST' | 'WON';
 
@@ -70,44 +72,14 @@ function App() {
   return (
     <div className="app" data-testid="app">
       <GameStatusModal status={gameStatus} onRestart={restartGame} />
-      <section className="info-counter">
-        <div className="info-counter__lives">
-          <h2>Lives</h2>
-          <big>{lives}</big>
-        </div>
-        <div className="info-counter__points">
-          <h2>Points</h2>
-          <big>
-            {points}/{movies.length}
-          </big>
-        </div>
-      </section>
+      <GameScore lives={lives} points={points} totalPoints={movies.length} />
       <h1 className="game-title">Guess the movie or show</h1>
-      <section className="game-content">
-        <span className="game-content__emoji">
-          {movies[currentMovieIndex].emojis.join('')}
-        </span>
-        <form
-          className="game-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            guessMovie();
-          }}
-        >
-          <input
-            type="text"
-            className="game-form__input"
-            placeholder="Enter your guess"
-            value={guessedName}
-            onChange={(e) => {
-              setGuessedName(e.target.value.toUpperCase());
-            }}
-          />
-          <button type="submit" className="game-form__button">
-            Send
-          </button>
-        </form>
-      </section>
+      <GameForm
+        riddle={movies[currentMovieIndex].emojis.join('')}
+        guess={guessedName}
+        onInputChange={setGuessedName}
+        onSubmit={guessMovie}
+      />
     </div>
   );
 }

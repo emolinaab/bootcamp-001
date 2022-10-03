@@ -7,6 +7,7 @@ function GameStatusModal({ status, onRestart }: GameStatusModalProps) {
   return (
     <div
       className="modal__wrapper"
+      aria-hidden={status === 'IN_PROGRESS'}
       style={{ display: status === 'IN_PROGRESS' ? 'none' : 'flex' }}
     >
       <div className="modal__body" role="dialog">
