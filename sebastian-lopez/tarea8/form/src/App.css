@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  margin-top:5%;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],input[type="password"]{
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right:none;
+  border-bottom: 2px black solid;
+  padding: 1em;
+  background-color: bisque;
+  color:rgb(69, 69, 69);
+}
+
+input[type="submit"]{
+  background-color: rgb(20, 165, 117);
+  border: none;
+  padding: 1em;
+  margin-top: 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+label{
+  font-weight: bolder;
+  color: rgb(97, 59, 59);
+}
