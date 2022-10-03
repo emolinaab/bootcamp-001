@@ -1,0 +1,25 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+}
+
+.input {
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 15px;
+    height: 40px;
+    padding-left: 10px;
+    width: 70%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.input::placeholder {
+    color: black;
+    font-size: 15px;
+}

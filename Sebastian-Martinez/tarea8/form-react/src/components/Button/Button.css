@@ -1,0 +1,15 @@
+.button {
+    border: none;
+    width: 40%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: tomato;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: rgb(252, 118, 94);
+    box-shadow: 1px 2px 10px 3px rgb(255, 126, 103);
+}
