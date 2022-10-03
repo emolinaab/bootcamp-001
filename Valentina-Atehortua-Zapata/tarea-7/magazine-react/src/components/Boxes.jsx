@@ -4,26 +4,24 @@ import TitleBoxes from "./TitleBoxes";
 const Boxes = () => {
   return (
     <section className="container-text">
-      <div className="box-left">
-        <div className="text">
-          <h6>SATURN</h6>
-        </div>
-      </div>
+      <section className="box-left">
+        <h6 className="text">SATURN</h6>
+      </section>
 
-      <div className="container-boxes">
-        <div className="box">
+      <ul className="container-boxes">
+        <li className="box">
           <TitleBoxes titleBox={"QUANTUM SUPREMACY"} />
-        </div>
-        <div className="box">
+        </li>
+        <li className="box">
           <TitleBoxes titleBox={"INFLAMMATION OVERLOAD"} />
-        </div>
-        <div className="box">
+        </li>
+        <li className="box">
           <TitleBoxes titleBox={"HOW DINOSAURS BECAME BIRDS"} />
-        </div>
-        <div className="box">
+        </li>
+        <li className="box">
           <TitleBoxes titleBox={"SATURN GREAT PLANET"} />
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   );
 };

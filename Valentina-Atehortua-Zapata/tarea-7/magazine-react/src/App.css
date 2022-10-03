@@ -73,6 +73,7 @@ h1 {
   display: flex;
   align-items: flex-end;
   text-align: center;
+  margin-top: 160px;
 }
 
 .text {
@@ -81,7 +82,7 @@ h1 {
   height: 20%;
   width: 79%;
   border: 1px solid white;
-  font-size: 5rem;
+  font-size: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
