@@ -1,19 +1,17 @@
 import React from 'react'
 import code from "../assets/img/code.png"
-import RegularText from './Tex/RegularText'
+import StrongTitle from './Shared/StrongTitle'
+import RegularText from './Shared/RegularText'
+import Title from './Shared/Title'
 
 const Right = () => {
   return (
     <article className="right">
-        <span className="textStrong">$2.90</span>
-        <span>April, 2021
-            <br/>
-            LIK EDITION
-        </span>
-        <span>
-            <img src={code} alt="" width="40px"/>
-        </span>
-        <span className="textStrong textBig n">273</span>
+        <Title text={'$2.90'}></Title>
+        <RegularText text="April, 2021"></RegularText>
+        <RegularText text="LIK EDITION"></RegularText>
+        <img src={code} alt="" width="40px"/>
+        <StrongTitle text={'273'}></StrongTitle>
         <Title text={'SEXI'}></Title>
         <Title text={'NEW'}></Title>
         <Title text={'BUYS'}></Title>

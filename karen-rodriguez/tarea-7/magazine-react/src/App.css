@@ -28,10 +28,6 @@
   font-size: 2vw
 }
 
-.textBelow, .n{
-  font-size: 3vw;
-}
-
 /*content structure*/
 .magazineCover{
   width: 40vw;
@@ -46,7 +42,6 @@
 .content{
   width: 40vw;
   position: relative;
-
 }
 
 #fotoBritney{
@@ -56,12 +51,6 @@
   bottom: 0%;
 }
 
-.texto{
-  position: absolute;
-  bottom: 0%;
-}
-
-
 /*magazine cover layout*/
 body{
   display: flex;
@@ -70,13 +59,12 @@ body{
 }
 
 .content{
-
   display: grid;
   grid-template-columns: 30% auto 20%;    
   grid-template-areas: "tittle tittle tittle"
                        "left . right"
-                       "textBelow  textBelow textBelow"
-                       "textFinish textFinish textFinish";
+                       "below  below below"
+                       "finish finish finish";
  
 }
 
@@ -102,12 +90,12 @@ body{
 
 }
 
-.textBelow{
-  grid-area: textBelow;
+.below{
+  grid-area: below;
 }
 
-.textFinish{
-  grid-area: textFinish;
+.finish{
+  grid-area: finish;
 
 }
 
@@ -118,6 +106,12 @@ body{
 .content{
   position: absolute;
   bottom: 0;
+}
+
+.right img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /*mobile responsive*/

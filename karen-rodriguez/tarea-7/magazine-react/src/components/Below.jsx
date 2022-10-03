@@ -1,9 +1,12 @@
 import React from 'react'
-import Title from './Tex/Title'
+import Title from './Shared/Title'
 
 const Below = () => {
   return (
-    <Title text={'GET FLIRTY'}></Title>
+    <article className='below'>
+      <Title text={'GET FLIRTY'}></Title>
+    </article>
+    
   )
 }
 
