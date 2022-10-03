@@ -29,12 +29,11 @@ const movies = [
   },
 ];
 
-export const searchMovie = (text) => {
-  if (
-    typeof movies.find((el) => el.name === text.toLowerCase().trim()) ===
-    "object"
-  )
-    return true;
+export const searchMovie = (text, emoji) => {
+  console.log(emoji);
+  let validate = movies.find((el) => el.name === text.toLowerCase().trim());
+  console.log();
+  if (typeof validate !== "undefined" && validate.emoji === emoji) return true;
   else return false;
 };
 

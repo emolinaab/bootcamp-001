@@ -15,12 +15,13 @@ export const Content = () => {
     setLive(3);
     setScore(0);
     setValidate(false);
+    setName("");
     setMenssage("");
   };
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (searchMovie(name) === true) {
+    if (searchMovie(name, display) === true) {
       setDisplay(showEmoji());
       setValidate(false);
       setName("");
