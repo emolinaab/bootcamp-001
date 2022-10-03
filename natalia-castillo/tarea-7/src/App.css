@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: rgb(15, 18, 20);
+}
+
+section {
+  height: 109vh;
+}
+
+#magazine-cover {
+  background-image: url(images/ramen2.jpg);
+  background-size: cover;
+  height: 150vh;
+  width: 90vh;
+  margin: 0 auto;
+  border-radius: 2vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  font-size: 2vh;
+  width: 30vh;
+  justify-content: flex-end;
+}
+
+#footer {
+  background-color: rgba(165, 72, 5, 0.587);
+  height: 12vh;
+  align-items: flex-start;
+  padding-left: 5vh;
+}
+
+.title {
+  color: rgba(184, 178, 164, 255);
+  font-size: 12vh;
+  text-align: center;
+  margin: 0vh;
+  padding: 2vh;
+  padding-bottom: 0vh;
+}
+
+.subtitle {
+  color: rgb(107, 71, 46);
+  font-size: 3vh;
+  text-align: center;
+  margin: 0vh;
+  margin-bottom: 3vh;
+}
+
+.author {
+  width: 20vh;
+  color: rgb(107, 71, 46);
+  background-color: rgba(184, 178, 164, 255);
+  font-weight: bold;
+  text-align: center;
+  margin: 1vh;
+  padding: 1vh;
+  border-top-left-radius: 3vh;
+  border-bottom-left-radius: 3vh;
+}
+
+span {
+  color: rgb(107, 71, 46);
+  font-style: italic;
+}
+
+p {
+  font-size: 2vh;
+  color: rgb(146, 65, 21);
+  width: 15vh;
+}
+
+.left {
+  position: relative;
+  left: 67vh;
+}
+
+.right {
+  padding-left: 4vh;
+  margin-top: 0vh;
+}
+
+.center {
+  position: relative;
+  left: 10vh;
+  margin-top: 0vh;
+}
+
+.bottom {
+  position: relative;
+  left: 15vh;
+  margin: 0vh;
+  padding-top: 2vh;
+}
+
+.large {
+  font-size: 4vh;
+  font-weight: bold;
+  margin-bottom: 0vh;
+}
+
+.larger {
+  font-size: 8vh;
+  font-weight: bold;
+  padding-top: 3vh;
+  margin-bottom: 0vh;
+}
+
+.cream-color {
+  color: rgba(184, 178, 164, 255);
+}
+
+#barcode {
+  position: relative;
+  left: 65vh;
+  height: 12vh;
+  width: 10vh;
+  bottom: 11vh;
+}
+
+#images {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 60%;
+  position: relative;
+  bottom: 12vh;
+  right: 2vh;
+}
