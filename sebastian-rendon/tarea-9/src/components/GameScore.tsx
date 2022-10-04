@@ -1,4 +1,4 @@
-type GameScoreProps = {
+export type GameScoreProps = {
   lives: number;
   points: number;
   totalPoints: number;

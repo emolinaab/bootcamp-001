@@ -1,4 +1,4 @@
-type GameStatusModalProps = {
+export type GameStatusModalProps = {
   status: 'IN_PROGRESS' | 'WON' | 'LOST';
   onRestart: Function;
 };
@@ -7,7 +7,8 @@ function GameStatusModal({ status, onRestart }: GameStatusModalProps) {
   return (
     <div
       className="modal__wrapper"
-      aria-hidden={status === 'IN_PROGRESS'}
+      data-testid="game-status-modal"
+      hidden={status === 'IN_PROGRESS'}
       style={{ display: status === 'IN_PROGRESS' ? 'none' : 'flex' }}
     >
       <div className="modal__body" role="dialog">

@@ -1,4 +1,4 @@
-type GameFormProps = {
+export type GameFormProps = {
   riddle: string;
   guess: string;
   onSubmit: Function;
