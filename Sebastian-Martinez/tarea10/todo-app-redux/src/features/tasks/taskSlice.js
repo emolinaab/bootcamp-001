@@ -1,9 +1,7 @@
+import { fabClasses } from "@mui/material";
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [
-  
-  
-];
+const initialState = [];
 
 export const taskSlice = createSlice({
   name: "tasks",
@@ -20,12 +18,9 @@ export const taskSlice = createSlice({
     },
     setTaskDone: (state, action) => {
       const taskDone = state.find((task) => task.id === action.payload);
-      if(taskDone) {
-        state.indexOf(taskDone) = { 
-            ...action.payload,
-            isCompleted: true
-        }    
-    }
+      taskDone.isDoneTask
+        ? (taskDone.isDoneTask = false)
+        : (taskDone.isDoneTask = true);
     },
   },
 });

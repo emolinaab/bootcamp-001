@@ -11,7 +11,7 @@ const TodoList = () => {
   return (
     <Box component={"section"} sx={{ display: "flex", justifyContent: "space-around", width: "100%", flexWrap: "wrap", height: "100px"}} >
         {stateTask.map(task => (
-            <TodoItem id={task.id} title={task.title} description={task.description} isCompleted={task.isCompleted} />
+            <TodoItem key={task.id} id={task.id} title={task.title} description={task.description} isCompleted={task.isDoneTask} />
         ))}
     </Box>    
 )}

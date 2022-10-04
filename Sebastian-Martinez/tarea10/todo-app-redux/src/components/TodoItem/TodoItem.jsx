@@ -8,15 +8,12 @@ import Card from "@mui/material/Card";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Box } from "@mui/system";
 import DoneIcon from "@mui/icons-material/Done";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteTask, setTaskDone } from "../../features/tasks/taskSlice";
+import { Link } from "react-router-dom";
+import InfoIcon from "@mui/icons-material/Info";
 
-
-
-const TodoItem = ({ id, title, description }) => {
-  const [doneTask, setDoneTask] = useState(true);
-
+const TodoItem = ({ id, title, description, isCompleted }) => {
   const dispatch = useDispatch();
 
   const handleDeleteTask = (id) => {
@@ -24,8 +21,7 @@ const TodoItem = ({ id, title, description }) => {
   };
 
   const handleDoneTask = () => {
-    doneTask ? setDoneTask(false) : setDoneTask(true);
-    dispatch(setTaskDone(id))
+    dispatch(setTaskDone(id));
   };
 
   return (
@@ -43,7 +39,7 @@ const TodoItem = ({ id, title, description }) => {
             alignItems: "center",
           }}
         >
-          {doneTask ? (
+          {isCompleted === false ? (
             <Typography variant="h4" color="text.secondary" gutterBottom>
               {title}
             </Typography>
@@ -57,16 +53,29 @@ const TodoItem = ({ id, title, description }) => {
               {title}
             </Typography>
           )}
-          <IconButton aria-label="delete" size="large" onClick={() => handleDoneTask(id)}>
+          <IconButton
+            aria-label="delete"
+            size="large"
+            onClick={() => handleDoneTask(id)}
+          >
             <DoneIcon />
           </IconButton>
         </Box>
 
         <Typography variant="h5">{description}</Typography>
       </CardContent>
-      <CardActions>
-        <IconButton aria-label="delete" size="large" onClick={() => handleDeleteTask(id)}>
+      <CardActions sx={{width: "80%"}}>
+        <IconButton
+          aria-label="delete"
+          size="large"
+          onClick={() => handleDeleteTask(id)}
+        >
           <DeleteIcon />
+        </IconButton>
+        <IconButton aria-label="info-detail" size="large">
+          <Link to={`/detail/${id}`}>
+            <InfoIcon  sx={{ color: "gray"}}/>
+          </Link>
         </IconButton>
       </CardActions>
     </Card>

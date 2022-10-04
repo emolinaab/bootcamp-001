@@ -2,23 +2,22 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import { Button, Typography } from "@mui/material";
 import "./FormAdd.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { addTask } from "../../features/tasks/taskSlice";
 import { v4 as uuid } from "uuid";
-
+import { format } from "date-fns/esm";
 
 
 const FormAdd = () => {
-
   const [task, setTask] = useState({
     title: "",
     description: "",
   });
 
-  const [ emptyInput, setEmptyInput ] = useState(false)
+  const [emptyInput, setEmptyInput] = useState(false);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,22 +25,26 @@ const FormAdd = () => {
       ...task,
       [name]: value,
     });
-    setEmptyInput(false)
+    setEmptyInput(false);
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if(task.title.length > 0 && task.description.length > 0) {
-      dispatch(addTask({
-        ...task,
-        id: uuid()
-      }))
+    e.preventDefault();
+    if (task.title.length > 0 && task.description.length > 0) {
+      dispatch(
+        addTask({
+          ...task,
+          id: uuid(),
+          isDoneTask: false,
+          date: format(new Date(),'dd.MM.yyyy HH:mm')
+        })
+      );
       setTask({
         title: "",
         description: "",
       });
-    }  else {
-      setEmptyInput(true)
+    } else if (task.title.length === 0 && task.description.length === 0) {
+      setEmptyInput(true);
     }
   };
 
@@ -55,8 +58,8 @@ const FormAdd = () => {
           flexDirection: "column",
           width: "100%",
           alignItems: "center",
-          height: "20vh",
-          justifyContent: "space-between",
+          height: "25vh",
+          justifyContent: "space-around",
         }}
         onSubmit={handleSubmit}
       >
@@ -65,7 +68,7 @@ const FormAdd = () => {
           label="Title"
           variant="outlined"
           sx={{
-            width: "50%",
+            width: "70%",
           }}
           onChange={handleChange}
           name="title"
@@ -76,16 +79,22 @@ const FormAdd = () => {
           label="Content"
           variant="outlined"
           sx={{
-            width: "50%",
+            width: "70%",
+            
           }}
           onChange={handleChange}
           name="description"
           value={task.description}
         />
-        {emptyInput ??
-          <Typography variant="p"> Please, type the name and description of your task </Typography> 
-        }
-        <Button type="submit" variant="contained">{"Send"}</Button>
+        {emptyInput ? (
+          <Typography variant="p" sx={{ color:  "tomato" }}>
+            {" "}
+            Please, type the title and description for your task{" "}
+          </Typography>
+        ) : null}
+        <Button type="submit" variant="contained">
+          {"Send"}
+        </Button>
       </Box>
     </section>
   );
