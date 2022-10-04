@@ -1,0 +1,100 @@
+@font-face
+{
+  font-family: 'myFont';
+  src: url('../fonts/Pastel.otf');
+}
+.container {
+  margin: auto;
+  width: 30%;
+  height: auto;
+  border-radius: 15px;
+  border: solid #A2D2FF;
+  background-color: #F9F9F9;
+  padding: 10px;
+}
+
+.container h1 {
+  font-family: myFont;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  font-family: myFont;
+  font-size: 30px;
+  letter-spacing: 3px;
+  /* color:aliceblue */
+}
+
+
+
+
+.input {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 22px 50px;
+  text-align: center;
+  font-family: myFont;
+  font-size: 26px;
+}
+
+.submit {
+  font-family: myFont;
+  font-weight: 0;
+  font-size: 26px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #476072 0%, #548CA8 100%);
+  padding: 10px 47px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 22px 50px;
+  transition: 327ms;
+  transform: translateY(0);
+}
+
+.submit:hover {
+  transition: 327ms;
+  padding: 10px 50px;
+  transform: translateY(-0px);
+  background: linear-gradient(90deg, #0066CC 0%, #d62828 100%);
+  color: #ffffff;
+  border: none;
+}
+
+
+.link {
+ 
+  font-family: myFont;
+  font-weight: 0;
+  font-size: 36px;
+  color: #062C30;
+  background: linear-gradient(90deg, #F6C6EA 0%, #CDF0EA 100%);
+  padding: 10px 47px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 22px 50px;
+  transition: 327ms;
+  transform: translateY(0);
+}
+
+.link:hover {
+  transition: 327ms;
+  padding: 10px 50px;
+  transform: translateY(-0px);
+  background: linear-gradient(90deg, #A3E4DB 0%, #1C6DD0 100%);
+  color: #ffffff;
+  border: none;
+}
+
+
+
+.add_btn {
+  float: right;
+  background-color: red;
+  color: aliceblue;
+}
