@@ -76,3 +76,29 @@
   border-radius: 2rem;
   background: #222;
 }
+
+.game-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-table__body {
+  display: inline-block;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.game-table__body::-webkit-scrollbar {
+  width: 4px;
+  background-color: #222;
+}
+
+.game-table__body::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.game-table__body td {
+  padding: 0.5rem;
+}

@@ -4,6 +4,7 @@ import './App.css';
 import GameStatusModal from './components/GameStatusModal';
 import GameForm from './components/GameForm';
 import GameScore from './components/GameScore';
+import GameGuessedList from './components/GameGuessedList';
 
 type GameStatus = 'IN_PROGRESS' | 'LOST' | 'WON';
 
@@ -80,6 +81,7 @@ function App() {
         onInputChange={setGuessedName}
         onSubmit={guessMovie}
       />
+      <GameGuessedList items={movies.filter((movie) => movie.guessed)} />
     </div>
   );
 }

@@ -1,9 +1,4 @@
-type Movie = {
-    name: string;
-    otherNames?: string[];
-    emojis: string[];
-    guessed: boolean;
-}
+import { Movie } from "../types/Game";
 
 const movies: Movie[] = [
     {

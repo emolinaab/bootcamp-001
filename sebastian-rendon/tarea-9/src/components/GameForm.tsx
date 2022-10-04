@@ -1,9 +1,4 @@
-export type GameFormProps = {
-  riddle: string;
-  guess: string;
-  onSubmit: Function;
-  onInputChange: Function;
-};
+import { GameFormProps } from '../types/Game';
 
 function GameForm({ riddle, guess, onSubmit, onInputChange }: GameFormProps) {
   return (

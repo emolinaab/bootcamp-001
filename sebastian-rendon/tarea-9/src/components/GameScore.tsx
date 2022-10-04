@@ -1,8 +1,4 @@
-export type GameScoreProps = {
-  lives: number;
-  points: number;
-  totalPoints: number;
-};
+import { GameScoreProps } from '../types/Game';
 
 function GameScore({ lives, points, totalPoints }: GameScoreProps) {
   return (

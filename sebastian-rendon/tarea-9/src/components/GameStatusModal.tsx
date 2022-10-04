@@ -1,7 +1,4 @@
-export type GameStatusModalProps = {
-  status: 'IN_PROGRESS' | 'WON' | 'LOST';
-  onRestart: Function;
-};
+import { GameStatusModalProps } from '../types/Game';
 
 function GameStatusModal({ status, onRestart }: GameStatusModalProps) {
   return (
