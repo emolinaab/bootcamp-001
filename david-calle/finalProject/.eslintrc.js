@@ -17,6 +17,7 @@ module.exports = {
     'import/resolver': {
       'babel-module': {},
     },
+    'import/ignore': ['react-native'],
   },
   plugins: ['import'],
 };

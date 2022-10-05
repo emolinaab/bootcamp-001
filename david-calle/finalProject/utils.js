@@ -2,16 +2,6 @@ import axios from 'axios';
 
 const POKEMON_API_URL = 'https://pokeapi.co/api/v2';
 
-export type pokemonDataType = {
-  name: string;
-  id: string;
-  imageUrl: string;
-  types: string[];
-  weight: string;
-  moves: string[];
-  sprites: string[];
-};
-
 export const getPokemonData = pokeData => {
   const {
     front_default,
@@ -44,7 +34,7 @@ export const getPokemonData = pokeData => {
   };
 };
 
-export const getPokemons = async (url: string) => {
+export const getPokemons = async (url = null) => {
   url = url || `${POKEMON_API_URL}/pokemon/?limit=4`;
   return axios
     .get(url)
@@ -70,7 +60,7 @@ export const getPokemons = async (url: string) => {
     });
 };
 
-const searchPokemon = async pokemonName => {
+export const searchPokemon = async pokemonName => {
   pokemonName = pokemonName.toLowerCase();
   axios
     .get(`${POKEMON_API_URL}/pokemon/${pokemonName}`)
