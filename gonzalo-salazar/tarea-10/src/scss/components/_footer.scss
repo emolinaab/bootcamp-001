@@ -1,0 +1,27 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.footer {
+  @include mixin.flex(center);
+  padding: 10px;
+  width: 600px;
+
+  &__btn {
+    background-color: variables.$blue;
+    margin: 0px 30px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #2bcddfb2;
+    }
+
+    @media (max-width: 850px) {
+      & {
+        margin: 0px 15px;
+      }
+    }
+  }
+}
