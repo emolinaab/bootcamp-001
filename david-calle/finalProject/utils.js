@@ -68,3 +68,30 @@ export const searchPokemon = async pokemonName => {
     .get(`${POKEMON_API_URL}/pokemon/${pokemonName}`)
     .then(res => getPokemonData(res.data));
 };
+
+export const getColorByType = type => {
+  const colors = {
+    normal: '#d3d3d3',
+    fighting: '#a18f62',
+    flying: '#bff1f2',
+    poison: '#ab8adb',
+    ground: '#aba67d',
+    rock: '#a69a8a',
+    bug: '#a1db6e',
+    ghost: '#a979c9',
+    steel: '#ada7a6',
+    fire: '#e8867d',
+    water: '#78a1e3',
+    grass: '#9fe396',
+    electric: '#e0e675',
+    psychic: '#fab9f6',
+    ice: '#82c7d1',
+    dragon: '#676ea6',
+    dark: '#53545e',
+    fairy: '#f7d7f4',
+    unknown: '#dbaf8f',
+    shadow: '#969493',
+  };
+
+  return colors[type];
+};

@@ -5,6 +5,7 @@
         "@components/*": ["components/*"],
         "@redux/*": ["redux/*"],
         "@screens/*": ["screens/*"],
+        "@assets/*": ["assets/*"],
         "@utils": ["utils.js"],
        },
     }

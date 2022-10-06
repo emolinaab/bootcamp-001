@@ -43,7 +43,7 @@ const pokemonReducer = createSlice({
 export const getInitialPokemons = createAsyncThunk(
   'pokemon/updatePokemons',
   async () => {
-    const initialRoute = `${POKEMON_API_URL}/pokemon/?limit=4`;
+    const initialRoute = `${POKEMON_API_URL}/pokemon/?limit=10`;
     const response = await getPokemons(initialRoute);
     return response;
   },

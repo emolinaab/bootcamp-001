@@ -9,6 +9,7 @@ module.exports = {
           '@components': './components',
           '@redux': './redux',
           '@screens': './screens',
+          '@assets': './assets',
           '@utils': './utils.js',
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx'],

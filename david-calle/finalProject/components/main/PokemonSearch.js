@@ -18,14 +18,15 @@ const PokemonSearch = () => {
 
 const styles = StyleSheet.create({
   searchBar: {
-    width: '60%',
-    alignSelf: 'baseline',
+    width: '90%',
+    alignSelf: 'center',
     padding: 10,
     borderColor: 'lightgray',
     borderWidth: 1,
     borderRadius: 5,
     marginBottom: 10,
     marginLeft: 5,
+    backgroundColor: '#fff',
   },
 });
 export default PokemonSearch;

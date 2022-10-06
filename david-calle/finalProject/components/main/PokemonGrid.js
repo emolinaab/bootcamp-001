@@ -1,19 +1,20 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 import React from 'react';
 import PokemonCard from './PokemonCard';
-import {useSelector} from 'react-redux';
 
-const PokemonGrid = () => {
-  const pokemon = useSelector(state => state.pokemon.pokemon);
-
-  const pokeCards = pokemon.map((item, index) => (
-    <PokemonCard pokeData={item} key={index} color={index % 4} />
-  ));
-
+const PokemonGrid = ({pokemon}) => {
   return (
     <View style={styles.pokemonGrid}>
-      <View style={styles.cardsWrapper}>
-        <View style={styles.cardsContainer}>{pokeCards}</View>
+      <View>
+        <FlatList
+          data={pokemon}
+          renderItem={({item, index}) => (
+            <PokemonCard pokeData={item} index={index} />
+          )}
+          numColumns={2}
+          columnWrapperStyle={styles.cardsContainer}
+          keyExtractor={item => item.name}
+        />
       </View>
     </View>
   );
@@ -21,23 +22,10 @@ const PokemonGrid = () => {
 
 const styles = StyleSheet.create({
   cardsContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'space-evenly',
-    marginHorizontal: 'auto',
-    width: '100%',
+    flex: 1,
   },
-  cardsContainerSmall: {
-    width: '60%',
-  },
-  pokemonGrid: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 10,
-    width: '100%',
-  },
+  pokemonGrid: {},
 });
 
 export default PokemonGrid;
