@@ -1,0 +1,43 @@
+.form {
+  margin: 10px 3px;
+  height: 70px;
+  width: 100%;
+  color: rgb(209, 209, 209);
+}
+
+.form label {
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+}
+
+.form__content {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__content input {
+  height: 70%;
+  padding: 0 5px;
+  color: #232323;
+  border: none;
+  width: 350px;
+  background-color: rgb(183, 192, 192);
+}
+
+.form__content .form__submit {
+  height: 37px;
+  width: 50px;
+  background-color: rgb(11, 123, 171);
+  border: none;
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+  background-color: rgba(11, 123, 171, 0.763);
+}
