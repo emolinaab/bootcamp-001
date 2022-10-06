@@ -1,13 +1,24 @@
-import { ToDoList as ToDoListProps } from '../types/PropTypes';
+import { useDispatch } from 'react-redux';
+import { completeItem } from '../store/ToDoSlice';
+import { ToDoListProps } from '../types/PropTypes';
 import ToDoItem from './ToDoItem';
+import styles from '../styles/ToDoList.module.css';
 
 const ToDoList = ({ items }: ToDoListProps) => {
+  const dispatch = useDispatch();
+
   return (
-    <ul>
-      {items.map((item) => (
-        <ToDoItem {...item} key={item.id} />
+    <section className={styles['item-list']}>
+      {items.map((item, i) => (
+        <ToDoItem
+          key={item.id}
+          item={item}
+          onComplete={() => {
+            dispatch(completeItem(i));
+          }}
+        />
       ))}
-    </ul>
+    </section>
   );
 };
 

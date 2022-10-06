@@ -1,0 +1,14 @@
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+}
+
+.form-btn {
+  cursor: pointer;
+  padding: 0.25rem;
+  width: 100%;
+  background-color: #fb923c;
+  border-radius: 1rem;
+}

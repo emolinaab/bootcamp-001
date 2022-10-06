@@ -1,12 +1,28 @@
-export type ToDoList = {
-    items: ToDoItem[];
-}
-
-export type ToDoItem = {
+export interface ToDoItem {
     id: number;
     title: string;
     description: string;
     priority: number;
     completed: boolean;
-    date: Date;
+    dateCreated: string;
+    dateDue: string;
+}
+
+export interface ToDoListProps {
+    items: ToDoItem[];
+}
+
+export interface ToDoItemProps {
+    item: ToDoItem;
+    onComplete: Function;
+}
+
+export interface ToDoForm {
+    item: ToDoItem;
+    onChange: Function;
+    onSubmit: Function;
+}
+
+export interface PriorityMap {
+    [key: number]: string
 }
