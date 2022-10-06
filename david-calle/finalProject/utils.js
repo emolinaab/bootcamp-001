@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const POKEMON_API_URL = 'https://pokeapi.co/api/v2';
+export const POKEMON_API_URL = 'https://pokeapi.co/api/v2';
 
 export const getPokemonData = pokeData => {
   const {
@@ -35,7 +35,9 @@ export const getPokemonData = pokeData => {
 };
 
 export const getPokemons = async (url = null) => {
-  url = url || `${POKEMON_API_URL}/pokemon/?limit=4`;
+  if (!url) {
+    return null;
+  }
   return axios
     .get(url)
     .then(res => ({

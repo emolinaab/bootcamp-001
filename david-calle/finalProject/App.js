@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   StatusBar,
   StyleSheet,
@@ -15,10 +15,14 @@ import {
 import {Provider} from 'react-redux';
 import store from '@redux/store';
 import Navigation from 'navigation';
-import {NavigationContainer} from '@react-navigation/native';
+import {getInitialPokemons} from '@redux/reducers/pokemon.reducer';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
+
+  useEffect(() => {
+    store.dispatch(getInitialPokemons());
+  }, []);
 
   return (
     <SafeAreaView style={styles.wrapper}>

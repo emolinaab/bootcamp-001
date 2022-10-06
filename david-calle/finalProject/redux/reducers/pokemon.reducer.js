@@ -1,8 +1,8 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {getPokemons} from '@utils';
+import {getPokemons, POKEMON_API_URL} from '@utils';
 
 const initialState = {
-  pokemon: [],
+  pokemons: [],
   selectedPokemon: null,
   next: null,
   prev: null,
@@ -16,7 +16,7 @@ const pokemonReducer = createSlice({
   reducers: {
     setSelectedPokemon: (state, action) => {
       const id = action.payload;
-      const selectedPokemon = state.pokemon.find(pokemon => pokemon.id === id);
+      const selectedPokemon = state.pokemons.find(pokemon => pokemon.id === id);
       if (selectedPokemon) {
         state.selectedPokemon = selectedPokemon;
       }
@@ -24,28 +24,51 @@ const pokemonReducer = createSlice({
   },
   extraReducers: builder => {
     builder
-      .addCase(updatePokemons.pending, state => {
+      .addCase(getInitialPokemons.pending, state => {
         state.status = 'loading';
       })
-      .addCase(updatePokemons.fulfilled, (state, action) => {
+      .addCase(getInitialPokemons.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.pokemon = action.payload.results;
+        state.pokemons = action.payload.results;
         state.next = action.payload.next;
         state.prev = action.payload.prev;
       })
-      .addCase(updatePokemons.rejected, (state, action) => {
+      .addCase(getInitialPokemons.rejected, (state, action) => {
         state.status = 'idle';
-        state.error = action.payload;
+        state.error = action.error.message;
       });
   },
 });
 
-export const updatePokemons = createAsyncThunk(
+export const getInitialPokemons = createAsyncThunk(
   'pokemon/updatePokemons',
-  async ({next = false, prev = false}, {getState}) => {
-    const {next: nextUrl, prev: prevUrl} = getState().pokemon;
-    const url = next ? nextUrl : prev ? prevUrl : null;
-    const response = await getPokemons(url);
+  async () => {
+    const initialRoute = `${POKEMON_API_URL}/pokemon/?limit=4`;
+    const response = await getPokemons(initialRoute);
+    return response;
+  },
+);
+
+export const getNextPokemons = createAsyncThunk(
+  'pokemon/updatePokemons',
+  async (args, {getState, rejectWithValue}) => {
+    const {next} = getState().pokemon;
+    if (!next) {
+      rejectWithValue('Action not allowed');
+    }
+    const response = await getPokemons(next);
+    return response;
+  },
+);
+
+export const getPrevPokemons = createAsyncThunk(
+  'pokemon/updatePokemons',
+  async (args, {getState, rejectWithValue}) => {
+    const {prev} = getState().pokemon;
+    if (!prev) {
+      rejectWithValue('Action not allowed');
+    }
+    const response = await getPokemons(prev);
     return response;
   },
 );
