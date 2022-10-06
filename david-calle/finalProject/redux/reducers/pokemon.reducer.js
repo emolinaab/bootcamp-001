@@ -51,4 +51,4 @@ export const updatePokemons = createAsyncThunk(
 );
 
 export const {setSelectedPokemon} = pokemonReducer.actions;
-export default pokemonReducer;
+export default pokemonReducer.reducer;
