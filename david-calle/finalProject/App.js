@@ -27,7 +27,10 @@ const App = () => {
   return (
     <SafeAreaView style={styles.wrapper}>
       <Provider store={store}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={'#d91d09'}
+        />
         <Navigation />
       </Provider>
     </SafeAreaView>
@@ -37,6 +40,9 @@ const App = () => {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
+  },
+  statusBar: {
+    backgroundColor: '#d91d09',
   },
 });
 

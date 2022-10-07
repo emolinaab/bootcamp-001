@@ -8,29 +8,24 @@ import {
 } from 'react-native';
 import React from 'react';
 
-export default ({pokeData, setSelectedPokemon}) => {
-  const types = pokeData.types?.reduce((prev, cur) => prev + ' ' + cur, '');
-  const moves = pokeData.moves?.reduce((prev, cur) => prev + ' ' + cur, '');
-  const sprites = pokeData.sprites?.map((spriteUrl, index) => (
+export default ({pokemonData}) => {
+  const types = pokemonData.types?.reduce((prev, cur) => prev + ' ' + cur, '');
+  const moves = pokemonData.moves?.reduce((prev, cur) => prev + ' ' + cur, '');
+  const sprites = pokemonData.sprites?.map((spriteUrl, index) => (
     <Image source={{uri: spriteUrl}} style={styles.pokeSprite} key={index} />
   ));
 
   return (
     <View style={styles.detailsContainer}>
-      <TouchableOpacity
-        style={styles.closeDetails}
-        onPress={() => setSelectedPokemon(null)}>
-        <Text>x</Text>
-      </TouchableOpacity>
       <View style={styles.cardContainer}>
-        <Image source={{uri: pokeData.imageUrl}} style={styles.pokeImage} />
-        <Text>#{pokeData.id}</Text>
-        <Text>{pokeData?.name}</Text>
+        <Image source={{uri: pokemonData.imageUrl}} style={styles.pokeImage} />
+        <Text>#{pokemonData.id}</Text>
+        <Text>{pokemonData?.name}</Text>
       </View>
       <Text style={styles.title}>Types</Text>
       <Text>{types}</Text>
       <Text style={styles.title}>Peso</Text>
-      <Text>{pokeData.weight}</Text>
+      <Text>{pokemonData.weight}</Text>
       <Text style={styles.title}>Sprites</Text>
       <ScrollView horizontal={true} style={styles.spritesContainer}>
         {sprites}
@@ -58,14 +53,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-  },
-  closeDetails: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    backgroundColor: '#b366ff',
-    paddingHorizontal: 5,
-    zIndex: 1,
   },
   title: {
     fontWeight: 'bold',

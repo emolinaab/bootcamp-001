@@ -9,7 +9,7 @@ const PokemonGrid = ({pokemon}) => {
         <FlatList
           data={pokemon}
           renderItem={({item, index}) => (
-            <PokemonCard pokeData={item} index={index} />
+            <PokemonCard pokemonData={item} index={index} />
           )}
           numColumns={2}
           columnWrapperStyle={styles.cardsContainer}

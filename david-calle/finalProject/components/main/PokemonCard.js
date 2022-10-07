@@ -1,42 +1,38 @@
 import {Text, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {getColorByType} from '@utils';
+import {getColorByType, capitalize} from '@utils';
+import {useNavigation} from '@react-navigation/native';
 
-export default ({pokeData, index}) => {
-  const capitalize = name => {
-    return name.charAt(0).toUpperCase() + name.slice(1);
+export default ({pokemonData, index}) => {
+  const navigation = useNavigation();
+
+  const handlePokemonPress = () => {
+    navigation.navigate('PokemonDetails', {pokemonData});
   };
 
   return (
-    <View style={styles.wrapper}>
-      <TouchableOpacity
-        style={[
-          styles.cardContainer,
-          styles.typeBackground(pokeData.types[0]),
-          styles.directionByIndex(index),
-        ]}
-        onPress={() => null}>
-        <Image source={{uri: pokeData.imageUrl}} style={styles.pokeImage} />
-        <Text style={styles.pokeName}>{capitalize(pokeData?.name)}</Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity
+      style={[
+        styles.cardContainer,
+        styles.typeBorder(pokemonData.types[0]),
+        styles.stylesByIndex(index),
+      ]}
+      onPress={handlePokemonPress}>
+      <Image source={{uri: pokemonData.imageUrl}} style={styles.pokeImage} />
+      <Text style={styles.pokeName}>{capitalize(pokemonData?.name)}</Text>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   pokeImage: {
-    width: 90,
-    height: 90,
+    width: 100,
+    height: 100,
   },
   pokeName: {
     fontSize: 17,
     fontWeight: 'bold',
     textAlign: 'center',
-  },
-  wrapper: {
-    flex: 1,
-    borderColor: '#fff',
-    borderWidth: 1,
   },
   cardContainer: {
     textAlign: 'center',
@@ -45,12 +41,14 @@ const styles = StyleSheet.create({
     padding: 5,
     display: 'flex',
     justifyContent: 'space-evenly',
+    margin: 1,
   },
-  directionByIndex: index => ({
+  stylesByIndex: index => ({
     flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
+    borderLeftWidth: index % 2 === 0 ? 5 : 0,
+    borderRightWidth: index % 2 === 0 ? 0 : 5,
   }),
-  typeBackground: type => ({
-    borderWidth: 3,
+  typeBorder: type => ({
     borderColor: getColorByType(type),
   }),
 });

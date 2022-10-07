@@ -95,3 +95,7 @@ export const getColorByType = type => {
 
   return colors[type];
 };
+
+export const capitalize = name => {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+};

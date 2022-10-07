@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#d91d09',
     flex: 1,
+    maxHeight: 150,
   },
   button: {
     width: 30,
