@@ -1,0 +1,19 @@
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.success-text {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.success-image {
+    width: 30px;
+    height: 30px;
+}
+

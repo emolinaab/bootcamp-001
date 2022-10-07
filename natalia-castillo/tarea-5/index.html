@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="index.css" rel="stylesheet" />
+    <title>Slide Puzzle</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Slide Puzzle</h1>
+      </header>
+      <section id="board"></section>
+      <section>
+        <h2>Movimientos: <span id="turns">0</span></h2>
+      </section>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>FELICITACIONES</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">Presione el botón para repetir el juego.</div>
+          <button
+            id="reset"
+            type="button"
+            onclick="window.location.assign('#'); window.location.reload()"
+          >
+            REPETIR
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./index.js" id="image" name="myImage"></script>
+</html>

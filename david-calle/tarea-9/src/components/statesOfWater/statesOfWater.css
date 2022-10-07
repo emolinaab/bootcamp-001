@@ -1,0 +1,22 @@
+div:nth-child(2) {
+    padding:20px;
+    margin-top:20px;
+    color:white;
+    font-size:2.5rem;
+  }
+  
+  input {
+    font-size:1rem;
+    margin-top:10px;
+  }
+  
+  .solid {
+    background-color:#000029;
+  }
+  .liquid {
+    background-color:blue;
+  }
+  .gas {
+    background-color:#d3d3d3;
+  }
+  

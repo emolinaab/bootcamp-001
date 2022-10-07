@@ -1,0 +1,55 @@
+:root{
+    --yellow: #ffff66;
+}
+
+@font-face {
+    font-family: butler;
+    src: url("../../../public/fonts/Butler_Medium.otf");
+}
+
+@font-face {
+    font-family: butler;
+    font-weight: bold;
+    src: url("../../../public/fonts/Butler_Bold.otf");
+}
+
+@font-face {
+    font-family: butler;
+    font-weight: lighter;
+    src: url("../../../public/fonts/Butler_Light.otf");
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: butler;
+}
+
+#magazine-container{
+    height: 100vmin;
+    width: 75vmin;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ), 
+      url("../../../public/img/background-image.jpg");
+    background-size:cover;
+    margin: 0 auto;
+    position: relative;
+}
+
+#magazine-title{
+    color: white;
+    font-size: 25vmin;
+    text-align: center;
+    margin: 0;
+    line-height: 0.8;
+}
+
+#magazine-title-description{
+    text-align: center;
+    font-size: 3vmin;
+    margin: 0;
+    color: var(--yellow);
+    line-height: 0;
+}

@@ -1,0 +1,31 @@
+.movie {
+    justify-content: center;
+    display: flex;
+    font-size: 100px;
+    margin-top: -8px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .answer {
+    width: 25vw;
+    height: 2vw;
+    border-radius: 25px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .container {
+    justify-content: center;
+    display: flex;
+  }
+  
+  .send{
+    width: 5vw;
+    height: 2,6vw;
+    margin-left: 20px;
+    font-size: 30px;
+    border-radius: 18px;
+    background-color: chartreuse;
+    color: blanchedalmond;
+  }
