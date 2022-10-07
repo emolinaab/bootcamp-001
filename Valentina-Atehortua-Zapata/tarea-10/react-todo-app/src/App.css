@@ -112,3 +112,11 @@ h1 {
 h4 {
   font-size: 20px;
 }
+
+.titleSub {
+  text-decoration: line-through;
+}
+
+.containerIcon {
+  display: flex;
+}
