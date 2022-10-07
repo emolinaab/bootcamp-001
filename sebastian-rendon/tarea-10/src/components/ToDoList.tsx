@@ -14,7 +14,7 @@ const ToDoList = ({ items }: ToDoListProps) => {
           key={item.id}
           item={item}
           onComplete={() => {
-            dispatch(completeItem(i));
+            dispatch(completeItem(item.id));
           }}
         />
       ))}

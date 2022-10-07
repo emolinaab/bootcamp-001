@@ -15,6 +15,7 @@ export interface ToDoListProps {
 
 export interface ToDoItemProps {
     item: ToDoItem;
+    isDetail?: boolean;
     onComplete: Function;
 }
 

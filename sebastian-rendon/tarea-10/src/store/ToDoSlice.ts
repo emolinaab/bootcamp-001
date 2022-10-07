@@ -44,8 +44,8 @@ export const toDoSlice = createSlice({
         },
         completeItem: (state, action: PayloadAction<number>) => {
             state.items = state.items
-                .map((item, i) =>
-                    i === action.payload ? { ...item, completed: !item.completed } : item
+                .map((item) =>
+                    item.id === action.payload ? { ...item, completed: !item.completed } : item
                 )
         },
     }
