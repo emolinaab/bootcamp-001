@@ -5,4 +5,3 @@ function initializeNames(name) {
     }
     return name.join(" ");
   }
- 
