@@ -1,12 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  ScrollView,
-  FlatList,
-  StatusBar,
-} from 'react-native';
+import {View, Text, StyleSheet, Image, FlatList} from 'react-native';
 import React from 'react';
 import PokemonImage from './PokemonImage';
 

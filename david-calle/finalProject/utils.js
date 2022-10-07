@@ -64,7 +64,7 @@ export const getPokemons = async (url = null) => {
 
 export const searchPokemon = async pokemonName => {
   pokemonName = pokemonName.toLowerCase();
-  axios
+  return axios
     .get(`${POKEMON_API_URL}/pokemon/${pokemonName}`)
     .then(res => getPokemonData(res.data));
 };

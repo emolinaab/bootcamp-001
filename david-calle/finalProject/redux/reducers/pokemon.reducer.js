@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {getPokemons, POKEMON_API_URL} from '@utils';
+import {getPokemons, POKEMON_API_URL, searchPokemon} from '@utils';
 
 const initialState = {
   pokemons: [],
@@ -31,6 +31,17 @@ const pokemonReducer = createSlice({
         state.prev = action.payload.prev;
       })
       .addCase(getInitialPokemons.rejected, (state, action) => {
+        state.status = 'idle';
+        state.error = action.error.message;
+      })
+      .addCase(getPokemonByName.pending, state => {
+        state.status = 'loading';
+      })
+      .addCase(getPokemonByName.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.selectedPokemon = action.payload;
+      })
+      .addCase(getPokemonByName.rejected, (state, action) => {
         state.status = 'idle';
         state.error = action.error.message;
       });
@@ -67,6 +78,18 @@ export const getPrevPokemons = createAsyncThunk(
     }
     const response = await getPokemons(prev);
     return response;
+  },
+);
+
+export const getPokemonByName = createAsyncThunk(
+  'pokemon/getPokemonByName',
+  async (pokemonName, {rejectWithValue}) => {
+    try {
+      const response = await searchPokemon(pokemonName);
+      return response;
+    } catch (error) {
+      rejectWithValue(error.message);
+    }
   },
 );
 

@@ -19,7 +19,7 @@ const DetailsConfig = name => ({
 });
 
 function App() {
-  const name = useSelector(state => state.pokemon.selectedPokemon.name);
+  const name = useSelector(state => state.pokemon.selectedPokemon?.name);
   return (
     <NavigationContainer>
       <Stack.Navigator>
