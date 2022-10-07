@@ -18,6 +18,9 @@ const pokemonReducer = createSlice({
       const selectedPokemon = action.payload;
       state.selectedPokemon = selectedPokemon;
     },
+    clearSelectedPokemon: state => {
+      state.selectedPokemon = null;
+    },
   },
   extraReducers: builder => {
     builder
@@ -93,5 +96,6 @@ export const getPokemonByName = createAsyncThunk(
   },
 );
 
-export const {setSelectedPokemon} = pokemonReducer.actions;
+export const {setSelectedPokemon, clearSelectedPokemon} =
+  pokemonReducer.actions;
 export default pokemonReducer.reducer;

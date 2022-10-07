@@ -3,7 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import MainScreen from '@screens/MainScreen';
 import PokemonDetailsScreen from '@screens/PokemonDetailsScreen';
-import {capitalize} from '@utils';
+import {capitalize, getColorByType} from '@utils';
 import {useSelector} from 'react-redux';
 
 const Stack = createNativeStackNavigator();
@@ -11,15 +11,16 @@ const config = {
   headerShown: false,
 };
 
-const DetailsConfig = name => ({
+const DetailsConfig = (name, type) => ({
   title: capitalize(name),
   headerStyle: {
-    backgroundColor: '#d91d09',
+    backgroundColor: getColorByType(type) || '#d91d09',
   },
 });
 
 function App() {
   const name = useSelector(state => state.pokemon.selectedPokemon?.name);
+  const type = useSelector(state => state.pokemon.selectedPokemon?.types[0]);
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -27,7 +28,7 @@ function App() {
         <Stack.Screen
           name="PokemonDetails"
           component={PokemonDetailsScreen}
-          options={DetailsConfig(name)}
+          options={DetailsConfig(name, type)}
         />
       </Stack.Navigator>
     </NavigationContainer>

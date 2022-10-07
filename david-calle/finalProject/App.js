@@ -16,7 +16,6 @@ import {Provider} from 'react-redux';
 import store from '@redux/store';
 import Navigation from 'navigation';
 import {getInitialPokemons} from '@redux/reducers/pokemon.reducer';
-import {COLORS} from '@constants';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -30,7 +29,8 @@ const App = () => {
       <Provider store={store}>
         <StatusBar
           barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-          backgroundColor={COLORS.mainRed}
+          backgroundColor="transparent"
+          translucent
         />
         <Navigation />
       </Provider>
