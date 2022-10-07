@@ -1,4 +1,26 @@
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .page-title {
   margin-bottom: 1rem;
   font-size: 3rem;
+}
+
+.form-section,
+.list-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.form-section {
+  padding: 2rem;
+  justify-content: center;
+}
+
+.list-section {
+  padding: 2rem;
+  overflow-y: auto;
 }

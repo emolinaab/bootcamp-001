@@ -16,7 +16,9 @@ const DetailPage = () => {
 
   return (
     <main className="main-content">
-      <h1>{currentItem?.title}</h1>
+      <header>
+        <h1>{currentItem?.title}</h1>
+      </header>
       <div>{itemId}</div>
     </main>
   );

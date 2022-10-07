@@ -1,4 +1,5 @@
 export interface ToDoItem {
+    [key: string | number]: any;
     id: number;
     title: string;
     description: string;

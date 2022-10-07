@@ -1,3 +1,4 @@
+import ToDoFilters from '../components/ToDoFilters';
 import ToDoForm from '../components/ToDoForm';
 import ToDoList from '../components/ToDoList';
 import { useAppDispatch, useAppSelector } from '../hooks/Redux';
@@ -16,18 +17,23 @@ const MainPage = () => {
   const items = useAppSelector(toDoItems);
 
   return (
-    <main className="main-content">
-      <h1 className={styles['page-title']}>What's To-Do?</h1>
-      <ToDoForm
-        item={newItem}
-        onChange={(formItem: ToDoItem) => {
-          dispatch(setNewItem(formItem));
-        }}
-        onSubmit={() => {
-          dispatch(addItem(newItem));
-        }}
-      />
-      {items.length ? <ToDoList items={items} /> : <h2>Nothing due!</h2>}
+    <main className={styles['main-content']}>
+      <section className={styles['form-section']}>
+        <h1 className={styles['page-title']}>What's To-Do?</h1>
+        <ToDoForm
+          item={newItem}
+          onChange={(formItem: ToDoItem) => {
+            dispatch(setNewItem(formItem));
+          }}
+          onSubmit={() => {
+            dispatch(addItem(newItem));
+          }}
+        />
+      </section>
+      <section className={styles['list-section']}>
+        <ToDoFilters />
+        {items.length ? <ToDoList items={items} /> : <h2>Nothing due!</h2>}
+      </section>
     </main>
   );
 };

@@ -53,7 +53,20 @@ export const toDoSlice = createSlice({
 
 export const { setNewItem, addItem, removeItem, completeItem } = toDoSlice.actions;
 export const newToDoItem = (state: RootState) => state.toDo.newItem;
-export const toDoItems = (state: RootState) => state.toDo.items;
+export const toDoItems = (state: RootState) => state.toDo.items
+    .filter((item) => (
+        !state.filter.titleFilter || item.title.includes(state.filter.titleFilter))
+        && (!state.filter.completedFilter || !item.completed))
+    .sort((a, b) => {
+        const sortKey = state.filter.sortBy;
+        switch (sortKey) {
+            case 'dateCreated':
+            case 'dateDue':
+                return new Date(a[sortKey]).getTime() - new Date(b[sortKey]).getTime();
+            default:
+                return b[sortKey] - a[sortKey];
+        }
+    });
 export const toDoPriorities = (state: RootState) => state.toDo.priorities;
 export const currentToDoItem = (itemId: number) =>
     (state: RootState) => state.toDo.items.find((item) => item.id === itemId)
