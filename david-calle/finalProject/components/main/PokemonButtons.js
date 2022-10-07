@@ -7,6 +7,7 @@ import {
   getInitialPokemons,
 } from '@redux/reducers/pokemon.reducer';
 import {useDispatch} from 'react-redux';
+import {COLORS} from '@constants';
 
 const PokemonButtons = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const PokemonButtons = () => {
         onPress={() => dispatch(getInitialPokemons())}
         style={styles.button}>
         <Image
-          source={require('../../assets/images/pokeball.png')}
+          source={require('@assets/images/pokeball.png')}
           style={styles.pokeball}
         />
       </TouchableOpacity>
@@ -34,15 +35,18 @@ const PokemonButtons = () => {
   );
 };
 
+export default PokemonButtons;
+
 const styles = StyleSheet.create({
   buttonsContainer: {
     display: 'flex',
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '#d91d09',
+    backgroundColor: COLORS.mainRed,
     flex: 1,
-    maxHeight: 150,
+    maxHeight: 100,
+    marginTop: 'auto',
   },
   button: {
     width: 30,
@@ -59,5 +63,3 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
 });
-
-export default PokemonButtons;

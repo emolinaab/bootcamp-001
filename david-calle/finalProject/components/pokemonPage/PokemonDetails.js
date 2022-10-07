@@ -3,62 +3,71 @@ import {
   Text,
   StyleSheet,
   Image,
-  TouchableOpacity,
   ScrollView,
+  FlatList,
+  StatusBar,
 } from 'react-native';
 import React from 'react';
+import PokemonImage from './PokemonImage';
 
-export default ({pokemonData}) => {
-  const types = pokemonData.types?.reduce((prev, cur) => prev + ' ' + cur, '');
-  const moves = pokemonData.moves?.reduce((prev, cur) => prev + ' ' + cur, '');
-  const sprites = pokemonData.sprites?.map((spriteUrl, index) => (
-    <Image source={{uri: spriteUrl}} style={styles.pokeSprite} key={index} />
-  ));
+const PokemonDetails = ({pokemonData}) => {
+  const types = pokemonData.types?.join(', ');
+  const moves = pokemonData.moves?.join(', ');
 
   return (
     <View style={styles.detailsContainer}>
-      <View style={styles.cardContainer}>
-        <Image source={{uri: pokemonData.imageUrl}} style={styles.pokeImage} />
-        <Text>#{pokemonData.id}</Text>
-        <Text>{pokemonData?.name}</Text>
+      <PokemonImage pokemonData={pokemonData} />
+      <View style={styles.informationContainer}>
+        <Text style={styles.title}>Number</Text>
+        <Text style={styles.description}>#{pokemonData.id}</Text>
+        <Text style={styles.title}>Name</Text>
+        <Text style={styles.description}>{pokemonData?.name}</Text>
+        <Text style={styles.title}>Types</Text>
+        <Text style={styles.description}>{types}</Text>
+        <Text style={styles.title}>Weight</Text>
+        <Text style={styles.description}>{pokemonData.weight} kg</Text>
+        <Text style={styles.title}>Sprites</Text>
+        <FlatList
+          data={pokemonData.sprites}
+          renderItem={({item}) => (
+            <Image source={{uri: item}} style={styles.pokeSprite} />
+          )}
+          horizontal={true}
+          style={styles.spritesContainer}
+        />
+        <Text style={styles.title}>Moves</Text>
+        <Text style={styles.description}>{moves}</Text>
       </View>
-      <Text style={styles.title}>Types</Text>
-      <Text>{types}</Text>
-      <Text style={styles.title}>Peso</Text>
-      <Text>{pokemonData.weight}</Text>
-      <Text style={styles.title}>Sprites</Text>
-      <ScrollView horizontal={true} style={styles.spritesContainer}>
-        {sprites}
-      </ScrollView>
-      <Text style={styles.title}>Movimientos</Text>
-      <Text>{moves}</Text>
     </View>
   );
 };
 
+export default PokemonDetails;
+
 const styles = StyleSheet.create({
-  pokeImage: {
+  pokeSprite: {
     width: 90,
     height: 90,
-  },
-  pokeSprite: {
-    width: 60,
-    height: 60,
     backgroundColor: 'white',
     borderRadius: 200,
     margin: 1,
+    alignSelf: 'center',
   },
-  cardContainer: {
+  spritesContainer: {
     width: '100%',
-    textAlign: 'center',
-    alignItems: 'center',
+    margin: 1,
     alignSelf: 'center',
   },
   title: {
     fontWeight: 'bold',
+    fontSize: 20,
   },
-  detailsContainer: {
-    backgroundColor: '#cc99ff',
+  description: {
+    fontSize: 17,
+  },
+  informationContainer: {
+    display: 'flex',
+    flexDirection: 'column',
     padding: 10,
   },
 });

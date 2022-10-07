@@ -20,6 +20,8 @@ const PokemonGrid = ({pokemon}) => {
   );
 };
 
+export default PokemonGrid;
+
 const styles = StyleSheet.create({
   cardsContainer: {
     justifyContent: 'space-evenly',
@@ -27,5 +29,3 @@ const styles = StyleSheet.create({
   },
   pokemonGrid: {},
 });
-
-export default PokemonGrid;

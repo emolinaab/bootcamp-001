@@ -1,11 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import PokemonDetails from '@components/pokemonPage/PokemonDetails';
+import {useSelector} from 'react-redux';
+const PokemonDetailsScreen = () => {
+  const pokemonData = useSelector(state => state.pokemon.selectedPokemon);
 
-const PokemonDetailsScreen = ({route}) => {
-  const {pokemonData} = route.params;
   return (
-    <View>
+    <View style={styles.PokemonDetails}>
       <PokemonDetails pokemonData={pokemonData} />
     </View>
   );
@@ -13,4 +14,9 @@ const PokemonDetailsScreen = ({route}) => {
 
 export default PokemonDetailsScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  PokemonDetails: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});

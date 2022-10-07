@@ -7,6 +7,7 @@
         "@screens/*": ["screens/*"],
         "@assets/*": ["assets/*"],
         "@utils": ["utils.js"],
+        "@constants": ["constants.js"],
        },
     }
 }

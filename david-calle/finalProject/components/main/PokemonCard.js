@@ -1,12 +1,15 @@
-import {Text, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {getColorByType, capitalize} from '@utils';
 import {useNavigation} from '@react-navigation/native';
+import {useDispatch} from 'react-redux';
+import {setSelectedPokemon} from '@redux/reducers/pokemon.reducer';
 
-export default ({pokemonData, index}) => {
+const PokemonCard = ({pokemonData, index}) => {
   const navigation = useNavigation();
-
+  const dispatch = useDispatch();
   const handlePokemonPress = () => {
+    dispatch(setSelectedPokemon(pokemonData));
     navigation.navigate('PokemonDetails', {pokemonData});
   };
 
@@ -23,6 +26,8 @@ export default ({pokemonData, index}) => {
     </TouchableOpacity>
   );
 };
+
+export default PokemonCard;
 
 const styles = StyleSheet.create({
   pokeImage: {

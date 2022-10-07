@@ -16,6 +16,8 @@ const PokemonSearch = () => {
   );
 };
 
+export default PokemonSearch;
+
 const styles = StyleSheet.create({
   searchBar: {
     width: '90%',
@@ -29,4 +31,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
-export default PokemonSearch;

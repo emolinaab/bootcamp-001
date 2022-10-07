@@ -15,11 +15,8 @@ const pokemonReducer = createSlice({
   initialState: initialState,
   reducers: {
     setSelectedPokemon: (state, action) => {
-      const id = action.payload;
-      const selectedPokemon = state.pokemons.find(pokemon => pokemon.id === id);
-      if (selectedPokemon) {
-        state.selectedPokemon = selectedPokemon;
-      }
+      const selectedPokemon = action.payload;
+      state.selectedPokemon = selectedPokemon;
     },
   },
   extraReducers: builder => {
