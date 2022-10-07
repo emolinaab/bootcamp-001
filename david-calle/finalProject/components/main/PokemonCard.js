@@ -17,11 +17,11 @@ const PokemonCard = ({pokemonData, index}) => {
     <TouchableOpacity
       style={[
         styles.cardContainer,
-        styles.typeBorder(pokemonData.types[0]),
+        styles.typeBorder(pokemonData?.types[0]),
         styles.stylesByIndex(index),
       ]}
       onPress={handlePokemonPress}>
-      <Image source={{uri: pokemonData.imageUrl}} style={styles.pokeImage} />
+      <Image source={{uri: pokemonData?.imageUrl}} style={styles.pokeImage} />
       <Text style={styles.pokeName}>{capitalize(pokemonData?.name)}</Text>
     </TouchableOpacity>
   );

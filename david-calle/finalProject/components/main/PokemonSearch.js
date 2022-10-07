@@ -35,6 +35,7 @@ const PokemonSearch = () => {
         placeholder="Buscar Pokemon"
         value={search}
         onChangeText={text => setSearch(text)}
+        onEndEditing={handleSearch}
       />
       <TouchableOpacity style={styles.searchButton} onPress={handleSearch}>
         <Icon name="search" size={40} color="#fff" />
