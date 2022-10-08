@@ -1,0 +1,22 @@
+
+.grid-container {
+    justify-content: justify;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 15px;
+    align-items: center;
+
+}
+
+.container-left {
+    text-align: left;
+    color: white;
+    font-size: 30px;
+}
+
+.container-right {
+    text-align: right;
+    color: white;
+    font-size: 30px;
+}
+
