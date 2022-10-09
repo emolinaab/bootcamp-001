@@ -1,0 +1,80 @@
+.App {
+  width: 80%;
+  margin:1em;
+}
+
+input,button[type="submit"]{
+  outline: 0;
+  border: 0;
+  padding: .7em 1em;
+}
+
+input[type="text"]{
+  width: 70%;
+}
+
+button[type="submit"]{
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(165, 136, 42);
+  width: 25%;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  height:2.5em;
+}
+
+.item div{
+  display: flex;
+  width: 80%;
+}
+
+.item h4{
+  margin: 0;
+  padding-bottom: .2em;
+}
+
+.item input{
+  margin-right: .4em;
+}
+
+#options{
+  display: flex;
+  gap: 2em;
+  margin-top:.5em;
+}
+
+#options div{
+  display: flex;
+}
+
+#options div input{
+  margin: 0;
+}
+#options div label{
+  margin-left: .2em;
+}
+
+#list{
+  width: 80%;
+  padding:2.em;
+}
+
+button{
+  height: min-content;
+  outline: 0;
+  border: 0;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+}
+
+
