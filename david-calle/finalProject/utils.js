@@ -93,7 +93,7 @@ export const getColorByType = type => {
     shadow: '#969493',
   };
 
-  return colors[type];
+  return colors[type] || '#fff';
 };
 
 export const capitalize = name => {

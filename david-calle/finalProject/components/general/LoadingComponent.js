@@ -4,7 +4,7 @@ import React from 'react';
 const LoadingComponent = () => {
   return (
     <View style={styles.container}>
-      <Text>Loading...</Text>
+      <Text style={styles.message}>Loading...</Text>
     </View>
   );
 };
@@ -17,5 +17,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  message: {
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });

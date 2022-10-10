@@ -6,8 +6,9 @@ import EmptyComponent from '@components/general/EmptyComponent';
 import LoadingComponent from '@components/general/LoadingComponent';
 
 const PokemonGrid = ({pokemon}) => {
-  const loading = useSelector(state => state.pokemon.loading);
-  const CurrentEmptyComponent = loading ? LoadingComponent : EmptyComponent;
+  const status = useSelector(state => state.pokemon.status);
+  const CurrentEmptyComponent =
+    status === 'loading' ? LoadingComponent : EmptyComponent;
 
   return (
     <View style={styles.pokemonGrid}>
