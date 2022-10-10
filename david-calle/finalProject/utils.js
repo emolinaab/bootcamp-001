@@ -15,7 +15,7 @@ export const getPokemonData = pokeData => {
   } = pokeData.sprites;
 
   return {
-    name: pokeData.name,
+    name: capitalize(pokeData.name),
     id: pokeData.id,
     imageUrl: pokeData.sprites.other['official-artwork']?.front_default ?? '',
     types: pokeData.types.map(type => type.type.name),

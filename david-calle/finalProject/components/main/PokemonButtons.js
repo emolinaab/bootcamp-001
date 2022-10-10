@@ -1,4 +1,4 @@
-import {View, StyleSheet, TouchableOpacity, Text, Image} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React from 'react';
 import {

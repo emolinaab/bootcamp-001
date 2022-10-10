@@ -4,27 +4,35 @@ import {
   TextInput,
   TouchableOpacity,
   Keyboard,
+  Alert,
 } from 'react-native';
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useDispatch} from 'react-redux';
-import {getPokemonByName} from '@redux/reducers/pokemon.reducer';
 import {useNavigation} from '@react-navigation/native';
+import {getPokemonByName} from '@redux/reducers/pokemon.reducer';
 
 const PokemonSearch = () => {
   const [search, setSearch] = useState('');
   const dispatch = useDispatch();
   const navigation = useNavigation();
+
   const handleSearch = () => {
     dispatch(getPokemonByName(search))
       .unwrap()
       .then(data => {
         Keyboard.dismiss();
         if (!data) {
-          return;
+          throw new Error('Pokemon not found');
         }
-        setSearch('');
         navigation.navigate('PokemonDetails');
+      })
+      .catch(error => {
+        Alert.alert(
+          'Pokemon not found',
+          `The pokemon ${search} could not be found. Try with another name`,
+          [{text: 'OK'}],
+        );
       });
   };
 
@@ -35,7 +43,6 @@ const PokemonSearch = () => {
         placeholder="Buscar Pokemon"
         value={search}
         onChangeText={text => setSearch(text)}
-        onEndEditing={handleSearch}
       />
       <TouchableOpacity style={styles.searchButton} onPress={handleSearch}>
         <Icon name="search" size={40} color="#fff" />

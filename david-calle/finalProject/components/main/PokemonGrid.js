@@ -1,21 +1,26 @@
 import {View, StyleSheet, FlatList} from 'react-native';
 import React from 'react';
 import PokemonCard from './PokemonCard';
+import {useSelector} from 'react-redux';
+import EmptyComponent from '@components/general/EmptyComponent';
+import LoadingComponent from '@components/general/LoadingComponent';
 
 const PokemonGrid = ({pokemon}) => {
+  const loading = useSelector(state => state.pokemon.loading);
+  const CurrentEmptyComponent = loading ? LoadingComponent : EmptyComponent;
+
   return (
     <View style={styles.pokemonGrid}>
-      <View>
-        <FlatList
-          data={pokemon}
-          renderItem={({item, index}) => (
-            <PokemonCard pokemonData={item} index={index} />
-          )}
-          numColumns={2}
-          columnWrapperStyle={styles.cardsContainer}
-          keyExtractor={item => item.name}
-        />
-      </View>
+      <FlatList
+        data={pokemon}
+        renderItem={({item, index}) => (
+          <PokemonCard pokemonData={item} index={index} />
+        )}
+        numColumns={2}
+        columnWrapperStyle={styles.cardsContainer}
+        keyExtractor={item => item.name}
+        ListEmptyComponent={CurrentEmptyComponent}
+      />
     </View>
   );
 };
@@ -27,5 +32,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     flex: 1,
   },
-  pokemonGrid: {},
+  pokemonGrid: {
+    flex: 1,
+  },
 });

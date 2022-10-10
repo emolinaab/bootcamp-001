@@ -8,6 +8,7 @@ const initialState = {
   prev: null,
   status: 'idle',
   error: '',
+  currentRequestId: undefined,
 };
 
 const pokemonReducer = createSlice({
@@ -24,29 +25,45 @@ const pokemonReducer = createSlice({
   },
   extraReducers: builder => {
     builder
-      .addCase(getInitialPokemons.pending, state => {
-        state.status = 'loading';
+      .addCase(getInitialPokemons.pending, (state, action) => {
+        state.status = 'pending';
+        state.currentRequestId = action.meta.requestId;
       })
       .addCase(getInitialPokemons.fulfilled, (state, action) => {
         state.status = 'idle';
         state.pokemons = action.payload.results;
         state.next = action.payload.next;
         state.prev = action.payload.prev;
+        state.currentRequestId = undefined;
       })
       .addCase(getInitialPokemons.rejected, (state, action) => {
-        state.status = 'idle';
-        state.error = action.error.message;
+        if (
+          state.status === 'pending' &&
+          state.currentRequestId === action.meta.requestId
+        ) {
+          state.status = 'idle';
+          state.error = action.error.message;
+          state.currentRequestId = undefined;
+        }
       })
-      .addCase(getPokemonByName.pending, state => {
-        state.status = 'loading';
+      .addCase(getPokemonByName.pending, (state, action) => {
+        state.status = 'pending';
+        state.currentRequestId = action.meta.requestId;
       })
       .addCase(getPokemonByName.fulfilled, (state, action) => {
         state.status = 'idle';
         state.selectedPokemon = action.payload;
+        state.currentRequestId = undefined;
       })
       .addCase(getPokemonByName.rejected, (state, action) => {
-        state.status = 'idle';
-        state.error = action.error.message;
+        if (
+          state.status === 'pending' &&
+          state.currentRequestId === action.meta.requestId
+        ) {
+          state.status = 'idle';
+          state.error = action.error.message;
+          state.currentRequestId = undefined;
+        }
       });
   },
 });
@@ -62,8 +79,11 @@ export const getInitialPokemons = createAsyncThunk(
 
 export const getNextPokemons = createAsyncThunk(
   'pokemon/updatePokemons',
-  async (args, {getState, rejectWithValue}) => {
-    const {next} = getState().pokemon;
+  async (args, {getState, rejectWithValue, requestId}) => {
+    const {currentRequestId, status, next} = getState().pokemon;
+    if (currentRequestId !== requestId || status !== 'pending') {
+      return;
+    }
     if (!next) {
       rejectWithValue('Action not allowed');
     }
@@ -74,10 +94,13 @@ export const getNextPokemons = createAsyncThunk(
 
 export const getPrevPokemons = createAsyncThunk(
   'pokemon/updatePokemons',
-  async (args, {getState, rejectWithValue}) => {
-    const {prev} = getState().pokemon;
+  async (args, {getState, rejectWithValue, requestId}) => {
+    const {currentRequestId, status, prev} = getState().pokemon;
+    if (currentRequestId !== requestId || status !== 'pending') {
+      return;
+    }
     if (!prev) {
-      rejectWithValue('Action not allowed');
+      return rejectWithValue('Action not allowed');
     }
     const response = await getPokemons(prev);
     return response;
@@ -91,7 +114,7 @@ export const getPokemonByName = createAsyncThunk(
       const response = await searchPokemon(pokemonName);
       return response;
     } catch (error) {
-      rejectWithValue(error.message);
+      return rejectWithValue('Action not allowed');
     }
   },
 );
