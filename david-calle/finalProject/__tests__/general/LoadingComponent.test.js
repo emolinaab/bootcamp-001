@@ -3,9 +3,10 @@
  */
 import 'react-native';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render, screen} from '@testing-library/react-native';
 import LoadingComponent from '~components/general/LoadingComponent';
 
 it('renders correctly', () => {
-  renderer.create(<LoadingComponent />);
+  render(<LoadingComponent />);
+  expect(screen.getByText('Loading...')).toBeTruthy();
 });

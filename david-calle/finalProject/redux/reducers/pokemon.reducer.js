@@ -121,4 +121,5 @@ export const getPokemonByName = createAsyncThunk(
 
 export const {setSelectedPokemon, clearSelectedPokemon} =
   pokemonReducer.actions;
+
 export default pokemonReducer.reducer;

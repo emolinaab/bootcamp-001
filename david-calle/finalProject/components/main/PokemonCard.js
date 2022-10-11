@@ -1,6 +1,6 @@
 import {Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {getColorByType, capitalize} from '~utils';
+import {getColorByType} from '~utils';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch} from 'react-redux';
 import {setSelectedPokemon} from '~redux/reducers/pokemon.reducer';
@@ -22,7 +22,7 @@ const PokemonCard = ({pokemonData, index}) => {
       ]}
       onPress={handlePokemonPress}>
       <Image source={{uri: pokemonData?.imageUrl}} style={styles.pokeImage} />
-      <Text style={styles.pokeName}>{capitalize(pokemonData?.name)}</Text>
+      <Text style={styles.pokeName}>{pokemonData?.name}</Text>
     </TouchableOpacity>
   );
 };

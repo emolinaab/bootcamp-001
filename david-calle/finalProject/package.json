@@ -23,7 +23,7 @@
     "react-native-screens": "^3.18.0",
     "react-native-vector-icons": "^9.2.0",
     "react-redux": "^8.0.4",
-    "ts-jest": "^29.0.3"
+    "ts-jest": "^29.0.0-next.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -58,17 +58,21 @@
     "testPathIgnorePatterns": [
       "./node_modules"
     ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|react-native-elements|react-native-vector-icons|@react-navigation|@react-native(-community)?)/)"
+    ],
     "moduleNameMapper": {
       "^~components/(.*)$": "./components/$1",
       "^~redux/(.*)$": ".//redux/$1",
       "^~screens/(.*)$": "./screens/$1",
       "^~assets/(.*)$": "./assets/$1",
       "^~utils": "./utils.js",
-      "^~constants": "./constants.js"
+      "^~constants": "./constants.js",
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js"
     },
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
+    "testRegex": "(/__tests__/.*.test.(js|ts|tsx)?$)"
   }
 }

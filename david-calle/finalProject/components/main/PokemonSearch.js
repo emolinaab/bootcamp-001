@@ -40,11 +40,14 @@ const PokemonSearch = () => {
     <View style={styles.searchBarContainer}>
       <TextInput
         style={styles.searchBar}
-        placeholder="Buscar Pokemon"
+        placeholder="Search Pokemon"
         value={search}
         onChangeText={text => setSearch(text)}
       />
-      <TouchableOpacity style={styles.searchButton} onPress={handleSearch}>
+      <TouchableOpacity
+        style={styles.searchButton}
+        onPress={handleSearch}
+        testID="searchButton">
         <Icon name="search" size={40} color="#fff" />
       </TouchableOpacity>
     </View>

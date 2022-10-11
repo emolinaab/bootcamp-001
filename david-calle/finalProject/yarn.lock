@@ -6851,10 +6851,10 @@ trim-right@^1.0.1:
   resolved "https://registry.npmjs.org/trim-right/-/trim-right-1.0.1.tgz"
   integrity sha512-WZGXGstmCWgeevgTL54hrCuw1dyMQIzWy7ZfqRJfSmJZBwklI15egmQytFP6bPidmw3M8d5yEowl1niq4vmqZw==
 
-ts-jest@^29.0.3:
-  version "29.0.3"
-  resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-29.0.3.tgz"
-  integrity sha512-Ibygvmuyq1qp/z3yTh9QTwVVAbFdDy/+4BtIQR2sp6baF2SJU/8CKK/hhnGIDY2L90Az2jIqTwZPnN2p+BweiQ==
+ts-jest@^29.0.0-next.1:
+  version "29.0.0-next.1"
+  resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-29.0.0-next.1.tgz#bfd6c190f1eb30ce2e9408f6c3309784ccf96349"
+  integrity sha512-bVo2GDuJiV+cWEYB72tdz2Ips4JDKa04bcKikPULxxUHT4fsoY1zB2zvsrJym18qrFpXyVrIdgJFLfEx2YTkbg==
   dependencies:
     bs-logger "0.x"
     fast-json-stable-stringify "2.x"
