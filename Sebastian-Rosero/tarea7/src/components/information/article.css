@@ -1,0 +1,44 @@
+.content-page {
+  display: flex;
+  flex-direction: row;
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.874);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(7, 0, 2, 0.849);
+  height: 60%;
+  bottom: 20%;
+}
+
+.content-page .aside-left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  padding-right: 10%;
+}
+
+.text-content {
+  border-bottom: 3px solid rgba(225, 24, 64, 0.381);
+}
+
+.aside-left .text-content-left {
+  padding: 0px 95px 0px 0px;
+}
+
+.content-page .aside-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 10%;
+  align-items: center;
+}
+.aside-left .aside-left-img {
+  width: 100px;
+  height: 100px;
+}
+
+.aside-left-img img {
+  width: 100%;
+  height: 100%;
+}
