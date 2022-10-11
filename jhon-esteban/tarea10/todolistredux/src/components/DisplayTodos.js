@@ -54,7 +54,6 @@ const DisplayTodos = (props) => {
                 );
               })
             : null}
-          {/* for completed items */}
           {props.todos.length > 0 && sort === "completed"
             ? props.todos.map((item) => {
                 return (
