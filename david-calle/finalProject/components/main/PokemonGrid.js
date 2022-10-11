@@ -2,8 +2,8 @@ import {View, StyleSheet, FlatList} from 'react-native';
 import React from 'react';
 import PokemonCard from './PokemonCard';
 import {useSelector} from 'react-redux';
-import EmptyComponent from '@components/general/EmptyComponent';
-import LoadingComponent from '@components/general/LoadingComponent';
+import EmptyComponent from '~components/general/EmptyComponent';
+import LoadingComponent from '~components/general/LoadingComponent';
 
 const PokemonGrid = ({pokemon}) => {
   const status = useSelector(state => state.pokemon.status);

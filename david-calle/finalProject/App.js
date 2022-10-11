@@ -13,9 +13,9 @@ import {
   SafeAreaView,
 } from 'react-native';
 import {Provider} from 'react-redux';
-import store from '@redux/store';
+import store from '~redux/store';
 import Navigation from 'navigation';
-import {getInitialPokemons} from '@redux/reducers/pokemon.reducer';
+import {getInitialPokemons} from '~redux/reducers/pokemon.reducer';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';

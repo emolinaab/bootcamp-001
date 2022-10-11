@@ -5,9 +5,9 @@ import {
   getNextPokemons,
   getPrevPokemons,
   getInitialPokemons,
-} from '@redux/reducers/pokemon.reducer';
+} from '~redux/reducers/pokemon.reducer';
 import {useDispatch} from 'react-redux';
-import {COLORS} from '@constants';
+import {COLORS} from '~constants';
 
 const PokemonButtons = () => {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const PokemonButtons = () => {
         onPress={() => dispatch(getInitialPokemons())}
         style={styles.button}>
         <Image
-          source={require('@assets/images/pokeball.png')}
+          source={require('~assets/images/pokeball.png')}
           style={styles.pokeball}
         />
       </TouchableOpacity>

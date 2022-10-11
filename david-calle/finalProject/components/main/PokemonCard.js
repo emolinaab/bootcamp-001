@@ -1,9 +1,9 @@
 import {Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {getColorByType, capitalize} from '@utils';
+import {getColorByType, capitalize} from '~utils';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch} from 'react-redux';
-import {setSelectedPokemon} from '@redux/reducers/pokemon.reducer';
+import {setSelectedPokemon} from '~redux/reducers/pokemon.reducer';
 
 const PokemonCard = ({pokemonData, index}) => {
   const navigation = useNavigation();

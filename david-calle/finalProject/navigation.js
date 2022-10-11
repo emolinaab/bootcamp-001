@@ -1,12 +1,12 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import MainScreen from '@screens/MainScreen';
-import PokemonDetailsScreen from '@screens/PokemonDetailsScreen';
-import {capitalize, getColorByType} from '@utils';
+import MainScreen from '~screens/MainScreen';
+import PokemonDetailsScreen from '~screens/PokemonDetailsScreen';
+import {capitalize, getColorByType} from '~utils';
 import {useSelector} from 'react-redux';
+import {createStackNavigator} from '@react-navigation/stack';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 const config = {
   headerShown: false,
 };

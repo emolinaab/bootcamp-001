@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {getPokemons, POKEMON_API_URL, searchPokemon} from '@utils';
+import {getPokemons, POKEMON_API_URL, searchPokemon} from '~utils';
 
 const initialState = {
   pokemons: [],

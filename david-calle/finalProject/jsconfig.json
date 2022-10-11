@@ -2,12 +2,12 @@
     "compilerOptions": {
        "baseUrl": ".",
        "paths": {
-        "@components/*": ["components/*"],
-        "@redux/*": ["redux/*"],
-        "@screens/*": ["screens/*"],
-        "@assets/*": ["assets/*"],
-        "@utils": ["utils.js"],
-        "@constants": ["constants.js"],
+        "~components/*": ["components/*"],
+        "~redux/*": ["redux/*"],
+        "~screens/*": ["screens/*"],
+        "~assets/*": ["assets/*"],
+        "~utils": ["utils.js"],
+        "~constants": ["constants.js"],
        },
     }
 }

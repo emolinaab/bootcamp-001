@@ -6,12 +6,12 @@ module.exports = {
       {
         root: ['./'],
         alias: {
-          '@components': './components',
-          '@redux': './redux',
-          '@screens': './screens',
-          '@assets': './assets',
-          '@utils': './utils.js',
-          '@constants': './constants.js',
+          '~components': './components',
+          '~redux': './redux',
+          '~screens': './screens',
+          '~assets': './assets',
+          '~utils': './utils.js',
+          '~constants': './constants.js',
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },

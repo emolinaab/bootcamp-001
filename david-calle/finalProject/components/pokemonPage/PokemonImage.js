@@ -5,7 +5,7 @@ const PokemonImage = ({pokemonData}) => {
   return (
     <ImageBackground
       style={styles.imageContainer}
-      source={require('@assets/images/pokemon_background.jpg')}>
+      source={require('~assets/images/pokemon_background.jpg')}>
       <Image source={{uri: pokemonData?.imageUrl}} style={styles.pokeImage} />
     </ImageBackground>
   );

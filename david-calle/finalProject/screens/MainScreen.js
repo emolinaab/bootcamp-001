@@ -1,8 +1,8 @@
 import {Text, View, StyleSheet} from 'react-native';
 import React from 'react';
-import PokemonSearch from '@components/main/PokemonSearch';
-import PokemonGrid from '@components/main/PokemonGrid';
-import PokemonButtons from '@components/main/PokemonButtons';
+import PokemonSearch from '~components/main/PokemonSearch';
+import PokemonGrid from '~components/main/PokemonGrid';
+import PokemonButtons from '~components/main/PokemonButtons';
 import {useSelector} from 'react-redux';
 
 const MainScreen = () => {

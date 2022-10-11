@@ -1,8 +1,8 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import PokemonDetails from '@components/pokemonPage/PokemonDetails';
+import PokemonDetails from '~components/pokemonPage/PokemonDetails';
 import {useSelector, useDispatch} from 'react-redux';
-import {clearSelectedPokemon} from '@redux/reducers/pokemon.reducer';
+import {clearSelectedPokemon} from '~redux/reducers/pokemon.reducer';
 
 const PokemonDetailsScreen = ({navigation}) => {
   const pokemonData = useSelector(state => state.pokemon.selectedPokemon);

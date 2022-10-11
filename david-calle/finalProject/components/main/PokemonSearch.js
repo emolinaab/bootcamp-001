@@ -10,7 +10,7 @@ import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useDispatch} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
-import {getPokemonByName} from '@redux/reducers/pokemon.reducer';
+import {getPokemonByName} from '~redux/reducers/pokemon.reducer';
 
 const PokemonSearch = () => {
   const [search, setSearch] = useState('');
