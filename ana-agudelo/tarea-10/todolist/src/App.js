@@ -9,8 +9,8 @@ function App() {
       <body>
         <main>
           <h1>TODO LIST</h1>
-        <TodosForm />
-        <TodosList />
+          <TodosForm />
+          <TodosList />
         </main>
       </body>
     </div>
