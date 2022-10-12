@@ -3,12 +3,7 @@
  */
 import 'react-native';
 import React from 'react';
-import {
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from '@testing-library/react-native';
+import {fireEvent, render, screen} from '@testing-library/react-native';
 import store from '~redux/store';
 import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
