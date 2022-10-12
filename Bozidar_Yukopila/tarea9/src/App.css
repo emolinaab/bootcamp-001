@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+
+}
+
+#game {
+
+  height: 200px;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  color: rgb(255, 225, 0);
+}
+
+input {
+  height: 40px;
+  width: 300px;
+  border-radius: 15px;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: rgb(63, 248, 66);
+}
+
+button:hover {
+  background-color: rgb(136, 255, 138)
+}
+
+button:active {
+  background-color: rgb(136, 255, 138);
+  box-shadow: 0 5px #676;
+  transform: translateY(4px);
+}
+
+#bonus {
+  display: block;
+}
+
+h2 {
+  font-size: 4em;
+  display: inline;
+  color: white;
+}
+
+#Points {
+  position: absolute;
+  height: 100px;
+  width: 260px;
+  left: 100%;
+  transform: translate(-100%);
+  display: inline;
+
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  font-size: 1.8em;
+  color: white;
+}
+
+#ans {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#emojibox {
+
+  display: block;
+  height: 100px;
+  width: 700px;
+}
