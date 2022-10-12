@@ -42,7 +42,6 @@ test('search is working correctly', async () => {
     return {
       ...actualReducer,
       getPokemonByName: name => {
-        console.log('name', name);
         return Promise.resolve({data: 'some data'});
       },
     };

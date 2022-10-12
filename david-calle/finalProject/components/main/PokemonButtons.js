@@ -16,7 +16,7 @@ const PokemonButtons = () => {
       <TouchableOpacity
         onPress={() => dispatch(getPrevPokemons())}
         style={styles.button}>
-        <Icon name="angle-left" size={70} color="#fff" />
+        <Icon name="angle-left" size={70} color="#fff" testID="prevButton" />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => dispatch(getInitialPokemons())}
@@ -24,10 +24,12 @@ const PokemonButtons = () => {
         <Image
           source={require('~assets/images/pokeball.png')}
           style={styles.pokeball}
+          testID="resetButton"
         />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => dispatch(getNextPokemons())}
+        testID="nextButton"
         style={styles.button}>
         <Icon name="angle-right" size={70} color="#fff" />
       </TouchableOpacity>
