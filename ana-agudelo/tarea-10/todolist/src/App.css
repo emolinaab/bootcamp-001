@@ -1,0 +1,26 @@
+.App {
+  text-align:left;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+h1 {
+  font-family:cursive;
+}
+
+.todoinput {
+  font-size: 15px;
+
+}
+
+.licomponent {
+  list-style:none;
+}
+
+.description {
+  font-size: 15px;
+}
+
+.btndelete {
+  font-size: 8px;
+}
