@@ -4,7 +4,7 @@ import {
   View,
   Text,
   Image,
-  TouchableWithoutFeedback,
+  TouchableNativeFeedback,
 } from "react-native";
 import getColorPokemonType from "../utils/getColorPokemonType";
 import { useNavigation } from "@react-navigation/native";
@@ -22,7 +22,7 @@ export default function PokemonCard(props) {
     navigation.navigate("Pokemon", { id: pokemon.id });
   };
   return (
-    <TouchableWithoutFeedback onPress={goToPokemon}>
+    <TouchableNativeFeedback onPress={goToPokemon}>
       <View style={styles.card}>
         <View style={styles.spacing}>
           <View style={bgStyles}>
@@ -34,7 +34,7 @@ export default function PokemonCard(props) {
           </View>
         </View>
       </View>
-    </TouchableWithoutFeedback>
+    </TouchableNativeFeedback>
   );
 }
 
