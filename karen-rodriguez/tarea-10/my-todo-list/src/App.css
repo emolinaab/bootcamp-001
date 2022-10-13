@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#principalTitle{
+    font-family: 'Satisfy', cursive;
+    font-size: 50px;
+    margin: 10px;
+
+}
+
+.inputContainer,#MyTodoList ,body,#btnAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+   
+    height: 100vh;
+    margin: 0%;
+}
+
+#MyTodoList{
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    height: 600px;
+    width: 400px;
+    border: 1px solid black;
+}
+
+.inputContainer{
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+input{
+    text-align: center;
+    font-size: 20px;
+    height: 40px;
+    width: 90%;
+    border: solid 1px rgb(127, 0, 212);
+    
+}
+
+#btnAdd{
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,4,77,1) 0%, rgba(68,7,101,1) 30%, rgba(9,9,121,1) 48%, rgba(8,37,139,1) 58%, rgba(6,84,170,1) 69%, rgba(0,212,255,1) 100%);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 0;
+}

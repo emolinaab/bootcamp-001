@@ -1,0 +1,7 @@
+#list{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: rgba(248, 245, 217, 0.848);
+}

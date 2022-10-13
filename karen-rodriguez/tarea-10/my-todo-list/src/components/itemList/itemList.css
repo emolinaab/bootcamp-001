@@ -1,0 +1,7 @@
+.item{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(94, 94, 218, 0.775);
+}
