@@ -1,0 +1,40 @@
+.inputTask {
+  background: #2A2A2A;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+  margin: 2px;
+  border-radius: 10px;
+  font-size: 40px;
+  color: #A1A1A1;
+}
+
+.inputTask:hover {
+  background: #333333;
+}
+
+.buttons {
+  background: #2A2A2A;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+  margin: 2px;
+  border-radius: 10px;
+  font-size: 40px;
+  color: #A1A1A1;
+}
+
+.buttons:hover {
+  background: #444444;
+}
+
+.addTaskcontainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+}
