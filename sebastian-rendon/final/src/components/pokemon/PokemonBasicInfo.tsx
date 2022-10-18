@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import { Colors } from '../../theme/colors';
 
-type PokemonBasicProps = {
+export type PokemonBasicInfoProps = {
   pokemonId?: number;
   pokemonName: string;
   pokemonUri: string;
@@ -19,9 +19,9 @@ const PokemonBasicInfo = ({
   onPress,
   onImageLoadError = () => {},
   pokemonId,
-}: PokemonBasicProps) => {
+}: PokemonBasicInfoProps) => {
   return (
-    <View style={styles.pokemonMain}>
+    <View testID="pokemon-basic-info" style={styles.pokemonMain}>
       <TouchableOpacity
         style={{
           ...styles.pokemonImageWrapper,

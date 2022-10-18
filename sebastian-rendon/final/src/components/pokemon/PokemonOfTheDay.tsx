@@ -5,7 +5,7 @@ import type { Pokemon } from '../../types/pokemon';
 import PokemonTypeChip from './PokemonTypeChip';
 import PokemonBasicInfo from './PokemonBasicInfo';
 
-type PokemonOfTheDayProps = {
+export type PokemonOfTheDayProps = {
   pokemon: Pokemon;
   onPokemonPress?: Function;
 };

@@ -4,7 +4,7 @@ import { Colors, PokemonTypeColors } from '../../theme/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useTypeIcon } from '../../hooks/icons';
 
-type PokemonTypeCardProps = {
+export type PokemonTypeCardProps = {
   type: string;
   onPress?: Function;
 };
@@ -17,17 +17,31 @@ const PokemonTypeCard = ({
 
   return (
     <TouchableOpacity
+      testID="pokemon-type-card"
       style={styles.cardWrapper}
       onPress={() => {
         onPress();
       }}>
       <View
+        testID="pokemon-type-card-view"
         style={{
           ...styles.typeCard,
-          backgroundColor: PokemonTypeColors[type],
+          backgroundColor: PokemonTypeColors[type] || Colors.pokemonRed,
         }}>
-        <Text style={styles.typeText}>{type}</Text>
-        {icon ? <Icon name={icon} style={styles.typeIcon} size={76} /> : <></>}
+        <Text testID="pokemon-type-card-text" style={styles.typeText}>
+          {type}
+        </Text>
+        {icon ? (
+          <Icon
+            testID="pokemon-type-card-icon"
+            accessibilityLabel={icon}
+            name={icon}
+            style={styles.typeIcon}
+            size={76}
+          />
+        ) : (
+          <></>
+        )}
       </View>
     </TouchableOpacity>
   );
