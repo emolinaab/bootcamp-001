@@ -25,7 +25,7 @@ export default function PanelData() {
   return (
     <View style={styles.content}>
       <View style={styles.titleBlock}>
-        <Text style={styles.title}>Welcome,</Text>
+        <Text style={styles.title1}>Welcome,</Text>
         <Text style={styles.title}>{`${auth.firstName} ${auth.lastName}`}</Text>
       </View>
 
@@ -55,11 +55,12 @@ function ItemMenu(props) {
 const styles = StyleSheet.create({
   content: {
     marginHorizontal: 20,
-    marginTop: 20,
+    marginTop: 15,
   },
   titleBlock: {
     marginBottom: 30,
   },
+  title1: { fontWeight: "bold", fontSize: 30, color: "red" },
   title: {
     fontWeight: "bold",
     fontSize: 22,

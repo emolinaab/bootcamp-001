@@ -36,6 +36,7 @@ export default function Pokedex() {
       console.error(error);
     }
   };
+
   return (
     <SafeAreaView>
       <PokemonList

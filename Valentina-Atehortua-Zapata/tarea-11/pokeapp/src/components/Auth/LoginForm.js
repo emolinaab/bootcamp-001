@@ -6,6 +6,7 @@ import {
   TextInput,
   Button,
   Keyboard,
+  Image,
 } from "react-native";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -15,9 +16,6 @@ import useAuth from "../../hooks/useAuth";
 export default function LoginForm() {
   const [error, setError] = useState("");
   const { login } = useAuth();
-  console.log(useAuth());
-
-  console.log(useAuth());
 
   const formik = useFormik({
     validationSchema: Yup.object(validationSchema()),
@@ -54,6 +52,12 @@ export default function LoginForm() {
         onChangeText={(text) => formik.setFieldValue("password", text)}
       />
       <Button title="Enter" onPress={formik.handleSubmit} />
+      <View>
+        <Image
+          source={require("../../assets/dragon.gif")}
+          style={styles.image}
+        />
+      </View>
       <Text style={styles.error}>{formik.errors.username}</Text>
       <Text style={styles.error}>{formik.errors.password}</Text>
       <Text style={styles.error}>{error}</Text>
@@ -77,7 +81,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 28,
     fontWeight: "bold",
-    marginTop: 50,
+    marginTop: 60,
     marginBottom: 15,
   },
   input: {
@@ -91,5 +95,16 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#f00",
     marginTop: 20,
+  },
+  image: {
+    width: 360,
+    height: 200,
+    justifyContent: "center",
+    display: "flex",
+    alignItems: "center",
+    marginTop: 80,
+    marginRight: 10,
+    marginLeft: 30,
+    borderRadius: 30,
   },
 });

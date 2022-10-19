@@ -5,9 +5,7 @@ import { FAVORITE_STORAGE } from "../utils/constants";
 export async function getPokemonsFavoriteApi() {
   try {
     const response = await AsyncStorage.getItem(FAVORITE_STORAGE);
-    console.log(response);
-    //return JSON.parse(response || "[]");
-    return response ? JSON.parse(response) : [];
+    return JSON.parse(response || "[]");
   } catch (error) {
     throw error;
   }
