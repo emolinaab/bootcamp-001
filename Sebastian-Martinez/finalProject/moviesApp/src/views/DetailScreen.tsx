@@ -7,9 +7,13 @@ import {
   Image,
   StyleSheet,
   Dimensions,
+  ActivityIndicator,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { MovieDetails } from "../components/MovieDetails";
+import { useMovieDetails } from "../hooks/useMovieDetails";
+
 import { Movie } from "../interfaces/movieInterface";
 import { RootStackParams } from "../navigation/Navigation";
 
@@ -21,6 +25,10 @@ const DetailScreen = ({ route }: Props) => {
   const movie = route.params;
   const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
+  const { isLoading, cast, movieFull  } = useMovieDetails(movie.id)
+
+  console.log(movie.id)
+
   return (
     <ScrollView>
       <SafeAreaView style={styles.imageContainer}>
@@ -29,7 +37,11 @@ const DetailScreen = ({ route }: Props) => {
       <View style={styles.textContainer}>
         <Text style={styles.subTitle}>{movie.original_title}</Text>
         <Text style={styles.title}>{movie.title}</Text>
-        
+        {
+          isLoading ? 
+          <ActivityIndicator size={30} style={{marginTop: 20}} /> 
+          : <MovieDetails movieFull={movieFull} cast={cast} />
+        }
       </View>
     </ScrollView>
   );
@@ -48,17 +60,18 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     marginHorizontal: 20,
-    marginTop: 20
+    marginTop: 0,
+    marginBottom: 30
   },
   subTitle: {
     fontSize: 18,
-    color: 'gray',
-    opacity: 0.8
+    color: "gray",
+    opacity: 0.8,
   },
   title: {
     fontSize: 22,
-    fontWeight: 'bold'
-  }
+    fontWeight: "bold",
+  },
 });
 
 export default DetailScreen;
