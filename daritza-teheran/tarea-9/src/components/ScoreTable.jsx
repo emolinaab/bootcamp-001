@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ScoreTable = ({ lives = 3, point = 0 }) => {
+export const ScoreTable = ({ lives, point}) => {
   return (
     <section className="score">
       <h3>Lives: {lives}</h3>

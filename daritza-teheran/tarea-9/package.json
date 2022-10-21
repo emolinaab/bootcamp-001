@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.6.0",
+    "sweetalert2-react-content": "^5.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

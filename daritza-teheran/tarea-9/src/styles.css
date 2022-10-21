@@ -1,38 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-
 html,
 body {
   background-color: #141d3d;
   color: white;
   font-size: 1.4rem;
-  padding: 30px;
+  padding: 35px;
   text-align: center;
   font-family: 'Space Mono', monospace;
 }
 
 button {
-  font-family: 'Space Mono', monospace;
   color: white;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  margin-right: 5px;
-  border-radius: 5px;
   background-color: #bb476a;
-  border: 2px solid #bb476a;
-
 }
 
 input {
-  font-family: 'Space Mono', monospace;
-  border-radius: 5px;
-  border: 2px solid #c60b43;
   color: black;
   font-size: 1.2rem;
   outline: none;
-  padding: 10px 20px;
   margin-right: 20px;
-  width: 25%;
+  width: 400px;
+}
+
+input,
+button {
+  font-family: 'Space Mono', monospace;
+  border-radius: 5px;
+  border: 2px solid #bb476a;
+  font-size: 1.2rem;
+  padding: 10px 20px;
 }
 
 .score {
