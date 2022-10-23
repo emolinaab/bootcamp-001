@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.display {
+    display: block;
+    text-align: right;
+    position: relative;
+    top: 3vmin;
+    font-size: 3vmin;
+    padding-right: 2.5vmin;
+}
+
+#disblock {
+    display: block;
+    position: relative;
+    height: 30vmin;
+    width: 40vmin;
+    margin: 0 auto;
+    top: 6vmin;
+    background-color: rgb(36, 36, 36);
+    border-radius: 3vmin;
+}
+
+#num1 {
+    color: rgba(255, 255, 255, 0.349);
+    font-size: 3.5vmin;
+}
+
+#num2 {
+    color: white;
+    margin-top: 3vmin;
+    top: 8vmin;
+    font-size: 8vmin;
+}
+
+
+
+table {
+    margin: 0 auto;
+    position: relative;
+    top: 15vmin;
+}
+
+td {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#a {
+    width: 20vmin;
+}
+
+button {
+    text-align: center;
+    border-radius: 10vmin;
+    font-size: 4vmin;
+    height: 10vmin;
+    width: 10vmin;
+}
+
+main {
+    border-radius: 3vmin;
+    background-color: black;
+    width: 50vmin;
+    height: 100vmin;
+    margin: 0 auto;
+}
+
+.special {
+
+    background-color: rgb(129, 129, 129);
+}
+
+.special:hover {
+    background-color: rgb(96, 96, 96);
+}
+
+.operands {
+
+    background-color: rgb(255, 174, 0);
+}
+
+.operands:hover {
+    background-color: rgb(137, 95, 3);
+}
+
+#EXE {
+    background-color: rgb(255, 174, 0);
+}
+
+#EXE:hover {
+    background-color: rgb(137, 95, 3);
+}
+
+
+
+.number:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+button:active {
+    transform: translateY(0.3vmin);
+}
