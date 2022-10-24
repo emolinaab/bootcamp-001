@@ -1,0 +1,71 @@
+.form {
+  height: auto;
+  width: auto;
+  padding: 40px 30px;
+}
+
+.form-title {
+  color: #ed3d6b;
+  text-align: center;
+  font-size: 30px;
+}
+
+.form-input {
+  width: auto;
+  height: 15%;
+  margin: 0px 0px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input label {
+  margin: 0 0 5px;
+  color: var(--second-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.form-input input {
+  height: 30px;
+  padding: 5px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #000000;
+  border: 2px solid #ed3d6b;
+  border-radius: 10px;
+  outline: none;
+}
+
+.remember-password {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.remember-password a {
+  color: #9b9b9b;
+  text-decoration: none;
+}
+
+.form .button {
+  background-color: #ed3d6b;
+  color: #ffffff;
+  font-size: 16px;
+  width: 35%;
+  height: 40px;
+  border: none;
+  border-radius: 14px;
+}
+
+.form .btn-login {
+  margin: 10px 33%;
+}
+.form-register {
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+.form-register a {
+  color: #10639f;
+  text-decoration: none;
+  font-size: 14px;
+}
