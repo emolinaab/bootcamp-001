@@ -1,0 +1,10 @@
+.section__message {
+  color: #fffb84;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0px 10%;
+}
+
+.section__message--hidden {
+  visibility: hidden;
+}
