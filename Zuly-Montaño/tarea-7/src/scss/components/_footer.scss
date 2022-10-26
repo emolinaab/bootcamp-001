@@ -1,0 +1,23 @@
+@use "../abstracts/mixin";
+
+.footer {
+  @include mixin.flex(center);
+  padding: 5px;
+  background-color: rgb(243, 212, 212);
+  
+  p {
+    font: oblique  100% cursive;
+  }
+
+  &__img {
+    float: left;
+    margin: 10px;
+
+    img {
+      width: 50px;
+      
+    }
+
+    
+  }
+}

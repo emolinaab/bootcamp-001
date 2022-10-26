@@ -1,0 +1,26 @@
+@use "../abstracts/mixin";
+
+.info-section {
+  @include mixin.flex(space-around);
+  display: grid;
+  grid-template-columns: 250px 120px 250px;
+  
+
+  &__img {
+    float: left;
+    margin: 10px;
+  }
+
+  &__article {
+    margin: 30px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 150px 200px 150px;
+    font: oblique  100% cursive;
+    
+    
+  }
+  
+}
