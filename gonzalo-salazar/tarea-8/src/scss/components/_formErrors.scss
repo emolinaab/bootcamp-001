@@ -1,0 +1,25 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.input-error {
+  border: 2px solid variables.$red;
+}
+
+.error {
+  color: variables.$red;
+  margin: 5px 0px;
+}
+
+.disabled-btn {
+  @include mixin.disabledBtn(variables.$blue);
+  border: 1px solid variables.$blue;
+  color: variables.$blue;
+  background-color: variables.$background;
+}
+
+.actived-btn {
+  @include mixin.actived(variables.$blue);
+  border: 1px solid variables.$blue;
+  color: variables.$blue;
+  background-color: variables.$background;
+}

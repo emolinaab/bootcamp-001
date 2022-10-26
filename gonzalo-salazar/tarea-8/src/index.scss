@@ -1,0 +1,15 @@
+// abstracts
+@use "scss/abstracts/mixin";
+
+// base
+@use "scss/base/reset";
+@use "scss/base/base";
+
+// image
+@use "./scss/components/image";
+
+// form
+@use "./scss/components/form.scss";
+
+// errors
+@use "./scss/components/formErrors.scss";
