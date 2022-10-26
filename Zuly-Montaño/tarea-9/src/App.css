@@ -1,0 +1,54 @@
+.game {
+  background-color: black;
+  justify-content: center;
+  color: white;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.lives {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font: oblique bold 205% cursive;
+}
+
+.score {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  font: oblique bold 205% cursive;
+}
+
+.title{
+  color: gold;
+  font: oblique bold 205% cursive;
+  
+}
+
+.emoji {
+  position: relative;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.answers{
+  border-radius: 15px;
+  height: 30px;
+  width: 240px;
+  font: oblique bold 105% cursive;
+}
+
+.button{
+  background-color: rgb(62, 255, 62);
+  border-radius: 15px;
+  color: white;
+  height: 35px;
+  font-weight: 500;
+  width: 70px;
+  margin-left: 10px;
+  font: oblique bold 80% cursive;
+  
+}
