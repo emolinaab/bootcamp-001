@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+*{
+  box-sizing: border-box;
+  
+}
+#principalTittle{
+  font-family: 'Bungee Spice', cursive;
+  font-size: 4rem;
+  margin: 0px;
+}
+
+body{
+  background-image: url("../src/assets/jungle.jpg");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover; 
+}
+
+.container{
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+#formContainer{
+  background-image: url("../src/assets/letrero.png");
+  background-repeat: no-repeat;
+  background-position: center bottom; 
+  background-size: 55vh;
+  height: 100vh;
+  align-items:center;
+  justify-content: space-evenly;
+}
+
+#form, .text, .textBox{
+  flex-direction: column;
+  align-items:center; 
+}
+
+#form{
+  background-position: 55vh;
+  width: 25%;
+  height: 30%;
+  transform: rotate(-10deg);
+
+}
+
+.buttonContainer{
+  justify-content: end;
+}
+
+.text{
+  margin-top: 0px;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+
+.textBox{
+  align-items:center;
+  height: 70px;
+  margin: 0px;
+  width: 90%;
+}
+
+input{
+  width: 80%;
+  height: 50%;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+.buttonContainer{
+  width: 100%;
+  justify-content: end;
+}
+
+#button-login{
+  background-color: rgb(255, 198, 10);
+  border-radius:20%;
+  border: 1px solid rgb(115, 90, 8);
+  font-size: 100%;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+}
+
+#button-login:hover{
+  background-color: rgb(255, 216, 87);
+}
+
+@media only screen and (max-width : 1600px) {
+  #principalTittle{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 3rem;
+    margin: 0px;
+  }
+
+}
