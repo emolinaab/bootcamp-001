@@ -1,0 +1,15 @@
+.button {
+  background: blue;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+  margin: 2px;
+  border-radius: 10px;
+  font-size: 40px;
+  color: #a1a1a1;
+}
+.buttons:hover {
+  background: #444444;
+}
