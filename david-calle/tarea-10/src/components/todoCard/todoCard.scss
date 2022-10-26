@@ -1,0 +1,56 @@
+@import "../../utilities/variables";
+
+.card{
+    display: flex;
+    justify-content: baseline;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    &-data-container{
+        
+        width: min(150px, 50%);
+
+        h2, p{
+            margin: 0;
+            padding: 2px;
+        }
+    }
+
+    &-title{
+        background-color: $dark-background;
+
+        &.completed{
+            background-color: $dark-background-green;
+        }
+    }
+
+    &-description{
+        background-color: $light-background;
+
+        &.completed{
+            background-color: $light-background-green;
+        }
+    }
+
+    &-button{
+        border: solid 1px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        color: black;
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:visited{
+            text-decoration: none;
+            color: black;
+        }
+
+        &:active{
+            color: lightblue;
+        }
+    }
+}
