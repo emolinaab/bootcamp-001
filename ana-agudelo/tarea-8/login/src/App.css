@@ -1,0 +1,13 @@
+.login {
+  height: 300px;
+  width: 300px;
+  background-color: aliceblue;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+h1 {
+  padding-top: 10px;
+  font-size: 20px;
+}

@@ -1,0 +1,37 @@
+body {
+  background-color: #161616;
+  padding: 2em; 
+}
+
+h2 {
+  font-size: 50px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+  justify-content: center;
+  display: flex;
+  font-size: 50px;
+  color: goldenrod;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 60px;
+}
+
+.header {
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.lives {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+
+.points {
+  position: absolute;
+  top: 10px;
+  right: 140px;
+}
