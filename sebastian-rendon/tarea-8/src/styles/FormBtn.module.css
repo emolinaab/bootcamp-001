@@ -1,0 +1,35 @@
+.btn {
+    margin: 1rem 0.5rem;
+    padding: 0.75rem 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono';
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn::before {
+    position: absolute;
+    content: "";
+    background-color: currentColor;
+    color: inherit;
+    border-radius: inherit;
+    pointer-events: none;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .2s cubic-bezier(.4, 0, .6, 1);
+}
+
+.btn:hover::before {
+    opacity: 0.1;
+}
+
+.btn.primary {
+    background-color: skyblue;
+    color: white;
+}

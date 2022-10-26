@@ -1,0 +1,9 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 360px;
+    padding: 2rem;
+}
