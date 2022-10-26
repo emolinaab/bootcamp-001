@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+}
+
+.container{
+  display: flex;
+}
+
+#msg{
+  height: 10%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#app{
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content:center;
+}
+
+#game{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 90%;
+
+}
+
+#principalTittle{
+  font-family: 'Bungee Spice', cursive;
+  font-size: 8ex;
+  margin: 0px;
+}
+
+#board{
+  height: 30vh;
+  font-size:18ex;
+  padding-bottom: 200px;
+
+}
+
+#searcher{
+  width: 100%;
+  height: 50px;
+}
+
+#input{
+  height: 100%;
+  width: 70%;
+}
+
+#btnCheck{
+  height: 100%;
+  width: 20%;
+}
