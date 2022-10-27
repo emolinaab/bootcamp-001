@@ -23,6 +23,7 @@ const PokemonBasicInfo = ({
   return (
     <View testID="pokemon-basic-info" style={styles.pokemonMain}>
       <TouchableOpacity
+        testID="pokemon-basic-info-touchable"
         style={{
           ...styles.pokemonImageWrapper,
           ...(showBackgroundShadow ? styles.pokemonImageBackground : {}),
@@ -40,7 +41,7 @@ const PokemonBasicInfo = ({
         />
       </TouchableOpacity>
       <Text style={styles.pokemonName}>{`${pokemonName}${
-        pokemonId ? ` #${pokemonId.toString().padStart(3, '0')}` : ''
+        pokemonId ? `#${pokemonId.toString().padStart(3, '0')}` : ''
       }`}</Text>
     </View>
   );
