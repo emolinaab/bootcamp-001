@@ -4,7 +4,7 @@ import { Colors } from '../../theme/colors';
 import PokemonTypeChip from './PokemonTypeChip';
 import { ResourceSummary } from '../../types/pokemon';
 
-type PokemonDamageRelationProps = {
+export type PokemonDamageRelationProps = {
   label: string;
   damageRelation: ResourceSummary[];
 };
