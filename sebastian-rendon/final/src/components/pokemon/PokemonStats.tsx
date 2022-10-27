@@ -1,13 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import {
-  Colors,
-  PokemonStatsColor,
-  PokemonTypeColors,
-} from '../../theme/colors';
+import { Colors, PokemonStatsColor } from '../../theme/colors';
 import { StatSummary } from '../../types/pokemon';
 
-type PokemonStatsProps = {
+export type PokemonStatsProps = {
   stats: StatSummary[];
 };
 
@@ -24,14 +20,22 @@ const PokemonStats = ({ stats }: PokemonStatsProps) => {
   return (
     <View style={styles.statsWrapper}>
       {stats.map((stat) => (
-        <View style={styles.statsRow} key={stat.stat.name}>
+        <View
+          testID="pokemon-stat"
+          style={styles.statsRow}
+          key={stat.stat.name}>
           <View>
-            <Text style={styles.statsTitle}>
+            <Text testID="pokemon-stat-name" style={styles.statsTitle}>
               {styledStatName[stat.stat.name]}
             </Text>
           </View>
           <View style={styles.statsBarBackground}>
             <View
+              testID="pokemon-stat-bar"
+              accessibilityValue={{
+                min: 0,
+                now: Math.min(stat.base_stat, 100),
+              }}
               style={{
                 ...styles.statsBarValue,
                 backgroundColor:
@@ -40,7 +44,12 @@ const PokemonStats = ({ stats }: PokemonStatsProps) => {
                 width: `${Math.min(stat.base_stat, 100)}%`,
               }}
             />
-            <Text style={styles.statsBarText}>{stat.base_stat}</Text>
+            <Text
+              testID="pokemon-stat-base"
+              style={styles.statsBarText}
+              accessibilityLabel={`${stat.stat.name}: ${stat.base_stat}`}>
+              {stat.base_stat}
+            </Text>
           </View>
         </View>
       ))}
