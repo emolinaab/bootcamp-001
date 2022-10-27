@@ -6,7 +6,7 @@ import { Colors } from '../../theme/colors';
 import { usePokemonIdFromUrl, usePokemonImageSet } from '../../hooks/pokemon';
 import { PokemonTypeColors } from '../../theme/colors';
 
-type PokemonBasicCardProps = {
+export type PokemonBasicCardProps = {
   pokemonBasic: ResourceSummary;
   typeColor?: string;
   onPress?: Function;
@@ -26,6 +26,7 @@ const PokemonBasicCard = ({
 
   return (
     <TouchableOpacity
+      testID="pokemon-basic-card"
       style={styles.cardWrapper}
       onPress={() => {
         onPress();
@@ -42,6 +43,8 @@ const PokemonBasicCard = ({
           </View>
         </View>
         <FastImage
+          testID="pokemon-basic-card-img"
+          accessibilityLabel={`Pokémon Image: ${pokemonBasic.name}`}
           source={{
             uri: selectedPokemonImg,
             priority: FastImage.priority.normal,

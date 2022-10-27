@@ -41,7 +41,7 @@ const PokemonBasicInfo = ({
         />
       </TouchableOpacity>
       <Text style={styles.pokemonName}>{`${pokemonName}${
-        pokemonId ? `#${pokemonId.toString().padStart(3, '0')}` : ''
+        pokemonId ? ` #${pokemonId.toString().padStart(3, '0')}` : ''
       }`}</Text>
     </View>
   );

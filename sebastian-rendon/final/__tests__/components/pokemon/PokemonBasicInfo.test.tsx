@@ -5,16 +5,20 @@ import PokemonBasicInfo, {
   PokemonBasicInfoProps,
 } from '../../../src/components/pokemon/PokemonBasicInfo';
 
+const props: PokemonBasicInfoProps = {
+  pokemonId: 25,
+  pokemonName: 'Pikachu',
+  pokemonUri:
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
+  showBackgroundShadow: false,
+  onPress: () => {},
+  onImageLoadError: () => {},
+};
+
 describe('when using the PokemonBasicInfo component', () => {
-  const props: PokemonBasicInfoProps = {
-    pokemonId: 25,
-    pokemonName: 'Pikachu',
-    pokemonUri:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
-    showBackgroundShadow: false,
-    onPress: () => {},
-    onImageLoadError: () => {},
-  };
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
 
   it('should have text with id if pokemonId is defined', () => {
     const view = render(<PokemonBasicInfo {...props} />);
