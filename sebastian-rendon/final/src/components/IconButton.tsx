@@ -3,7 +3,7 @@ import type { StyleProp, ViewStyle } from 'react-native';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Colors, PokemonTypeColors } from '../theme/colors';
 
-type MainButtonProps = {
+export type IconButtonProps = {
   icon: JSX.Element;
   variant?: string;
   onPress?: Function;
@@ -16,9 +16,10 @@ const IconButton = ({
   onPress = () => {},
   variant = '',
   accessibilityLabel = '',
-}: MainButtonProps) => {
+}: IconButtonProps) => {
   return (
     <TouchableOpacity
+      testID="icon-button"
       accessibilityLabel={accessibilityLabel}
       style={[
         styles.btn,
