@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-/* Get rid of all default margins/paddings. Set typeface */
 body {
   box-sizing: border-box;
   margin: 0;
@@ -36,8 +35,6 @@ body {
   margin-bottom: 17px;
 }
 
-/* Style the inputs */
-
 .input {
   position: absolute;
   top: 0px;
@@ -52,8 +49,6 @@ body {
   background: none;
   z-index: 1;
 }
-
-/* Hide the placeholder texts (a) */
 
 ::placeholder {
   color: transparent;
