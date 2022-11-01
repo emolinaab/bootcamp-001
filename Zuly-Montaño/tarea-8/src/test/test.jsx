@@ -1,31 +1,31 @@
 import {verifyLogin} from '../App';
 
 
-const validUser = {
-  user: 'zuly12@gmail.com',
-  password: '1234567'
+const userAdmitted = {
+  user: 'zulymontano@gmail.com',
+  password: '123456'
 }
 
 test('The username and password are undefined', () => {
   const details = {
   }
-  const result = verifyLogin(details, validUser);
-  expect(result).toBe('you must complete all the fields');
+  const result = verifyLogin(details, userAdmitted);
+  expect(result).toBe('You need to complete all the fields');
 })
 
 test('The username is undefined', () => {
   const details = {
-    password: '12345'
+    password: '123'
   }
-  const result = verifyLogin(details, validUser);
+  const result = verifyLogin(details, userAdmitted);
   expect(result).toBe('You need to complete all the fields');
 })
 
 test('The password is undefined', () => {
   const details = {
-    username: 'zuly12@gmail.com'
+    username: 'zulymontano@gmail.com'
   }
-  const result = verifyLogin(details, validUser);
+  const result = verifyLogin(details, userAdmitted);
   expect(result).toBe('You need to complete all the fields');
 })
 
@@ -34,60 +34,60 @@ test('The username and password are empty', () => {
     username: '',
     password: ''
   }
-  const result = verifyLogin(details, validUser);
+  const result = verifyLogin(details, userAdmitted);
   expect(result).toBe('You need to complete all the fields');
 })
 
 test('The username is empty', () => {
   const details = {
     username: '',
-    password: '1234567'
+    password: 'password'
   }
-  const result = verifyLogin(details, validUser);
+  const result = verifyLogin(details, userAdmitted);
   expect(result).toBe('You need to complete all the fields');
 })
 
-test('The password is empty', () => {
+test('The username is empty', () => {
   const details = {
-    username: 'zuly12@gmail.com',
+    username: 'user',
     password: ''
   }
-  const result = verifyLogin(details, validUser);
+  const result = verifyLogin(details, userAdmitted);
   expect(result).toBe('You need to complete all the fields');
 })
 
 test('The username and password are incorrect', () => {
   const details = {
-    username: 'zully23@gmail.com',
-    password: '12345'
+    username: 'user',
+    password: 'password'
   }
-  const result = verifyLogin(details, validUser);
-  expect(result).toBe('User name or password incorrect');
+  const result = verifyLogin(details, userAdmitted);
+  expect(result).toBe('User name or password invalid');
 })
 
 test('The username is incorrect', () => {
   const details = {
-    username: 'zully23@gmail.com',
-    password: '1234567'
+    username: 'user',
+    password: '123456'
   }
-  const result = verifyLogin(details, validUser);
-  expect(result).toBe('Incorrect username');
+  const result = verifyLogin(details, userAdmitted);
+  expect(result).toBe('User name or password invalid');
 })
 
 test('The password is incorrect', () => {
   const details = {
-    username: 'zuly12@gmail.com',
-    password: '12345'
+    username: 'zulymontano@gmail.com',
+    password: 'password'
   }
-  const result = verifyLogin(details, validUser);
-  expect(result).toBe('Password is incorrect ');
+  const result = verifyLogin(details, userAdmitted);
+  expect(result).toBe('User name or password invalid');
 })
 
 test('Username and password are ok', () => {
   const details = {
-    username: 'zuly12@gmail.com',
-    password: '1234567'
+    username: 'zulymontano@gmail.com',
+    password: '123456'
   }
-  const result = verifyLogin(details, validUser);
-  expect(result).toBe('Logged');
+  const result = verifyLogin(details, userAdmitted);
+  expect(result).toBe('Logged in');
 })

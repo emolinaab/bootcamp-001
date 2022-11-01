@@ -1,27 +1,27 @@
 import React from 'react';
 import {LoginForm} from './components/LoginForm';
-export function verifyLogin(details, validUser){
-  if(details.username === validUser.user && details.password === validUser.password){
-    return "Logged ";
+export function verifyLogin(details, userAdmitted){
+  if(details.username === userAdmitted.user && details.password === userAdmitted.password){
+    return "Logged in";
   }else if((details.username === ''|| details.password === '') || (details.username === undefined|| details.password === undefined)){
-    return "you must complete all fields";
+    return "You need to complete all the fields";
   }else{
     return "User name or password invalid";
   }
 }
 function App() {
-  const validUser = {
-    user: 'zuly12@gmail.com',
-    password: '1234567'
+  const userAdmitted = {
+    user: 'zulymontano@gmail.com',
+    password: '123456'
   }
   const Login = details =>{
     console.log(details);
-    alert(verifyLogin(details,validUser));
+    alert(verifyLogin(details,userAdmitted));
   }
   return (
     <div className="App">
       <LoginForm Login={Login}/>
     </div>
   );
-};
+}
 export default App;
