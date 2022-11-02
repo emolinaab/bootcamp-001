@@ -1,0 +1,66 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.main-container {
+  @include mixin.flex(center);
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+
+  &__title {
+    @include mixin.flex(center);
+    width: 100%;
+
+    h1 {
+      margin: 30px;
+      color: variables.$dark-light;
+      font-weight: 700;
+      text-align: left;
+      font-size: 4rem;
+      @media (max-width: 1150px) {
+        & {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__emojis {
+    margin: 10px;
+    font-size: 35px;
+  }
+
+  &__guess {
+    @include mixin.flex(center);
+    padding: 10px;
+    flex-direction: column;
+    width: 100%;
+
+    input {
+      width: 400px;
+      margin: 10px;
+      font-size: 16px;
+      font-size: max(16px, 1em);
+      padding: 10px;
+      border-radius: 4px;
+      @media (max-width: 900px) {
+        & {
+          width: 200px;
+        }
+      }
+    }
+
+    button {
+      @include mixin.main-button(variables.$blue);
+      border: 1px solid variables.$blue;
+      color: variables.$blue;
+      background-color: variables.$dark;
+    }
+  }
+}
