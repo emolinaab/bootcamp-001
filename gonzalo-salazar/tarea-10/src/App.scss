@@ -1,0 +1,6 @@
+@use "./scss/abstracts/mixin";
+
+.App {
+  @include mixin.flex(center);
+  flex-direction: column;
+}

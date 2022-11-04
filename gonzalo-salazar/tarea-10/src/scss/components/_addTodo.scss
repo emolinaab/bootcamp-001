@@ -1,0 +1,66 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.add-container {
+  width: 100%;
+  padding: 10px;
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 9rem;
+    color: variables.$dark-light;
+    margin: 20px;
+    @media (max-width: 1200px) {
+      & {
+        font-size: 6rem;
+      }
+    }
+    @media (max-width: 850px) {
+      & {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__content {
+    @include mixin.flex(center);
+
+    input {
+      width: 400px;
+      margin: 10px;
+      font-size: 16px;
+      font-size: max(16px, 1em);
+      padding: 10px;
+      border-radius: 4px;
+      border: variables.$dark;
+      @media (max-width: 850px) {
+        & {
+          width: 200px;
+        }
+      }
+    }
+
+    button {
+      background-color: variables.$dark;
+      border: 1px solid variables.$blue;
+      color: variables.$white;
+      padding: 10px;
+      border-radius: 5px;
+      width: 130px;
+      margin: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$blue;
+        color: variables.$dark;
+      }
+
+      @media (max-width: 850px) {
+        & {
+          width: 80px;
+        }
+      }
+    }
+  }
+}

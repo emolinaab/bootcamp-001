@@ -1,0 +1,16 @@
+// abstracts
+@use "scss/abstracts/variables";
+@use "scss/abstracts/mixin";
+
+// base
+@use "scss/base/reset";
+@use "scss/base/base";
+
+// Add tasks
+@use "./scss/components/addTodo.scss";
+
+// List
+@use "./scss/components/list.scss";
+
+// footer
+@use "./scss/components/footer";

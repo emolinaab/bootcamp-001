@@ -1,0 +1,32 @@
+@use "../abstracts/variables";
+
+.list-container {
+  margin: 20px;
+  width: 500px;
+  overflow: hidden;
+
+  &__item {
+    background-color: variables.$dark-light;
+    color: variables.$white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px 0px;
+    cursor: pointer;
+  }
+
+  &__completed {
+    text-decoration: line-through green 1px;
+    background-color: #00ff110c;
+    color: variables.$white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px 0px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 850px) {
+    & {
+      width: 250px;
+    }
+  }
+}
