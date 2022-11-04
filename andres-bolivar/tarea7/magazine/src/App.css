@@ -1,0 +1,31 @@
+html>body{
+  background-image: url('../assets/kobe.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: auto 100%; 
+  background-color: black;
+  background-position: center;
+}
+
+.App {    
+  width: 80%;
+  margin: auto;
+}
+
+.magazine-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.title {
+  color:white;
+  font-size: 100px;
+  text-align: center;
+  transition: font 1s ease-in-out;
+}
+
+@media (max-height:400px) {
+  .title {
+      font-size:60px;
+  }
+}
