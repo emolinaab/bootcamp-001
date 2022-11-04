@@ -1,0 +1,104 @@
+.app {
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.info-counter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-counter__lives,
+.info-counter__points {
+  text-align: center;
+}
+
+.game-title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-content__emoji {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+
+.game-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 16px;
+  padding: 1rem;
+}
+
+.game-form__input {
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  border-radius: 2rem;
+  outline: none;
+}
+
+.game-form__button,
+.modal__button {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: orange;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.game-form__button:hover,
+.modal__button:hover {
+  background-color: darkorange;
+}
+
+.modal__wrapper {
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.modal__body {
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: #222;
+}
+
+.game-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-table__body {
+  display: inline-block;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.game-table__body::-webkit-scrollbar {
+  width: 4px;
+  background-color: #222;
+}
+
+.game-table__body::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.game-table__body td {
+  padding: 0.5rem;
+}
