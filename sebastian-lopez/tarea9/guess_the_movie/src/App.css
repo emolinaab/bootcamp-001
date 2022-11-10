@@ -1,0 +1,49 @@
+
+.App {
+  text-align: center;
+  margin-top:.8em;
+}
+
+.numbers{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+h3{
+  text-align: center;
+}
+
+input{
+  outline: none;
+  border: none;
+  padding: .7em .8em;
+  width: 60%;
+  margin-right: .5em;
+  color:rgb(56, 55, 55);
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button{
+  padding: .7em 1.5em;
+  outline: none;
+  border: none;
+  background-color: rgb(4, 143, 158);
+  cursor: pointer;
+  color:white;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: rgb(3, 96, 107);
+}
+
+span{
+  margin-left: .3em;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(45, 111, 165);
+}
+img{
+  height: 50vh;
+  width: 80vh;
+}
