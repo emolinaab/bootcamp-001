@@ -1,0 +1,24 @@
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+}
+
+.form-control > :nth-child(2) {
+  padding: 0.5rem;
+}
+
+.form-btn {
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #fb923c;
+  border: 2px solid #000;
+  border-radius: 1rem;
+}
+
+.form-inline-filters {
+  display: flex;
+  justify-content: space-between;
+}

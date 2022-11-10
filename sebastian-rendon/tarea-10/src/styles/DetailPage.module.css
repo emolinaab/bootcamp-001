@@ -1,0 +1,14 @@
+.detail-header {
+  padding: 2rem;
+}
+
+.header-back-btn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.header-back-btn:hover {
+  text-decoration: underline;
+}
