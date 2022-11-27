@@ -9,7 +9,7 @@
 import React from 'react';
 
 
-import type { Node } from 'react';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -28,7 +28,7 @@ import { Charater } from './Character';
 
 
 
-const App: () => Node = () => {
+const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -42,15 +42,15 @@ const App: () => Node = () => {
         backgroundColor={backgroundStyle.backgroundColor}
       />
 
-      <ScrollView
+      {/* <View
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+        style={backgroundStyle}> */}
         <View>
           <Text style={styles.sectionTitle}>rick and morty </Text>
         </View>
         <Charater />
 
-      </ScrollView>
+   {/*    </View> */}
     </SafeAreaView>
   );
 };
