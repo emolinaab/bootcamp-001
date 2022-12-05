@@ -1,0 +1,12 @@
+.container {
+  margin: 0 30%;
+  background: url("assets/img/luis_diazBoll.jpg") no-repeat;
+  background-size: 120% 100%;
+  box-shadow: 0px 0px 10px 0px rgba(210, 105, 30, 0.39);
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}

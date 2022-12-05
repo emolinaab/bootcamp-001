@@ -1,0 +1,18 @@
+.content-title {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-shadow: rgba(235, 235, 232, 0.737) 1px 1px 2px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.title {
+  font-size: 2.4rem;
+  color: #fff;
+}
+.container .subtitle {
+  color: aliceblue;
+  text-align: end;
+}
+.color-title {
+  color: rgb(222, 30, 68);
+}
